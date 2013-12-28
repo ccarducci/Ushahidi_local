@@ -35,6 +35,9 @@
 #import "USHUploadComment.h"
 #import "USHUploadVideo.h"
 
+
+#import "USHDownloadCustomCategoryType.h"
+
 #import "NSObject+USH.h"
 
 @interface USHSynchronize ()
@@ -200,6 +203,14 @@
         [downloadCheckin addDependency:downloadLocation];
         [self.operations addOperation:downloadCheckin];
     }
+    
+    // -------------------------------------------------------------------------------------------------------------------------------
+    USHDownloadCustomCategoryType *downloadCustomCategoryType= [[[USHDownloadCustomCategoryType alloc] initWithDelegate:self.delegate
+                                                                                                    callback:self.callback
+                                                                                                         map:self.map] autorelease];
+    [downloadCustomCategoryType addDependency:downloadCategory];
+    [self.operations addOperation:downloadCustomCategoryType];
+    // -------------------------------------------------------------------------------------------------------------------------------
 }
 
 - (void) finish {

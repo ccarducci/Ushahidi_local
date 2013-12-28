@@ -79,7 +79,7 @@
 	<key>USHMapURLS</key>
 	<dict>
 		<key>Demo Map</key>
-		<string>http://demo.ushahidi.com</string>
+		<string>http://geoavalanche.org/incident</string>
 	</dict>
 	<key>USHNavBarColor</key>
 	<string>#524939</string>

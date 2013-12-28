@@ -364,6 +364,8 @@
 		3EFF5AC0162097D20072FAE1 /* UITableView+USH.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF5ABE162097D20072FAE1 /* UITableView+USH.m */; };
 		3EFF5AC31620BB4C0072FAE1 /* NSBundle+USH.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 3E022E0715ECC4ED00FDDC9E /* NSBundle+USH.h */; };
 		3EFF5AC41620BB4C0072FAE1 /* UITableView+USH.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 3EFF5ABD162097D20072FAE1 /* UITableView+USH.h */; };
+		4A2A4128186E440300B302D1 /* USHDownloadCustomCategoryType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2A4126186E440300B302D1 /* USHDownloadCustomCategoryType.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4A2A4129186E440300B302D1 /* USHDownloadCustomCategoryType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A4127186E440300B302D1 /* USHDownloadCustomCategoryType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -736,6 +738,8 @@
 		3EFB23DE167BC11000321464 /* zh-Hant-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant-TW"; path = Localizable.strings; sourceTree = "<group>"; };
 		3EFF5ABD162097D20072FAE1 /* UITableView+USH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+USH.h"; sourceTree = "<group>"; };
 		3EFF5ABE162097D20072FAE1 /* UITableView+USH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+USH.m"; sourceTree = "<group>"; };
+		4A2A4126186E440300B302D1 /* USHDownloadCustomCategoryType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHDownloadCustomCategoryType.h; sourceTree = "<group>"; };
+		4A2A4127186E440300B302D1 /* USHDownloadCustomCategoryType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHDownloadCustomCategoryType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -954,6 +958,8 @@
 		3E971B2A15A36E0E005EB625 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				4A2A4126186E440300B302D1 /* USHDownloadCustomCategoryType.h */,
+				4A2A4127186E440300B302D1 /* USHDownloadCustomCategoryType.m */,
 				3E33D42215D56D5200010DC3 /* USHSynchronize.h */,
 				3E33D42315D56D5200010DC3 /* USHSynchronize.m */,
 				3E971B2B15A36E51005EB625 /* USHDownload.h */,
@@ -1327,6 +1333,7 @@
 				3E9E4D83167000410095F4A4 /* USHQrCodeViewController.h in Headers */,
 				3E9E4D85167000410095F4A4 /* USHTwitterViewController.h in Headers */,
 				3EB0D711165BF6600092DFC8 /* USHVideoPicker.h in Headers */,
+				4A2A4128186E440300B302D1 /* USHDownloadCustomCategoryType.h in Headers */,
 				3ECD8FCB165B013200709ACA /* USHDefaults.h in Headers */,
 				3EA34446165478D000DC017D /* UIBezierPath+USH.h in Headers */,
 				3EA3444A16547D8500DC017D /* USHTableCell.h in Headers */,
@@ -1709,6 +1716,7 @@
 				3E64AF64163EDDBF00211536 /* USHMapDialog.m in Sources */,
 				3E64AF69163EDDE500211536 /* USHLoginDialog.m in Sources */,
 				3E64AF70163F07AC00211536 /* USHMessageView.m in Sources */,
+				4A2A4129186E440300B302D1 /* USHDownloadCustomCategoryType.m in Sources */,
 				3EBE2BD8163F630600DDFA2A /* USHAppDelegate.m in Sources */,
 				3EBF48F7164042E600D7EE96 /* UINavigationController+USH.m in Sources */,
 				3E59CC5A1641D56900D9705B /* UIActionSheet+USH.m in Sources */,
