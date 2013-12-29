@@ -366,6 +366,9 @@
 		3EFF5AC41620BB4C0072FAE1 /* UITableView+USH.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 3EFF5ABD162097D20072FAE1 /* UITableView+USH.h */; };
 		4A2A4128186E440300B302D1 /* USHDownloadCustomCategoryType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2A4126186E440300B302D1 /* USHDownloadCustomCategoryType.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4A2A4129186E440300B302D1 /* USHDownloadCustomCategoryType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A4127186E440300B302D1 /* USHDownloadCustomCategoryType.m */; };
+		4A2CEC0D186F2C5500AC8BC2 /* CustomFieldType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A2CEC0E186F2C5500AC8BC2 /* CustomFieldType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */; };
+		4A2CEC0F186F2C5500AC8BC2 /* CustomFieldType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -445,6 +448,7 @@
 				3EAA80F915EA174200F2FC16 /* USHMapAnnotation.h in Copy Headers */,
 				3EAA80FA15EA174200F2FC16 /* USHAddViewController.h in Copy Headers */,
 				3EAA80FB15EA174200F2FC16 /* USHDetailsViewController.h in Copy Headers */,
+				4A2CEC0E186F2C5500AC8BC2 /* CustomFieldType.h in Copy Headers */,
 				3EAA80FC15EA174200F2FC16 /* USHMapViewController.h in Copy Headers */,
 				3EAA80FE15EA174200F2FC16 /* USHTableViewController.h in Copy Headers */,
 				3EAA80FF15EA174200F2FC16 /* USHViewController.h in Copy Headers */,
@@ -740,6 +744,8 @@
 		3EFF5ABE162097D20072FAE1 /* UITableView+USH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+USH.m"; sourceTree = "<group>"; };
 		4A2A4126186E440300B302D1 /* USHDownloadCustomCategoryType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHDownloadCustomCategoryType.h; sourceTree = "<group>"; };
 		4A2A4127186E440300B302D1 /* USHDownloadCustomCategoryType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHDownloadCustomCategoryType.m; sourceTree = "<group>"; };
+		4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFieldType.h; sourceTree = "<group>"; };
+		4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFieldType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1122,6 +1128,8 @@
 				3EDE88C115A12C3C00FB30BD /* USHVideo.m */,
 				3EDE88B815A12C3C00FB30BD /* USHLocation.h */,
 				3EDE88B915A12C3C00FB30BD /* USHLocation.m */,
+				4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */,
+				4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1379,6 +1387,7 @@
 				3EAA80E615EA13FC00F2FC16 /* USHViewController.h in Headers */,
 				3EAA80F315EA152900F2FC16 /* USHAlertView.h in Headers */,
 				3EAA80F515EA152900F2FC16 /* USHMapAnnotation.h in Headers */,
+				4A2CEC0D186F2C5500AC8BC2 /* CustomFieldType.h in Headers */,
 				3EE3990015DB0483006A3CE8 /* NSObject+USH.h in Headers */,
 				3E33D42D15D5AB2600010DC3 /* UIColor+USH.h in Headers */,
 				3E33D43115D5B1E900010DC3 /* NSError+USH.h in Headers */,
@@ -1686,6 +1695,7 @@
 				3EAA80BF15EA12B300F2FC16 /* UIDevice+USH.m in Sources */,
 				3EAA80C115EA12B300F2FC16 /* UIEvent+USH.m in Sources */,
 				3EAA80C915EA12B300F2FC16 /* UIImage+USH.m in Sources */,
+				4A2CEC0F186F2C5500AC8BC2 /* CustomFieldType.m in Sources */,
 				3EAA80CB15EA12B300F2FC16 /* UIView+USH.m in Sources */,
 				3EAA80CD15EA12B300F2FC16 /* UIViewController+USH.m in Sources */,
 				3EAA80DD15EA13FC00F2FC16 /* USHAddViewController.m in Sources */,

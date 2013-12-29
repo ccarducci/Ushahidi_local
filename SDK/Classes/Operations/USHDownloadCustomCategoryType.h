@@ -9,7 +9,11 @@
 #import <Ushahidi/Ushahidi.h>
 #import "USHDownloadJSON.h"
 
+@class CustomFieldType;
+
 @interface USHDownloadCustomCategoryType : USHDownloadJSON
+
+@property (nonatomic, strong, readonly) CustomFieldType *customFieldType;
 
 - (id) initWithDelegate:(NSObject<USHDownloadDelegate>*)delegate
                callback:(NSObject<UshahidiDelegate>*)callback
