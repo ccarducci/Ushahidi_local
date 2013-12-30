@@ -12,7 +12,7 @@
 @protocol UshahidiDelegate;
 @protocol USHDownloadDelegate;
 
-@interface USHDownloadIncidentCustomFields : NSOperation<NSURLConnectionDelegate>
+@interface USHDownloadIncidentCustomFields : NSOperation
 
 @property (nonatomic, strong, readonly) NSObject<USHDownloadDelegate> *delegate;
 @property (nonatomic, strong, readonly) NSObject<UshahidiDelegate> *callback;

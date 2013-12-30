@@ -112,25 +112,16 @@
     [self.delegate performSelectorOnMainThread:@selector(download:started:)
                                  waitUntilDone:YES
                                    withObjects:self, self.map, nil];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval:30.0];
-    if ([NSString isNilOrEmpty:self.username] == NO &&
-        [NSString isNilOrEmpty:self.password] == NO) {
-        NSString *credentials = [NSString stringWithFormat:@"%@:%@", self.username, self.password];
-        NSData *encoded = [credentials dataUsingEncoding:NSASCIIStringEncoding];
-        NSString *base64 = [encoded base64EncodingWithLineLength:80];
-        NSString *authorization = [NSString stringWithFormat:@"Basic %@", base64];
-        [request setValue:authorization forHTTPHeaderField:@"Authorization"];
-    }
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request
-                                                                  delegate:self
-                                                          startImmediately:NO];
-    [connection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-    [connection start];
-    [connection release];
+    DLog(@"Cristiano 1");
     
- 
+    
+    
+    
+    
+    
+    DLog(@"Cristiano 2");
+    
+    [self finish];
 }
 
 - (void) finish {
@@ -144,89 +135,6 @@
     
     [self didChangeValueForKey:@"isExecuting"];
     [self didChangeValueForKey:@"isFinished"];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    DLog(@"%@ %@", self.class, self.url);
-    if ([challenge previousFailureCount] == 0) {
-        if ([NSString isNilOrEmpty:self.username] == NO &&
-            [NSString isNilOrEmpty:self.password] == NO) {
-            NSURLCredential *credentials = [NSURLCredential credentialWithUser:self.username
-                                                                      password:self.password
-                                                                   persistence:NSURLCredentialPersistenceForSession];
-            [[challenge sender] useCredential:credentials forAuthenticationChallenge:challenge];
-        }
-        else {
-            NSError *error = [NSError errorWithDomain:self.map.url
-                                                 code:NSURLErrorUserAuthenticationRequired
-                                              message:NSLocalizedString(@"User Authentication Required", nil)];
-            [self.delegate performSelector:@selector(download:finished:error:)
-                               withObjects:self, self.map, error, nil];
-            [self finish];
-        }
-    }
-    else {
-        DLog(@"Previous authentication failure");
-        [self.delegate performSelector:@selector(download:finished:error:)
-                           withObjects:self, self.map, challenge.error, nil];
-        [self finish];
-    }
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    DLog(@"%@ %@", self.class, self.url);
-    self.response = [NSMutableData data];
-    [self.delegate performSelector:@selector(download:connected:)
-                       withObjects:self, self.map, nil];
-    
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [self.response appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    DLog(@"%@ %@ Error:%@", self.class, self.url, [error description]);
-    [self.delegate performSelector:@selector(download:finished:error:)
-                       withObjects:self, self.map, error, nil];
-    [self finish];
-}
-
-/*
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    DLog(@"%@ %@", self.class, self.url);
-    [self.delegate performSelector:@selector(download:finished:error:)
-                       withObjects:self, self.map, nil, nil];
-    [self finish];
-}
-*/
- 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    DLog(@"%@ %@", self.class, self.url);
-    NSString *string = [NSString utf8StringFromData:self.response];
-    NSError *error = nil;
-    if (string != nil && string.length > 0) {
-        NSDictionary *json = [string JSONValue];
-        if (json != nil) {
-            DLog(@"JSON:%@", json);
-            [self downloadedJSON:json];
-        }
-        else {
-            DLog(@"JSON NULL:%@", string);
-            error = [NSError errorWithDomain:self.map.url code:NSURLErrorCannotParseResponse message:NSLocalizedString(@"API URL Invalid", nil)];
-        }
-    }
-    else {
-        DLog(@"Response NULL:%@", string);
-        error = [NSError errorWithDomain:self.map.url code:NSURLErrorBadServerResponse message:NSLocalizedString(@"Bad Server Response", nil)];
-    }
-    [self.delegate performSelector:@selector(download:finished:error:)
-                       withObjects:self, self.map, error, nil];
-    [self finish];
-}
-
-- (void) downloadedJSON:(NSDictionary*)json {
-    DLog(@"%@ %@ JSON:%@", self.class, self.url, json);
 }
 
 @end
