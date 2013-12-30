@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadMaps.m \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadMaps.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Ushahidi.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Libraries/Singleton/SynthesizeSingleton.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHMap.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHReport.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHCheckin.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHUser.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHCategory.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHLocation.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHComment.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHPhoto.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHVideo.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHSound.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHNews.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadJSON.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownload.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Categories/NSDictionary+USH.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Categories/NSObject+USH.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Utilities/USHDatabase.h

@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHSynchronize.m \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHSynchronize.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Ushahidi.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Libraries/Singleton/SynthesizeSingleton.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHMap.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHReport.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHCheckin.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHUser.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHCategory.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHLocation.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHComment.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHPhoto.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHVideo.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHSound.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Models/USHNews.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownload.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadVersion.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadJSON.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadReport.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadCategory.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadCheckin.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadLocation.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadPhoto.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadMap.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHUpload.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHUploadReport.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHUploadJSON.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHUploadCheckin.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHUploadComment.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHUploadVideo.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadCustomCategoryType.h \
+  /Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Categories/NSObject+USH.h
