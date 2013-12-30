@@ -15,7 +15,7 @@
 #import "NSObject+USH.h"
 #import "NSData+USH.h"
 #import "SBJson.h"
-
+#import "USHDowloadCustomField.h"
 
 
 @interface USHDownloadIncidentCustomFields ()
@@ -114,11 +114,17 @@
                                    withObjects:self, self.map, nil];
     DLog(@"Cristiano 1");
     
-    
-    
-    
-    
-    
+    USHDowloadCustomField *down1 = [[USHDowloadCustomField alloc]initWithDelegate:self.map
+                                                                           api:@"api?task=categories&resp=json"
+                                                                      username:self.username
+                                                                      password:self.password];
+
+    USHDowloadCustomField *down2 = [[USHDowloadCustomField alloc]initWithDelegate:self.map
+                                                                              api:@"api?task=categories&resp=json"
+                                                                         username:self.username
+                                                                         password:self.password];
+    [down1 download];
+    [down2 download];
     DLog(@"Cristiano 2");
     
     [self finish];
