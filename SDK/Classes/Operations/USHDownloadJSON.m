@@ -35,7 +35,7 @@
 @implementation USHDownloadJSON
 
 - (void) downloadedJSON:(NSDictionary*)json {
-    DLog(@"%@ %@ JSON:%@", self.class, self.url, json);
+    DLog(@"%@ %@ CRISTIANO JSON:%@", self.class, self.url, json);
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {

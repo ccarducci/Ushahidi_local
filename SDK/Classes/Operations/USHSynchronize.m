@@ -37,6 +37,7 @@
 
 
 #import "USHDownloadCustomCategoryType.h"
+#import "USHDownloadIncidentCustomFields.h"
 
 #import "NSObject+USH.h"
 
@@ -210,6 +211,15 @@
                                                                                                          map:self.map] autorelease];
     [downloadCustomCategoryType addDependency:downloadCategory];
     [self.operations addOperation:downloadCustomCategoryType];
+    
+    
+    
+    USHDownloadIncidentCustomFields *downloadIncidentCustomFields =[[[USHDownloadIncidentCustomFields alloc] initWithDelegate:self.delegate
+                                                                                             callback:self.callback
+                                                                                                  map:self.map
+                                                                                                  api:@"api?task=categories&resp=json"] autorelease];
+    [downloadIncidentCustomFields addDependency:downloadCustomCategoryType];
+    [self.operations addOperation:downloadIncidentCustomFields];
     // -------------------------------------------------------------------------------------------------------------------------------
 }
 

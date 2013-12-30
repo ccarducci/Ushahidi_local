@@ -364,6 +364,8 @@
 		3EFF5AC0162097D20072FAE1 /* UITableView+USH.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF5ABE162097D20072FAE1 /* UITableView+USH.m */; };
 		3EFF5AC31620BB4C0072FAE1 /* NSBundle+USH.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 3E022E0715ECC4ED00FDDC9E /* NSBundle+USH.h */; };
 		3EFF5AC41620BB4C0072FAE1 /* UITableView+USH.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 3EFF5ABD162097D20072FAE1 /* UITableView+USH.h */; };
+		4A1C81D31871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1C81D11871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h */; };
+		4A1C81D41871EB7600EE1A24 /* USHDownloadIncidentCustomFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1C81D21871EB7600EE1A24 /* USHDownloadIncidentCustomFields.m */; };
 		4A2A4128186E440300B302D1 /* USHDownloadCustomCategoryType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2A4126186E440300B302D1 /* USHDownloadCustomCategoryType.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4A2A4129186E440300B302D1 /* USHDownloadCustomCategoryType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A4127186E440300B302D1 /* USHDownloadCustomCategoryType.m */; };
 		4A2CEC0D186F2C5500AC8BC2 /* CustomFieldType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -742,6 +744,8 @@
 		3EFB23DE167BC11000321464 /* zh-Hant-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant-TW"; path = Localizable.strings; sourceTree = "<group>"; };
 		3EFF5ABD162097D20072FAE1 /* UITableView+USH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+USH.h"; sourceTree = "<group>"; };
 		3EFF5ABE162097D20072FAE1 /* UITableView+USH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+USH.m"; sourceTree = "<group>"; };
+		4A1C81D11871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHDownloadIncidentCustomFields.h; sourceTree = "<group>"; };
+		4A1C81D21871EB7600EE1A24 /* USHDownloadIncidentCustomFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHDownloadIncidentCustomFields.m; sourceTree = "<group>"; };
 		4A2A4126186E440300B302D1 /* USHDownloadCustomCategoryType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHDownloadCustomCategoryType.h; sourceTree = "<group>"; };
 		4A2A4127186E440300B302D1 /* USHDownloadCustomCategoryType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHDownloadCustomCategoryType.m; sourceTree = "<group>"; };
 		4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFieldType.h; sourceTree = "<group>"; };
@@ -966,6 +970,8 @@
 			children = (
 				4A2A4126186E440300B302D1 /* USHDownloadCustomCategoryType.h */,
 				4A2A4127186E440300B302D1 /* USHDownloadCustomCategoryType.m */,
+				4A1C81D11871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h */,
+				4A1C81D21871EB7600EE1A24 /* USHDownloadIncidentCustomFields.m */,
 				3E33D42215D56D5200010DC3 /* USHSynchronize.h */,
 				3E33D42315D56D5200010DC3 /* USHSynchronize.m */,
 				3E971B2B15A36E51005EB625 /* USHDownload.h */,
@@ -1401,6 +1407,7 @@
 				3EDE88CA15A12C3C00FB30BD /* USHSound.h in Headers */,
 				3EDE88CE15A12C3C00FB30BD /* USHCheckin.h in Headers */,
 				3EDE88D215A12C3C00FB30BD /* USHComment.h in Headers */,
+				4A1C81D31871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h in Headers */,
 				3EDE88D615A12C3C00FB30BD /* USHCategory.h in Headers */,
 				3EDE88DA15A12C3C00FB30BD /* USHUser.h in Headers */,
 				3EDE88DE15A12C3C00FB30BD /* USHPhoto.h in Headers */,
@@ -1758,6 +1765,7 @@
 				3EA79906167B7B52009C83B1 /* SBJsonStreamParser.m in Sources */,
 				3EA79908167B7B52009C83B1 /* SBJsonStreamParserAccumulator.m in Sources */,
 				3EA7990A167B7B52009C83B1 /* SBJsonStreamParserAdapter.m in Sources */,
+				4A1C81D41871EB7600EE1A24 /* USHDownloadIncidentCustomFields.m in Sources */,
 				3EA7990C167B7B52009C83B1 /* SBJsonStreamParserState.m in Sources */,
 				3EA7990E167B7B52009C83B1 /* SBJsonStreamWriter.m in Sources */,
 				3EA79910167B7B52009C83B1 /* SBJsonStreamWriterAccumulator.m in Sources */,
