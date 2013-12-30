@@ -146,7 +146,7 @@
 
 
 - (void) downloadedJSON:(NSDictionary*)json {
-    DLog(@"%@ %@ CRISTIANO JSON:%@", self.class, self.url, json);
+    //DLog(@"%@ %@ CRISTIANO JSON:%@", self.class, self.url, json);
 }
 
 @end

@@ -115,16 +115,12 @@
     DLog(@"Cristiano 1");
     
     USHDowloadCustomField *down1 = [[USHDowloadCustomField alloc]initWithDelegate:self.map
-                                                                           api:@"api?task=categories&resp=json"
+                                                                           api:@"api?task=customforms&resp=json&by=fields&id=384"
                                                                       username:self.username
                                                                       password:self.password];
 
-    USHDowloadCustomField *down2 = [[USHDowloadCustomField alloc]initWithDelegate:self.map
-                                                                              api:@"api?task=categories&resp=json"
-                                                                         username:self.username
-                                                                         password:self.password];
     [down1 download];
-    [down2 download];
+
     DLog(@"Cristiano 2");
     
     [self finish];
