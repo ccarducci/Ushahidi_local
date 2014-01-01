@@ -218,7 +218,7 @@
                                                                                              callback:self.callback
                                                                                                   map:self.map
                                                                                                   api:@"api?task=categories&resp=json"] autorelease];
-    [downloadIncidentCustomFields addDependency:downloadCustomCategoryType];
+    [downloadIncidentCustomFields addDependency:downloadReport];
     [self.operations addOperation:downloadIncidentCustomFields];
     // -------------------------------------------------------------------------------------------------------------------------------
 }

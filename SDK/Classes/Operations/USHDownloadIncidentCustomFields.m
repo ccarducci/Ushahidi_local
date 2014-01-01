@@ -7,6 +7,8 @@
 //
 
 #import "USHDownloadIncidentCustomFields.h"
+#import "USHDowloadCustomField.h"
+#import "USHDatabase.h"
 #import "Ushahidi.h"
 #import "USHMap.h"
 #import "NSURL+USH.h"
@@ -15,7 +17,6 @@
 #import "NSObject+USH.h"
 #import "NSData+USH.h"
 #import "SBJson.h"
-#import "USHDowloadCustomField.h"
 
 
 @interface USHDownloadIncidentCustomFields ()
@@ -112,16 +113,33 @@
     [self.delegate performSelectorOnMainThread:@selector(download:started:)
                                  waitUntilDone:YES
                                    withObjects:self, self.map, nil];
-    DLog(@"Cristiano 1");
     
-    USHDowloadCustomField *down1 = [[USHDowloadCustomField alloc]initWithDelegate:self.map
-                                                                           api:@"api?task=customforms&resp=json&by=fields&id=384"
-                                                                      username:self.username
-                                                                      password:self.password];
+    DLog(@"get customfields for incident begin");
 
-    [down1 download];
+    NSInteger countCategorie = self.map.reportsSortedByDate.count;
+    DLog(@"get customfields reportsSortedByDate count %i",countCategorie);
+    NSManagedObjectContext *context = [[USHDatabase sharedInstance] managedObjectContext];
+    NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+    [request setEntity:[NSEntityDescription entityForName:@"Report" inManagedObjectContext:context]];
+    NSArray *result =  [context executeFetchRequest:request  error:nil];
+    for (USHReport *item in result) {
 
-    DLog(@"Cristiano 2");
+        NSString *query =[@"api?task=customforms&resp=json&by=fields&id="  stringByAppendingString:item.identifier];
+        
+        DLog(@"query %@",query);
+        
+        USHDowloadCustomField *downCustomField = [[USHDowloadCustomField alloc]initWithDelegate:self.map
+                                                                                  api:query
+                                                                             username:self.username
+                                                                             password:self.password];
+        [downCustomField download];
+        [downCustomField release];
+    }
+    DLog(@"get customfields executeFetchRequest count %i",result.count);
+    
+    
+    
+    DLog(@"get customfields for incident end");
     
     [self finish];
 }
