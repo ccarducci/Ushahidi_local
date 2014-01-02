@@ -193,9 +193,34 @@
             self.reportCustomField.defaultvalue = defaultvalue;
             NSString *name =[meta stringForKey:@"name"];
             self.reportCustomField.name = name;
-            //NSString *type =[meta stringForKey:@"type"];
             NSNumber *type =[meta numberForKey:@"type"];
-            //self.reportCustomField.type = [meta intForKey:@"type"];
+            self.reportCustomField.type = type;
+            
+            // required
+            NSNumber *required =[meta numberForKey:@"required"];
+            self.reportCustomField.required = required;
+            
+            // maxlen
+            NSNumber *maxlen =[meta numberForKey:@"maxlen"];
+            self.reportCustomField.maxlen = maxlen;
+            
+            // height
+            //NSString *height =[meta stringForKey:@"height"];
+            //self.reportCustomField.height = height;
+            
+            // isdate
+            NSNumber *isdate =[meta numberForKey:@"isdate"];
+            self.reportCustomField.isdate = isdate;
+            
+            // ispublicvisible
+            NSNumber *ispublicvisible =[meta numberForKey:@"ispublicvisible"];
+            self.reportCustomField.ispublicvisible = ispublicvisible;
+            
+            // ispublicsubmit
+            NSNumber *ispublicsubmit =[meta numberForKey:@"ispublicsubmit"];
+            self.reportCustomField.ispublicsubmit = ispublicsubmit;
+            
+            
             if ( itemValues > 0 )
             {
                 /*
@@ -210,9 +235,14 @@
                 DLog(@"-----------------------------------");
                 DLog(@"Custom field report_id :%@", self.reportCustomField .identifier);
                 DLog(@"Custom field value :%@", self.reportCustomField.value);
-                DLog(@"Custom field type:%i", type);
+                DLog(@"Custom field type:%@", [self.reportCustomField.type stringValue]);
                 DLog(@"Custom field name :%@", self.reportCustomField.name);
-                DLog(@"Custom field defaultvalue:%@", self.reportCustomField.defaultvalue);
+                DLog(@"Custom field defaultvalue:%@", self.reportCustomField.defaultvalue); 
+                DLog(@"Custom field required:%@", [self.reportCustomField.required stringValue]);
+                DLog(@"Custom field maxlen:%@", [self.reportCustomField.maxlen stringValue]);
+                DLog(@"Custom field isdate:%@", [self.reportCustomField.isdate stringValue]);
+                DLog(@"Custom field ispublicvisible:%@", [self.reportCustomField.ispublicvisible stringValue]);
+                DLog(@"Custom field ispublicsubmit:%@", [self.reportCustomField.ispublicsubmit stringValue]);
                 DLog(@"-----------------------------------");
                 
             }
