@@ -104,6 +104,19 @@
         <relationship name="sounds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sound" inverseName="report" inverseEntity="Sound" syncable="YES"/>
         <relationship name="videos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Video" inverseName="report" inverseEntity="Video" syncable="YES"/>
     </entity>
+    <entity name="ReportCustomField" representedClassName="ReportCustomField" syncable="YES">
+        <attribute name="defaultvalue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isdate" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="ispublicsubmit" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="ispublicvisible" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="maxlen" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="required" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Sound" representedClassName="USHSound" syncable="YES">
         <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -129,6 +142,7 @@
         <element name="Category" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Checkin" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Comment" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CustomFieldType" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Location" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Map" positionX="0" positionY="0" width="0" height="0"/>
         <element name="News" positionX="0" positionY="0" width="0" height="0"/>
@@ -137,6 +151,6 @@
         <element name="Sound" positionX="0" positionY="0" width="0" height="0"/>
         <element name="User" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Video" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="CustomFieldType" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ReportCustomField" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

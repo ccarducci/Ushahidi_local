@@ -364,6 +364,8 @@
 		3EFF5AC0162097D20072FAE1 /* UITableView+USH.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF5ABE162097D20072FAE1 /* UITableView+USH.m */; };
 		3EFF5AC31620BB4C0072FAE1 /* NSBundle+USH.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 3E022E0715ECC4ED00FDDC9E /* NSBundle+USH.h */; };
 		3EFF5AC41620BB4C0072FAE1 /* UITableView+USH.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 3EFF5ABD162097D20072FAE1 /* UITableView+USH.h */; };
+		4A0BC63E187565BF00F121AB /* ReportCustomField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A0BC63C187565BF00F121AB /* ReportCustomField.h */; };
+		4A0BC63F187565BF00F121AB /* ReportCustomField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BC63D187565BF00F121AB /* ReportCustomField.m */; };
 		4A1C81D31871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1C81D11871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4A1C81D41871EB7600EE1A24 /* USHDownloadIncidentCustomFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1C81D21871EB7600EE1A24 /* USHDownloadIncidentCustomFields.m */; };
 		4A1C81D7187228DD00EE1A24 /* USHDowloadCustomField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1C81D5187228DD00EE1A24 /* USHDowloadCustomField.h */; };
@@ -746,6 +748,8 @@
 		3EFB23DE167BC11000321464 /* zh-Hant-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant-TW"; path = Localizable.strings; sourceTree = "<group>"; };
 		3EFF5ABD162097D20072FAE1 /* UITableView+USH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+USH.h"; sourceTree = "<group>"; };
 		3EFF5ABE162097D20072FAE1 /* UITableView+USH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+USH.m"; sourceTree = "<group>"; };
+		4A0BC63C187565BF00F121AB /* ReportCustomField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCustomField.h; sourceTree = "<group>"; };
+		4A0BC63D187565BF00F121AB /* ReportCustomField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCustomField.m; sourceTree = "<group>"; };
 		4A1C81D11871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHDownloadIncidentCustomFields.h; sourceTree = "<group>"; };
 		4A1C81D21871EB7600EE1A24 /* USHDownloadIncidentCustomFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHDownloadIncidentCustomFields.m; sourceTree = "<group>"; };
 		4A1C81D5187228DD00EE1A24 /* USHDowloadCustomField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHDowloadCustomField.h; sourceTree = "<group>"; };
@@ -1118,6 +1122,8 @@
 		3EA235DA159B90730072A60D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4A0BC63C187565BF00F121AB /* ReportCustomField.h */,
+				4A0BC63D187565BF00F121AB /* ReportCustomField.m */,
 				3EDE88BC15A12C3C00FB30BD /* USHMap.h */,
 				3EDE88BD15A12C3C00FB30BD /* USHMap.m */,
 				3EDE88E015A12C3D00FB30BD /* USHReport.h */,
@@ -1423,6 +1429,7 @@
 				3EA79902167B7B52009C83B1 /* SBJson.h in Headers */,
 				3EA79903167B7B52009C83B1 /* SBJsonParser.h in Headers */,
 				3EA79905167B7B52009C83B1 /* SBJsonStreamParser.h in Headers */,
+				4A0BC63E187565BF00F121AB /* ReportCustomField.h in Headers */,
 				3EA79907167B7B52009C83B1 /* SBJsonStreamParserAccumulator.h in Headers */,
 				3EA79909167B7B52009C83B1 /* SBJsonStreamParserAdapter.h in Headers */,
 				3EA7990B167B7B52009C83B1 /* SBJsonStreamParserState.h in Headers */,
@@ -1719,6 +1726,7 @@
 				3EAA80E715EA13FC00F2FC16 /* USHViewController.m in Sources */,
 				3EAA80EE15EA14C300F2FC16 /* Reachability.m in Sources */,
 				3EAA80F415EA152900F2FC16 /* USHAlertView.m in Sources */,
+				4A0BC63F187565BF00F121AB /* ReportCustomField.m in Sources */,
 				3EAA80F615EA152900F2FC16 /* USHMapAnnotation.m in Sources */,
 				3E94937115ECB6ED004B32A8 /* USHTabBarController.m in Sources */,
 				3E022E0A15ECC4ED00FDDC9E /* NSBundle+USH.m in Sources */,
