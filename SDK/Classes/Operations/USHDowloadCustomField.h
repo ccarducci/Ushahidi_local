@@ -18,6 +18,7 @@
 @property (nonatomic, strong, readonly) NSString *api;
 @property (nonatomic, strong, readonly) NSString *username;
 @property (nonatomic, strong, readonly) NSString *password;
+@property (nonatomic, strong, readonly) NSString *identifier;
 @property (nonatomic, strong, readonly) USHMap *map;
 @property (nonatomic, strong, readonly) NSURL *domain;
 

@@ -131,7 +131,8 @@
         USHDowloadCustomField *downCustomField = [[USHDowloadCustomField alloc]initWithDelegate:self.map
                                                                                   api:query
                                                                              username:self.username
-                                                                             password:self.password];
+                                                                             password:self.password
+                                                                           identifier:item.identifier];
         [downCustomField download];
         [downCustomField release];
     }

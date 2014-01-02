@@ -16,6 +16,8 @@
 #import "NSData+USH.h"
 #import "SBJson.h"
 #import "ReportCustomField.h"
+#import "USHDatabase.h"
+#import "NSDictionary+USH.h"
 
 @interface USHDowloadCustomField ()
 
@@ -28,6 +30,7 @@
 @property (nonatomic, strong) NSString *api;
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *password;
+@property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong, readwrite) NSURL *domain;
 
 @end
@@ -43,11 +46,13 @@
 @synthesize password = _password;
 @synthesize map = _map;
 @synthesize domain = _domain;
+@synthesize identifier = _identifier;
 
 - (id) initWithDelegate:(USHMap*)map
                     api:(NSString*)api
                username:(NSString*)username
                password:(NSString*)password
+             identifier:(NSString*)identifier
 {
     if ((self = [super init])) {
         self.map = map;
@@ -56,6 +61,7 @@
         self.domain = [self.url domainURL];
         self.username = map.username;
         self.password = map.password;
+        self.identifier = identifier;
     }
     return self;
 }
@@ -69,6 +75,7 @@
     [_map release];
     [_domain release];
     [_response release];
+    [_identifier release];
     [super dealloc];
 }
 
@@ -159,9 +166,57 @@
     for (NSDictionary *item in fields) {
         if (item != nil) {
             NSDictionary *values = [item objectForKey:@"values"];
-            DLog(@"CRISTIANO values field:%@", values);
             NSDictionary *meta = [item objectForKey:@"meta"];
-            DLog(@"%@ %@ CRISTIANO meta:%@", self.class, self.url, meta);
+            
+            
+            self.reportCustomField = (ReportCustomField *)[[USHDatabase sharedInstance] fetchOrInsertItemForName:@"ReportCustomField"
+                                                                                                           query:@"identifier = %@"
+                                                                                                          params:self.identifier, nil];
+            
+            NSMutableString *str = [NSMutableString string];
+            NSInteger itemValues = 0;
+            for (NSDictionary *itemvalue in values) {
+                
+                //DLog(@"CRISTIANO itemvalue field:%@", itemvalue);
+                [str appendString:itemvalue];
+                [str appendString:@","];
+                itemValues++;
+            }
+            [str deleteCharactersInRange:NSMakeRange([str length]-1, 1)];
+            
+            self.reportCustomField.value=str;
+            
+            
+            NSString *identifier = self.identifier;
+            self.reportCustomField .identifier =identifier;
+            NSString *defaultvalue =[meta stringForKey:@"default"];
+            self.reportCustomField.defaultvalue = defaultvalue;
+            NSString *name =[meta stringForKey:@"name"];
+            self.reportCustomField.name = name;
+            //NSString *type =[meta stringForKey:@"type"];
+            NSNumber *type =[meta numberForKey:@"type"];
+            //self.reportCustomField.type = [meta intForKey:@"type"];
+            if ( itemValues > 0 )
+            {
+                /*
+                DLog(@"-----------------------------------");
+                DLog(@"Custom field report_id :%@", identifier);
+                DLog(@"Custom field value :%@", str);
+                DLog(@"Custom field type:%@", type);
+                DLog(@"Custom field name :%@", name);
+                DLog(@"Custom field defaultvalue:%@", defaultvalue);
+                DLog(@"-----------------------------------");
+                */
+                DLog(@"-----------------------------------");
+                DLog(@"Custom field report_id :%@", self.reportCustomField .identifier);
+                DLog(@"Custom field value :%@", self.reportCustomField.value);
+                DLog(@"Custom field type:%i", type);
+                DLog(@"Custom field name :%@", self.reportCustomField.name);
+                DLog(@"Custom field defaultvalue:%@", self.reportCustomField.defaultvalue);
+                DLog(@"-----------------------------------");
+                
+            }
+            [[USHDatabase sharedInstance] saveChanges];
         }
     }
 }
