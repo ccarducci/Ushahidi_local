@@ -15,10 +15,12 @@
 #import "NSObject+USH.h"
 #import "NSData+USH.h"
 #import "SBJson.h"
-
+#import "ReportCustomField.h"
 
 @interface USHDowloadCustomField ()
 
+
+@property (nonatomic, strong, readwrite) ReportCustomField *reportCustomField;
 
 @property (nonatomic, strong, readwrite) USHMap *map;
 @property (nonatomic, strong, readwrite) NSMutableData *response;
@@ -33,6 +35,8 @@
 
 @implementation USHDowloadCustomField
 
+
+@synthesize reportCustomField = _reportCustomField;
 @synthesize url = _url;
 @synthesize api = _api;
 @synthesize username = _username;
@@ -57,13 +61,14 @@
 }
 
 - (void)dealloc {
-    [_api release];
+    [_reportCustomField release];
     [_url release];
+    [_api release];
     [_username release];
     [_password release];
     [_map release];
-    [_response release];
     [_domain release];
+    [_response release];
     [super dealloc];
 }
 
@@ -130,7 +135,7 @@
     if (string != nil && string.length > 0) {
         NSDictionary *json = [string JSONValue];
         if (json != nil) {
-            DLog(@"JSON:%@", json);
+            //DLog(@"JSON:%@", json);
             [self downloadedJSON:json];
         }
         else {
@@ -146,7 +151,19 @@
 
 
 - (void) downloadedJSON:(NSDictionary*)json {
-    //DLog(@"%@ %@ CRISTIANO JSON:%@", self.class, self.url, json);
+    
+    NSDictionary *payload = [json objectForKey:@"payload"];
+    NSDictionary *customforms = [payload objectForKey:@"customforms"];
+    NSArray *fields = [customforms objectForKey:@"fields"];
+    
+    for (NSDictionary *item in fields) {
+        if (item != nil) {
+            NSDictionary *values = [item objectForKey:@"values"];
+            DLog(@"CRISTIANO values field:%@", values);
+            NSDictionary *meta = [item objectForKey:@"meta"];
+            DLog(@"%@ %@ CRISTIANO meta:%@", self.class, self.url, meta);
+        }
+    }
 }
 
 @end

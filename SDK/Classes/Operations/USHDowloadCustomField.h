@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ReportCustomField.h"
 
 @class USHMap;
 
 @interface USHDowloadCustomField : NSObject<NSURLConnectionDelegate>
 
+@property (nonatomic, strong, readonly) ReportCustomField *reportCustomField;
 @property (nonatomic, strong, readonly) NSURL *url;
 @property (nonatomic, strong, readonly) NSString *api;
 @property (nonatomic, strong, readonly) NSString *username;
