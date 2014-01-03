@@ -7,6 +7,8 @@
 //
 
 #import "USHCustomFieldsViewController.h"
+#import <Ushahidi/ReportCustomField.h>
+#import <Ushahidi/USHCustomFieldUtility.h>
 
 @interface USHCustomFieldsViewController ()
 
@@ -17,7 +19,18 @@
 @synthesize report_id = _report_id;
 
 - (void)viewWillAppear:(BOOL)animated {
-       NSLog(@"Custom Field View Controller for %@" , self.report_id );
+    NSLog(@"Custom Field View Controller for %@" , self.report_id );
+    NSArray *CustomFields = [USHCustomFieldUtility getCustomFields:self.report_id];
+    for (ReportCustomField *customField in CustomFields)
+    {
+        NSLog(@"----------------------------------------------");
+        NSLog(@"USHCustomFieldsViewController custom field %@", customField.identifier);
+        NSLog(@"USHCustomFieldsViewController %@", customField.name);
+        NSLog(@"USHCustomFieldsViewController %@", customField.value);
+        NSLog(@"USHCustomFieldsViewController %@", customField.type);
+        NSLog(@"USHCustomFieldsViewController USHCustomFieldsViewController%@", customField.defaultvalue);
+        NSLog(@"----------------------------------------------");
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
