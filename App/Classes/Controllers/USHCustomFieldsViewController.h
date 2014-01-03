@@ -10,6 +10,6 @@
 
 @interface USHCustomFieldsViewController : UIViewController
 
-@property (strong, nonatomic) NSString *identifier;
+@property (strong, nonatomic) NSString *report_id;
 
 @end

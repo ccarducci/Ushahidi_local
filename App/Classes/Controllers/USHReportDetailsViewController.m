@@ -42,6 +42,7 @@
 #import "USHLocationTableCell.h"
 #import "USHCommentTableCell.h"
 #import "USHCommentAddViewController.h"
+#import "USHCustomFieldsViewController.h"
 
 @interface USHReportDetailsViewController ()
 
@@ -382,7 +383,8 @@ typedef enum {
         }
     } else if (indexPath.section == TableCustomFields) {
         // QUI METTO LA IL VIEW CONTROLLER PER I CUSTOM FIELDS
-
+        self.customFieldsViewController.report_id = self.report.identifier;
+        //NSLog(@"Custom Field View Controller for %@" , self.customFieldsViewController.report_id );
         [self.navigationController pushViewController:self.customFieldsViewController animated:YES];
         
     }

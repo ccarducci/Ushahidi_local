@@ -439,14 +439,10 @@
         <image name="add.png" width="20" height="20"/>
         <image name="checkin.png" width="20" height="20"/>
         <image name="down.png" width="15" height="13"/>
-        <image name="down.png" width="15" height="13"/>
-        <image name="down.png" width="15" height="13"/>
         <image name="locate.png" width="20" height="20"/>
         <image name="map.png" width="26" height="21"/>
         <image name="refresh.png" width="20" height="20"/>
         <image name="reports.png" width="20" height="20"/>
-        <image name="up.png" width="15" height="13"/>
-        <image name="up.png" width="15" height="13"/>
         <image name="up.png" width="15" height="13"/>
     </resources>
 </document>

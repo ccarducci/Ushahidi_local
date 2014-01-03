@@ -14,8 +14,11 @@
 
 @implementation USHCustomFieldsViewController
 
-@synthesize identifier;
+@synthesize report_id = _report_id;
 
+- (void)viewWillAppear:(BOOL)animated {
+       NSLog(@"Custom Field View Controller for %@" , self.report_id );
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +31,7 @@
 
 - (void)viewDidLoad
 {
+ 
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
