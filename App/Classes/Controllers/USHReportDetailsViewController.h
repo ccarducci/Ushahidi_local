@@ -27,9 +27,12 @@
 @class USHImageViewController;
 @class USHLocationViewController;
 @class USHCommentAddViewController;
+@class USHCustomFieldsViewController;
 
 @interface USHReportDetailsViewController : USHTableViewController<USHShareControllerDelegate>
 
+
+@property (retain, nonatomic) IBOutlet USHCustomFieldsViewController *customFieldsViewController;
 @property (strong, nonatomic) IBOutlet USHWebViewController *webViewController;
 @property (strong, nonatomic) IBOutlet USHImageViewController *imageViewController;
 @property (strong, nonatomic) IBOutlet USHLocationViewController *locationViewController;

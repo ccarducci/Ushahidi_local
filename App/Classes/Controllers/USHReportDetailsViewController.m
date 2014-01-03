@@ -61,6 +61,7 @@
 @synthesize shareController = _shareController;
 @synthesize commentAddViewController = _commentAddViewController;
 @synthesize starredButton = _starredButton;
+@synthesize customFieldsViewController = _customFieldsViewController;
 
 typedef enum {
     TableSectionTitle,
@@ -73,6 +74,7 @@ typedef enum {
     TableSectionVideos,
     TableSectionNews,
     TableSectionComments,
+    TableCustomFields,
     TableSections
 } TableSection;
 
@@ -150,6 +152,8 @@ typedef enum {
     [_shareController release];
     [_commentAddViewController release];
     [_starredButton release];
+    [_customFieldsViewController release];
+    [_customFieldsViewController release];
     [super dealloc];
 }
 
@@ -328,6 +332,12 @@ typedef enum {
                                                          text:NSLocalizedString(@"No comments", nil) 
                                                          icon:@"comment.png"];
         }
+    }else if (indexPath.section == TableCustomFields) {
+        return [USHTableCellFactory iconTableCellForTable:tableView
+                                                indexPath:indexPath
+                                                     text:@"Informazioni Aggiuntive"
+                                                     icon:@"map.png"
+                                                accessory:YES];
     }
     return nil;
 }
@@ -370,6 +380,11 @@ typedef enum {
             [self.navigationController pushViewController:self.imageViewController animated:YES];
             self.imageViewController.title = self.report.location;
         }
+    } else if (indexPath.section == TableCustomFields) {
+        // QUI METTO LA IL VIEW CONTROLLER PER I CUSTOM FIELDS
+
+        [self.navigationController pushViewController:self.customFieldsViewController animated:YES];
+        
     }
 }
 

@@ -1972,6 +1972,27 @@
 		3EFF5B021620E64B0072FAE1 /* verified@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF5AFE1620E64B0072FAE1 /* verified@2x.png */; };
 		3EFF5B051620E9740072FAE1 /* locate.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF5B031620E9740072FAE1 /* locate.png */; };
 		3EFF5B061620E9740072FAE1 /* locate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF5B041620E9740072FAE1 /* locate@2x.png */; };
+		4AF856471876305100B6B357 /* USHCustomFieldsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */; };
+		4AF856481876305100B6B357 /* USHCustomFieldsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */; };
+		4AF856491876305100B6B357 /* USHCustomFieldsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */; };
+		4AF8564A1876305100B6B357 /* USHCustomFieldsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */; };
+		4AF8564B1876305100B6B357 /* USHCustomFieldsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */; };
+		4AF8564C1876305100B6B357 /* USHCustomFieldsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */; };
+		4AF8564D1876305100B6B357 /* USHCustomFieldsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */; };
+		4AF856571876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */; };
+		4AF856581876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */; };
+		4AF856591876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */; };
+		4AF8565A1876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */; };
+		4AF8565B1876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */; };
+		4AF8565C1876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */; };
+		4AF8565D1876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */; };
+		4AF8565F1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */; };
+		4AF856601876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */; };
+		4AF856611876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */; };
+		4AF856621876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */; };
+		4AF856631876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */; };
+		4AF856641876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */; };
+		4AF856651876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -2392,6 +2413,10 @@
 		3EFF5AFE1620E64B0072FAE1 /* verified@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "verified@2x.png"; sourceTree = "<group>"; };
 		3EFF5B031620E9740072FAE1 /* locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locate.png; sourceTree = "<group>"; };
 		3EFF5B041620E9740072FAE1 /* locate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locate@2x.png"; sourceTree = "<group>"; };
+		4AF856451876305100B6B357 /* USHCustomFieldsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHCustomFieldsViewController.h; sourceTree = "<group>"; };
+		4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHCustomFieldsViewController.m; sourceTree = "<group>"; };
+		4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USHCustomFieldsViewController_iPhone.xib; sourceTree = "<group>"; };
+		4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USHCustomFieldsViewController_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2963,6 +2988,8 @@
 		3E6D034F159B55FE00CDB5B7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AF856451876305100B6B357 /* USHCustomFieldsViewController.h */,
+				4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */,
 				3E6D036A159B663100CDB5B7 /* USHMapTableViewController.h */,
 				3E6D036B159B663100CDB5B7 /* USHMapTableViewController.m */,
 				3E9BABBF164826B7006ED993 /* USHMapAddViewController.h */,
@@ -3121,6 +3148,8 @@
 				3E01346E16723DC000C40CB4 /* USHImageViewController_iPhone.xib */,
 				3E01346F16723DC000C40CB4 /* USHWebViewController_iPad.xib */,
 				3E01347016723DC000C40CB4 /* USHWebViewController_iPhone.xib */,
+				4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */,
+				4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3535,6 +3564,7 @@
 				3ED8F2241602AF940095DB31 /* share.png in Resources */,
 				3ED8F2251602AF940095DB31 /* share@2x.png in Resources */,
 				3ED8F2261602AF940095DB31 /* starred.png in Resources */,
+				4AF856571876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */,
 				3ED8F2271602AF940095DB31 /* starred@2x.png in Resources */,
 				3ED8F2281602AF940095DB31 /* like@2x.png in Resources */,
 				3ED8F2291602AF940095DB31 /* unstarred.png in Resources */,
@@ -3557,6 +3587,7 @@
 				3EF435BB161113BF00C4D725 /* info@2x.png in Resources */,
 				3EF435BC161113BF00C4D725 /* layers.png in Resources */,
 				3EF435BD161113BF00C4D725 /* layers@2x.png in Resources */,
+				4AF8565F1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */,
 				3EF435BE161113BF00C4D725 /* phone.png in Resources */,
 				3EF435BF161113BF00C4D725 /* phone@2x.png in Resources */,
 				3EF435C0161113BF00C4D725 /* save.png in Resources */,
@@ -3813,6 +3844,7 @@
 				3E9E509D167129320095F4A4 /* USHReportTableViewController_iPhone.xib in Resources */,
 				3E9E509E167129320095F4A4 /* USHSettingsViewController_iPad.xib in Resources */,
 				3E9E509F167129320095F4A4 /* USHSettingsViewController_iPhone.xib in Resources */,
+				4AF856611876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */,
 				3E9E50A0167129320095F4A4 /* USHCheckinTableCell_iPad.xib in Resources */,
 				3E9E50A1167129320095F4A4 /* USHCheckinTableCell_iPhone.xib in Resources */,
 				3E9E50A2167129320095F4A4 /* USHMapTableCell_iPad.xib in Resources */,
@@ -3838,6 +3870,7 @@
 				3E9E50B6167129320095F4A4 /* time.png in Resources */,
 				3E9E50B7167129320095F4A4 /* time@2x.png in Resources */,
 				3E9E50B8167129320095F4A4 /* title.png in Resources */,
+				4AF856591876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */,
 				3E9E50B9167129320095F4A4 /* title@2x.png in Resources */,
 				3E9E50BA167129320095F4A4 /* video.png in Resources */,
 				3E9E50BB167129320095F4A4 /* video@2x.png in Resources */,
@@ -4059,6 +4092,7 @@
 				3E9E51FD167129350095F4A4 /* USHLocationTableCell.xib in Resources */,
 				3E9E51FE167129350095F4A4 /* USHWebTableCell.xib in Resources */,
 				3E9E51FF167129350095F4A4 /* USHCommentTableCell.xib in Resources */,
+				4AF8565B1876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */,
 				3E9E5200167129350095F4A4 /* USHTextTableCell.xib in Resources */,
 				3E9E5201167129350095F4A4 /* USHIconTableCell.xib in Resources */,
 				3E9E5202167129350095F4A4 /* categories.png in Resources */,
@@ -4084,6 +4118,7 @@
 				3E9E5216167129350095F4A4 /* USHLocationViewController_iPhone.xib in Resources */,
 				3E9E5217167129350095F4A4 /* USHLocationViewController_iPad.xib in Resources */,
 				3E9E5218167129350095F4A4 /* USHReportAddViewController_iPad.xib in Resources */,
+				4AF856631876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */,
 				3E9E5219167129350095F4A4 /* USHReportAddViewController_iPhone.xib in Resources */,
 				3E9E521A167129350095F4A4 /* date.png in Resources */,
 				3E9E521B167129350095F4A4 /* date@2x.png in Resources */,
@@ -4191,6 +4226,7 @@
 				3E9E52DA167129380095F4A4 /* next@2x.png in Resources */,
 				3E9E52DB167129380095F4A4 /* previous.png in Resources */,
 				3E9E52DC167129380095F4A4 /* previous@2x.png in Resources */,
+				4AF8565C1876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */,
 				3E9E52DD167129380095F4A4 /* up.png in Resources */,
 				3E9E52DE167129380095F4A4 /* up@2x.png in Resources */,
 				3E9E52DF167129380095F4A4 /* checkin.png in Resources */,
@@ -4389,6 +4425,7 @@
 				3EC04D061672B7EB003D5875 /* Icon-iPad@2x.png in Resources */,
 				3EC04D071672B7EB003D5875 /* Icon-iPhone.png in Resources */,
 				3EC04D081672B7EB003D5875 /* Icon-iPhone@2x.png in Resources */,
+				4AF856641876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */,
 				3EC04D0A1672B7EB003D5875 /* iTunesArtwork.png in Resources */,
 				3EC04D0B1672B7EB003D5875 /* Logo-iPad.png in Resources */,
 				3EC04D0C1672B7EB003D5875 /* Logo-iPad@2x.png in Resources */,
@@ -4516,6 +4553,7 @@
 				3E9E5499167129530095F4A4 /* USHReportTableViewController_iPhone.xib in Resources */,
 				3E9E549A167129530095F4A4 /* USHSettingsViewController_iPad.xib in Resources */,
 				3E9E549B167129530095F4A4 /* USHSettingsViewController_iPhone.xib in Resources */,
+				4AF856621876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */,
 				3E9E549C167129530095F4A4 /* USHCheckinTableCell_iPad.xib in Resources */,
 				3E9E549D167129530095F4A4 /* USHCheckinTableCell_iPhone.xib in Resources */,
 				3E9E549E167129530095F4A4 /* USHMapTableCell_iPad.xib in Resources */,
@@ -4541,6 +4579,7 @@
 				3E9E54B2167129530095F4A4 /* time.png in Resources */,
 				3E9E54B3167129530095F4A4 /* time@2x.png in Resources */,
 				3E9E54B4167129530095F4A4 /* title.png in Resources */,
+				4AF8565A1876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */,
 				3E9E54B5167129530095F4A4 /* title@2x.png in Resources */,
 				3E9E54B6167129530095F4A4 /* video.png in Resources */,
 				3E9E54B7167129530095F4A4 /* video@2x.png in Resources */,
@@ -4750,6 +4789,7 @@
 				3E9E57E816712E5A0095F4A4 /* USHReportTableViewController_iPhone.xib in Resources */,
 				3E9E57E916712E5A0095F4A4 /* USHSettingsViewController_iPad.xib in Resources */,
 				3E9E57EA16712E5A0095F4A4 /* USHSettingsViewController_iPhone.xib in Resources */,
+				4AF856601876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */,
 				3E9E57EB16712E5A0095F4A4 /* USHCheckinTableCell_iPad.xib in Resources */,
 				3E9E57EC16712E5A0095F4A4 /* USHCheckinTableCell_iPhone.xib in Resources */,
 				3E9E57ED16712E5A0095F4A4 /* USHMapTableCell_iPad.xib in Resources */,
@@ -4775,6 +4815,7 @@
 				3E9E580116712E5A0095F4A4 /* time.png in Resources */,
 				3E9E580216712E5A0095F4A4 /* time@2x.png in Resources */,
 				3E9E580316712E5A0095F4A4 /* title.png in Resources */,
+				4AF856581876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */,
 				3E9E580416712E5A0095F4A4 /* title@2x.png in Resources */,
 				3E9E580516712E5A0095F4A4 /* video.png in Resources */,
 				3E9E580616712E5A0095F4A4 /* video@2x.png in Resources */,
@@ -4998,6 +5039,7 @@
 				3EC1B5191757AB1000CFF726 /* USHWebTableCell.xib in Resources */,
 				3EC1B51A1757AB1000CFF726 /* USHCommentTableCell.xib in Resources */,
 				3EC1B51B1757AB1000CFF726 /* USHTextTableCell.xib in Resources */,
+				4AF8565D1876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib in Resources */,
 				3EC1B51C1757AB1000CFF726 /* USHIconTableCell.xib in Resources */,
 				3EC1B51D1757AB1000CFF726 /* categories.png in Resources */,
 				3EC1B51E1757AB1000CFF726 /* categories@2x.png in Resources */,
@@ -5035,6 +5077,7 @@
 				3EC1B53E1757AB1000CFF726 /* name@2x.png in Resources */,
 				3EC1B53F1757AB1000CFF726 /* clear.png in Resources */,
 				3EC1B5401757AB1000CFF726 /* clear@2x.png in Resources */,
+				4AF856651876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */,
 				3EC1B5411757AB1000CFF726 /* qrcode.png in Resources */,
 				3EC1B5421757AB1000CFF726 /* qrcode@2x.png in Resources */,
 				3EC1B5431757AB1000CFF726 /* zoomin.png in Resources */,
@@ -5147,6 +5190,7 @@
 				3EFF5AD61620E0F10072FAE1 /* USHIconTableCell.m in Sources */,
 				3E756F0B16224F7200C27EED /* USHLocationViewController.m in Sources */,
 				3E9257D81623643200A077A7 /* USHReportAddViewController.m in Sources */,
+				4AF856471876305100B6B357 /* USHCustomFieldsViewController.m in Sources */,
 				3ED89CFB16236F7800F46881 /* USHInputTableCell.m in Sources */,
 				3ED89D101623BB9800F46881 /* USHCheckBoxTableCell.m in Sources */,
 				3E2BFE53163DD3CC00445A29 /* USHSettings.m in Sources */,
@@ -5188,6 +5232,7 @@
 				3E9E500B167129320095F4A4 /* USHIconTableCell.m in Sources */,
 				3E9E500C167129320095F4A4 /* USHLocationViewController.m in Sources */,
 				3E9E500D167129320095F4A4 /* USHReportAddViewController.m in Sources */,
+				4AF856491876305100B6B357 /* USHCustomFieldsViewController.m in Sources */,
 				3E9E500E167129320095F4A4 /* USHInputTableCell.m in Sources */,
 				3E9E500F167129320095F4A4 /* USHCheckBoxTableCell.m in Sources */,
 				3E9E5010167129320095F4A4 /* USHSettings.m in Sources */,
@@ -5229,6 +5274,7 @@
 				3E9E515F167129350095F4A4 /* USHIconTableCell.m in Sources */,
 				3E9E5160167129350095F4A4 /* USHLocationViewController.m in Sources */,
 				3E9E5161167129350095F4A4 /* USHReportAddViewController.m in Sources */,
+				4AF8564B1876305100B6B357 /* USHCustomFieldsViewController.m in Sources */,
 				3E9E5162167129350095F4A4 /* USHInputTableCell.m in Sources */,
 				3E9E5163167129350095F4A4 /* USHCheckBoxTableCell.m in Sources */,
 				3E9E5164167129350095F4A4 /* USHSettings.m in Sources */,
@@ -5270,6 +5316,7 @@
 				3E9E52B3167129380095F4A4 /* USHIconTableCell.m in Sources */,
 				3E9E52B4167129380095F4A4 /* USHLocationViewController.m in Sources */,
 				3E9E52B5167129380095F4A4 /* USHReportAddViewController.m in Sources */,
+				4AF8564C1876305100B6B357 /* USHCustomFieldsViewController.m in Sources */,
 				3E9E52B6167129380095F4A4 /* USHInputTableCell.m in Sources */,
 				3E9E52B7167129380095F4A4 /* USHCheckBoxTableCell.m in Sources */,
 				3E9E52B8167129380095F4A4 /* USHSettings.m in Sources */,
@@ -5311,6 +5358,7 @@
 				3E9E5407167129530095F4A4 /* USHIconTableCell.m in Sources */,
 				3E9E5408167129530095F4A4 /* USHLocationViewController.m in Sources */,
 				3E9E5409167129530095F4A4 /* USHReportAddViewController.m in Sources */,
+				4AF8564A1876305100B6B357 /* USHCustomFieldsViewController.m in Sources */,
 				3E9E540A167129530095F4A4 /* USHInputTableCell.m in Sources */,
 				3E9E540B167129530095F4A4 /* USHCheckBoxTableCell.m in Sources */,
 				3E9E540C167129530095F4A4 /* USHSettings.m in Sources */,
@@ -5352,6 +5400,7 @@
 				3E9E575616712E5A0095F4A4 /* USHIconTableCell.m in Sources */,
 				3E9E575716712E5A0095F4A4 /* USHLocationViewController.m in Sources */,
 				3E9E575816712E5A0095F4A4 /* USHReportAddViewController.m in Sources */,
+				4AF856481876305100B6B357 /* USHCustomFieldsViewController.m in Sources */,
 				3E9E575916712E5A0095F4A4 /* USHInputTableCell.m in Sources */,
 				3E9E575A16712E5A0095F4A4 /* USHCheckBoxTableCell.m in Sources */,
 				3E9E575B16712E5A0095F4A4 /* USHSettings.m in Sources */,
@@ -5393,6 +5442,7 @@
 				3EC1B4891757AB1000CFF726 /* USHIconTableCell.m in Sources */,
 				3EC1B48A1757AB1000CFF726 /* USHLocationViewController.m in Sources */,
 				3EC1B48B1757AB1000CFF726 /* USHReportAddViewController.m in Sources */,
+				4AF8564D1876305100B6B357 /* USHCustomFieldsViewController.m in Sources */,
 				3EC1B48C1757AB1000CFF726 /* USHInputTableCell.m in Sources */,
 				3EC1B48D1757AB1000CFF726 /* USHCheckBoxTableCell.m in Sources */,
 				3EC1B48E1757AB1000CFF726 /* USHSettings.m in Sources */,
