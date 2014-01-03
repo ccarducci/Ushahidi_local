@@ -162,16 +162,17 @@
     NSDictionary *payload = [json objectForKey:@"payload"];
     NSDictionary *customforms = [payload objectForKey:@"customforms"];
     NSArray *fields = [customforms objectForKey:@"fields"];
-    
+    DLog(@"---------------------------------------------------------------------------------------------------------------------------");
     for (NSDictionary *item in fields) {
         if (item != nil) {
             NSDictionary *values = [item objectForKey:@"values"];
             NSDictionary *meta = [item objectForKey:@"meta"];
+            NSString *identifierField = [meta stringForKey:@"id"];;
             
-            
+            NSLog(@"IdentifierField %@",identifierField);
             self.reportCustomField = (ReportCustomField *)[[USHDatabase sharedInstance] fetchOrInsertItemForName:@"ReportCustomField"
-                                                                                                           query:@"identifier = %@"
-                                                                                                          params:self.identifier, nil];
+                                                                                                           query:@"identifier = %@ && identifierField = %@"
+                                                                                                          params:self.identifier,identifierField, nil];
             
             NSMutableString *str = [NSMutableString string];
             NSInteger itemValues = 0;
@@ -220,18 +221,11 @@
             NSNumber *ispublicsubmit =[meta numberForKey:@"ispublicsubmit"];
             self.reportCustomField.ispublicsubmit = ispublicsubmit;
             
+            [[USHDatabase sharedInstance] saveChanges];
             
             if ( itemValues > 0 )
             {
                 /*
-                DLog(@"-----------------------------------");
-                DLog(@"Custom field report_id :%@", identifier);
-                DLog(@"Custom field value :%@", str);
-                DLog(@"Custom field type:%@", type);
-                DLog(@"Custom field name :%@", name);
-                DLog(@"Custom field defaultvalue:%@", defaultvalue);
-                DLog(@"-----------------------------------");
-                */
                 DLog(@"-----------------------------------");
                 DLog(@"Custom field report_id :%@", self.reportCustomField .identifier);
                 DLog(@"Custom field value :%@", self.reportCustomField.value);
@@ -244,11 +238,12 @@
                 DLog(@"Custom field ispublicvisible:%@", [self.reportCustomField.ispublicvisible stringValue]);
                 DLog(@"Custom field ispublicsubmit:%@", [self.reportCustomField.ispublicsubmit stringValue]);
                 DLog(@"-----------------------------------");
-                
+                */
             }
-            [[USHDatabase sharedInstance] saveChanges];
+            
         }
     }
+    DLog(@"---------------------------------------------------------------------------------------------------------------------------");
 }
 
 @end

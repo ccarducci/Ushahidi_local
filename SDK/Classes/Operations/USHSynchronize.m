@@ -41,6 +41,9 @@
 
 #import "NSObject+USH.h"
 
+#import "ReportCustomField.h"
+#import "USHDatabase.h"
+
 @interface USHSynchronize ()
 
 @property (nonatomic, strong, readwrite) NSObject<USHSynchronizeDelegate> *delegate;
@@ -205,7 +208,7 @@
         [self.operations addOperation:downloadCheckin];
     }
     
-    // -------------------------------------------------------------------------------------------------------------------------------
+    
     USHDownloadCustomCategoryType *downloadCustomCategoryType= [[[USHDownloadCustomCategoryType alloc] initWithDelegate:self.delegate
                                                                                                     callback:self.callback
                                                                                                          map:self.map] autorelease];
@@ -213,6 +216,7 @@
     [self.operations addOperation:downloadCustomCategoryType];
     
     
+    // -------------------------------------------------------------------------------------------------------------------------------
     
     USHDownloadIncidentCustomFields *downloadIncidentCustomFields =[[[USHDownloadIncidentCustomFields alloc] initWithDelegate:self.delegate
                                                                                              callback:self.callback
@@ -220,6 +224,23 @@
                                                                                                   api:@"api?task=categories&resp=json"] autorelease];
     [downloadIncidentCustomFields addDependency:downloadReport];
     [self.operations addOperation:downloadIncidentCustomFields];
+    
+    /*
+    NSManagedObjectContext *context = [[USHDatabase sharedInstance] managedObjectContext];
+    NSFetchRequest *requestSaved = [[[NSFetchRequest alloc] init] autorelease];
+    [requestSaved setEntity:[NSEntityDescription entityForName:@"ReportCustomField" inManagedObjectContext:context]];
+    NSArray *CustomFields =  [context executeFetchRequest:requestSaved  error:nil];
+    for (ReportCustomField *customField in CustomFields)
+    {
+        NSLog(@"----------------------------------------------");
+        NSLog(@"Add custom field %@", customField.identifier);
+        NSLog(@"                 %@", customField.name);
+        NSLog(@"                 %@", customField.value);
+        NSLog(@"                 %@", customField.type);
+        NSLog(@"                 %@", customField.defaultvalue);
+        NSLog(@"----------------------------------------------");
+    }
+    */
     // -------------------------------------------------------------------------------------------------------------------------------
 }
 
