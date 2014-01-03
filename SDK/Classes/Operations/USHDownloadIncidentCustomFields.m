@@ -123,25 +123,27 @@
     [request setEntity:[NSEntityDescription entityForName:@"Report" inManagedObjectContext:context]];
     NSArray *result =  [context executeFetchRequest:request  error:nil];
     for (USHReport *item in result) {
-
-        NSString *query =[@"api?task=customforms&resp=json&by=fields&id="  stringByAppendingString:item.identifier];
-        
-        DLog(@"query %@",query);
-        
-        USHDowloadCustomField *downCustomField = [[USHDowloadCustomField alloc]initWithDelegate:self.map
+        DLog(@"item.pending %@",[item.pending stringValue]);
+        if ( [[item.pending stringValue] isEqualToString:@"0"]){
+            
+            DLog(@"not get customfields for this incident pending: %@", item.title);
+        }else{
+            DLog(@"get customfields for this incident: %@", item.title);
+            NSString *query =[@"api?task=customforms&resp=json&by=fields&id="  stringByAppendingString:item.identifier];
+            
+            DLog(@"query %@",query);
+            
+            USHDowloadCustomField *downCustomField = [[USHDowloadCustomField alloc]initWithDelegate:self.map
                                                                                   api:query
                                                                              username:self.username
                                                                              password:self.password
                                                                            identifier:item.identifier];
-        [downCustomField download];
-        [downCustomField release];
+            [downCustomField download];
+            [downCustomField release];
+        }
     }
     DLog(@"get customfields executeFetchRequest count %i",result.count);
-    
-    
-    
     DLog(@"get customfields for incident end");
-    
     [self finish];
 }
 
