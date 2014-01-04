@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface USHCustomFieldsViewController : UIViewController
+@interface USHCustomFieldsViewController : UITableViewController
 
 @property (strong, nonatomic) NSString *report_id;
+@property (nonatomic, retain) NSArray *booksArray;
 
 @end

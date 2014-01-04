@@ -32,7 +32,7 @@
             <navigationItem key="navigationItem" title="Categories" id="212">
                 <barButtonItem key="leftBarButtonItem" id="213">
                     <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="214">
-                        <rect key="frame" x="5" y="12" width="22" height="22"/>
+                        <rect key="frame" x="16" y="11" width="22" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <state key="normal">
@@ -75,7 +75,7 @@
             <navigationItem key="navigationItem" title="Maps" id="42">
                 <barButtonItem key="leftBarButtonItem" id="155">
                     <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="154">
-                        <rect key="frame" x="5" y="12" width="22" height="22"/>
+                        <rect key="frame" x="16" y="11" width="22" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <state key="normal">
@@ -92,7 +92,7 @@
                 </barButtonItem>
                 <barButtonItem key="rightBarButtonItem" id="165">
                     <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="164" customClass="USHRefreshButton">
-                        <rect key="frame" x="291" y="10" width="24" height="24"/>
+                        <rect key="frame" x="280" y="10" width="24" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <state key="normal" image="refresh.png">
@@ -331,7 +331,7 @@
             <extendedEdge key="edgesForExtendedLayout"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <nil key="simulatedDestinationMetrics"/>
             <tabBar key="tabBar" contentMode="scaleToFill" id="54">
@@ -408,11 +408,6 @@
             </connections>
         </viewController>
         <viewController id="pv4-AF-Ika" userLabel="Custom Fields View Controller" customClass="USHCustomFieldsViewController">
-            <view key="view" contentMode="scaleToFill" id="eDU-sA-EO0">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            </view>
             <navigationItem key="navigationItem" title="Title" id="KBE-yl-A2y"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

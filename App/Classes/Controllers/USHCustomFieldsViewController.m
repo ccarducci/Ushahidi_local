@@ -16,6 +16,8 @@
 
 @implementation USHCustomFieldsViewController
 
+@synthesize booksArray;
+
 @synthesize report_id = _report_id;
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -47,6 +49,7 @@
  
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+self.booksArray = [NSArray arrayWithObjects:@"Brave new world",@"Call of the Wild",@"Catch-22",@"Atlas Shrugged",@"The Great Gatsby",@"The Art of War",@"The Catcher in the Rye",@"The Picture of Dorian Gray",@"The Grapes of Wrath", @"The Metamorphosis",nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,4 +58,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [super dealloc];
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.booksArray.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    }
+    
+    // Configure the cell.
+    cell.textLabel.text = [self.booksArray objectAtIndex:indexPath.row];
+    return cell;
+}
 @end
