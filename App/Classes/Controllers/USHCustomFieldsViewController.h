@@ -12,5 +12,5 @@
 
 @property (strong, nonatomic) NSString *report_id;
 @property (nonatomic, retain) NSArray *booksArray;
-
+@property (nonatomic, retain) NSArray *CustomFields;
 @end
