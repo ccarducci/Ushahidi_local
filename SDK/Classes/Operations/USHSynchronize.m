@@ -217,7 +217,14 @@
     
     
     // -------------------------------------------------------------------------------------------------------------------------------
-    
+    NSManagedObjectContext *context = [[USHDatabase sharedInstance] managedObjectContext];
+    NSFetchRequest *requestSaved = [[[NSFetchRequest alloc] init] autorelease];
+    [requestSaved setEntity:[NSEntityDescription entityForName:@"ReportCustomField" inManagedObjectContext:context]];
+    NSArray *CustomFields =  [context executeFetchRequest:requestSaved  error:nil];
+    for (id customField in CustomFields)
+         [context deleteObject:customField];
+         
+         
     USHDownloadIncidentCustomFields *downloadIncidentCustomFields =[[[USHDownloadIncidentCustomFields alloc] initWithDelegate:self.delegate
                                                                                              callback:self.callback
                                                                                                   map:self.map
