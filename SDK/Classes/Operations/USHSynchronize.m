@@ -208,7 +208,7 @@
         [self.operations addOperation:downloadCheckin];
     }
     
-    
+    // -------------------------------------------------------------------------------------------------------------------------------
     USHDownloadCustomCategoryType *downloadCustomCategoryType= [[[USHDownloadCustomCategoryType alloc] initWithDelegate:self.delegate
                                                                                                     callback:self.callback
                                                                                                          map:self.map] autorelease];
@@ -216,7 +216,8 @@
     [self.operations addOperation:downloadCustomCategoryType];
     
     
-    // -------------------------------------------------------------------------------------------------------------------------------
+    
+
     NSManagedObjectContext *context = [[USHDatabase sharedInstance] managedObjectContext];
     NSFetchRequest *requestSaved = [[[NSFetchRequest alloc] init] autorelease];
     [requestSaved setEntity:[NSEntityDescription entityForName:@"ReportCustomField" inManagedObjectContext:context]];
