@@ -12,6 +12,7 @@
 #import "Ushahidi.h"
 #import "USHDatabase.h"
 #import "CustomFieldType.h"
+#import "USHDownloadCustomCategoryTypeDetail.h"
 
 @interface USHDownloadCustomCategoryType ()
 
@@ -55,8 +56,20 @@
         self.customFieldType.descr =description;
 
         [[USHDatabase sharedInstance] saveChanges];
-        
 
+        
+        NSMutableString *downCustomFieldDetailUrl = [[NSMutableString alloc]init];
+        
+        [downCustomFieldDetailUrl appendString:@"api?task=customforms&resp=json&&by=meta&formid="];
+        [downCustomFieldDetailUrl appendString:identifier];
+        USHDownloadCustomCategoryTypeDetail *downCustomFieldDetail = [[USHDownloadCustomCategoryTypeDetail alloc]
+                                                                               initWithDelegate:self.map
+                                                                                            api:downCustomFieldDetailUrl
+                                                                                       username:self.map.username
+                                                                                       password:self.map.password
+                                                                                     identifier:identifier];
+        [downCustomFieldDetail download];
+        [downCustomFieldDetail release];
         
     }
     DLog(@"----------------------------------------------------------------------------------------");
