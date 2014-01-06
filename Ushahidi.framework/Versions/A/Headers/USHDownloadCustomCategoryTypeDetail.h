@@ -10,15 +10,29 @@
 #import "USHDownloadJSON.h"
 #import "CustomFieldTypeDetail.h"
 
+@class USHMap;
 
-
-@interface USHDownloadCustomCategoryTypeDetail : USHDownloadJSON
+@interface USHDownloadCustomCategoryTypeDetail : NSObject<NSURLConnectionDelegate>
 
 
 @property (nonatomic, strong, readonly) CustomFieldTypeDetail *CustomFieldTypeDetail;
+@property (nonatomic, strong, readonly) NSURL *url;
+@property (nonatomic, strong, readonly) NSString *api;
+@property (nonatomic, strong, readonly) NSString *username;
+@property (nonatomic, strong, readonly) NSString *password;
+@property (nonatomic, strong, readonly) NSString *identifier;
+@property (nonatomic, strong, readonly) USHMap *map;
+@property (nonatomic, strong, readonly) NSURL *domain;
 
-- (id) initWithDelegate:(NSObject<USHDownloadDelegate>*)delegate
-               callback:(NSObject<UshahidiDelegate>*)callback
-                    map:(USHMap *)map;
+- (void) download;
+
+
+- (id) initWithDelegate:(USHMap*)map
+                    api:(NSString*)api
+               username:(NSString*)username
+               password:(NSString*)password
+             identifier:(NSString*)identifier;
+
+- (void) downloadedJSON:(NSDictionary*)json;
 
 @end
