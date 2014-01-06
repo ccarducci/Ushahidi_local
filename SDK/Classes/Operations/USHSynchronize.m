@@ -209,21 +209,46 @@
     }
     
     // -------------------------------------------------------------------------------------------------------------------------------
+    NSManagedObjectContext *context = [[USHDatabase sharedInstance] managedObjectContext];
+    int itemDeleted = 0;
+    
+    // CANCELLO TUTTI I CUSTOM REPORT
+    NSFetchRequest *requestSaved = [[[NSFetchRequest alloc] init] autorelease];
+    [requestSaved setEntity:[NSEntityDescription entityForName:@"ReportCustomField" inManagedObjectContext:context]];
+    NSArray *CustomFields =  [context executeFetchRequest:requestSaved  error:nil];
+    for (id customField in CustomFields){
+        [context deleteObject:customField];
+        itemDeleted++;
+    }
+    NSLog(@"ReportCustomField deleted item: %i" , itemDeleted);
+    
+    itemDeleted = 0;
+    NSFetchRequest *requestCategorySaved = [[[NSFetchRequest alloc] init] autorelease];
+    [requestCategorySaved setEntity:[NSEntityDescription entityForName:@"CustomFieldType" inManagedObjectContext:context]];
+    NSArray *CategoryCustomFields =  [context executeFetchRequest:requestCategorySaved  error:nil];
+    for (id categoryCustomField in CategoryCustomFields){
+        [context deleteObject:categoryCustomField];
+        itemDeleted++;
+    }
+    NSLog(@"CustomFieldType deleted item: %i" , itemDeleted);
+    
+    itemDeleted = 0;
+    NSFetchRequest *requestCategoryDetailSaved = [[[NSFetchRequest alloc] init] autorelease];
+    [requestCategoryDetailSaved setEntity:[NSEntityDescription entityForName:@"CustomFieldTypeDetail" inManagedObjectContext:context]];
+    NSArray *CategoryDettailCustomFields =  [context executeFetchRequest:requestCategoryDetailSaved  error:nil];
+    for (id categoryDettailCustomField in CategoryDettailCustomFields)
+    {
+        [context deleteObject:categoryDettailCustomField];
+         itemDeleted++;
+    }
+    NSLog(@"CustomFieldTypeDetail deleted item: %i" , itemDeleted);
+    
     USHDownloadCustomCategoryType *downloadCustomCategoryType= [[[USHDownloadCustomCategoryType alloc] initWithDelegate:self.delegate
                                                                                                     callback:self.callback
                                                                                                          map:self.map] autorelease];
     [downloadCustomCategoryType addDependency:downloadCategory];
     [self.operations addOperation:downloadCustomCategoryType];
     
-    
-    
-
-    NSManagedObjectContext *context = [[USHDatabase sharedInstance] managedObjectContext];
-    NSFetchRequest *requestSaved = [[[NSFetchRequest alloc] init] autorelease];
-    [requestSaved setEntity:[NSEntityDescription entityForName:@"ReportCustomField" inManagedObjectContext:context]];
-    NSArray *CustomFields =  [context executeFetchRequest:requestSaved  error:nil];
-    for (id customField in CustomFields)
-         [context deleteObject:customField];
          
          
     USHDownloadIncidentCustomFields *downloadIncidentCustomFields =[[[USHDownloadIncidentCustomFields alloc] initWithDelegate:self.delegate
