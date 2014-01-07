@@ -168,12 +168,26 @@
     for (NSDictionary *item in fields) {
         if (item != nil) {
             
-            NSDictionary *meta = [item objectForKey:@"meta"];
-            NSString *identifierField = [meta stringForKey:@"id"];;
+            NSString *identifierField = [item stringForKey:@"id"];
+            self.customFieldTypeDetail = (CustomFieldTypeDetail *)[[USHDatabase sharedInstance] fetchOrInsertItemForName:@"CustomFieldTypeDetail"
+                                                                                                           query:@"identifier = %@ && identifierField = %@"
+                                                                                                          params:self.identifier,identifierField, nil];
+            NSNumber *type =[item numberForKey:@"type"];
+            self.CustomFieldTypeDetail.type = type;
+            NSString *defaultvalue =[item stringForKey:@"default"];
+            self.CustomFieldTypeDetail.defaultvalue = defaultvalue;
+            NSString *name =[item stringForKey:@"name"];
+            self.CustomFieldTypeDetail.name = name;
             
+            [[USHDatabase sharedInstance] saveChanges];
             
-            
-
+            DLog(@"-----------------------------------");
+            DLog(@"Custom detail identifier: %@", self.identifier);
+            DLog(@"Custom detail identifierField: %@", identifierField);
+            DLog(@"Custom detail name: %@", name);
+            DLog(@"Custom detail field type: %@", [type stringValue]);
+            DLog(@"Custom detail field defaultvalue: %@", defaultvalue);
+            DLog(@"-----------------------------------");
         }
     }
     DLog(@"---------------------------------------------------------------------------------------------------------------------------");
