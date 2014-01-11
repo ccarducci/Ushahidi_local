@@ -278,6 +278,7 @@
             <connections>
                 <outlet property="cancelButton" destination="185" id="189"/>
                 <outlet property="categoryTableController" destination="111" id="112"/>
+                <outlet property="customFiedlsAddViewController" destination="g0v-Ul-aEK" id="nT3-hk-Xuj"/>
                 <outlet property="doneButton" destination="184" id="188"/>
                 <outlet property="locationAddViewController" destination="152" id="153"/>
                 <outlet property="settingsViewController" destination="85" id="222"/>
@@ -414,6 +415,31 @@
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </viewController>
+        <viewController title="Add Report" nibName="USHReportAddViewController_iPhone" id="g0v-Ul-aEK" userLabel="Custom Fields Add View Controller - Add Report" customClass="USHCustomFieldsAddViewController">
+            <extendedEdge key="edgesForExtendedLayout"/>
+            <navigationItem key="navigationItem" title="Extended Info" id="Uhp-iM-CWO">
+                <barButtonItem key="leftBarButtonItem" title="Cancel" id="OAR-iK-7ut">
+                    <connections>
+                        <action selector="CancelEv:" destination="g0v-Ul-aEK" id="fGQ-03-o0u"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="dWn-9m-OtH">
+                    <connections>
+                        <action selector="DoneEv:" destination="g0v-Ul-aEK" id="PEi-Un-DGL"/>
+                    </connections>
+                </barButtonItem>
+            </navigationItem>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <nil key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancel" destination="OAR-iK-7ut" id="y1D-MB-Zml"/>
+                <outlet property="done" destination="dWn-9m-OtH" id="J2l-6y-5jy"/>
+                <outlet property="reportAdd" destination="109" id="0mZ-xx-AdT"/>
+            </connections>
         </viewController>
     </objects>
     <resources>

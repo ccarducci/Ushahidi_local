@@ -34,26 +34,16 @@
 @class USHSettingsViewController;
 @class USHMap;
 @class USHReport;
+@class USHReportAddViewController;
 
-@interface USHReportAddViewController : USHAddViewController<UshahidiDelegate,
-                                                             USHDatePickerDelegate,
-                                                             UIAlertViewDelegate,
-                                                             USHLocatorDelegate,
-                                                             USHImagePickerDelegate,
-                                                             USHVideoPickerDelegate,
-                                                             USHInputTableCellDelegate,
-                                                             USHLoginDialogDelegate,
-                                                             USHShareControllerDelegate>
+@interface USHCustomFieldsAddViewController : USHTableViewController
 
 
-@property (strong, nonatomic) IBOutlet USHCategoryTableViewController *categoryTableController;
-@property (strong, nonatomic) IBOutlet USHLocationAddViewController *locationAddViewController;
-@property (strong, nonatomic) IBOutlet USHSettingsViewController *settingsViewController;
+@property (retain, nonatomic) IBOutlet USHReportAddViewController *reportAdd;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *cancel;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *done;
 
-@property (strong, nonatomic) USHMap *map;
-@property (strong, nonatomic) USHReport *report;
-@property (assign, nonatomic) BOOL openGeoSMS;
-
-- (IBAction)info:(id)sender event:(UIEvent*)event;
+- (IBAction)CancelEv:(id)sender;
+- (IBAction)DoneEv:(id)sender;
 
 @end

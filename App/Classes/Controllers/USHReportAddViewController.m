@@ -227,6 +227,7 @@ typedef enum {
     [_settingsViewController release];
     [_locateError release];
     [_lookupError release];
+    [_customFiedlsAddViewController release];
     [super dealloc];
 }
 
@@ -499,11 +500,7 @@ typedef enum {
         [self.videoPicker showVideoPickerForCell:cell];
     }
     else if (indexPath.section == TableSectionCustomFields) {
-        self.locationAddViewController.map = self.map;
-        self.locationAddViewController.report = self.report;
-        self.locationAddViewController.modalPresentationStyle = UIModalPresentationFormSheet;
-        self.locationAddViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-        [self presentModalViewController:self.locationAddViewController animated:YES];
+        [self presentModalViewController:self.customFiedlsAddViewController animated:YES];
     }
 }
 
