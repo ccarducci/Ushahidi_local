@@ -1972,6 +1972,18 @@
 		3EFF5B021620E64B0072FAE1 /* verified@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF5AFE1620E64B0072FAE1 /* verified@2x.png */; };
 		3EFF5B051620E9740072FAE1 /* locate.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF5B031620E9740072FAE1 /* locate.png */; };
 		3EFF5B061620E9740072FAE1 /* locate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF5B041620E9740072FAE1 /* locate@2x.png */; };
+		4A2FCDC01896EA490093F592 /* libG3MiOSSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2FCDBE1896E9540093F592 /* libG3MiOSSDK.a */; };
+		4A2FCDC21896EA510093F592 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2FCDC11896EA510093F592 /* libicucore.dylib */; };
+		4A2FCDC41896EA5A0093F592 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2FCDC31896EA5A0093F592 /* libstdc++.6.0.9.dylib */; };
+		4A2FCDC61896EA610093F592 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2FCDC51896EA610093F592 /* OpenGLES.framework */; };
+		4A2FCDC81896EA6D0093F592 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2FCDC71896EA6D0093F592 /* CFNetwork.framework */; };
+		4A2FCDCD1896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */; };
+		4A2FCDCE1896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */; };
+		4A2FCDCF1896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */; };
+		4A2FCDD01896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */; };
+		4A2FCDD11896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */; };
+		4A2FCDD21896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */; };
+		4A2FCDD31896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */; };
 		4AB5E3901881EEF40037BD56 /* USHCustomFieldsAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */; };
 		4AB5E3911881EEF40037BD56 /* USHCustomFieldsAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */; };
 		4AB5E3921881EEF40037BD56 /* USHCustomFieldsAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */; };
@@ -2001,6 +2013,23 @@
 		4AF856641876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */; };
 		4AF856651876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A2FCDBD1896E9540093F592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A2FCDB91896E9540093F592 /* G3MiOSSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8EEF3B51577924D003FEB5E;
+			remoteInfo = G3MiOSSDK;
+		};
+		4A2FCDC91896EB4F0093F592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A2FCDB91896E9540093F592 /* G3MiOSSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D8EEF3B41577924D003FEB5E;
+			remoteInfo = G3MiOSSDK;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3E01345C16723DB000C40CB4 /* USHImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHImageViewController.h; sourceTree = "<group>"; };
@@ -2420,6 +2449,12 @@
 		3EFF5AFE1620E64B0072FAE1 /* verified@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "verified@2x.png"; sourceTree = "<group>"; };
 		3EFF5B031620E9740072FAE1 /* locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locate.png; sourceTree = "<group>"; };
 		3EFF5B041620E9740072FAE1 /* locate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locate@2x.png"; sourceTree = "<group>"; };
+		4A2FCDB91896E9540093F592 /* G3MiOSSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = G3MiOSSDK.xcodeproj; path = ../G3MiOSSDK/G3MiOSSDK.xcodeproj; sourceTree = "<group>"; };
+		4A2FCDC11896EA510093F592 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4A2FCDC31896EA5A0093F592 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		4A2FCDC51896EA610093F592 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4A2FCDC71896EA6D0093F592 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USHG3MViewController_iPhone.xib; sourceTree = "<group>"; };
 		4AB5E38E1881EEF40037BD56 /* USHCustomFieldsAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHCustomFieldsAddViewController.h; sourceTree = "<group>"; };
 		4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHCustomFieldsAddViewController.m; sourceTree = "<group>"; };
 		4AF856451876305100B6B357 /* USHCustomFieldsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHCustomFieldsViewController.h; sourceTree = "<group>"; };
@@ -2433,6 +2468,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A2FCDC81896EA6D0093F592 /* CFNetwork.framework in Frameworks */,
+				4A2FCDC61896EA610093F592 /* OpenGLES.framework in Frameworks */,
+				4A2FCDC41896EA5A0093F592 /* libstdc++.6.0.9.dylib in Frameworks */,
+				4A2FCDC21896EA510093F592 /* libicucore.dylib in Frameworks */,
+				4A2FCDC01896EA490093F592 /* libG3MiOSSDK.a in Frameworks */,
 				3E5CA9F7164710430065AF67 /* libsqlite3.0.dylib in Frameworks */,
 				3E9E4DA4167005DC0095F4A4 /* FacebookSDK.framework in Frameworks */,
 				3E46F624163DC48200C24119 /* Twitter.framework in Frameworks */,
@@ -2682,6 +2722,7 @@
 		3E6D0317159B54CF00CDB5B7 = {
 			isa = PBXGroup;
 			children = (
+				4A2FCDB91896E9540093F592 /* G3MiOSSDK.xcodeproj */,
 				3E6D0350159B561900CDB5B7 /* Themes */,
 				3E6D033D159B54EF00CDB5B7 /* Resources */,
 				3E6D0343159B558400CDB5B7 /* Classes */,
@@ -2709,6 +2750,10 @@
 		3E6D0325159B54CF00CDB5B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A2FCDC71896EA6D0093F592 /* CFNetwork.framework */,
+				4A2FCDC51896EA610093F592 /* OpenGLES.framework */,
+				4A2FCDC31896EA5A0093F592 /* libstdc++.6.0.9.dylib */,
+				4A2FCDC11896EA510093F592 /* libicucore.dylib */,
 				3E5CA9F6164710430065AF67 /* libsqlite3.0.dylib */,
 				3EA29937159CF51B00AC6AF2 /* Ushahidi.framework */,
 				3E9E4DA3167005DC0095F4A4 /* FacebookSDK.framework */,
@@ -3161,6 +3206,7 @@
 				3E01347016723DC000C40CB4 /* USHWebViewController_iPhone.xib */,
 				4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */,
 				4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */,
+				4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3340,6 +3386,14 @@
 			path = "zh-Hant-TW.lproj";
 			sourceTree = "<group>";
 		};
+		4A2FCDBA1896E9540093F592 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A2FCDBE1896E9540093F592 /* libG3MiOSSDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3354,6 +3408,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4A2FCDCA1896EB4F0093F592 /* PBXTargetDependency */,
 			);
 			name = Ushahidi;
 			productName = App;
@@ -3503,6 +3558,12 @@
 			mainGroup = 3E6D0317159B54CF00CDB5B7;
 			productRefGroup = 3E6D0323159B54CF00CDB5B7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4A2FCDBA1896E9540093F592 /* Products */;
+					ProjectRef = 4A2FCDB91896E9540093F592 /* G3MiOSSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3E6D0321159B54CF00CDB5B7 /* Ushahidi */,
@@ -3515,6 +3576,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4A2FCDBE1896E9540093F592 /* libG3MiOSSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libG3MiOSSDK.a;
+			remoteRef = 4A2FCDBD1896E9540093F592 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3E6D0320159B54CF00CDB5B7 /* Resources */ = {
@@ -3703,6 +3774,7 @@
 				3EE57FB0164D155E002677E6 /* download@2x.png in Resources */,
 				3EE57FB4164D1694002677E6 /* width.png in Resources */,
 				3EE57FB5164D1694002677E6 /* width@2x.png in Resources */,
+				4A2FCDCD1896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */,
 				3E9869F01651A9C000486ACB /* upload.png in Resources */,
 				3E9869F11651A9C000486ACB /* upload@2x.png in Resources */,
 				3ECD8FC2165AD85A00709ACA /* statusbar.png in Resources */,
@@ -3822,6 +3894,7 @@
 				3E9E507B167129320095F4A4 /* photo.png in Resources */,
 				3E9E507C167129320095F4A4 /* photo@2x.png in Resources */,
 				3E9E507D167129320095F4A4 /* back.png in Resources */,
+				4A2FCDCF1896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */,
 				3E9E507E167129320095F4A4 /* back@2x.png in Resources */,
 				3E9E507F167129320095F4A4 /* checked.png in Resources */,
 				3E9E5080167129320095F4A4 /* checked@2x.png in Resources */,
@@ -4016,6 +4089,7 @@
 				3E9E5194167129350095F4A4 /* map@2x.png in Resources */,
 				3E9E5195167129350095F4A4 /* pattern.png in Resources */,
 				3E9E5196167129350095F4A4 /* radar.png in Resources */,
+				4A2FCDD11896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */,
 				3E9E5197167129350095F4A4 /* radar@2x.png in Resources */,
 				3E9E5198167129350095F4A4 /* refresh.png in Resources */,
 				3E9E5199167129350095F4A4 /* refresh@2x.png in Resources */,
@@ -4303,6 +4377,7 @@
 				3E9E532C167129380095F4A4 /* forward@2x.png in Resources */,
 				3E9E532E167129380095F4A4 /* gps.png in Resources */,
 				3E9E532F167129380095F4A4 /* gps@2x.png in Resources */,
+				4A2FCDD21896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */,
 				3E9E5330167129380095F4A4 /* info.png in Resources */,
 				3E9E5331167129380095F4A4 /* info@2x.png in Resources */,
 				3E9E5332167129380095F4A4 /* layers.png in Resources */,
@@ -4531,6 +4606,7 @@
 				3E9E5477167129530095F4A4 /* photo.png in Resources */,
 				3E9E5478167129530095F4A4 /* photo@2x.png in Resources */,
 				3E9E5479167129530095F4A4 /* back.png in Resources */,
+				4A2FCDD01896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */,
 				3E9E547A167129530095F4A4 /* back@2x.png in Resources */,
 				3E9E547B167129530095F4A4 /* checked.png in Resources */,
 				3E9E547C167129530095F4A4 /* checked@2x.png in Resources */,
@@ -4767,6 +4843,7 @@
 				3E9E57C616712E5A0095F4A4 /* photo.png in Resources */,
 				3E9E57C716712E5A0095F4A4 /* photo@2x.png in Resources */,
 				3E9E57C816712E5A0095F4A4 /* back.png in Resources */,
+				4A2FCDCE1896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */,
 				3E9E57C916712E5A0095F4A4 /* back@2x.png in Resources */,
 				3E9E57CA16712E5A0095F4A4 /* checked.png in Resources */,
 				3E9E57CB16712E5A0095F4A4 /* checked@2x.png in Resources */,
@@ -4992,6 +5069,7 @@
 				3EC1B4DF1757AB1000CFF726 /* dislike.png in Resources */,
 				3EC1B4E01757AB1000CFF726 /* dislike@2x.png in Resources */,
 				3EC1B4E11757AB1000CFF726 /* like.png in Resources */,
+				4A2FCDD31896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */,
 				3EC1B4E21757AB1000CFF726 /* share.png in Resources */,
 				3EC1B4E31757AB1000CFF726 /* share@2x.png in Resources */,
 				3EC1B4E41757AB1000CFF726 /* starred.png in Resources */,
@@ -5480,6 +5558,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4A2FCDCA1896EB4F0093F592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = G3MiOSSDK;
+			targetProxy = 4A2FCDC91896EB4F0093F592 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		3E2DB866167CD80B00890D39 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -5616,11 +5702,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(BUILT_PRODUCTS_DIR)",
+					/Users/ccarducci/Desktop/Ushahidi/G3MiOSSDK,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lsqlite3.0",
+					"-lstdc++",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -5649,11 +5742,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(BUILT_PRODUCTS_DIR)",
+					/Users/ccarducci/Desktop/Ushahidi/G3MiOSSDK,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lsqlite3.0",
+					"-lstdc++",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
