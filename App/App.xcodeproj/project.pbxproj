@@ -2771,26 +2771,7 @@
 		3E6D0317159B54CF00CDB5B7 = {
 			isa = PBXGroup;
 			children = (
-				4A7079B21896F5EC004A0D4B /* Billboard.fsh */,
-				4A7079B31896F5EC004A0D4B /* Billboard.vsh */,
-				4A7079B41896F5EC004A0D4B /* ColorMesh.fsh */,
-				4A7079B51896F5EC004A0D4B /* ColorMesh.vsh */,
-				4A7079B61896F5EC004A0D4B /* Default.fsh */,
-				4A7079B71896F5EC004A0D4B /* Default.vsh */,
-				4A7079B81896F5EC004A0D4B /* FlatColorMesh.fsh */,
-				4A7079B91896F5EC004A0D4B /* FlatColorMesh.vsh */,
-				4A7079BA1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.fsh */,
-				4A7079BB1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.vsh */,
-				4A7079BC1896F5EC004A0D4B /* NoColorMesh.fsh */,
-				4A7079BD1896F5EC004A0D4B /* NoColorMesh.vsh */,
-				4A7079BE1896F5EC004A0D4B /* Shader.fsh */,
-				4A7079BF1896F5EC004A0D4B /* Shader.vsh */,
-				4A7079C01896F5EC004A0D4B /* TexturedMesh.fsh */,
-				4A7079C11896F5EC004A0D4B /* TexturedMesh.vsh */,
-				4A7079C21896F5EC004A0D4B /* TexturedMesh+DirectionLight.fsh */,
-				4A7079C31896F5EC004A0D4B /* TexturedMesh+DirectionLight.vsh */,
-				4A7079C41896F5EC004A0D4B /* TransformedTexCoorTexturedMesh.fsh */,
-				4A7079C51896F5EC004A0D4B /* TransformedTexCoorTexturedMesh.vsh */,
+				4A707A041896F8F1004A0D4B /* G3M Resources */,
 				4A2FCDB91896E9540093F592 /* G3MiOSSDK.xcodeproj */,
 				3E6D0350159B561900CDB5B7 /* Themes */,
 				3E6D033D159B54EF00CDB5B7 /* Resources */,
@@ -3463,6 +3444,33 @@
 				4A2FCDBE1896E9540093F592 /* libG3MiOSSDK.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4A707A041896F8F1004A0D4B /* G3M Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4A7079B21896F5EC004A0D4B /* Billboard.fsh */,
+				4A7079B31896F5EC004A0D4B /* Billboard.vsh */,
+				4A7079B41896F5EC004A0D4B /* ColorMesh.fsh */,
+				4A7079B51896F5EC004A0D4B /* ColorMesh.vsh */,
+				4A7079B61896F5EC004A0D4B /* Default.fsh */,
+				4A7079B71896F5EC004A0D4B /* Default.vsh */,
+				4A7079B81896F5EC004A0D4B /* FlatColorMesh.fsh */,
+				4A7079B91896F5EC004A0D4B /* FlatColorMesh.vsh */,
+				4A7079BA1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.fsh */,
+				4A7079BB1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.vsh */,
+				4A7079BC1896F5EC004A0D4B /* NoColorMesh.fsh */,
+				4A7079BD1896F5EC004A0D4B /* NoColorMesh.vsh */,
+				4A7079BE1896F5EC004A0D4B /* Shader.fsh */,
+				4A7079BF1896F5EC004A0D4B /* Shader.vsh */,
+				4A7079C01896F5EC004A0D4B /* TexturedMesh.fsh */,
+				4A7079C11896F5EC004A0D4B /* TexturedMesh.vsh */,
+				4A7079C21896F5EC004A0D4B /* TexturedMesh+DirectionLight.fsh */,
+				4A7079C31896F5EC004A0D4B /* TexturedMesh+DirectionLight.vsh */,
+				4A7079C41896F5EC004A0D4B /* TransformedTexCoorTexturedMesh.fsh */,
+				4A7079C51896F5EC004A0D4B /* TransformedTexCoorTexturedMesh.vsh */,
+			);
+			name = "G3M Resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
