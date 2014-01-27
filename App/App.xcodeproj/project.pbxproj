@@ -1984,6 +1984,33 @@
 		4A2FCDD11896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */; };
 		4A2FCDD21896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */; };
 		4A2FCDD31896EC2A0093F592 /* USHG3MViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */; };
+		4A2FCDD61896EC560093F592 /* USHG3MViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FCDD51896EC560093F592 /* USHG3MViewController.mm */; };
+		4A2FCDD71896EC560093F592 /* USHG3MViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FCDD51896EC560093F592 /* USHG3MViewController.mm */; };
+		4A2FCDD81896EC560093F592 /* USHG3MViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FCDD51896EC560093F592 /* USHG3MViewController.mm */; };
+		4A2FCDD91896EC560093F592 /* USHG3MViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FCDD51896EC560093F592 /* USHG3MViewController.mm */; };
+		4A2FCDDA1896EC560093F592 /* USHG3MViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FCDD51896EC560093F592 /* USHG3MViewController.mm */; };
+		4A2FCDDB1896EC560093F592 /* USHG3MViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FCDD51896EC560093F592 /* USHG3MViewController.mm */; };
+		4A2FCDDC1896EC560093F592 /* USHG3MViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FCDD51896EC560093F592 /* USHG3MViewController.mm */; };
+		4A7079C61896F5EC004A0D4B /* Billboard.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079B21896F5EC004A0D4B /* Billboard.fsh */; };
+		4A7079C71896F5EC004A0D4B /* Billboard.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079B31896F5EC004A0D4B /* Billboard.vsh */; };
+		4A7079C81896F5EC004A0D4B /* ColorMesh.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079B41896F5EC004A0D4B /* ColorMesh.fsh */; };
+		4A7079C91896F5EC004A0D4B /* ColorMesh.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079B51896F5EC004A0D4B /* ColorMesh.vsh */; };
+		4A7079CA1896F5EC004A0D4B /* Default.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079B61896F5EC004A0D4B /* Default.fsh */; };
+		4A7079CB1896F5EC004A0D4B /* Default.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079B71896F5EC004A0D4B /* Default.vsh */; };
+		4A7079CC1896F5EC004A0D4B /* FlatColorMesh.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079B81896F5EC004A0D4B /* FlatColorMesh.fsh */; };
+		4A7079CD1896F5EC004A0D4B /* FlatColorMesh.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079B91896F5EC004A0D4B /* FlatColorMesh.vsh */; };
+		4A7079CE1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079BA1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.fsh */; };
+		4A7079CF1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079BB1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.vsh */; };
+		4A7079D01896F5ED004A0D4B /* NoColorMesh.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079BC1896F5EC004A0D4B /* NoColorMesh.fsh */; };
+		4A7079D11896F5ED004A0D4B /* NoColorMesh.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079BD1896F5EC004A0D4B /* NoColorMesh.vsh */; };
+		4A7079D21896F5ED004A0D4B /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079BE1896F5EC004A0D4B /* Shader.fsh */; };
+		4A7079D31896F5ED004A0D4B /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079BF1896F5EC004A0D4B /* Shader.vsh */; };
+		4A7079D41896F5ED004A0D4B /* TexturedMesh.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079C01896F5EC004A0D4B /* TexturedMesh.fsh */; };
+		4A7079D51896F5ED004A0D4B /* TexturedMesh.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079C11896F5EC004A0D4B /* TexturedMesh.vsh */; };
+		4A7079D61896F5ED004A0D4B /* TexturedMesh+DirectionLight.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079C21896F5EC004A0D4B /* TexturedMesh+DirectionLight.fsh */; };
+		4A7079D71896F5ED004A0D4B /* TexturedMesh+DirectionLight.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079C31896F5EC004A0D4B /* TexturedMesh+DirectionLight.vsh */; };
+		4A7079D81896F5ED004A0D4B /* TransformedTexCoorTexturedMesh.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079C41896F5EC004A0D4B /* TransformedTexCoorTexturedMesh.fsh */; };
+		4A7079D91896F5ED004A0D4B /* TransformedTexCoorTexturedMesh.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4A7079C51896F5EC004A0D4B /* TransformedTexCoorTexturedMesh.vsh */; };
 		4AB5E3901881EEF40037BD56 /* USHCustomFieldsAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */; };
 		4AB5E3911881EEF40037BD56 /* USHCustomFieldsAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */; };
 		4AB5E3921881EEF40037BD56 /* USHCustomFieldsAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */; };
@@ -2455,6 +2482,28 @@
 		4A2FCDC51896EA610093F592 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		4A2FCDC71896EA6D0093F592 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4A2FCDCC1896EC2A0093F592 /* USHG3MViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USHG3MViewController_iPhone.xib; sourceTree = "<group>"; };
+		4A2FCDD41896EC560093F592 /* USHG3MViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHG3MViewController.h; sourceTree = "<group>"; };
+		4A2FCDD51896EC560093F592 /* USHG3MViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USHG3MViewController.mm; sourceTree = "<group>"; };
+		4A7079B21896F5EC004A0D4B /* Billboard.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Billboard.fsh; path = ../G3MiOSSDK/Resources/Shaders/Billboard.fsh; sourceTree = "<group>"; };
+		4A7079B31896F5EC004A0D4B /* Billboard.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Billboard.vsh; path = ../G3MiOSSDK/Resources/Shaders/Billboard.vsh; sourceTree = "<group>"; };
+		4A7079B41896F5EC004A0D4B /* ColorMesh.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = ColorMesh.fsh; path = ../G3MiOSSDK/Resources/Shaders/ColorMesh.fsh; sourceTree = "<group>"; };
+		4A7079B51896F5EC004A0D4B /* ColorMesh.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = ColorMesh.vsh; path = ../G3MiOSSDK/Resources/Shaders/ColorMesh.vsh; sourceTree = "<group>"; };
+		4A7079B61896F5EC004A0D4B /* Default.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Default.fsh; path = ../G3MiOSSDK/Resources/Shaders/Default.fsh; sourceTree = "<group>"; };
+		4A7079B71896F5EC004A0D4B /* Default.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Default.vsh; path = ../G3MiOSSDK/Resources/Shaders/Default.vsh; sourceTree = "<group>"; };
+		4A7079B81896F5EC004A0D4B /* FlatColorMesh.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = FlatColorMesh.fsh; path = ../G3MiOSSDK/Resources/Shaders/FlatColorMesh.fsh; sourceTree = "<group>"; };
+		4A7079B91896F5EC004A0D4B /* FlatColorMesh.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = FlatColorMesh.vsh; path = ../G3MiOSSDK/Resources/Shaders/FlatColorMesh.vsh; sourceTree = "<group>"; };
+		4A7079BA1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = "FlatColorMesh+DirectionLight.fsh"; path = "../G3MiOSSDK/Resources/Shaders/FlatColorMesh+DirectionLight.fsh"; sourceTree = "<group>"; };
+		4A7079BB1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = "FlatColorMesh+DirectionLight.vsh"; path = "../G3MiOSSDK/Resources/Shaders/FlatColorMesh+DirectionLight.vsh"; sourceTree = "<group>"; };
+		4A7079BC1896F5EC004A0D4B /* NoColorMesh.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = NoColorMesh.fsh; path = ../G3MiOSSDK/Resources/Shaders/NoColorMesh.fsh; sourceTree = "<group>"; };
+		4A7079BD1896F5EC004A0D4B /* NoColorMesh.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = NoColorMesh.vsh; path = ../G3MiOSSDK/Resources/Shaders/NoColorMesh.vsh; sourceTree = "<group>"; };
+		4A7079BE1896F5EC004A0D4B /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = ../G3MiOSSDK/Resources/Shaders/Shader.fsh; sourceTree = "<group>"; };
+		4A7079BF1896F5EC004A0D4B /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = ../G3MiOSSDK/Resources/Shaders/Shader.vsh; sourceTree = "<group>"; };
+		4A7079C01896F5EC004A0D4B /* TexturedMesh.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = TexturedMesh.fsh; path = ../G3MiOSSDK/Resources/Shaders/TexturedMesh.fsh; sourceTree = "<group>"; };
+		4A7079C11896F5EC004A0D4B /* TexturedMesh.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = TexturedMesh.vsh; path = ../G3MiOSSDK/Resources/Shaders/TexturedMesh.vsh; sourceTree = "<group>"; };
+		4A7079C21896F5EC004A0D4B /* TexturedMesh+DirectionLight.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = "TexturedMesh+DirectionLight.fsh"; path = "../G3MiOSSDK/Resources/Shaders/TexturedMesh+DirectionLight.fsh"; sourceTree = "<group>"; };
+		4A7079C31896F5EC004A0D4B /* TexturedMesh+DirectionLight.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = "TexturedMesh+DirectionLight.vsh"; path = "../G3MiOSSDK/Resources/Shaders/TexturedMesh+DirectionLight.vsh"; sourceTree = "<group>"; };
+		4A7079C41896F5EC004A0D4B /* TransformedTexCoorTexturedMesh.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = TransformedTexCoorTexturedMesh.fsh; path = ../G3MiOSSDK/Resources/Shaders/TransformedTexCoorTexturedMesh.fsh; sourceTree = "<group>"; };
+		4A7079C51896F5EC004A0D4B /* TransformedTexCoorTexturedMesh.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = TransformedTexCoorTexturedMesh.vsh; path = ../G3MiOSSDK/Resources/Shaders/TransformedTexCoorTexturedMesh.vsh; sourceTree = "<group>"; };
 		4AB5E38E1881EEF40037BD56 /* USHCustomFieldsAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHCustomFieldsAddViewController.h; sourceTree = "<group>"; };
 		4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHCustomFieldsAddViewController.m; sourceTree = "<group>"; };
 		4AF856451876305100B6B357 /* USHCustomFieldsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHCustomFieldsViewController.h; sourceTree = "<group>"; };
@@ -2722,6 +2771,26 @@
 		3E6D0317159B54CF00CDB5B7 = {
 			isa = PBXGroup;
 			children = (
+				4A7079B21896F5EC004A0D4B /* Billboard.fsh */,
+				4A7079B31896F5EC004A0D4B /* Billboard.vsh */,
+				4A7079B41896F5EC004A0D4B /* ColorMesh.fsh */,
+				4A7079B51896F5EC004A0D4B /* ColorMesh.vsh */,
+				4A7079B61896F5EC004A0D4B /* Default.fsh */,
+				4A7079B71896F5EC004A0D4B /* Default.vsh */,
+				4A7079B81896F5EC004A0D4B /* FlatColorMesh.fsh */,
+				4A7079B91896F5EC004A0D4B /* FlatColorMesh.vsh */,
+				4A7079BA1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.fsh */,
+				4A7079BB1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.vsh */,
+				4A7079BC1896F5EC004A0D4B /* NoColorMesh.fsh */,
+				4A7079BD1896F5EC004A0D4B /* NoColorMesh.vsh */,
+				4A7079BE1896F5EC004A0D4B /* Shader.fsh */,
+				4A7079BF1896F5EC004A0D4B /* Shader.vsh */,
+				4A7079C01896F5EC004A0D4B /* TexturedMesh.fsh */,
+				4A7079C11896F5EC004A0D4B /* TexturedMesh.vsh */,
+				4A7079C21896F5EC004A0D4B /* TexturedMesh+DirectionLight.fsh */,
+				4A7079C31896F5EC004A0D4B /* TexturedMesh+DirectionLight.vsh */,
+				4A7079C41896F5EC004A0D4B /* TransformedTexCoorTexturedMesh.fsh */,
+				4A7079C51896F5EC004A0D4B /* TransformedTexCoorTexturedMesh.vsh */,
 				4A2FCDB91896E9540093F592 /* G3MiOSSDK.xcodeproj */,
 				3E6D0350159B561900CDB5B7 /* Themes */,
 				3E6D033D159B54EF00CDB5B7 /* Resources */,
@@ -3042,6 +3111,8 @@
 		3E6D034F159B55FE00CDB5B7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4A2FCDD41896EC560093F592 /* USHG3MViewController.h */,
+				4A2FCDD51896EC560093F592 /* USHG3MViewController.mm */,
 				4AB5E38E1881EEF40037BD56 /* USHCustomFieldsAddViewController.h */,
 				4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */,
 				4AF856451876305100B6B357 /* USHCustomFieldsViewController.h */,
@@ -3592,6 +3663,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A7079C61896F5EC004A0D4B /* Billboard.fsh in Resources */,
+				4A7079C71896F5EC004A0D4B /* Billboard.vsh in Resources */,
+				4A7079C81896F5EC004A0D4B /* ColorMesh.fsh in Resources */,
+				4A7079C91896F5EC004A0D4B /* ColorMesh.vsh in Resources */,
+				4A7079CA1896F5EC004A0D4B /* Default.fsh in Resources */,
+				4A7079CB1896F5EC004A0D4B /* Default.vsh in Resources */,
+				4A7079CC1896F5EC004A0D4B /* FlatColorMesh.fsh in Resources */,
+				4A7079CD1896F5EC004A0D4B /* FlatColorMesh.vsh in Resources */,
+				4A7079CE1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.fsh in Resources */,
+				4A7079CF1896F5EC004A0D4B /* FlatColorMesh+DirectionLight.vsh in Resources */,
+				4A7079D01896F5ED004A0D4B /* NoColorMesh.fsh in Resources */,
+				4A7079D11896F5ED004A0D4B /* NoColorMesh.vsh in Resources */,
+				4A7079D21896F5ED004A0D4B /* Shader.fsh in Resources */,
+				4A7079D31896F5ED004A0D4B /* Shader.vsh in Resources */,
+				4A7079D41896F5ED004A0D4B /* TexturedMesh.fsh in Resources */,
+				4A7079D51896F5ED004A0D4B /* TexturedMesh.vsh in Resources */,
+				4A7079D61896F5ED004A0D4B /* TexturedMesh+DirectionLight.fsh in Resources */,
+				4A7079D71896F5ED004A0D4B /* TexturedMesh+DirectionLight.vsh in Resources */,
+				4A7079D81896F5ED004A0D4B /* TransformedTexCoorTexturedMesh.fsh in Resources */,
+				4A7079D91896F5ED004A0D4B /* TransformedTexCoorTexturedMesh.vsh in Resources */,
 				3E6D03AC159B774C00CDB5B7 /* down.png in Resources */,
 				3E6D03AD159B774C00CDB5B7 /* down@2x.png in Resources */,
 				3E6D03AE159B774C00CDB5B7 /* next.png in Resources */,
@@ -5289,6 +5380,7 @@
 				3EFAD0D81647337F00A02316 /* USHCheckinTableViewController.m in Sources */,
 				3EFAD0E71647639E00A02316 /* USHCheckinDetailsViewController.m in Sources */,
 				3E9BABC1164826B7006ED993 /* USHMapAddViewController.m in Sources */,
+				4A2FCDD61896EC560093F592 /* USHG3MViewController.mm in Sources */,
 				3E9BABDA1648A91C006ED993 /* USHLocationAddViewController.m in Sources */,
 				3E9A5F101649903F00FF10C1 /* USHSwitchTableCell.m in Sources */,
 				3E0F3A9E16499EF3004BA80F /* USHSliderTableCell.m in Sources */,
@@ -5332,6 +5424,7 @@
 				3E9E5013167129320095F4A4 /* USHCheckinTableViewController.m in Sources */,
 				3E9E5014167129320095F4A4 /* USHCheckinDetailsViewController.m in Sources */,
 				3E9E5015167129320095F4A4 /* USHMapAddViewController.m in Sources */,
+				4A2FCDD81896EC560093F592 /* USHG3MViewController.mm in Sources */,
 				3E9E5016167129320095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E5017167129320095F4A4 /* USHSwitchTableCell.m in Sources */,
 				3E9E5018167129320095F4A4 /* USHSliderTableCell.m in Sources */,
@@ -5375,6 +5468,7 @@
 				3E9E5167167129350095F4A4 /* USHCheckinTableViewController.m in Sources */,
 				3E9E5168167129350095F4A4 /* USHCheckinDetailsViewController.m in Sources */,
 				3E9E5169167129350095F4A4 /* USHMapAddViewController.m in Sources */,
+				4A2FCDDA1896EC560093F592 /* USHG3MViewController.mm in Sources */,
 				3E9E516A167129350095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E516B167129350095F4A4 /* USHSwitchTableCell.m in Sources */,
 				3E9E516C167129350095F4A4 /* USHSliderTableCell.m in Sources */,
@@ -5418,6 +5512,7 @@
 				3E9E52BB167129380095F4A4 /* USHCheckinTableViewController.m in Sources */,
 				3E9E52BC167129380095F4A4 /* USHCheckinDetailsViewController.m in Sources */,
 				3E9E52BD167129380095F4A4 /* USHMapAddViewController.m in Sources */,
+				4A2FCDDB1896EC560093F592 /* USHG3MViewController.mm in Sources */,
 				3E9E52BE167129380095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E52BF167129380095F4A4 /* USHSwitchTableCell.m in Sources */,
 				3E9E52C0167129380095F4A4 /* USHSliderTableCell.m in Sources */,
@@ -5461,6 +5556,7 @@
 				3E9E540F167129530095F4A4 /* USHCheckinTableViewController.m in Sources */,
 				3E9E5410167129530095F4A4 /* USHCheckinDetailsViewController.m in Sources */,
 				3E9E5411167129530095F4A4 /* USHMapAddViewController.m in Sources */,
+				4A2FCDD91896EC560093F592 /* USHG3MViewController.mm in Sources */,
 				3E9E5412167129530095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E5413167129530095F4A4 /* USHSwitchTableCell.m in Sources */,
 				3E9E5414167129530095F4A4 /* USHSliderTableCell.m in Sources */,
@@ -5504,6 +5600,7 @@
 				3E9E575E16712E5A0095F4A4 /* USHCheckinTableViewController.m in Sources */,
 				3E9E575F16712E5A0095F4A4 /* USHCheckinDetailsViewController.m in Sources */,
 				3E9E576016712E5A0095F4A4 /* USHMapAddViewController.m in Sources */,
+				4A2FCDD71896EC560093F592 /* USHG3MViewController.mm in Sources */,
 				3E9E576116712E5A0095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E576216712E5A0095F4A4 /* USHSwitchTableCell.m in Sources */,
 				3E9E576316712E5A0095F4A4 /* USHSliderTableCell.m in Sources */,
@@ -5547,6 +5644,7 @@
 				3EC1B4911757AB1000CFF726 /* USHCheckinTableViewController.m in Sources */,
 				3EC1B4921757AB1000CFF726 /* USHCheckinDetailsViewController.m in Sources */,
 				3EC1B4931757AB1000CFF726 /* USHMapAddViewController.m in Sources */,
+				4A2FCDDC1896EC560093F592 /* USHG3MViewController.mm in Sources */,
 				3EC1B4941757AB1000CFF726 /* USHLocationAddViewController.m in Sources */,
 				3EC1B4951757AB1000CFF726 /* USHSwitchTableCell.m in Sources */,
 				3EC1B4961757AB1000CFF726 /* USHSliderTableCell.m in Sources */,
@@ -5678,6 +5776,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -5692,6 +5791,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					C_CODE,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -5705,8 +5805,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(BUILT_PRODUCTS_DIR)",
-					/Users/ccarducci/Desktop/Ushahidi/G3MiOSSDK,
+					"$(BUILT_PRODUCTS_DIR)/**",
+					"$(BUILT_PRODUCTS_DIR)/G3MiOSSDK/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -5725,6 +5825,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -5734,6 +5835,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = C_CODE;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -5745,8 +5847,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(BUILT_PRODUCTS_DIR)",
-					/Users/ccarducci/Desktop/Ushahidi/G3MiOSSDK,
+					"$(BUILT_PRODUCTS_DIR)/**",
+					"$(BUILT_PRODUCTS_DIR)/G3MiOSSDK/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

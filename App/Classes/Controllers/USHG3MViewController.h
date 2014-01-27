@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#import <G3MiOSSDK/G3MWidget_iOS.h>
 #import <G3MBuilder_iOS.hpp>
+
 
 class MapBooBuilder_iOS;
 
@@ -26,10 +25,10 @@ Mesh* createSectorMesh(const Planet* planet,
 
 @interface USHG3MViewController : UIViewController{
     
-    
     IBOutlet G3MWidget_iOS *G3MWidget;
     MapBooBuilder_iOS* _g3mcBuilder;
-}
-@property (retain, nonatomic) G3MWidget_iOS* G3MWidget;
 
+}
+
+@property (retain, nonatomic) G3MWidget_iOS* G3MWidget;
 @end

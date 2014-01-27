@@ -95,8 +95,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "392"
             endingLineNumber = "392"
-            landmarkName = "-tableView:titleForHeaderInSection:"
-            landmarkType = "5">
+            landmarkName = "@implementation USHReportDetailsViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -111,7 +111,23 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "396"
             endingLineNumber = "396"
-            landmarkName = "-tableView:heightForRowAtIndexPath:"
+            landmarkName = "@implementation USHReportDetailsViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App/Classes/Controllers/USHCustomFieldsAddViewController.m"
+            timestampString = "411186587.773276"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,44 +137,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "App/Classes/Controllers/USHCustomFieldsViewController.m"
-            timestampString = "411168262.269269"
+            filePath = "App/Classes/Controllers/USHCustomFieldsAddViewController.m"
+            timestampString = "411186591.26132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-viewDidDisappear:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[USHCustomFieldsViewController viewWillAppear:]"
-                  moduleName = "Ushahidi"
-                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/App/Classes/Controllers/USHCustomFieldsViewController.m"
-                  timestampString = "411170568.334519"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "799">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[USHCustomFieldsViewController viewWillAppear:]"
-                  moduleName = "Ushahidi"
-                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/App/Classes/Controllers/USHCustomFieldsViewController.m"
-                  timestampString = "411170568.334772"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "921">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
