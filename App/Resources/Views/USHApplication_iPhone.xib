@@ -417,6 +417,40 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </viewController>
         <viewController title="Add Report" nibName="USHReportAddViewController_iPhone" id="g0v-Ul-aEK" userLabel="Custom Fields Add View Controller - Add Report" customClass="USHCustomFieldsAddViewController">
+            <view key="view" contentMode="scaleToFill" id="d10-wC-Uux">
+                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selezionare la categoria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oPa-Nt-Khp">
+                        <rect key="frame" x="20" y="140" width="280" height="79"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" id="0XE-6q-sTT" userLabel="Custom 1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" id="t1V-JF-9WH" userLabel="Custom 2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" id="dtZ-YX-tpd" userLabel="Custom 3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" id="Sfc-iB-UWX" userLabel="Custom 4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            </view>
             <extendedEdge key="edgesForExtendedLayout"/>
             <navigationItem key="navigationItem" title="Extended Info" id="Uhp-iM-CWO">
                 <barButtonItem key="leftBarButtonItem" title="Cancel" id="OAR-iK-7ut">
@@ -436,6 +470,11 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <nil key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="Custom1" destination="0XE-6q-sTT" id="BZt-6k-eEA"/>
+                <outlet property="Custom2" destination="t1V-JF-9WH" id="qW9-MD-Qg4"/>
+                <outlet property="Custom3" destination="dtZ-YX-tpd" id="7TK-vB-ha0"/>
+                <outlet property="Custom4" destination="Sfc-iB-UWX" id="oBU-HH-1Zg"/>
+                <outlet property="Mess" destination="oPa-Nt-Khp" id="Jft-F4-s1l"/>
                 <outlet property="cancel" destination="OAR-iK-7ut" id="y1D-MB-Zml"/>
                 <outlet property="done" destination="dWn-9m-OtH" id="J2l-6y-5jy"/>
                 <outlet property="reportAdd" destination="109" id="0mZ-xx-AdT"/>

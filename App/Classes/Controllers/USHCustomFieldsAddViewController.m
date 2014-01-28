@@ -54,6 +54,11 @@
     [_cancel release];
     [_done release];
     [_reportAdd release];
+    [_Mess release];
+    [_Custom1 release];
+    [_Custom2 release];
+    [_Custom3 release];
+    [_Custom4 release];
     [super dealloc];
 }
 
@@ -67,6 +72,10 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.Custom1.hidden=YES;
+        self.Custom2.hidden=YES;
+        self.Custom3.hidden=YES;
+        self.Custom4.hidden=NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -85,6 +94,6 @@
 
 - (IBAction)DoneEv:(id)sender {
     [self presentModalViewController:self.reportAdd animated:YES];
-    
+
 }
 @end

@@ -38,6 +38,11 @@
 
 @interface USHCustomFieldsAddViewController : USHTableViewController
 
+@property (retain, nonatomic) IBOutlet UILabel *Mess;
+@property (retain, nonatomic) IBOutlet UIView *Custom1;
+@property (retain, nonatomic) IBOutlet UIView *Custom2;
+@property (retain, nonatomic) IBOutlet UIView *Custom3;
+@property (retain, nonatomic) IBOutlet UIView *Custom4;
 
 @property (retain, nonatomic) IBOutlet USHReportAddViewController *reportAdd;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *cancel;
