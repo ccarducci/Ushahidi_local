@@ -7,45 +7,116 @@
 //
 
 #import "MDTreeViewController.h"
+#import <Ushahidi/MDTreeNodestore.h>
+#import <Ushahidi/MDTreeNode.h>
+//#import "MDTreeViewCell.h"
+#import <Ushahidi/Ushahidi.h>
+#import <Ushahidi/CategoryTreeManager.h>
+#import <Ushahidi/CategoryTree.h>
+#import "USHSettings.h"
 
 @interface MDTreeViewController ()
 
 @end
 
+
 @implementation MDTreeViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
+
+@synthesize mapControllerTree;
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.backgroundColor = [[USHSettings sharedInstance] tableRowColor];
+}
+
+- (UIColor *)toUIColor :(NSString *)colorHex{
+    
+    unsigned int c;
+    
+    if ([colorHex characterAtIndex:0] == '#') {
+        
+        [[NSScanner scannerWithString:[colorHex substringFromIndex:1]] scanHexInt:&c];
+        
+    } else {
+        
+        [[NSScanner scannerWithString:colorHex] scanHexInt:&c];
+        
     }
+    
+    return [UIColor colorWithRed:((c & 0xff0000) >> 16)/255.0 green:((c & 0xff00) >> 8)/255.0 blue:(c & 0xff)/255.0 alpha:1.0];
+    
+}
+
+- (IBAction)done:(id)sender
+{
+    NSMutableDictionary *dictionary = [[Ushahidi sharedInstance] flatCategorySelected];
+    NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory] ;
+    NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];
+    
+    for (CategoryTree* pp in flatCategory) {
+        NSString *selected = [dictionary objectForKey:pp.indetifier];
+        pp.selected = selected;
+        
+        if ([selected isEqual:@"YES"]){
+            [flatOnlyCategoryYES setValue:@"YES" forKey:pp.id];
+        }
+    }
+    
+    //[mapControllerTree refreshMap];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (id)init
+{
+    self = [super initWithStyle:UITableViewStyleGrouped];
+    if (self)
+    {
+        // CREO PULSANTE DONE
+        UINavigationItem *n = [self navigationItem];
+        [n setTitle:NSLocalizedString(@"cat_new", nil)];
+        
+        UIBarButtonItem *bbi =
+        [[UIBarButtonItem alloc]
+         initWithBarButtonSystemItem:UIBarButtonItemStylePlain
+         target:self
+         action:@selector(done:)];
+        
+        [[self navigationItem] setRightBarButtonItem:bbi];
+
+    }
+    
+    [[MDTreeNodeStore sharedStore]   removeAll] ;
+    NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory];
+    NSLog(@"Count in MDTreeViewController: %i",flatCategory.count);
+    CategoryTreeManager *operazione = [[CategoryTreeManager alloc] init];
+    [operazione createTree:flatCategory];
+    NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];
+    [flatOnlyCategoryYES removeAllObjects];
+    [operazione dealloc];
+
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // BACKGROUND TABLE
+    self.tableView.backgroundColor = [[USHSettings sharedInstance] tableBackColor];
+    // COLORE NAVIGATION
+    self.navigationController.navigationBar.tintColor = [[USHSettings sharedInstance] navBarColor];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
+    #warning Potentially incomplete method implementation.
+
     return 0;
 }
 
@@ -66,55 +137,5 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end

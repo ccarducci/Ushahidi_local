@@ -6,47 +6,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK/Classes/Operations/USHDownloadCategory.m"
-            timestampString = "412986209.434736"
+            filePath = "App/Classes/Controllers/USHReportTabBarController.m"
+            timestampString = "412987481.245165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "-downloadedJSON:"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-filter:event:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[USHDownloadCategory downloadedJSON:]"
-                  moduleName = "Ushahidi"
-                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadCategory.m"
-                  timestampString = "412986238.289331"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "487">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[USHDownloadCategory downloadedJSON:]"
-                  moduleName = "Ushahidi"
-                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHDownloadCategory.m"
-                  timestampString = "412986238.289544"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "2328">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

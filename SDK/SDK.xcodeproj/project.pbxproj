@@ -128,7 +128,7 @@
 		3E971B1915A365F1005EB625 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E817EBD159E0981001B16CF /* CoreFoundation.framework */; };
 		3E971B2D15A36E51005EB625 /* USHDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E971B2B15A36E51005EB625 /* USHDownload.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3E971B2E15A36E51005EB625 /* USHDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E971B2C15A36E51005EB625 /* USHDownload.m */; };
-		3E971B3715A37D08005EB625 /* USHDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E971B3515A37D08005EB625 /* USHDatabase.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3E971B3715A37D08005EB625 /* USHDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E971B3515A37D08005EB625 /* USHDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E971B3815A37D08005EB625 /* USHDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E971B3615A37D08005EB625 /* USHDatabase.m */; };
 		3E971B3B15A382F2005EB625 /* USHDownloadVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E971B3915A382F2005EB625 /* USHDownloadVersion.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3E971B3C15A382F2005EB625 /* USHDownloadVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E971B3A15A382F2005EB625 /* USHDownloadVersion.m */; };
@@ -386,6 +386,7 @@
 		4A2CEC0D186F2C5500AC8BC2 /* CustomFieldType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A2CEC0E186F2C5500AC8BC2 /* CustomFieldType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */; };
 		4A2CEC0F186F2C5500AC8BC2 /* CustomFieldType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */; };
+		4AC064B3189DB01600186B58 /* USHDatabase.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 3E971B3515A37D08005EB625 /* USHDatabase.h */; };
 		4AEA9A62189DA57200B356B7 /* MDTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A60189DA57200B356B7 /* MDTreeNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AEA9A63189DA57200B356B7 /* MDTreeNode.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A60189DA57200B356B7 /* MDTreeNode.h */; };
 		4AEA9A64189DA57200B356B7 /* MDTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A61189DA57200B356B7 /* MDTreeNode.m */; };
@@ -495,6 +496,7 @@
 				3EAA80FC15EA174200F2FC16 /* USHMapViewController.h in Copy Headers */,
 				3EAA80FE15EA174200F2FC16 /* USHTableViewController.h in Copy Headers */,
 				4AEA9A7B189DA79800B356B7 /* MDTreeNodestore.h in Copy Headers */,
+				4AC064B3189DB01600186B58 /* USHDatabase.h in Copy Headers */,
 				3EAA80FF15EA174200F2FC16 /* USHViewController.h in Copy Headers */,
 				3EAA810115EA174200F2FC16 /* USHDevice.h in Copy Headers */,
 				3EAA810215EA174200F2FC16 /* USHInternet.h in Copy Headers */,

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "USHReportMapViewController.h"
 
-@interface MDTreeViewController : UITableViewController
+@interface MDTreeViewController : UITableViewController{
+    USHReportMapViewController *mapControllerTree;
+}
+
+@property (strong, nonatomic) USHReportMapViewController *mapControllerTree;
+- (IBAction)done:(id)sender;
+- (UIColor *)toUIColor :(NSString *)colorHex;
 
 @end

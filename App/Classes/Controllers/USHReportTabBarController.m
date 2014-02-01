@@ -39,6 +39,14 @@
 #import <Ushahidi/USHDevice.h>
 #import <Ushahidi/NSBundle+USH.h>
 
+
+/* MODIFICHE GEOAVALANCHE INIZIO */
+#import <Ushahidi/USHDatabase.h>
+#import <Ushahidi/CategoryTreeManager.h>
+#import <Ushahidi/CategoryTree.h>
+#import "MDTreeViewController.h"
+/* MODIFICHE GEOAVALANCHE INIZIO */
+
 @interface USHReportTabBarController ()
 
 @property (strong, nonatomic) NSString *textSubmitViaUshahidiAPI;
@@ -91,6 +99,8 @@
 - (IBAction)filter:(id)sender event:(UIEvent*)event {
     DLog(@"");
 	NSMutableArray *titles = [NSMutableArray arrayWithObject:NSLocalizedString(@"--- ALL CATEGORIES ---", nil)];
+    /* MODIFICHE GEOAVALANCHE INIZIO */
+    /*
 	for (USHCategory *category in self.map.categoriesSortedByPosition) {
 		if (category.title != nil) {
 			[titles addObject:category.title];
@@ -100,6 +110,29 @@
                           selected:self.category.title
                              event:event
                                tag:0];
+    */
+    
+    
+    if ([USHDevice isIPad]) {
+        MDTreeViewController *treeViewController = [MDTreeViewController new];
+        UINavigationController *navController =
+        [[UINavigationController alloc] initWithRootViewController:treeViewController];
+        //reportMapController     self.reportMapController
+        treeViewController.mapControllerTree = self.reportMapController;
+        
+        
+        [self presentModalViewController:navController animated:YES];
+    }else{
+        
+        MDTreeViewController *treeViewController = [MDTreeViewController new];
+        UINavigationController *navController =
+        [[UINavigationController alloc]
+         initWithRootViewController:treeViewController];
+        treeViewController.mapControllerTree = self.reportMapController;
+        
+        [self presentModalViewController:navController animated:YES];
+    }
+    /* MODIFICHE GEOAVALANCHE FINE */
 }
 
 - (IBAction)info:(id)sender event:(UIEvent*)event {
