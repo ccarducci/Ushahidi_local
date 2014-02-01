@@ -3,7 +3,9 @@
     <entity name="Category" representedClassName="USHCategory" syncable="YES">
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parent_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="map" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Map" inverseName="categories" inverseEntity="Map" syncable="YES"/>
@@ -158,6 +160,7 @@
         <element name="Checkin" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Comment" positionX="0" positionY="0" width="0" height="0"/>
         <element name="CustomFieldType" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CustomFieldTypeDetail" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Location" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Map" positionX="0" positionY="0" width="0" height="0"/>
         <element name="News" positionX="0" positionY="0" width="0" height="0"/>
@@ -167,6 +170,5 @@
         <element name="Sound" positionX="0" positionY="0" width="0" height="0"/>
         <element name="User" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Video" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="CustomFieldTypeDetail" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

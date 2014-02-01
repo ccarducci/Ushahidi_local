@@ -386,6 +386,17 @@
 		4A2CEC0D186F2C5500AC8BC2 /* CustomFieldType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A2CEC0E186F2C5500AC8BC2 /* CustomFieldType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */; };
 		4A2CEC0F186F2C5500AC8BC2 /* CustomFieldType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */; };
+		4AEA9A62189DA57200B356B7 /* MDTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A60189DA57200B356B7 /* MDTreeNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AEA9A63189DA57200B356B7 /* MDTreeNode.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A60189DA57200B356B7 /* MDTreeNode.h */; };
+		4AEA9A64189DA57200B356B7 /* MDTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A61189DA57200B356B7 /* MDTreeNode.m */; };
+		4AEA9A6A189DA67F00B356B7 /* CategoryTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A66189DA67F00B356B7 /* CategoryTree.h */; };
+		4AEA9A6B189DA67F00B356B7 /* CategoryTree.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A66189DA67F00B356B7 /* CategoryTree.h */; };
+		4AEA9A6C189DA67F00B356B7 /* CategoryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A67189DA67F00B356B7 /* CategoryTree.m */; };
+		4AEA9A6D189DA67F00B356B7 /* CategoryTree.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A67189DA67F00B356B7 /* CategoryTree.m */; };
+		4AEA9A6E189DA67F00B356B7 /* CategoryTreeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */; };
+		4AEA9A6F189DA67F00B356B7 /* CategoryTreeManager.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */; };
+		4AEA9A70189DA67F00B356B7 /* CategoryTreeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A69189DA67F00B356B7 /* CategoryTreeManager.m */; };
+		4AEA9A71189DA67F00B356B7 /* CategoryTreeManager.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A69189DA67F00B356B7 /* CategoryTreeManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -436,8 +447,10 @@
 				3E9E4DA11670037F0095F4A4 /* USHQrCodeViewController.h in Copy Headers */,
 				3E9E4DA21670037F0095F4A4 /* USHTwitterViewController.h in Copy Headers */,
 				3EB0D713165C02B70092DFC8 /* USHVideoPicker.h in Copy Headers */,
+				4AEA9A63189DA57200B356B7 /* MDTreeNode.h in Copy Headers */,
 				3ECD8FCE165B069100709ACA /* USHDefaults.h in Copy Headers */,
 				3EA3445016547DFE00DC017D /* USHWindow.h in Copy Headers */,
+				4AEA9A71189DA67F00B356B7 /* CategoryTreeManager.m in Copy Headers */,
 				3EA3445116547DFE00DC017D /* USHTableCell.h in Copy Headers */,
 				3EA3445216547DFE00DC017D /* UIBezierPath+USH.h in Copy Headers */,
 				3EC32CF5164C31D9000FFE7B /* USHRefreshButton.h in Copy Headers */,
@@ -457,6 +470,9 @@
 				3EFF5AC31620BB4C0072FAE1 /* NSBundle+USH.h in Copy Headers */,
 				3EFF5AC41620BB4C0072FAE1 /* UITableView+USH.h in Copy Headers */,
 				3E6E529615EE79DC00CF67D6 /* USHItemPicker.h in Copy Headers */,
+				4AEA9A6D189DA67F00B356B7 /* CategoryTree.m in Copy Headers */,
+				4AEA9A6B189DA67F00B356B7 /* CategoryTree.h in Copy Headers */,
+				4AEA9A6F189DA67F00B356B7 /* CategoryTreeManager.h in Copy Headers */,
 				4A249B33187A15EA001F1A96 /* CustomFieldTypeDetail.h in Copy Headers */,
 				3E6E522A15EE12D400CF67D6 /* USHRefreshButtonItem.h in Copy Headers */,
 				3E022E1515ECE22D00FDDC9E /* UIBarButtonItem+USH.h in Copy Headers */,
@@ -780,6 +796,12 @@
 		4A2A4127186E440300B302D1 /* USHDownloadCustomCategoryType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHDownloadCustomCategoryType.m; sourceTree = "<group>"; };
 		4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFieldType.h; sourceTree = "<group>"; };
 		4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFieldType.m; sourceTree = "<group>"; };
+		4AEA9A60189DA57200B356B7 /* MDTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeNode.h; sourceTree = "<group>"; };
+		4AEA9A61189DA57200B356B7 /* MDTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTreeNode.m; sourceTree = "<group>"; };
+		4AEA9A66189DA67F00B356B7 /* CategoryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTree.h; sourceTree = "<group>"; };
+		4AEA9A67189DA67F00B356B7 /* CategoryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTree.m; sourceTree = "<group>"; };
+		4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTreeManager.h; sourceTree = "<group>"; };
+		4AEA9A69189DA67F00B356B7 /* CategoryTreeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTreeManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -998,6 +1020,10 @@
 		3E971B2A15A36E0E005EB625 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				4AEA9A66189DA67F00B356B7 /* CategoryTree.h */,
+				4AEA9A67189DA67F00B356B7 /* CategoryTree.m */,
+				4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */,
+				4AEA9A69189DA67F00B356B7 /* CategoryTreeManager.m */,
 				4A249B3C187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.h */,
 				4A249B3D187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.m */,
 				4A2A4126186E440300B302D1 /* USHDownloadCustomCategoryType.h */,
@@ -1146,6 +1172,8 @@
 		3EA235DA159B90730072A60D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4AEA9A60189DA57200B356B7 /* MDTreeNode.h */,
+				4AEA9A61189DA57200B356B7 /* MDTreeNode.m */,
 				3EDE88BC15A12C3C00FB30BD /* USHMap.h */,
 				3EDE88BD15A12C3C00FB30BD /* USHMap.m */,
 				3EDE88E015A12C3D00FB30BD /* USHReport.h */,
@@ -1387,6 +1415,7 @@
 				3E9E4D83167000410095F4A4 /* USHQrCodeViewController.h in Headers */,
 				3E9E4D85167000410095F4A4 /* USHTwitterViewController.h in Headers */,
 				3EB0D711165BF6600092DFC8 /* USHVideoPicker.h in Headers */,
+				4AEA9A6E189DA67F00B356B7 /* CategoryTreeManager.h in Headers */,
 				4A2A4128186E440300B302D1 /* USHDownloadCustomCategoryType.h in Headers */,
 				3ECD8FCB165B013200709ACA /* USHDefaults.h in Headers */,
 				3EA34446165478D000DC017D /* UIBezierPath+USH.h in Headers */,
@@ -1451,6 +1480,7 @@
 				3EDE88CA15A12C3C00FB30BD /* USHSound.h in Headers */,
 				3EDE88CE15A12C3C00FB30BD /* USHCheckin.h in Headers */,
 				3EDE88D215A12C3C00FB30BD /* USHComment.h in Headers */,
+				4AEA9A62189DA57200B356B7 /* MDTreeNode.h in Headers */,
 				4A1C81D31871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h in Headers */,
 				3EDE88D615A12C3C00FB30BD /* USHCategory.h in Headers */,
 				3EDE88DA15A12C3C00FB30BD /* USHUser.h in Headers */,
@@ -1496,6 +1526,7 @@
 				3E971B3B15A382F2005EB625 /* USHDownloadVersion.h in Headers */,
 				3E83650B15A3A75F00998484 /* USHDownloadReport.h in Headers */,
 				3E83650F15A3B64600998484 /* USHDownloadCategory.h in Headers */,
+				4AEA9A6A189DA67F00B356B7 /* CategoryTree.h in Headers */,
 				3E83651815A3BF7A00998484 /* USHDownloadLocation.h in Headers */,
 				3E83651C15A3C61500998484 /* USHDownloadCheckin.h in Headers */,
 				3E943117159A24C700864D11 /* SDK-Prefix.pch in Headers */,
@@ -1764,12 +1795,14 @@
 				3E94937115ECB6ED004B32A8 /* USHTabBarController.m in Sources */,
 				3E022E0A15ECC4ED00FDDC9E /* NSBundle+USH.m in Sources */,
 				3E022E1415ECE20600FDDC9E /* UIBarButtonItem+USH.m in Sources */,
+				4AEA9A64189DA57200B356B7 /* MDTreeNode.m in Sources */,
 				3E6E522815EE120F00CF67D6 /* USHRefreshButtonItem.m in Sources */,
 				3E6E527015EE5DF100CF67D6 /* USHHeaderView.m in Sources */,
 				3E6E529515EE77F300CF67D6 /* USHItemPicker.m in Sources */,
 				3EFF5AC0162097D20072FAE1 /* UITableView+USH.m in Sources */,
 				3ED89CFF1623788400F46881 /* USHDatePicker.m in Sources */,
 				3ED89D051623986C00F46881 /* USHLocator.m in Sources */,
+				4AEA9A6C189DA67F00B356B7 /* CategoryTree.m in Sources */,
 				3ED89D0A1623A44000F46881 /* USHImagePicker.m in Sources */,
 				3E9D90E416248040006B3BFA /* NSSet+USH.m in Sources */,
 				3E9D90E91624818E006B3BFA /* NSArray+USH.m in Sources */,
@@ -1789,6 +1822,7 @@
 				3E59CC6E1641EE2000D9705B /* QRBitBuffer.m in Sources */,
 				3E59CC711641EE2000D9705B /* QREncoder.m in Sources */,
 				3E59CC731641EE2000D9705B /* QRMath.m in Sources */,
+				4AEA9A70189DA67F00B356B7 /* CategoryTreeManager.m in Sources */,
 				3E59CC751641EE2000D9705B /* QRMatrix.m in Sources */,
 				3E59CC771641EE2000D9705B /* QRPolynomial.m in Sources */,
 				3E59CC791641EE2000D9705B /* QRRSBlock.m in Sources */,
