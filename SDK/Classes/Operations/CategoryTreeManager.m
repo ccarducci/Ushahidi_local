@@ -20,7 +20,6 @@
 
 - (void) createTreeRecursive: (NSMutableArray*)elements elementTosearch:(NSString*)search nodoParente:(MDTreeNode *)parentNode
 {
-    //NSMutableDictionary *dictionary = [[Ushahidi sharedInstance] flatCategorySelected];
     for (int i = 0 ; i< elements.count;i++){
         CategoryTree *element = [elements objectAtIndex:i];
     
@@ -47,7 +46,6 @@
 - (void)createTree:(NSMutableArray*)elements{
 
     NSLog(@"title: %i",elements.count);
-    //NSMutableDictionary *dictionary = [[Ushahidi sharedInstance] flatCategorySelected];
 
     for (int i = 0 ; i< elements.count;i++){
         CategoryTree *element = [elements objectAtIndex:i];
@@ -76,14 +74,12 @@
 + (NSString *)isReportAdd:(NSString*)categoryID searchtext:(NSString *)text titleReport:(NSString *)title{
    NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];
    NSString *value = [flatOnlyCategoryYES valueForKey:categoryID];
-   //NSLog(@"key category %@ value: --> %@",categoryID,value);
    return value;
 }
 
 
 - (void) createTreeRecursiveAdd: (NSMutableArray*)elements elementTosearch:(NSString*)search nodoParente:(MDTreeAddNodeStore *)parentNode
 {
-    //NSMutableDictionary *dictionary = [[Ushahidi sharedInstance] flatCategorySelected];
     for (int i = 0 ; i< elements.count;i++){
         CategoryTree *element = [elements objectAtIndex:i];
         

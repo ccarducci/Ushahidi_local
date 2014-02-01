@@ -389,14 +389,22 @@
 		4AEA9A62189DA57200B356B7 /* MDTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A60189DA57200B356B7 /* MDTreeNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AEA9A63189DA57200B356B7 /* MDTreeNode.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A60189DA57200B356B7 /* MDTreeNode.h */; };
 		4AEA9A64189DA57200B356B7 /* MDTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A61189DA57200B356B7 /* MDTreeNode.m */; };
-		4AEA9A6A189DA67F00B356B7 /* CategoryTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A66189DA67F00B356B7 /* CategoryTree.h */; };
+		4AEA9A6A189DA67F00B356B7 /* CategoryTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A66189DA67F00B356B7 /* CategoryTree.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AEA9A6B189DA67F00B356B7 /* CategoryTree.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A66189DA67F00B356B7 /* CategoryTree.h */; };
 		4AEA9A6C189DA67F00B356B7 /* CategoryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A67189DA67F00B356B7 /* CategoryTree.m */; };
 		4AEA9A6D189DA67F00B356B7 /* CategoryTree.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A67189DA67F00B356B7 /* CategoryTree.m */; };
-		4AEA9A6E189DA67F00B356B7 /* CategoryTreeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */; };
+		4AEA9A6E189DA67F00B356B7 /* CategoryTreeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AEA9A6F189DA67F00B356B7 /* CategoryTreeManager.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */; };
 		4AEA9A70189DA67F00B356B7 /* CategoryTreeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A69189DA67F00B356B7 /* CategoryTreeManager.m */; };
 		4AEA9A71189DA67F00B356B7 /* CategoryTreeManager.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A69189DA67F00B356B7 /* CategoryTreeManager.m */; };
+		4AEA9A76189DA79800B356B7 /* MDTreeAddNodestore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A72189DA79800B356B7 /* MDTreeAddNodestore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AEA9A77189DA79800B356B7 /* MDTreeAddNodestore.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A72189DA79800B356B7 /* MDTreeAddNodestore.h */; };
+		4AEA9A78189DA79800B356B7 /* MDTreeAddNodeStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A73189DA79800B356B7 /* MDTreeAddNodeStore.m */; };
+		4AEA9A79189DA79800B356B7 /* MDTreeAddNodeStore.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A73189DA79800B356B7 /* MDTreeAddNodeStore.m */; };
+		4AEA9A7A189DA79800B356B7 /* MDTreeNodestore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A74189DA79800B356B7 /* MDTreeNodestore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AEA9A7B189DA79800B356B7 /* MDTreeNodestore.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A74189DA79800B356B7 /* MDTreeNodestore.h */; };
+		4AEA9A7C189DA79800B356B7 /* MDTreeNodeStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A75189DA79800B356B7 /* MDTreeNodeStore.m */; };
+		4AEA9A7D189DA79800B356B7 /* MDTreeNodeStore.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A75189DA79800B356B7 /* MDTreeNodeStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -486,15 +494,18 @@
 				4A2CEC0E186F2C5500AC8BC2 /* CustomFieldType.h in Copy Headers */,
 				3EAA80FC15EA174200F2FC16 /* USHMapViewController.h in Copy Headers */,
 				3EAA80FE15EA174200F2FC16 /* USHTableViewController.h in Copy Headers */,
+				4AEA9A7B189DA79800B356B7 /* MDTreeNodestore.h in Copy Headers */,
 				3EAA80FF15EA174200F2FC16 /* USHViewController.h in Copy Headers */,
 				3EAA810115EA174200F2FC16 /* USHDevice.h in Copy Headers */,
 				3EAA810215EA174200F2FC16 /* USHInternet.h in Copy Headers */,
 				3EAA810315EA174200F2FC16 /* NSObject+USH.h in Copy Headers */,
 				3EAA810415EA174200F2FC16 /* NSString+USH.h in Copy Headers */,
 				3EAA810515EA174200F2FC16 /* NSDictionary+USH.h in Copy Headers */,
+				4AEA9A77189DA79800B356B7 /* MDTreeAddNodestore.h in Copy Headers */,
 				3EAA810615EA174200F2FC16 /* UIColor+USH.h in Copy Headers */,
 				3EAA810715EA174200F2FC16 /* NSError+USH.h in Copy Headers */,
 				3EAA810815EA174200F2FC16 /* MKMapView+USH.h in Copy Headers */,
+				4AEA9A79189DA79800B356B7 /* MDTreeAddNodeStore.m in Copy Headers */,
 				3EAA810915EA174200F2FC16 /* MKPinAnnotationView+USH.h in Copy Headers */,
 				4A249B3F187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.h in Copy Headers */,
 				4A25DD57187743700053A11A /* USHCustomFieldUtility.h in Copy Headers */,
@@ -509,6 +520,7 @@
 				3EAA811715EA174200F2FC16 /* UIViewController+USH.h in Copy Headers */,
 				3EDE88E415A12C9E00FB30BD /* USHReport.h in Copy Headers */,
 				3EDE88E515A12C9E00FB30BD /* USHPhoto.h in Copy Headers */,
+				4AEA9A7D189DA79800B356B7 /* MDTreeNodeStore.m in Copy Headers */,
 				3EDE88E615A12C9E00FB30BD /* USHUser.h in Copy Headers */,
 				4A249B41187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.m in Copy Headers */,
 				3EDE88E715A12C9E00FB30BD /* USHCategory.h in Copy Headers */,
@@ -802,6 +814,10 @@
 		4AEA9A67189DA67F00B356B7 /* CategoryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTree.m; sourceTree = "<group>"; };
 		4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTreeManager.h; sourceTree = "<group>"; };
 		4AEA9A69189DA67F00B356B7 /* CategoryTreeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTreeManager.m; sourceTree = "<group>"; };
+		4AEA9A72189DA79800B356B7 /* MDTreeAddNodestore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeAddNodestore.h; sourceTree = "<group>"; };
+		4AEA9A73189DA79800B356B7 /* MDTreeAddNodeStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTreeAddNodeStore.m; sourceTree = "<group>"; };
+		4AEA9A74189DA79800B356B7 /* MDTreeNodestore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeNodestore.h; sourceTree = "<group>"; };
+		4AEA9A75189DA79800B356B7 /* MDTreeNodeStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTreeNodeStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1324,6 +1340,10 @@
 		3EAA806715EA110700F2FC16 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AEA9A72189DA79800B356B7 /* MDTreeAddNodestore.h */,
+				4AEA9A73189DA79800B356B7 /* MDTreeAddNodeStore.m */,
+				4AEA9A74189DA79800B356B7 /* MDTreeNodestore.h */,
+				4AEA9A75189DA79800B356B7 /* MDTreeNodeStore.m */,
 				3E9E4D7B166FFFBB0095F4A4 /* USHShareController.h */,
 				3E9E4D7C166FFFBB0095F4A4 /* USHShareController.m */,
 				3EAA80D815EA13FC00F2FC16 /* USHViewController.h */,
@@ -1481,6 +1501,7 @@
 				3EDE88CE15A12C3C00FB30BD /* USHCheckin.h in Headers */,
 				3EDE88D215A12C3C00FB30BD /* USHComment.h in Headers */,
 				4AEA9A62189DA57200B356B7 /* MDTreeNode.h in Headers */,
+				4AEA9A7A189DA79800B356B7 /* MDTreeNodestore.h in Headers */,
 				4A1C81D31871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h in Headers */,
 				3EDE88D615A12C3C00FB30BD /* USHCategory.h in Headers */,
 				3EDE88DA15A12C3C00FB30BD /* USHUser.h in Headers */,
@@ -1490,6 +1511,7 @@
 				3EA79902167B7B52009C83B1 /* SBJson.h in Headers */,
 				3EA79903167B7B52009C83B1 /* SBJsonParser.h in Headers */,
 				3EA79905167B7B52009C83B1 /* SBJsonStreamParser.h in Headers */,
+				4AEA9A76189DA79800B356B7 /* MDTreeAddNodestore.h in Headers */,
 				4A0BC63E187565BF00F121AB /* ReportCustomField.h in Headers */,
 				3EA79907167B7B52009C83B1 /* SBJsonStreamParserAccumulator.h in Headers */,
 				3EA79909167B7B52009C83B1 /* SBJsonStreamParserAdapter.h in Headers */,
@@ -1763,6 +1785,7 @@
 				3E83651915A3BF7A00998484 /* USHDownloadLocation.m in Sources */,
 				3E83651D15A3C61500998484 /* USHDownloadCheckin.m in Sources */,
 				3E33D42515D56D5200010DC3 /* USHSynchronize.m in Sources */,
+				4AEA9A78189DA79800B356B7 /* MDTreeAddNodeStore.m in Sources */,
 				3E33D42E15D5AB2600010DC3 /* UIColor+USH.m in Sources */,
 				4A249B34187A15EA001F1A96 /* CustomFieldTypeDetail.m in Sources */,
 				3E33D43215D5B1E900010DC3 /* NSError+USH.m in Sources */,
@@ -1786,6 +1809,7 @@
 				3EAA80DD15EA13FC00F2FC16 /* USHAddViewController.m in Sources */,
 				3EAA80DF15EA13FC00F2FC16 /* USHDetailsViewController.m in Sources */,
 				3EAA80E115EA13FC00F2FC16 /* USHMapViewController.m in Sources */,
+				4AEA9A7C189DA79800B356B7 /* MDTreeNodeStore.m in Sources */,
 				3EAA80E515EA13FC00F2FC16 /* USHTableViewController.m in Sources */,
 				3EAA80E715EA13FC00F2FC16 /* USHViewController.m in Sources */,
 				3EAA80EE15EA14C300F2FC16 /* Reachability.m in Sources */,
