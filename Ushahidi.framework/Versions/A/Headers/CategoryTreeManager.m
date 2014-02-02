@@ -13,9 +13,36 @@
 #import "MDTreeNodeStore.h"
 #import "MDTreeAddNodeStore.h"
 #import <Ushahidi.h>
+
 @implementation CategoryTreeManager: NSObject{
     
     
+}
+
+- (void)createTree:(NSMutableArray*)elements{
+    
+    NSLog(@"title: %i",elements.count);
+    
+    for (int i = 0 ; i< elements.count;i++){
+        CategoryTree *element = [elements objectAtIndex:i];
+        
+        if ( [element.parent_id  isEqualToString:@"0"]){
+            @try{
+                MDTreeNode *newNode = [[MDTreeNodeStore sharedStore] createNode];
+                NSLog(@"MASTER - newNode.title: %@",element.title);
+                NSLog(@"MASTER - newNode.id: %@",element.id);
+                newNode.title = element.title;
+                newNode.id = element.indetifier;
+                [self createTreeRecursive:(NSMutableArray*)elements elementTosearch:(NSString*)element.id
+                              nodoParente:(MDTreeNode *)newNode];
+                
+            }
+            @catch(NSException *ex)
+            {
+                NSLog(@"index: Errore");
+            }
+        }
+    }
 }
 
 - (void) createTreeRecursive: (NSMutableArray*)elements elementTosearch:(NSString*)search nodoParente:(MDTreeNode *)parentNode
@@ -42,34 +69,6 @@
     }
     
 }
-
-- (void)createTree:(NSMutableArray*)elements{
-
-    NSLog(@"title: %i",elements.count);
-
-    for (int i = 0 ; i< elements.count;i++){
-        CategoryTree *element = [elements objectAtIndex:i];
-        
-        if ( [element.parent_id  isEqualToString:@"0"]){
-            @try{
-                MDTreeNode *newNode = [[MDTreeNodeStore sharedStore] createNode];
-                NSLog(@"MASTER - newNode.title: %@",element.title);
-                NSLog(@"MASTER - newNode.id: %@",element.id);
-                newNode.title = element.title;
-                newNode.id = element.indetifier;
-                                
-                [self createTreeRecursive:(NSMutableArray*)elements elementTosearch:(NSString*)element.id
-                              nodoParente:(MDTreeNode *)newNode];
-                
-            }
-            @catch(NSException *ex)
-            {
-                NSLog(@"index: Errore");
-            }
-        }
-    }
-}
-
 
 + (NSString *)isReportAdd:(NSString*)categoryID searchtext:(NSString *)text titleReport:(NSString *)title{
    NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];

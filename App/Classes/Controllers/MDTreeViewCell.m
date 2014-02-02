@@ -56,11 +56,7 @@
     {
         // SETTO PRIMA LE STRUTTURE
         [self.buttonExpand setHidden:NO];
-        /*
-        if (_isExpanded){
-            
-        }
-        */
+
     } else
     {
         [self.buttonExpand setHidden:YES];

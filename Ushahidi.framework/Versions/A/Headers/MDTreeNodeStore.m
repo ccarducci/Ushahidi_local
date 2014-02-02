@@ -93,6 +93,11 @@
     return [rootNode flatten];
 }
 
+- (NSArray *)allNodesVisible
+{
+    return [rootNode flattenVisible];
+}
+
 - (MDTreeNode *)createNode
 {
     MDTreeNode *n = [MDTreeNode new];
@@ -116,8 +121,7 @@
 
     [newChild setParent:node];
 
-    NSLog(@"-createChildIn invoked to create at position %d in array of size \
-%d", position, [[node children] count]);
+    NSLog(@"-createChildIn invoked to create at position %d in array of size \%d", position, [[node children] count]);
     NSMutableArray *children = [node children];
     if ([children count] < position)
         [children addObject:newChild];

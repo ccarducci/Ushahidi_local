@@ -14,9 +14,12 @@
 #import <Ushahidi/CategoryTreeManager.h>
 #import <Ushahidi/CategoryTree.h>
 #import "USHSettings.h"
+#import <Ushahidi/USHDatabase.h>
+#import <Ushahidi/USHCategoriesUtility.h>
 
 @interface MDTreeViewController ()
-
+    @property (strong, nonatomic)  NSArray *nodes;
+    @property (nonatomic, strong, readwrite) USHCategory *category;
 @end
 
 
@@ -25,27 +28,6 @@
 
 @synthesize mapControllerTree;
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    cell.backgroundColor = [[USHSettings sharedInstance] tableRowColor];
-}
-
-- (UIColor *)toUIColor :(NSString *)colorHex{
-    
-    unsigned int c;
-    
-    if ([colorHex characterAtIndex:0] == '#') {
-        
-        [[NSScanner scannerWithString:[colorHex substringFromIndex:1]] scanHexInt:&c];
-        
-    } else {
-        
-        [[NSScanner scannerWithString:colorHex] scanHexInt:&c];
-        
-    }
-    
-    return [UIColor colorWithRed:((c & 0xff0000) >> 16)/255.0 green:((c & 0xff00) >> 8)/255.0 blue:(c & 0xff)/255.0 alpha:1.0];
-    
-}
 
 - (IBAction)done:(id)sender
 {
@@ -61,8 +43,6 @@
             [flatOnlyCategoryYES setValue:@"YES" forKey:pp.id];
         }
     }
-    
-    //[mapControllerTree refreshMap]; // OKKIO
     [self dismissModalViewControllerAnimated:YES];
 }
 
@@ -87,19 +67,33 @@
     
     [[MDTreeNodeStore sharedStore]   removeAll] ;
     NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory];
+    NSMutableDictionary *flatCategorySelected = [[Ushahidi sharedInstance] flatCategorySelected] ;
+    NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];
+    
     NSLog(@"Count in MDTreeViewController: %i",flatCategory.count);
+
+        
+    [USHCategoriesUtility   getCategories:flatCategory
+                     flatCategorySelected:flatCategorySelected
+                      flatOnlyCategoryYES:flatOnlyCategoryYES];
+    
+    [flatOnlyCategoryYES removeAllObjects];
+    
     CategoryTreeManager *operazione = [[CategoryTreeManager alloc] init];
     [operazione createTree:flatCategory];
-    NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];
-    [flatOnlyCategoryYES removeAllObjects];
     [operazione dealloc];
-
+    
+    self.nodes = [[MDTreeNodeStore sharedStore] allNodes];
+    int count = self.nodes.count;
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // CARICO NIB CELLA
+    UINib *nib = [UINib nibWithNibName:@"MDTreeViewCell" bundle:nil];
+    [[self tableView] registerNib:nib forCellReuseIdentifier:@"MDTreeViewCell"];
     // BACKGROUND TABLE
     self.tableView.backgroundColor = [[USHSettings sharedInstance] tableBackColor];
     // COLORE NAVIGATION
@@ -121,7 +115,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger count =[[[MDTreeNodeStore sharedStore] allNodes] count];
-    DLog(@"Node count: @i",count);
     return count;
 }
 
@@ -143,24 +136,105 @@
     
     
     cell.buttonCheck.tag =(NSInteger) n.id;
-    NSLog(@"-------------------------------"  );
-    NSLog(@"TAG FOR  - %@" ,(NSString *)cell.buttonCheck.tag );
-    NSLog(@" n.id  - %@" , n.id );
-    [cell.buttonCheck addTarget:self action:@selector(cellButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    if ( cell.treeImage== nil)    NSLog(@"cell.treeImage - null" );else NSLog(@"cell.treeImage - notnull" );
     cell.buttonRowIndex.tag = [indexPath row];
-    NSLog(@" index cell  - %d" , cell.buttonRowIndex.tag );
-    //[cell.treeImage   addTarget:self action:@selector(expand:) forControlEvents:UIControlEventTouchUpInside];
-    
     [[cell nodeTitleField] setText:[n description]];
-    //[cell setIndentationWidth:32]; // INDENTAZIONE
     [cell setIndentationWidth:8]; // INDENTAZIONE
     [cell setIsExpanded:[n isExpanded]];
-    //NSLog(@" [n isExpanded]  - %@" , [n isExpanded] );
     [cell setHasChildren:([[n children] count] > 0)];
+
+    NSLog(@"-------------------------------"  );
+    NSLog(@"buttonCheck.tag - %@" ,(NSString *)cell.buttonCheck.tag );
+    NSLog(@"buttonRowIndex.tag  - %d" , cell.buttonRowIndex.tag );
     [cell prepareForReuse];
     NSLog(@"-------------------------------"  );
     return cell;
+}
+
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"click %d",indexPath.row);
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSArray *nodes = [[MDTreeNodeStore sharedStore] allNodes];
+    MDTreeNode *selectedNode = [nodes objectAtIndex:[indexPath row]];
+    if ([[selectedNode children] count] < 1)
+        return;
+    
+    // -----------------------
+    // SE HA FIGLI VADO AVANTI
+    // -----------------------
+    MDTreeViewCell *cell =
+    (MDTreeViewCell *)[[self tableView] cellForRowAtIndexPath:indexPath];
+    [cell spinNodeStateIndicatorWithDuration:0.25];
+    
+    
+    BOOL oldIsExpanded = [selectedNode isExpanded];
+    
+    if (oldIsExpanded)
+    {
+        cell.isExpanded = true;
+        NSArray *flattenedChildren = [selectedNode flatten];
+        NSMutableArray *rowsToDelete = [NSMutableArray array];
+        
+        NSLog(@"-------------------------");
+        NSLog(@"DeExpand node %d",cell.tag);
+        for (MDTreeNode *child in flattenedChildren)
+        {
+            NSUInteger row = [nodes indexOfObjectIdenticalTo:child];
+            NSIndexPath *ip = [NSIndexPath indexPathForRow:row inSection:0];
+            [rowsToDelete addObject:ip];
+        }
+        NSLog(@"-------------------------");
+        [selectedNode setIsExpanded:!oldIsExpanded];
+        [cell setIsExpanded:!oldIsExpanded];
+        [tableView beginUpdates];
+        [tableView deleteRowsAtIndexPaths:rowsToDelete
+                         withRowAnimation:UITableViewRowAnimationTop];
+        [tableView endUpdates];
+        
+        // SET IMAGE EXPAND PLUS
+        [cell.buttonExpand setImage:[UIImage imageNamed:@"button_plus_blue.png"] forState:UIControlStateNormal];
+    }else{
+        // --------------------------
+        // SE NON ERA APERTO LO APRO
+        // --------------------------
+        cell.isExpanded = true;
+        [selectedNode setIsExpanded:!oldIsExpanded];
+        [cell setIsExpanded:!oldIsExpanded];
+        
+        NSArray *flattenedChildren = [selectedNode flatten];
+        NSMutableArray *rowsToInsert = [[NSMutableArray array] init];
+        
+        nodes = [[MDTreeNodeStore sharedStore] allNodes];
+        
+        NSLog(@"-------------------------");
+        NSLog(@"Expand node %d",cell.tag);
+        for (MDTreeNode *child in flattenedChildren)
+        {
+            NSUInteger row = [nodes indexOfObjectIdenticalTo:child];
+            NSIndexPath *ip = [NSIndexPath indexPathForRow:row inSection:0];
+            [rowsToInsert addObject:ip];
+            
+        }
+        NSLog(@"-------------------------");
+        
+        [tableView beginUpdates];
+        [tableView insertRowsAtIndexPaths:rowsToInsert
+                         withRowAnimation:UITableViewRowAnimationBottom];
+        [tableView endUpdates];
+        
+    }
+    
 }
 
 

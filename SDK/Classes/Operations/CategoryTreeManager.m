@@ -33,7 +33,6 @@
                 NSLog(@"MASTER - newNode.id: %@",element.id);
                 newNode.title = element.title;
                 newNode.id = element.indetifier;
-                
                 [self createTreeRecursive:(NSMutableArray*)elements elementTosearch:(NSString*)element.id
                               nodoParente:(MDTreeNode *)newNode];
                 

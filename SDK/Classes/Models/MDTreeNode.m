@@ -17,7 +17,7 @@
     {
         _title = @"New Item";
         _isExpanded = NO;
-        _children = [NSMutableArray array];
+        _children = [[NSMutableArray alloc] init]; //[NSMutableArray array];
         _parent = nil;
     }
 
@@ -63,5 +63,6 @@
 
     return result;
 }
+
 
 @end

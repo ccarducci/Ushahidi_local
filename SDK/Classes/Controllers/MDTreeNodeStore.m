@@ -93,6 +93,11 @@
     return [rootNode flatten];
 }
 
+- (NSArray *)allNodesVisible
+{
+    return [rootNode flattenVisible];
+}
+
 - (MDTreeNode *)createNode
 {
     MDTreeNode *n = [MDTreeNode new];

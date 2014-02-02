@@ -12,11 +12,12 @@
 
 @property (copy) NSString *title;
 @property (strong) NSMutableArray *children;
-@property (retain) MDTreeNode *parent; // weak
+@property (assign) MDTreeNode *parent; // weak
 @property (assign) BOOL isExpanded;
 @property (assign) NSNumber *id;
 @property (assign) NSString *identifier;
 
 - (NSArray *)flatten;
+
 
 @end

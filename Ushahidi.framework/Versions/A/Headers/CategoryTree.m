@@ -20,7 +20,6 @@
 @synthesize  indetifier;
 
 - (id) init {
-    //key = [[NSString alloc] init];
     return self;
 }
 
