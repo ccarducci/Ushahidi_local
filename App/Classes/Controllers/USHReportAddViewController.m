@@ -496,7 +496,7 @@ typedef enum {
         self.categoryTableController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
         [self presentModalViewController:self.categoryTableController animated:YES];
         */
-        
+
         NSMutableDictionary *flatCategoryToAdd = [[Ushahidi sharedInstance] flatCategoryToAdd];
         [flatCategoryToAdd removeAllObjects];
         NSArray *categories = [self.map categoriesSortedByPosition];

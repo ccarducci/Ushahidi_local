@@ -88,6 +88,12 @@
                              buttons:self.textSubmitViaOpenGeoSMS, self.textSubmitViaUshahidiAPI, nil];
     }
     else {
+        
+        /* MODIFICHE GEOAVALANCHE INIZIO */
+        NSMutableDictionary *flatCategoryToAddSelected = [[Ushahidi sharedInstance] flatCategoryToAddSelected];
+        [flatCategoryToAddSelected removeAllObjects];
+        /* MODIFICHE GEOAVALANCHE FINE */
+        
         self.reportAddController.openGeoSMS = NO;
         self.reportAddController.map = self.map;
         self.reportAddController.report = [[Ushahidi sharedInstance] addReportForMap:self.map];

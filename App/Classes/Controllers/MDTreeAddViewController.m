@@ -94,7 +94,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -128,25 +127,22 @@
     
     
     cell.buttonCheck.tag =(NSInteger) n.id;
-    NSLog(@"-------------------------------"  );
-    NSLog(@"TAG FOR  - %@" ,(NSString *)cell.buttonCheck.tag );
-    NSLog(@" n.id  - %@" , n.id );
     [cell.buttonCheck addTarget:self action:@selector(check:) forControlEvents:UIControlEventTouchUpInside];
-    if ( cell.treeImage== nil)    NSLog(@"cell.treeImage - null" );else NSLog(@"cell.treeImage - notnull" );
     cell.buttonRowIndex.tag = [indexPath row];
-    NSLog(@" index cell  - %d" , cell.buttonRowIndex.tag );
     [[cell nodeTitleField] setText:[n description]];
     [cell setIndentationWidth:8];
     [cell setIsExpanded:[n isExpanded]];
     [cell setHasChildren:([[n children] count] > 0)];
     [cell prepareForReuse];
     NSLog(@"-------------------------------"  );
+    NSLog(@"cell.buttonCheck.tag  - %@" ,(NSString *)cell.buttonCheck.tag );
+    NSLog(@"index cell  - %d" , cell.buttonRowIndex.tag );
+    NSLog(@"-------------------------------"  );
 
     return cell;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView
-    indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodes];
     MDTreeNode *n = [items objectAtIndex:[indexPath row]];
@@ -159,20 +155,17 @@
         n = n.parent;
     }
 
-    return result;
+    return result * 2;
 }
 
 #pragma mark - Table view delegate
-
 
 - (IBAction)done:(id)sender
 {
     [self dismissModalViewControllerAnimated:YES];   
 }
 
-- (void)tableView:(UITableView *)tableView
-    commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-     forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
@@ -219,9 +212,7 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView
-    moveRowAtIndexPath:(NSIndexPath *)oldPath
-           toIndexPath:(NSIndexPath *)newPath
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)oldPath toIndexPath:(NSIndexPath *)newPath
 {
     MDTreeAddNodeStore *store = [MDTreeAddNodeStore sharedStore];
     NSArray *items = [store allNodes];
@@ -269,8 +260,7 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView
-    didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
      NSLog(@"click %d",indexPath.row);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -342,8 +332,7 @@
     
 }
 
-- (void)tableView:(UITableView *)tableView
-    accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
 
 }
@@ -405,51 +394,6 @@
     }
 
 }
-
--(void) cellButtonAction:(id)sender{
-    UIButton *button = (UIButton *)sender;
-    UITableViewCell *tableViewCell = (UITableViewCell *)button.superview.superview;
-    UITableView* tableView = (UITableView *)tableViewCell.superview;
-    NSIndexPath* pathOfTheCell = [tableView indexPathForCell:tableViewCell];
-    NSInteger rowOfTheCell = pathOfTheCell.row;
-    NSLog(@"rowofthecell %d", rowOfTheCell);
-    
-    NSArray *nodes = [[MDTreeAddNodeStore sharedStore] allNodes];
-    MDTreeNode *selectedNode = [nodes objectAtIndex:pathOfTheCell.row];
-
-    NSInteger myInteger = [button.tag integerValue];
-    NSString *key =[NSString stringWithFormat:@"%i", myInteger];
-
-    
-    NSMutableDictionary *flatCategoryToAdd = [[Ushahidi sharedInstance] flatCategoryToAdd];
-    NSMutableDictionary *flatCategoryToAddSelected = [[Ushahidi sharedInstance] flatCategoryToAddSelected];
-    USHCategory *category = [flatCategoryToAddSelected objectForKey:key];
-    USHCategory *categoryDic = [flatCategoryToAdd objectForKey:key];
-
-    if( [[button imageForState:UIControlStateNormal] isEqual:[UIImage imageNamed:@"checkbox_checked.png"]])
-    {
-        [button setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
-        if (category!=nil)
-        {
-            [report removeCategoriesObject:category];
-            [flatCategoryToAddSelected removeObjectForKey:key];
-        }
-    }
-    else
-    {
-        
-        category = categoryDic;
-        if (category!=NULL)
-        {
-            [button setImage:[UIImage imageNamed:@"checkbox_checked.png"] forState:UIControlStateNormal];
-            [report addCategoriesObject:category];
-            [flatCategoryToAddSelected setObject:category forKey:key];
-        }
-    }
-
-}
-
-
 
 - (void)setCildren:(NSString *)value node:(MDTreeNode *)selectedNode withCell:(NSString *)refreshImageCheck {
     NSMutableDictionary *dictionary = [[Ushahidi sharedInstance] flatCategorySelected];
