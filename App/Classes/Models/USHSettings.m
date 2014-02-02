@@ -22,7 +22,7 @@
 #import <Ushahidi/UIColor+USH.h>
 #import <Ushahidi/NSString+USH.h>
 #import <Ushahidi/NSDictionary+USH.h>
-
+ 
 @interface USHSettings ()
 
 @end
