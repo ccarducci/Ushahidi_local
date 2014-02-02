@@ -28,6 +28,10 @@
 #import "NSString+USH.h"
 #import "NSSet+USH.h"
 #import "NSArray+USH.h"
+#import "CategoryTree.h"
+#import "CategoryTreeManager.h"
+#import <Ushahidi.h>
+#import "USHCategoriesUtility.h"
 
 @implementation USHMap
 
@@ -68,6 +72,47 @@
     NSMutableArray *filtered = [NSMutableArray array];
     NSString *sortedBy = sort == USHSortByDate ? @"date" : @"title";
     for (USHReport *report in [self.reports sortedBy:sortedBy ascending:ascending]) {
+
+        BOOL hasCategory = NO;
+        BOOL hasText = NO;
+        // PRIMA CONTROLLO SE HA
+        if (text != nil) {
+            if ([report.title anyWordHasPrefix:text]) {
+                hasText = YES;
+            }
+            if ([report.desc anyWordHasPrefix:text]) {
+                hasText = YES;
+            }
+        }
+        else {
+            hasText = YES;
+        }
+        
+        if ( hasText ){
+            for (USHCategory *reportCategory in report.categories) {
+
+                    NSString *value =[CategoryTreeManager isReportAdd:reportCategory.identifier searchtext:text titleReport:report.title];
+                    if ( [value isEqual:@"YES"])
+                    {
+                        hasCategory = YES;
+                        break;
+                    }
+            }
+        }
+        //if ( report.categories == nil )hasCategory = YES;
+        if (hasText && hasCategory) {
+            [filtered addObject:report];
+        }
+
+    }
+    return filtered;
+}
+
+/*
+- (NSArray*) reportsWithCategory:(USHCategory*)category text:(NSString*)text sort:(USHSort)sort ascending:(BOOL)ascending {
+    NSMutableArray *filtered = [NSMutableArray array];
+    NSString *sortedBy = sort == USHSortByDate ? @"date" : @"title";
+    for (USHReport *report in [self.reports sortedBy:sortedBy ascending:ascending]) {
         BOOL hasCategory = NO;
         if (category != nil) {
             for (USHCategory *reportCategory in report.categories) {
@@ -97,6 +142,7 @@
     }
     return filtered;
 }
+*/
 
 - (NSArray*)checkinsForUser:(USHUser*)user text:(NSString*)text {
     NSMutableArray *filtered = [NSMutableArray array];

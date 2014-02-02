@@ -33,6 +33,7 @@
 #import <Ushahidi/UITableView+USH.h>
 #import <Ushahidi/UIAlertView+USH.h>
 #import "USHSettings.h"
+#import <Ushahidi/USHCategoriesUtility.h>
 
 @interface USHReportTableViewController ()
 
@@ -79,6 +80,16 @@ typedef enum {
 }
 
 - (void) initialSyncIfNeeded {
+    DLog(@"OKKIO----------------------------------------");
+    NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory];
+    NSMutableDictionary *flatCategorySelected = [[Ushahidi sharedInstance] flatCategorySelected] ;
+    NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];
+    if ( flatOnlyCategoryYES.count == 0 )
+    {
+        [USHCategoriesUtility   getCategories:flatCategory
+                         flatCategorySelected:flatCategorySelected
+                          flatOnlyCategoryYES:flatOnlyCategoryYES];
+    }
     if ([[Ushahidi sharedInstance] synchronizeDate] == nil) {
         [self showLoadingWithMessage:NSLocalizedString(@"Loading...", nil)];
         [self startRefreshControl];

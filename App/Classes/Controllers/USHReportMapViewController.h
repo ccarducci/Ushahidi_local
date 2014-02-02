@@ -34,5 +34,7 @@
 @property (strong, nonatomic) USHCategory *category;
 
 - (IBAction)locate:(id)sender event:(UIEvent*)event;
-
+/* MODIFICHE GROAVALANCHE INIZIO */
+- (void) refreshMap;
+/* MODIFICHE GROAVALANCHE FINE */
 @end

@@ -45,6 +45,7 @@
 #import <Ushahidi/CategoryTreeManager.h>
 #import <Ushahidi/CategoryTree.h>
 #import "MDTreeViewController.h"
+#import <Ushahidi/USHCategoriesUtility.h>
 /* MODIFICHE GEOAVALANCHE INIZIO */
 
 @interface USHReportTabBarController ()
@@ -98,9 +99,11 @@
 
 - (IBAction)filter:(id)sender event:(UIEvent*)event {
     DLog(@"");
-	NSMutableArray *titles = [NSMutableArray arrayWithObject:NSLocalizedString(@"--- ALL CATEGORIES ---", nil)];
     /* MODIFICHE GEOAVALANCHE INIZIO */
     /*
+	NSMutableArray *titles = [NSMutableArray arrayWithObject:NSLocalizedString(@"--- ALL CATEGORIES ---", nil)];
+
+
 	for (USHCategory *category in self.map.categoriesSortedByPosition) {
 		if (category.title != nil) {
 			[titles addObject:category.title];
@@ -110,6 +113,7 @@
                           selected:self.category.title
                              event:event
                                tag:0];
+    
     */
     
     

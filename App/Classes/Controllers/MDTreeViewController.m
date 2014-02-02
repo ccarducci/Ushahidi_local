@@ -28,24 +28,6 @@
 
 @synthesize mapControllerTree;
 
-
-- (IBAction)done:(id)sender
-{
-    NSMutableDictionary *dictionary = [[Ushahidi sharedInstance] flatCategorySelected];
-    NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory] ;
-    NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];
-    
-    for (CategoryTree* pp in flatCategory) {
-        NSString *selected = [dictionary objectForKey:pp.indetifier];
-        pp.selected = selected;
-        
-        if ([selected isEqual:@"YES"]){
-            [flatOnlyCategoryYES setValue:@"YES" forKey:pp.id];
-        }
-    }
-    [self dismissModalViewControllerAnimated:YES];
-}
-
 - (id)init
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
@@ -53,7 +35,9 @@
     {
         // CREO PULSANTE DONE
         UINavigationItem *n = [self navigationItem];
-        [n setTitle:NSLocalizedString(@"cat_new", nil)];
+        //[n setTitle:NSLocalizedString(@"cat_new", nil)];
+
+        [n setTitle:@"Categorie"];
         
         UIBarButtonItem *bbi =
         [[UIBarButtonItem alloc]
@@ -66,16 +50,19 @@
     }
     
     [[MDTreeNodeStore sharedStore]   removeAll] ;
+    
+    
     NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory];
     NSMutableDictionary *flatCategorySelected = [[Ushahidi sharedInstance] flatCategorySelected] ;
     NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];
     
     NSLog(@"Count in MDTreeViewController: %i",flatCategory.count);
 
-        
-    [USHCategoriesUtility   getCategories:flatCategory
-                     flatCategorySelected:flatCategorySelected
-                      flatOnlyCategoryYES:flatOnlyCategoryYES];
+    if ( flatCategory.count == 0){
+        [USHCategoriesUtility   getCategories:flatCategory
+                         flatCategorySelected:flatCategorySelected
+                          flatOnlyCategoryYES:flatOnlyCategoryYES];
+    }
     
     [flatOnlyCategoryYES removeAllObjects];
     
@@ -103,6 +90,51 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
+}
+
+#pragma mark - Action
+
+- (IBAction)done:(id)sender
+{
+    NSMutableDictionary *dictionary = [[Ushahidi sharedInstance] flatCategorySelected];
+    NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory] ;
+    NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];
+    
+    for (CategoryTree* pp in flatCategory) {
+        NSString *selected = [dictionary objectForKey:pp.indetifier];
+        pp.selected = selected;
+        
+        if ([selected isEqual:@"YES"]){
+            [flatOnlyCategoryYES setValue:@"YES" forKey:pp.id];
+        }
+    }
+    [mapControllerTree refreshMap];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+-(void) pressCheck:(id)sender{
+    UIButton *button = (UIButton *)sender;
+    NSLog(@"Button tag pressed: %@",(NSString *)button.tag);
+    BOOL check = false;
+    NSMutableDictionary *dictionary = [[Ushahidi sharedInstance] flatCategorySelected];
+    if( [[button imageForState:UIControlStateNormal] isEqual:[UIImage imageNamed:@"checkbox_checked.png"]])
+    {
+        [button setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
+        [dictionary setValue:@"NO" forKey:(NSString *)button.tag];
+    }
+    else
+    {
+        [button setImage:[UIImage imageNamed:@"checkbox_checked.png"] forState:UIControlStateNormal];
+        [dictionary setValue:@"YES" forKey:(NSString *)button.tag];
+        check = true;
+    }
+    
 }
 
 #pragma mark - Table view data source
@@ -147,17 +179,11 @@
     NSLog(@"buttonRowIndex.tag  - %d" , cell.buttonRowIndex.tag );
     [cell prepareForReuse];
     NSLog(@"-------------------------------"  );
+    
+    // LEGO L?EVENTO DELL CHECK
+    [cell.buttonCheck addTarget:self action:@selector(pressCheck:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
-
-
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [[self tableView] reloadData];
-}
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -190,6 +216,7 @@
         NSLog(@"DeExpand node %d",cell.tag);
         for (MDTreeNode *child in flattenedChildren)
         {
+            NSLog(@"Delete child: %@" , child.title );
             NSUInteger row = [nodes indexOfObjectIdenticalTo:child];
             NSIndexPath *ip = [NSIndexPath indexPathForRow:row inSection:0];
             [rowsToDelete addObject:ip];
@@ -221,6 +248,7 @@
         NSLog(@"Expand node %d",cell.tag);
         for (MDTreeNode *child in flattenedChildren)
         {
+            NSLog(@"Insert child: %@" , child.title );
             NSUInteger row = [nodes indexOfObjectIdenticalTo:child];
             NSIndexPath *ip = [NSIndexPath indexPathForRow:row inSection:0];
             [rowsToInsert addObject:ip];
@@ -233,9 +261,26 @@
                          withRowAnimation:UITableViewRowAnimationBottom];
         [tableView endUpdates];
         
+        // SET IMAGE EXPAND MINUS
+        [cell.buttonExpand setImage:[UIImage imageNamed:@"button_minus_blue.png"] forState:UIControlStateNormal];
     }
     
 }
 
+- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray *items = [[MDTreeNodeStore sharedStore] allNodes];
+    MDTreeNode *n = [items objectAtIndex:[indexPath row]];
+    
+    NSInteger result = -1;
+    
+    while (n && n.parent)
+    {
+        ++result;
+        n = n.parent;
+    }
+     NSLog(@"result indentation %d",result);
+    return result * 2;
+}
 
 @end
