@@ -33,7 +33,7 @@
 #import <Ushahidi/UITableView+USH.h>
 #import <Ushahidi/UIAlertView+USH.h>
 #import "USHSettings.h"
-#import <Ushahidi/USHCategoriesUtility.h>
+#import <Ushahidi/USHCategoriesUtility.h> // GEOAVALANCHE
 
 @interface USHReportTableViewController ()
 
@@ -80,7 +80,8 @@ typedef enum {
 }
 
 - (void) initialSyncIfNeeded {
-    DLog(@"OKKIO----------------------------------------");
+
+    /* GEOAVALANCHE */
     NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory];
     NSMutableDictionary *flatCategorySelected = [[Ushahidi sharedInstance] flatCategorySelected] ;
     NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];
@@ -90,6 +91,8 @@ typedef enum {
                          flatCategorySelected:flatCategorySelected
                           flatOnlyCategoryYES:flatOnlyCategoryYES];
     }
+    /* GEOAVALANCHE */
+    
     if ([[Ushahidi sharedInstance] synchronizeDate] == nil) {
         [self showLoadingWithMessage:NSLocalizedString(@"Loading...", nil)];
         [self startRefreshControl];
