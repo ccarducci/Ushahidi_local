@@ -96,6 +96,12 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -158,13 +164,6 @@
     return result * 2;
 }
 
-#pragma mark - Table view delegate
-
-- (IBAction)done:(id)sender
-{
-    [self dismissModalViewControllerAnimated:YES];   
-}
-
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
@@ -174,8 +173,8 @@
         MDTreeNode *n = [items objectAtIndex:[indexPath row]];
         NSLog(@"deleting row %d", [indexPath row]);
         MDTreeAddViewCell *cell =
-            (MDTreeAddViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-
+        (MDTreeAddViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+        
         NSArray *childrenToReload;
         // no need to reload children if they're removed with the parent
         // but if they're not removed with the parent, we need to get those
@@ -189,22 +188,22 @@
         
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                          withRowAnimation:UITableViewRowAnimationFade];
-
+        
         // no need to reload children if they're removed with the parent
         if (![cell isExpanded])
             return;
-
+        
         NSMutableArray *indexPathsToReload = [NSMutableArray array];
         // reloading all items to get refreshed indexes
         items = [store allNodes];
         for (MDTreeNode *nodeToReload in childrenToReload)
         {
             NSUInteger index = [items indexOfObjectIdenticalTo:nodeToReload];
-
+            
             [indexPathsToReload addObject:[NSIndexPath indexPathForRow:index
                                                              inSection:0]];
         }
-
+        
         [tableView beginUpdates];
         [tableView reloadRowsAtIndexPaths:indexPathsToReload
                          withRowAnimation:UITableViewRowAnimationFade];
@@ -218,42 +217,42 @@
     NSArray *items = [store allNodes];
     MDTreeNode *n = [items objectAtIndex:[oldPath row]];
     MDTreeAddViewCell *cell =
-        (MDTreeAddViewCell *)[tableView cellForRowAtIndexPath:oldPath];
-
+    (MDTreeAddViewCell *)[tableView cellForRowAtIndexPath:oldPath];
+    
     NSArray *childrenToReload;
-
+    
     // no need to reload children if they're moved with the parent
     // but if they're not moved with the parent, we need to get those
     // before changes to the store were applied
     if ([cell isExpanded])
         childrenToReload = [n flatten];
-
+    
     NSInteger oldRow = [oldPath row];
     NSInteger newRow = [newPath row];
-
+    
     if (![cell isExpanded])
         [store moveNodeAtRowWithChildren:oldRow toRow:newRow];
     else
         [store moveNodeAtRow:oldRow toRow:newRow];
-
+    
     [cell setIndentationLevel:[self tableView:[self tableView]
             indentationLevelForRowAtIndexPath:newPath]];
     [cell setNeedsLayout];
-
+    
     // no need to reload children if they're moved with the parent
     if (![cell isExpanded])
         return;
-
+    
     // reloading all items to get refreshed indexes
     items = [store allNodes];
     for (MDTreeNode *nodeToReload in childrenToReload)
     {
         NSUInteger row = [items indexOfObjectIdenticalTo:nodeToReload];
         NSIndexPath *indexPathToUpdate =
-            [NSIndexPath indexPathForRow:row inSection:0];
-
+        [NSIndexPath indexPathForRow:row inSection:0];
+        
         UITableViewCell *cell =
-            [[self tableView] cellForRowAtIndexPath:indexPathToUpdate];
+        [[self tableView] cellForRowAtIndexPath:indexPathToUpdate];
         [cell setIndentationLevel:[self tableView:[self tableView]
                 indentationLevelForRowAtIndexPath:indexPathToUpdate]];
         [cell setNeedsLayout];
@@ -262,26 +261,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-     NSLog(@"click %d",indexPath.row);
+    NSLog(@"click %d",indexPath.row);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    
     NSArray *nodes = [[MDTreeAddNodeStore sharedStore] allNodes];
     MDTreeNode *selectedNode = [nodes objectAtIndex:[indexPath row]];
     if ([[selectedNode children] count] < 1)
         return;
-
+    
     MDTreeAddViewCell *cell =
-        (MDTreeAddViewCell *)[[self tableView] cellForRowAtIndexPath:indexPath];
+    (MDTreeAddViewCell *)[[self tableView] cellForRowAtIndexPath:indexPath];
     [cell spinNodeStateIndicatorWithDuration:0.25];
-
-
+    
+    
     BOOL oldIsExpanded = [selectedNode isExpanded];
-
+    
     if (oldIsExpanded)
     {
         NSArray *flattenedChildren = [selectedNode flatten];
         NSMutableArray *rowsToDelete = [NSMutableArray array];
-
+        
         NSLog(@"-------------------------");
         NSLog(@"DeExpand node %d",cell.tag);
         for (MDTreeNode *child in flattenedChildren)
@@ -334,13 +333,14 @@
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-
+    
 }
 
-- (void)viewWillAppear:(BOOL)animated
+#pragma mark - Action
+
+- (IBAction)done:(id)sender
 {
-    [super viewWillAppear:animated];
-    [[self tableView] reloadData];
+    [self dismissModalViewControllerAnimated:YES];   
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animate
