@@ -2028,6 +2028,27 @@
 		4AC064E2189DB67F00186B58 /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC064D6189DB67F00186B58 /* checkbox_unchecked.png */; };
 		4AC064E3189DB67F00186B58 /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC064D6189DB67F00186B58 /* checkbox_unchecked.png */; };
 		4AC064E4189DB67F00186B58 /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC064D6189DB67F00186B58 /* checkbox_unchecked.png */; };
+		4ADE367A189EDAB300ECB569 /* MDTreeAddViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3677189EDAB300ECB569 /* MDTreeAddViewCell.m */; };
+		4ADE367B189EDAB300ECB569 /* MDTreeAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3679189EDAB300ECB569 /* MDTreeAddViewController.m */; };
+		4ADE367C189EDAC300ECB569 /* MDTreeAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3679189EDAB300ECB569 /* MDTreeAddViewController.m */; };
+		4ADE367D189EDAC400ECB569 /* MDTreeAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3679189EDAB300ECB569 /* MDTreeAddViewController.m */; };
+		4ADE367E189EDAC400ECB569 /* MDTreeAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3679189EDAB300ECB569 /* MDTreeAddViewController.m */; };
+		4ADE367F189EDAC500ECB569 /* MDTreeAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3679189EDAB300ECB569 /* MDTreeAddViewController.m */; };
+		4ADE3680189EDAC500ECB569 /* MDTreeAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3679189EDAB300ECB569 /* MDTreeAddViewController.m */; };
+		4ADE3681189EDAC500ECB569 /* MDTreeAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3679189EDAB300ECB569 /* MDTreeAddViewController.m */; };
+		4ADE3682189EDACC00ECB569 /* MDTreeAddViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3677189EDAB300ECB569 /* MDTreeAddViewCell.m */; };
+		4ADE3683189EDACC00ECB569 /* MDTreeAddViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3677189EDAB300ECB569 /* MDTreeAddViewCell.m */; };
+		4ADE3684189EDACD00ECB569 /* MDTreeAddViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3677189EDAB300ECB569 /* MDTreeAddViewCell.m */; };
+		4ADE3685189EDACD00ECB569 /* MDTreeAddViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3677189EDAB300ECB569 /* MDTreeAddViewCell.m */; };
+		4ADE3686189EDACE00ECB569 /* MDTreeAddViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3677189EDAB300ECB569 /* MDTreeAddViewCell.m */; };
+		4ADE3687189EDACE00ECB569 /* MDTreeAddViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE3677189EDAB300ECB569 /* MDTreeAddViewCell.m */; };
+		4ADE3689189EDCEC00ECB569 /* MDTreeAddViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE3688189EDCEC00ECB569 /* MDTreeAddViewCell.xib */; };
+		4ADE368A189EDCF600ECB569 /* MDTreeAddViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE3688189EDCEC00ECB569 /* MDTreeAddViewCell.xib */; };
+		4ADE368B189EDCF600ECB569 /* MDTreeAddViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE3688189EDCEC00ECB569 /* MDTreeAddViewCell.xib */; };
+		4ADE368C189EDCF600ECB569 /* MDTreeAddViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE3688189EDCEC00ECB569 /* MDTreeAddViewCell.xib */; };
+		4ADE368D189EDCF700ECB569 /* MDTreeAddViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE3688189EDCEC00ECB569 /* MDTreeAddViewCell.xib */; };
+		4ADE368E189EDCF700ECB569 /* MDTreeAddViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE3688189EDCEC00ECB569 /* MDTreeAddViewCell.xib */; };
+		4ADE368F189EDCF700ECB569 /* MDTreeAddViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE3688189EDCEC00ECB569 /* MDTreeAddViewCell.xib */; };
 		4AF856471876305100B6B357 /* USHCustomFieldsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */; };
 		4AF856481876305100B6B357 /* USHCustomFieldsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */; };
 		4AF856491876305100B6B357 /* USHCustomFieldsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */; };
@@ -2480,6 +2501,11 @@
 		4AC064C6189DB67200186B58 /* button_plus_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_plus_blue.png; sourceTree = "<group>"; };
 		4AC064D5189DB67F00186B58 /* checkbox_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_checked.png; sourceTree = "<group>"; };
 		4AC064D6189DB67F00186B58 /* checkbox_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_unchecked.png; sourceTree = "<group>"; };
+		4ADE3676189EDAB300ECB569 /* MDTreeAddViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeAddViewCell.h; sourceTree = "<group>"; };
+		4ADE3677189EDAB300ECB569 /* MDTreeAddViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTreeAddViewCell.m; sourceTree = "<group>"; };
+		4ADE3678189EDAB300ECB569 /* MDTreeAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeAddViewController.h; sourceTree = "<group>"; };
+		4ADE3679189EDAB300ECB569 /* MDTreeAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTreeAddViewController.m; sourceTree = "<group>"; };
+		4ADE3688189EDCEC00ECB569 /* MDTreeAddViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MDTreeAddViewCell.xib; sourceTree = "<group>"; };
 		4AF856451876305100B6B357 /* USHCustomFieldsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHCustomFieldsViewController.h; sourceTree = "<group>"; };
 		4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHCustomFieldsViewController.m; sourceTree = "<group>"; };
 		4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USHCustomFieldsViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -3059,6 +3085,10 @@
 		3E6D034F159B55FE00CDB5B7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4ADE3676189EDAB300ECB569 /* MDTreeAddViewCell.h */,
+				4ADE3677189EDAB300ECB569 /* MDTreeAddViewCell.m */,
+				4ADE3678189EDAB300ECB569 /* MDTreeAddViewController.h */,
+				4ADE3679189EDAB300ECB569 /* MDTreeAddViewController.m */,
 				4AC064B4189DB5AE00186B58 /* MDTreeViewCell.h */,
 				4AC064B5189DB5AE00186B58 /* MDTreeViewCell.m */,
 				4AC064AA189DAD0300186B58 /* MDTreeViewController.h */,
@@ -3191,6 +3221,7 @@
 		3E97572C161F7D980072C3BD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4ADE3688189EDCEC00ECB569 /* MDTreeAddViewCell.xib */,
 				4AC064BD189DB60500186B58 /* MDTreeViewCell.xib */,
 				3E97572D161F7E0D0072C3BD /* USHApplication_iPad.xib */,
 				3E97572E161F7E0D0072C3BD /* USHApplication_iPhone.xib */,
@@ -3659,6 +3690,7 @@
 				3EF435B2161113BF00C4D725 /* done@2x.png in Resources */,
 				3EF435B5161113BF00C4D725 /* forward.png in Resources */,
 				3EF435B6161113BF00C4D725 /* forward@2x.png in Resources */,
+				4ADE3689189EDCEC00ECB569 /* MDTreeAddViewCell.xib in Resources */,
 				3EF435B8161113BF00C4D725 /* gps.png in Resources */,
 				3EF435B9161113BF00C4D725 /* gps@2x.png in Resources */,
 				3EF435BA161113BF00C4D725 /* info.png in Resources */,
@@ -4046,6 +4078,7 @@
 				3EC04CCE1672AF2F003D5875 /* Logo-iPad@2x.png in Resources */,
 				3EC04CCF1672AF2F003D5875 /* Logo-iPhone.png in Resources */,
 				3EC04CD01672AF2F003D5875 /* Logo-iPhone@2x.png in Resources */,
+				4ADE368B189EDCF600ECB569 /* MDTreeAddViewCell.xib in Resources */,
 				3EC04CD21672AFFF003D5875 /* Icon-iPad@2x.png in Resources */,
 				3E3377B9167501FF00625F73 /* discovered.png in Resources */,
 				3E3377BF167501FF00625F73 /* discovered@2x.png in Resources */,
@@ -4178,6 +4211,7 @@
 				3E9E51F9167129350095F4A4 /* USHReportNoImageTableCell_iPhone.xib in Resources */,
 				3E9E51FA167129350095F4A4 /* USHReportTableCell_iPad.xib in Resources */,
 				3E9E51FB167129350095F4A4 /* USHReportTableCell_iPhone.xib in Resources */,
+				4ADE368D189EDCF700ECB569 /* MDTreeAddViewCell.xib in Resources */,
 				3E9E51FC167129350095F4A4 /* USHImageTableCell.xib in Resources */,
 				3E9E51FD167129350095F4A4 /* USHLocationTableCell.xib in Resources */,
 				3E9E51FE167129350095F4A4 /* USHWebTableCell.xib in Resources */,
@@ -4421,6 +4455,7 @@
 				3E9E534F167129380095F4A4 /* USHReportTableCell_iPhone.xib in Resources */,
 				3E9E5350167129380095F4A4 /* USHImageTableCell.xib in Resources */,
 				3E9E5351167129380095F4A4 /* USHLocationTableCell.xib in Resources */,
+				4ADE368E189EDCF700ECB569 /* MDTreeAddViewCell.xib in Resources */,
 				3E9E5352167129380095F4A4 /* USHWebTableCell.xib in Resources */,
 				3E9E5353167129380095F4A4 /* USHCommentTableCell.xib in Resources */,
 				3E9E5354167129380095F4A4 /* USHTextTableCell.xib in Resources */,
@@ -4770,6 +4805,7 @@
 				3EC04CAA1672ACDF003D5875 /* iTunesArtwork@2x.png in Resources */,
 				3EC04CAB1672ACDF003D5875 /* Logo-iPad.png in Resources */,
 				3EC04CAC1672ACDF003D5875 /* Logo-iPhone.png in Resources */,
+				4ADE368C189EDCF600ECB569 /* MDTreeAddViewCell.xib in Resources */,
 				3EC04CAE1672AD71003D5875 /* Icon-iPad@2x.png in Resources */,
 				3E3377BA167501FF00625F73 /* discovered.png in Resources */,
 				3E3377C0167501FF00625F73 /* discovered@2x.png in Resources */,
@@ -5011,6 +5047,7 @@
 				3EC04CEB1672B37B003D5875 /* Logo-iPad.png in Resources */,
 				3EC04CEC1672B37B003D5875 /* Logo-iPad@2x.png in Resources */,
 				3EC04CED1672B37B003D5875 /* Logo-iPhone.png in Resources */,
+				4ADE368A189EDCF600ECB569 /* MDTreeAddViewCell.xib in Resources */,
 				3EC04CEE1672B37B003D5875 /* Logo-iPhone@2x.png in Resources */,
 				3E3377B8167501FF00625F73 /* discovered.png in Resources */,
 				3E3377BE167501FF00625F73 /* discovered@2x.png in Resources */,
@@ -5185,6 +5222,7 @@
 				3EC1B53D1757AB1000CFF726 /* name.png in Resources */,
 				3EC1B53E1757AB1000CFF726 /* name@2x.png in Resources */,
 				3EC1B53F1757AB1000CFF726 /* clear.png in Resources */,
+				4ADE368F189EDCF700ECB569 /* MDTreeAddViewCell.xib in Resources */,
 				4AC064C4189DB60500186B58 /* MDTreeViewCell.xib in Resources */,
 				3EC1B5401757AB1000CFF726 /* clear@2x.png in Resources */,
 				4AF856651876318600B6B357 /* USHCustomFieldsViewController_iPad.xib in Resources */,
@@ -5288,6 +5326,7 @@
 				4AC064AC189DAD0300186B58 /* MDTreeViewController.m in Sources */,
 				3E9B26D215DD4869004CB8EE /* USHMapTableCell.m in Sources */,
 				3E9B26D315DD4869004CB8EE /* USHReportTableCell.m in Sources */,
+				4ADE367B189EDAB300ECB569 /* MDTreeAddViewController.m in Sources */,
 				3E9B26D415DD4869004CB8EE /* USHCheckinTableCell.m in Sources */,
 				3E9B26DD15DD558A004CB8EE /* USHTableCellFactory.m in Sources */,
 				3EA2B99415DD84A000ACD98F /* USHReportTableViewController.m in Sources */,
@@ -5311,6 +5350,7 @@
 				3ED89D101623BB9800F46881 /* USHCheckBoxTableCell.m in Sources */,
 				3E2BFE53163DD3CC00445A29 /* USHSettings.m in Sources */,
 				3E2BFE62163DF53500445A29 /* USHCommentAddViewController.m in Sources */,
+				4ADE367A189EDAB300ECB569 /* MDTreeAddViewCell.m in Sources */,
 				3EBE2BDC163F65D400DDFA2A /* USHAppDelegateMain.m in Sources */,
 				3EFAD0D81647337F00A02316 /* USHCheckinTableViewController.m in Sources */,
 				3EFAD0E71647639E00A02316 /* USHCheckinDetailsViewController.m in Sources */,
@@ -5344,6 +5384,7 @@
 				3E9E5005167129320095F4A4 /* USHCategoryTableViewController.m in Sources */,
 				3E9E5006167129320095F4A4 /* USHTextTableCell.m in Sources */,
 				3E9E5007167129320095F4A4 /* USHImageTableCell.m in Sources */,
+				4ADE367D189EDAC400ECB569 /* MDTreeAddViewController.m in Sources */,
 				3E9E5008167129320095F4A4 /* USHWebTableCell.m in Sources */,
 				3E9E5009167129320095F4A4 /* USHCommentTableCell.m in Sources */,
 				3E9E500A167129320095F4A4 /* USHLocationTableCell.m in Sources */,
@@ -5362,6 +5403,7 @@
 				3E9E5015167129320095F4A4 /* USHMapAddViewController.m in Sources */,
 				3E9E5016167129320095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E5017167129320095F4A4 /* USHSwitchTableCell.m in Sources */,
+				4ADE3683189EDACC00ECB569 /* MDTreeAddViewCell.m in Sources */,
 				3E9E5018167129320095F4A4 /* USHSliderTableCell.m in Sources */,
 				3E9E5019167129320095F4A4 /* USHFilterViewController.m in Sources */,
 				3E01346216723DB000C40CB4 /* USHImageViewController.m in Sources */,
@@ -5389,6 +5431,7 @@
 				3E9E5159167129350095F4A4 /* USHCategoryTableViewController.m in Sources */,
 				3E9E515A167129350095F4A4 /* USHTextTableCell.m in Sources */,
 				3E9E515B167129350095F4A4 /* USHImageTableCell.m in Sources */,
+				4ADE367F189EDAC500ECB569 /* MDTreeAddViewController.m in Sources */,
 				3E9E515C167129350095F4A4 /* USHWebTableCell.m in Sources */,
 				3E9E515D167129350095F4A4 /* USHCommentTableCell.m in Sources */,
 				3E9E515E167129350095F4A4 /* USHLocationTableCell.m in Sources */,
@@ -5407,6 +5450,7 @@
 				3E9E5169167129350095F4A4 /* USHMapAddViewController.m in Sources */,
 				3E9E516A167129350095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E516B167129350095F4A4 /* USHSwitchTableCell.m in Sources */,
+				4ADE3685189EDACD00ECB569 /* MDTreeAddViewCell.m in Sources */,
 				3E9E516C167129350095F4A4 /* USHSliderTableCell.m in Sources */,
 				3E9E516D167129350095F4A4 /* USHFilterViewController.m in Sources */,
 				3E01346416723DB000C40CB4 /* USHImageViewController.m in Sources */,
@@ -5434,6 +5478,7 @@
 				3E9E52AD167129380095F4A4 /* USHCategoryTableViewController.m in Sources */,
 				3E9E52AE167129380095F4A4 /* USHTextTableCell.m in Sources */,
 				3E9E52AF167129380095F4A4 /* USHImageTableCell.m in Sources */,
+				4ADE3680189EDAC500ECB569 /* MDTreeAddViewController.m in Sources */,
 				3E9E52B0167129380095F4A4 /* USHWebTableCell.m in Sources */,
 				3E9E52B1167129380095F4A4 /* USHCommentTableCell.m in Sources */,
 				3E9E52B2167129380095F4A4 /* USHLocationTableCell.m in Sources */,
@@ -5452,6 +5497,7 @@
 				3E9E52BD167129380095F4A4 /* USHMapAddViewController.m in Sources */,
 				3E9E52BE167129380095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E52BF167129380095F4A4 /* USHSwitchTableCell.m in Sources */,
+				4ADE3686189EDACE00ECB569 /* MDTreeAddViewCell.m in Sources */,
 				3E9E52C0167129380095F4A4 /* USHSliderTableCell.m in Sources */,
 				3E9E52C1167129380095F4A4 /* USHFilterViewController.m in Sources */,
 				3E01346516723DB000C40CB4 /* USHImageViewController.m in Sources */,
@@ -5479,6 +5525,7 @@
 				3E9E5401167129530095F4A4 /* USHCategoryTableViewController.m in Sources */,
 				3E9E5402167129530095F4A4 /* USHTextTableCell.m in Sources */,
 				3E9E5403167129530095F4A4 /* USHImageTableCell.m in Sources */,
+				4ADE367E189EDAC400ECB569 /* MDTreeAddViewController.m in Sources */,
 				3E9E5404167129530095F4A4 /* USHWebTableCell.m in Sources */,
 				3E9E5405167129530095F4A4 /* USHCommentTableCell.m in Sources */,
 				3E9E5406167129530095F4A4 /* USHLocationTableCell.m in Sources */,
@@ -5497,6 +5544,7 @@
 				3E9E5411167129530095F4A4 /* USHMapAddViewController.m in Sources */,
 				3E9E5412167129530095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E5413167129530095F4A4 /* USHSwitchTableCell.m in Sources */,
+				4ADE3684189EDACD00ECB569 /* MDTreeAddViewCell.m in Sources */,
 				3E9E5414167129530095F4A4 /* USHSliderTableCell.m in Sources */,
 				3E9E5415167129530095F4A4 /* USHFilterViewController.m in Sources */,
 				3E01346316723DB000C40CB4 /* USHImageViewController.m in Sources */,
@@ -5524,6 +5572,7 @@
 				3E9E575016712E5A0095F4A4 /* USHCategoryTableViewController.m in Sources */,
 				3E9E575116712E5A0095F4A4 /* USHTextTableCell.m in Sources */,
 				3E9E575216712E5A0095F4A4 /* USHImageTableCell.m in Sources */,
+				4ADE367C189EDAC300ECB569 /* MDTreeAddViewController.m in Sources */,
 				3E9E575316712E5A0095F4A4 /* USHWebTableCell.m in Sources */,
 				3E9E575416712E5A0095F4A4 /* USHCommentTableCell.m in Sources */,
 				3E9E575516712E5A0095F4A4 /* USHLocationTableCell.m in Sources */,
@@ -5542,6 +5591,7 @@
 				3E9E576016712E5A0095F4A4 /* USHMapAddViewController.m in Sources */,
 				3E9E576116712E5A0095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E576216712E5A0095F4A4 /* USHSwitchTableCell.m in Sources */,
+				4ADE3682189EDACC00ECB569 /* MDTreeAddViewCell.m in Sources */,
 				3E9E576316712E5A0095F4A4 /* USHSliderTableCell.m in Sources */,
 				3E9E576416712E5A0095F4A4 /* USHFilterViewController.m in Sources */,
 				3E01346116723DB000C40CB4 /* USHImageViewController.m in Sources */,
@@ -5569,6 +5619,7 @@
 				3EC1B4831757AB1000CFF726 /* USHCategoryTableViewController.m in Sources */,
 				3EC1B4841757AB1000CFF726 /* USHTextTableCell.m in Sources */,
 				3EC1B4851757AB1000CFF726 /* USHImageTableCell.m in Sources */,
+				4ADE3681189EDAC500ECB569 /* MDTreeAddViewController.m in Sources */,
 				3EC1B4861757AB1000CFF726 /* USHWebTableCell.m in Sources */,
 				3EC1B4871757AB1000CFF726 /* USHCommentTableCell.m in Sources */,
 				3EC1B4881757AB1000CFF726 /* USHLocationTableCell.m in Sources */,
@@ -5587,6 +5638,7 @@
 				3EC1B4931757AB1000CFF726 /* USHMapAddViewController.m in Sources */,
 				3EC1B4941757AB1000CFF726 /* USHLocationAddViewController.m in Sources */,
 				3EC1B4951757AB1000CFF726 /* USHSwitchTableCell.m in Sources */,
+				4ADE3687189EDACE00ECB569 /* MDTreeAddViewCell.m in Sources */,
 				3EC1B4961757AB1000CFF726 /* USHSliderTableCell.m in Sources */,
 				3EC1B4971757AB1000CFF726 /* USHFilterViewController.m in Sources */,
 				3EC1B4981757AB1000CFF726 /* USHImageViewController.m in Sources */,
