@@ -9,7 +9,7 @@
 #import "MDTreeViewController.h"
 #import <Ushahidi/MDTreeNodestore.h>
 #import <Ushahidi/MDTreeNode.h>
-//#import "MDTreeViewCell.h"
+#import "MDTreeViewCell.h"
 #import <Ushahidi/Ushahidi.h>
 #import <Ushahidi/CategoryTreeManager.h>
 #import <Ushahidi/CategoryTree.h>
@@ -62,7 +62,7 @@
         }
     }
     
-    //[mapControllerTree refreshMap];
+    //[mapControllerTree refreshMap]; // OKKIO
     [self dismissModalViewControllerAnimated:YES];
 }
 
@@ -115,25 +115,51 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    #warning Potentially incomplete method implementation.
-
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    NSInteger count =[[[MDTreeNodeStore sharedStore] allNodes] count];
+    DLog(@"Node count: @i",count);
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    MDTreeViewCell *cell =
+    [tableView dequeueReusableCellWithIdentifier:@"MDTreeViewCell"];
     
-    // Configure the cell...
+    if (!cell)
+    {
+        cell =
+        [[MDTreeViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                              reuseIdentifier:@"MDTreeViewCell"];
+    }
     
+    MDTreeNode *n =
+    [[[MDTreeNodeStore sharedStore] allNodes]
+     objectAtIndex:[indexPath row]];
+    
+    
+    cell.buttonCheck.tag =(NSInteger) n.id;
+    NSLog(@"-------------------------------"  );
+    NSLog(@"TAG FOR  - %@" ,(NSString *)cell.buttonCheck.tag );
+    NSLog(@" n.id  - %@" , n.id );
+    [cell.buttonCheck addTarget:self action:@selector(cellButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    if ( cell.treeImage== nil)    NSLog(@"cell.treeImage - null" );else NSLog(@"cell.treeImage - notnull" );
+    cell.buttonRowIndex.tag = [indexPath row];
+    NSLog(@" index cell  - %d" , cell.buttonRowIndex.tag );
+    //[cell.treeImage   addTarget:self action:@selector(expand:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [[cell nodeTitleField] setText:[n description]];
+    //[cell setIndentationWidth:32]; // INDENTAZIONE
+    [cell setIndentationWidth:8]; // INDENTAZIONE
+    [cell setIsExpanded:[n isExpanded]];
+    //NSLog(@" [n isExpanded]  - %@" , [n isExpanded] );
+    [cell setHasChildren:([[n children] count] > 0)];
+    [cell prepareForReuse];
+    NSLog(@"-------------------------------"  );
     return cell;
 }
 
