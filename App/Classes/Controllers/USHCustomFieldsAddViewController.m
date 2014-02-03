@@ -86,14 +86,11 @@
     [super viewDidDisappear:animated];
 }
 
-
-
-
+#pragma mark  action
 - (IBAction)CancelEv:(id)sender {
 }
 
 - (IBAction)DoneEv:(id)sender {
-    [self presentModalViewController:self.reportAdd animated:YES];
-
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end
