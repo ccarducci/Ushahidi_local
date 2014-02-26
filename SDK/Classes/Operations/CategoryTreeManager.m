@@ -20,7 +20,7 @@
 }
 
 - (void)createTree:(NSMutableArray*)elements{
-    
+    NSLog(@"------------- createTree BEGIN");
     NSLog(@"title: %i",elements.count);
     
     for (int i = 0 ; i< elements.count;i++){
@@ -29,13 +29,17 @@
         if ( [element.parent_id  isEqualToString:@"0"]){
             @try{
                 MDTreeNode *newNode = [[MDTreeNodeStore sharedStore] createNode];
-                NSLog(@"MASTER - newNode.title: %@",element.title);
-                NSLog(@"MASTER - newNode.id: %@",element.id);
+
                 newNode.title = element.title;
                 newNode.id = element.indetifier;
+                newNode.parent_root = newNode.id;
+                NSLog(@"-----------");
+                NSLog(@"MASTER - newNode.title: %@",newNode.title);
+                NSLog(@"MASTER - newNode.id: %@",newNode.id);
+                NSLog(@"MASTER - newNode.parent_root: %@",newNode.parent_root);
                 [self createTreeRecursive:(NSMutableArray*)elements elementTosearch:(NSString*)element.id
                               nodoParente:(MDTreeNode *)newNode];
-                
+                NSLog(@"-----------");
             }
             @catch(NSException *ex)
             {
@@ -43,6 +47,7 @@
             }
         }
     }
+    NSLog(@"------------- createTree END");
 }
 
 - (void) createTreeRecursive: (NSMutableArray*)elements elementTosearch:(NSString*)search nodoParente:(MDTreeNode *)parentNode
@@ -57,8 +62,12 @@
             @try{
                 newchild.title = element.title;
                 newchild.id = element.indetifier;
+                newchild.parent_root = parentNode.parent_root;
+                NSLog(@"------");
                 NSLog(@"CHILD - newchild.title: %@",newchild.title);
                 NSLog(@"CHILD - newchild.id: %@",newchild.id);
+                NSLog(@"CHILD - newchild.parent_root: %@",newchild.parent_root);
+                NSLog(@"------");
             }
             @catch(NSException *ex)
             {

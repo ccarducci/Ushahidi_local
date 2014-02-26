@@ -19,6 +19,9 @@
         _isExpanded = NO;
         _children = [[NSMutableArray alloc] init]; //[NSMutableArray array];
         _parent = nil;
+        _form_id = 0;
+        _parent_root = 0;
+        _isDisabled = false;
     }
 
     return self;

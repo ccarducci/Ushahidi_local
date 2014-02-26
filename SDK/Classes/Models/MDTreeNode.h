@@ -17,6 +17,10 @@
 @property (assign) NSNumber *id;
 @property (assign) NSString *identifier;
 
+@property (assign) NSNumber *form_id;
+@property (assign) NSNumber *parent_root;
+@property (assign) BOOL isDisabled;
+
 - (NSArray *)flatten;
 
 
