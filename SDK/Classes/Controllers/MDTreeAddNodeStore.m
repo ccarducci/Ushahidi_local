@@ -93,6 +93,12 @@
     return [rootNode flatten];
 }
 
+- (NSArray *)allNodesAll
+{
+    return [rootNode flattenAll];
+}
+
+
 - (MDTreeNode *)createNode
 {
     MDTreeNode *n = [MDTreeNode new];

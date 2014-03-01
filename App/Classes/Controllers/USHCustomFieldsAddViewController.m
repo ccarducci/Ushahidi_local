@@ -39,6 +39,8 @@
 #import <Ushahidi/NSString+USH.h>
 #import <Ushahidi/UITableView+USH.h>
 #import <Ushahidi/UIBarButtonItem+USH.h>
+#import <Ushahidi/MDTreeAddNodestore.h>
+#import <Ushahidi/MDTreeNode.h>
 
 @interface USHCustomFieldsAddViewController ()
 
@@ -72,10 +74,21 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    MDTreeNode *item =[self getSelected];
+    NSLog(@"Form_id: %@",item.form_id);
     self.Custom1.hidden=YES;
         self.Custom2.hidden=YES;
         self.Custom3.hidden=YES;
         self.Custom4.hidden=NO;
+}
+
+- (MDTreeNode*) getSelected
+{
+    NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodesAll];
+    for (MDTreeNode *item in items) {
+        if ( item.isSelected == true) return item;
+    }
+    return -1;
 }
 
 - (void)viewDidAppear:(BOOL)animated {

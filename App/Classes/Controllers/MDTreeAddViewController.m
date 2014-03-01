@@ -62,15 +62,32 @@
         [[self navigationItem] setRightBarButtonItem:bbi];
 
     }
-    selected = -1	;
+    NSNumber *selectedId = [self getSelected];
     [[MDTreeAddNodeStore sharedStore]   removeAll];
     NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory];
     NSLog(@"Count in MDTreeAddViewController: %i",flatCategory.count);
     CategoryTreeManager *operazione = [[CategoryTreeManager alloc] init];
     [operazione createTreeAdd:flatCategory];
     [operazione dealloc];
-
+    [self setDefaultChioice:selectedId];
     return self;
+}
+
+
+
+- (void) setDefaultChioice:(NSNumber*) idCategoryStart
+{
+    NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodesAll];
+    for (MDTreeNode *item in items) {
+        if ( item.id == idCategoryStart)
+        {
+            item.isSelected = true;
+            item.isDisabled = false;
+        }else{
+            item.isSelected = false;
+            item.isDisabled = true;
+        }
+    }
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -141,21 +158,23 @@
     [cell setHasChildren:([[n children] count] > 0)];
     [cell prepareForReuse];
     
-    NSLog(@"cell.buttonCheck.tag  - %@" ,(NSString *)cell.buttonCheck.tag );
-    
-    NSLog(@"index cell  - %d" , cell.buttonRowIndex.tag );
-    if ( selected == -1 )
+    if ( [self getSelected] == -1 )
     {
         [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
-    }else {
-        if ( selected != cell.buttonRowIndex.tag )
+    }else{
+        if ( n.isSelected == true)
         {
-            //cell.buttonCheck.hidden =true;
+            [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_checked.png"] forState:UIControlStateNormal];
+        }else{
             [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_unchecked_dis.png"] forState:UIControlStateNormal];
         }
+        
     }
+    
+    
+    NSLog(@"cell.buttonCheck.tag  - %@" ,(NSString *)cell.buttonCheck.tag );
+    NSLog(@"index cell  - %d" , cell.buttonRowIndex.tag );
     NSLog(@"-------------------------------"  );
-
     return cell;
 }
 
@@ -254,6 +273,35 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+- (void) setIsDisabled:(NSNumber*)selected
+{
+    NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodesAll];
+    for (MDTreeNode *item in items) {
+        if ( item.id == selected){
+            item.isDisabled = false;
+        }else{
+            item.isDisabled = true;
+        }
+    }
+}
+
+- (void) resetIsDisabled
+{
+    NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodesAll];
+    for (MDTreeNode *item in items) {
+        item.isDisabled = false;
+    }
+}
+
+- (NSNumber*) getSelected
+{
+    NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodesAll];
+    for (MDTreeNode *item in items) {
+        if ( item.isSelected == true) return item.id;
+    }
+    return -1;
+}
+
 -(void) check:(id)sender{
     NSLog(@"BEGIN CLICK CHECK ----");
     UIButton *button = (UIButton *)sender;
@@ -275,6 +323,29 @@
             NSMutableDictionary *flatCategoryToAddSelected = [[Ushahidi sharedInstance] flatCategoryToAddSelected];
             USHCategory *category = [flatCategoryToAddSelected objectForKey:key];
             USHCategory *categoryDic = [flatCategoryToAdd objectForKey:key];
+            
+            if ( [self getSelected] == -1 )
+            {
+                selectedNode.isSelected = true;
+                [self setIsDisabled:selectedNode.id];
+                category = categoryDic;
+                if (category!=NULL)
+                {
+                    [report addCategoriesObject:category];
+                    [flatCategoryToAddSelected setObject:category forKey:key];
+                }
+            }else{
+                if ( selectedNode.isSelected == true)
+                {
+                    selectedNode.isSelected = false;
+                    if (category!=nil)
+                    {
+                        [report removeCategoriesObject:category];
+                        [flatCategoryToAddSelected removeObjectForKey:key];
+                    }
+                    [self resetIsDisabled];
+                }
+            }
             
             /*
             if( [[button imageForState:UIControlStateNormal] isEqual:[UIImage imageNamed:@"checkbox_checked.png"]])
@@ -300,31 +371,6 @@
                 }
             }
             */
-            
-            if (selected == -1)
-            {
-                category = categoryDic;
-                if (category!=NULL)
-                {
-                    [button setImage:[UIImage imageNamed:@"checkbox_checked.png"] forState:UIControlStateNormal];
-                    [report addCategoriesObject:category];
-                    [flatCategoryToAddSelected setObject:category forKey:key];
-                }
-                selected = rowOfTheCell;
-            }else{
-                if (selected == rowOfTheCell){
-                    
-                    [button setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
-                    if (category!=nil)
-                    {
-                        [report removeCategoriesObject:category];
-                        [flatCategoryToAddSelected removeObjectForKey:key];
-                    }
-                    selected = -1;
-                }
-            }
-            
-            NSLog(@"is ---------- selected %i",selected);
             [self.tableView reloadData];
             break;
         }

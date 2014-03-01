@@ -20,6 +20,7 @@
 - (void)removeNode:(MDTreeNode *)n;
 - (void)removeNodeWithChildren:(MDTreeNode *)n;
 - (NSArray *)allNodes;
+- (NSArray *)allNodesAll;
 - (MDTreeNode *)createNode;
 - (void)moveNodeAtRow:(int)from toRow:(int)to;
 - (void)moveNodeAtRowWithChildren:(int)from toRow:(int)to;

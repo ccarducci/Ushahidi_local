@@ -22,6 +22,7 @@
         _form_id = 0;
         _parent_root = 0;
         _isDisabled = false;
+        _isSelected = false;
     }
 
     return self;
@@ -67,5 +68,15 @@
     return result;
 }
 
-
+- (NSArray *)flattenAll
+{
+    NSMutableArray *result = [NSMutableArray array];
+    for (MDTreeNode *node in _children)
+    {
+        [result addObject:node];
+        [result addObjectsFromArray:[node flatten]];
+    }
+    
+    return result;
+}
 @end

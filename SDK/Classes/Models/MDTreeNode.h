@@ -20,8 +20,9 @@
 @property (assign) NSNumber *form_id;
 @property (assign) NSNumber *parent_root;
 @property (assign) BOOL isDisabled;
+@property (assign) BOOL isSelected;
 
 - (NSArray *)flatten;
-
+- (NSArray *)flattenAll;
 
 @end
