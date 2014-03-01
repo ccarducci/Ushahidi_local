@@ -145,16 +145,19 @@
     NSLog(@"index cell  - %d" , cell.buttonRowIndex.tag );
     if ( selected == -1 )
     {
-        cell.buttonCheck.hidden =false;
+        //cell.buttonCheck.hidden =false;
+        // SET IMAGE EXPAND PLUS
+        [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
     }
     else{
         if ( selected == cell.buttonRowIndex.tag )
         {
-            cell.buttonCheck.hidden =false;
+            //cell.buttonCheck.hidden =false;
+            [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
             
         }else{
-            cell.buttonCheck.hidden =true;
-            
+            //cell.buttonCheck.hidden =true;
+            [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_unchecked_dis.png"] forState:UIControlStateNormal];
         }
     }
     NSLog(@"-------------------------------"  );

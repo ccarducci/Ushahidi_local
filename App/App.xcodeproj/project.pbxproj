@@ -1972,6 +1972,13 @@
 		3EFF5B021620E64B0072FAE1 /* verified@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF5AFE1620E64B0072FAE1 /* verified@2x.png */; };
 		3EFF5B051620E9740072FAE1 /* locate.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF5B031620E9740072FAE1 /* locate.png */; };
 		3EFF5B061620E9740072FAE1 /* locate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF5B041620E9740072FAE1 /* locate@2x.png */; };
+		4A13319F18C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
+		4A1331A018C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
+		4A1331A118C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
+		4A1331A218C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
+		4A1331A318C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
+		4A1331A418C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
+		4A1331A518C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
 		4AB5E3901881EEF40037BD56 /* USHCustomFieldsAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */; };
 		4AB5E3911881EEF40037BD56 /* USHCustomFieldsAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */; };
 		4AB5E3921881EEF40037BD56 /* USHCustomFieldsAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */; };
@@ -2490,6 +2497,7 @@
 		3EFF5AFE1620E64B0072FAE1 /* verified@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "verified@2x.png"; sourceTree = "<group>"; };
 		3EFF5B031620E9740072FAE1 /* locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locate.png; sourceTree = "<group>"; };
 		3EFF5B041620E9740072FAE1 /* locate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locate@2x.png"; sourceTree = "<group>"; };
+		4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_unchecked_dis.png; sourceTree = "<group>"; };
 		4AB5E38E1881EEF40037BD56 /* USHCustomFieldsAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHCustomFieldsAddViewController.h; sourceTree = "<group>"; };
 		4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHCustomFieldsAddViewController.m; sourceTree = "<group>"; };
 		4AC064AA189DAD0300186B58 /* MDTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeViewController.h; sourceTree = "<group>"; };
@@ -2831,6 +2839,7 @@
 		3E6D033E159B550100CDB5B7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */,
 				4AC064D5189DB67F00186B58 /* checkbox_checked.png */,
 				4AC064D6189DB67F00186B58 /* checkbox_unchecked.png */,
 				4AC064C5189DB67200186B58 /* button_minus_blue.png */,
@@ -3641,6 +3650,7 @@
 				3E6D03CB159B774C00CDB5B7 /* radar.png in Resources */,
 				3E6D03CC159B774C00CDB5B7 /* radar@2x.png in Resources */,
 				3E6D03CD159B774C00CDB5B7 /* refresh.png in Resources */,
+				4A13319F18C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */,
 				3E6D03CE159B774C00CDB5B7 /* refresh@2x.png in Resources */,
 				3E6D03CF159B774C00CDB5B7 /* reports.png in Resources */,
 				3E6D03D0159B774C00CDB5B7 /* reports@2x.png in Resources */,
@@ -3928,6 +3938,7 @@
 				3E9E507A167129320095F4A4 /* camera@2x.png in Resources */,
 				3E9E507B167129320095F4A4 /* photo.png in Resources */,
 				3E9E507C167129320095F4A4 /* photo@2x.png in Resources */,
+				4A1331A118C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */,
 				3E9E507D167129320095F4A4 /* back.png in Resources */,
 				3E9E507E167129320095F4A4 /* back@2x.png in Resources */,
 				3E9E507F167129320095F4A4 /* checked.png in Resources */,
@@ -4283,6 +4294,7 @@
 				3E9E523D167129350095F4A4 /* lastname.png in Resources */,
 				3E9E523E167129350095F4A4 /* lastname@2x.png in Resources */,
 				3E9E523F167129350095F4A4 /* USHSwitchTableCell.xib in Resources */,
+				4A1331A318C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */,
 				3E9E5240167129350095F4A4 /* USHSliderTableCell.xib in Resources */,
 				3E9E5241167129350095F4A4 /* resize.png in Resources */,
 				3E9E5242167129350095F4A4 /* resize@2x.png in Resources */,
@@ -4575,6 +4587,7 @@
 				3E4CCE03167BBAE2006BC175 /* Localizable.strings in Resources */,
 				4AC064D3189DB67200186B58 /* button_plus_blue.png in Resources */,
 				3E4CCE09167BBAE2006BC175 /* Localizable.strings in Resources */,
+				4A1331A418C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */,
 				3E4CCE0F167BBAE2006BC175 /* Localizable.strings in Resources */,
 				3E4CCE15167BBAE2006BC175 /* Localizable.strings in Resources */,
 				3EFB23E8167BC14C00321464 /* Localizable.strings in Resources */,
@@ -4655,6 +4668,7 @@
 				3E9E5476167129530095F4A4 /* camera@2x.png in Resources */,
 				3E9E5477167129530095F4A4 /* photo.png in Resources */,
 				3E9E5478167129530095F4A4 /* photo@2x.png in Resources */,
+				4A1331A218C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */,
 				3E9E5479167129530095F4A4 /* back.png in Resources */,
 				3E9E547A167129530095F4A4 /* back@2x.png in Resources */,
 				3E9E547B167129530095F4A4 /* checked.png in Resources */,
@@ -4897,6 +4911,7 @@
 				3E9E57C516712E5A0095F4A4 /* camera@2x.png in Resources */,
 				3E9E57C616712E5A0095F4A4 /* photo.png in Resources */,
 				3E9E57C716712E5A0095F4A4 /* photo@2x.png in Resources */,
+				4A1331A018C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */,
 				3E9E57C816712E5A0095F4A4 /* back.png in Resources */,
 				3E9E57C916712E5A0095F4A4 /* back@2x.png in Resources */,
 				3E9E57CA16712E5A0095F4A4 /* checked.png in Resources */,
@@ -5148,6 +5163,7 @@
 				3EC1B4F41757AB1000CFF726 /* forward@2x.png in Resources */,
 				3EC1B4F51757AB1000CFF726 /* gps.png in Resources */,
 				3EC1B4F61757AB1000CFF726 /* gps@2x.png in Resources */,
+				4A1331A518C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */,
 				3EC1B4F71757AB1000CFF726 /* info.png in Resources */,
 				3EC1B4F81757AB1000CFF726 /* info@2x.png in Resources */,
 				3EC1B4F91757AB1000CFF726 /* layers.png in Resources */,
