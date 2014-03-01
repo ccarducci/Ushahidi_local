@@ -27,9 +27,11 @@
 
 @dynamic color;
 @dynamic desc;
+@dynamic id; // GEOAVALANCHE 
 @dynamic identifier;
 @dynamic position;
 @dynamic title;
+@dynamic parent_id; // GEOAVALANCHE
 @dynamic map;
 @dynamic reports;
 

@@ -40,6 +40,10 @@
 #import <Ushahidi/UITableView+USH.h>
 #import <Ushahidi/UIBarButtonItem+USH.h>
 
+// MODIFICA GEOAVALANCHE -- INIZIO
+#import "MDTreeAddViewController.h"
+// MODIFICA GEOAVALANCHE -- FINE
+
 @interface USHReportAddViewController ()
 
 @property (strong, nonatomic) USHDatePicker *datePicker;
@@ -482,11 +486,33 @@ typedef enum {
         [self.tableView reloadRowsAtSection:TableSectionPhotos];
     }
     else if (indexPath.section == TableSectionCategory) {
+        
+        /* GEOAVALANCHE */
+        
+        /*
         self.categoryTableController.map = self.map;
         self.categoryTableController.report = self.report;
         self.categoryTableController.modalPresentationStyle = UIModalPresentationFormSheet;
         self.categoryTableController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
         [self presentModalViewController:self.categoryTableController animated:YES];
+        */
+
+        NSMutableDictionary *flatCategoryToAdd = [[Ushahidi sharedInstance] flatCategoryToAdd];
+        [flatCategoryToAdd removeAllObjects];
+        NSArray *categories = [self.map categoriesSortedByPosition];
+        for ( USHCategory *cat in categories ) {
+            NSString *num = cat.identifier;
+            NSLog(@"flatCategoryToAdd: %@", num );
+            [flatCategoryToAdd setObject:cat forKey:num];
+        }
+        
+        MDTreeAddViewController *treeAddViewController = [MDTreeAddViewController new];
+        treeAddViewController.map = self.map;
+        treeAddViewController.report = self.report;
+        UINavigationController *navAddController = [[UINavigationController alloc] initWithRootViewController:treeAddViewController];
+        [self presentModalViewController:navAddController animated:YES];
+        
+        /* GEOAVALANCHE */
     }
     else if (indexPath.section == TableSectionLocation) {
         self.locationAddViewController.map = self.map;
