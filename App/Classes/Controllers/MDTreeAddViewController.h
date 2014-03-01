@@ -17,6 +17,7 @@
     USHReportMapViewController *mapControllerTree;
     USHMap *map;
     USHReport *report;
+    NSInteger *selected;
 }
 
 @property (strong, nonatomic) USHReportMapViewController *mapControllerTree;

@@ -62,7 +62,7 @@
         [[self navigationItem] setRightBarButtonItem:bbi];
 
     }
-
+    selected = -1	;
     [[MDTreeAddNodeStore sharedStore]   removeAll];
     NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory];
     NSLog(@"Count in MDTreeAddViewController: %i",flatCategory.count);
@@ -116,7 +116,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSLog(@"-------------------------------"  );
     MDTreeAddViewCell *cell =
         [tableView dequeueReusableCellWithIdentifier:@"MDTreeAddViewCell"];
 
@@ -140,9 +140,23 @@
     [cell setIsExpanded:[n isExpanded]];
     [cell setHasChildren:([[n children] count] > 0)];
     [cell prepareForReuse];
-    NSLog(@"-------------------------------"  );
+    
     NSLog(@"cell.buttonCheck.tag  - %@" ,(NSString *)cell.buttonCheck.tag );
     NSLog(@"index cell  - %d" , cell.buttonRowIndex.tag );
+    if ( selected == -1 )
+    {
+        cell.buttonCheck.hidden =false;
+    }
+    else{
+        if ( selected == cell.buttonRowIndex.tag )
+        {
+            cell.buttonCheck.hidden =false;
+            
+        }else{
+            cell.buttonCheck.hidden =true;
+            
+        }
+    }
     NSLog(@"-------------------------------"  );
 
     return cell;
@@ -244,6 +258,7 @@
 }
 
 -(void) check:(id)sender{
+    NSLog(@"BEGIN CLICK CHECK ----");
     UIButton *button = (UIButton *)sender;
     for (UIView *parent = [button superview]; parent != nil; parent = [parent superview]) {
         if ([parent isKindOfClass: [UITableViewCell class]]) {
@@ -254,7 +269,7 @@
             NSLog(@"rowofthecell %d", rowOfTheCell);
             NSArray *nodes = [[MDTreeAddNodeStore sharedStore] allNodes];
             MDTreeNode *selectedNode = [nodes objectAtIndex:pathOfTheCell.row];
-            
+            NSLog(@"selectedNode parent_root %i", selectedNode.parent_root);
             NSInteger myInteger = [button.tag integerValue];
             NSString *key =[NSString stringWithFormat:@"%i", myInteger];
             
@@ -264,30 +279,51 @@
             USHCategory *category = [flatCategoryToAddSelected objectForKey:key];
             USHCategory *categoryDic = [flatCategoryToAdd objectForKey:key];
             
-            if( [[button imageForState:UIControlStateNormal] isEqual:[UIImage imageNamed:@"checkbox_checked.png"]])
+            //NSLog(@"is ---------- selected %i",selected);
+            if (selected == -1)
             {
+                //NSLog(@"set ---------- ");
+                if( [[button imageForState:UIControlStateNormal] isEqual:[UIImage imageNamed:@"checkbox_checked.png"]])
+                {
+                    [button setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
+                    if (category!=nil)
+                    {
+                        [report removeCategoriesObject:category];
+                        [flatCategoryToAddSelected removeObjectForKey:key];
+                    }
+                    selected = -1;
+                    //NSLog(@"set ---------- selected %i",selected);
+                }
+                else
+                {
+                
+                    category = categoryDic;
+                    if (category!=NULL)
+                    {
+                        [button setImage:[UIImage imageNamed:@"checkbox_checked.png"] forState:UIControlStateNormal];
+                        [report addCategoriesObject:category];
+                        [flatCategoryToAddSelected setObject:category forKey:key];
+                    }
+                    selected = rowOfTheCell;
+                    //NSLog(@"set ---------- selected %i",selected);
+                }
+            }else{
                 [button setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
                 if (category!=nil)
                 {
                     [report removeCategoriesObject:category];
                     [flatCategoryToAddSelected removeObjectForKey:key];
                 }
-            }
-            else
-            {
+                selected = -1;
                 
-                category = categoryDic;
-                if (category!=NULL)
-                {
-                    [button setImage:[UIImage imageNamed:@"checkbox_checked.png"] forState:UIControlStateNormal];
-                    [report addCategoriesObject:category];
-                    [flatCategoryToAddSelected setObject:category forKey:key];
-                }
             }
-            break; // for
+            NSLog(@"is ---------- selected %i",selected);
+            [self.tableView reloadData];
+            break;
         }
     }
-
+  
+    NSLog(@"BEGIN CLICK CHECK ----");
 }
 
 - (void)setCildren:(NSString *)value node:(MDTreeNode *)selectedNode withCell:(NSString *)refreshImageCheck {
