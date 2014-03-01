@@ -142,20 +142,14 @@
     [cell prepareForReuse];
     
     NSLog(@"cell.buttonCheck.tag  - %@" ,(NSString *)cell.buttonCheck.tag );
+    
     NSLog(@"index cell  - %d" , cell.buttonRowIndex.tag );
     if ( selected == -1 )
     {
-        //cell.buttonCheck.hidden =false;
-        // SET IMAGE EXPAND PLUS
         [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
-    }
-    else{
-        if ( selected == cell.buttonRowIndex.tag )
+    }else {
+        if ( selected != cell.buttonRowIndex.tag )
         {
-            //cell.buttonCheck.hidden =false;
-            [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
-            
-        }else{
             //cell.buttonCheck.hidden =true;
             [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_unchecked_dis.png"] forState:UIControlStateNormal];
         }
@@ -282,35 +276,9 @@
             USHCategory *category = [flatCategoryToAddSelected objectForKey:key];
             USHCategory *categoryDic = [flatCategoryToAdd objectForKey:key];
             
-            //NSLog(@"is ---------- selected %i",selected);
-            if (selected == -1)
+            /*
+            if( [[button imageForState:UIControlStateNormal] isEqual:[UIImage imageNamed:@"checkbox_checked.png"]])
             {
-                //NSLog(@"set ---------- ");
-                if( [[button imageForState:UIControlStateNormal] isEqual:[UIImage imageNamed:@"checkbox_checked.png"]])
-                {
-                    [button setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
-                    if (category!=nil)
-                    {
-                        [report removeCategoriesObject:category];
-                        [flatCategoryToAddSelected removeObjectForKey:key];
-                    }
-                    selected = -1;
-                    //NSLog(@"set ---------- selected %i",selected);
-                }
-                else
-                {
-                
-                    category = categoryDic;
-                    if (category!=NULL)
-                    {
-                        [button setImage:[UIImage imageNamed:@"checkbox_checked.png"] forState:UIControlStateNormal];
-                        [report addCategoriesObject:category];
-                        [flatCategoryToAddSelected setObject:category forKey:key];
-                    }
-                    selected = rowOfTheCell;
-                    //NSLog(@"set ---------- selected %i",selected);
-                }
-            }else{
                 [button setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
                 if (category!=nil)
                 {
@@ -318,8 +286,44 @@
                     [flatCategoryToAddSelected removeObjectForKey:key];
                 }
                 selected = -1;
-                
+                //NSLog(@"set ---------- selected %i",selected);
             }
+            else
+            {
+                
+                category = categoryDic;
+                if (category!=NULL)
+                {
+                    [button setImage:[UIImage imageNamed:@"checkbox_checked.png"] forState:UIControlStateNormal];
+                    [report addCategoriesObject:category];
+                    [flatCategoryToAddSelected setObject:category forKey:key];
+                }
+            }
+            */
+            
+            if (selected == -1)
+            {
+                category = categoryDic;
+                if (category!=NULL)
+                {
+                    [button setImage:[UIImage imageNamed:@"checkbox_checked.png"] forState:UIControlStateNormal];
+                    [report addCategoriesObject:category];
+                    [flatCategoryToAddSelected setObject:category forKey:key];
+                }
+                selected = rowOfTheCell;
+            }else{
+                if (selected == rowOfTheCell){
+                    
+                    [button setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
+                    if (category!=nil)
+                    {
+                        [report removeCategoriesObject:category];
+                        [flatCategoryToAddSelected removeObjectForKey:key];
+                    }
+                    selected = -1;
+                }
+            }
+            
             NSLog(@"is ---------- selected %i",selected);
             [self.tableView reloadData];
             break;
