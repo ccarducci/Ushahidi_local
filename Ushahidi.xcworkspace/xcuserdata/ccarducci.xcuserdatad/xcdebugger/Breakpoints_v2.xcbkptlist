@@ -9,13 +9,59 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "App/Classes/Controllers/USHCustomFieldsAddViewController.m"
-            timestampString = "415410946.167555"
+            filePath = "SDK/Classes/Operations/CategoryTreeManager.m"
+            timestampString = "415466985.76859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-createTreeAdd:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CategoryTreeManager createTreeAdd:]"
+                  moduleName = "Ushahidi"
+                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/CategoryTreeManager.m"
+                  timestampString = "415467333.789841"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "123">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CategoryTreeManager createTreeAdd:]"
+                  moduleName = "Ushahidi"
+                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/CategoryTreeManager.m"
+                  timestampString = "415467333.790069"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "619">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDK/Classes/Operations/CategoryTreeManager.m"
+            timestampString = "415467349.115937"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-createTreeAdd:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

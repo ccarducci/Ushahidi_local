@@ -20,5 +20,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(USHCategoriesUtility);
 + (NSMutableArray *) getCategories:(NSMutableArray *)flatCategory
               flatCategorySelected:(NSMutableDictionary *)flatCategorySelected
                flatOnlyCategoryYES:(NSMutableDictionary *)flatOnlyCategoryYES;
-
++ (NSNumber *) getCustomFormType:(NSString *)title;
++ (NSString *) getCategoryTitleById:(NSNumber *)identifier;
 @end

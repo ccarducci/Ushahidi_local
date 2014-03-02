@@ -21,4 +21,6 @@
 
 - (void) createTreeRecursiveAdd: (NSMutableArray*)elements elementTosearch:(NSString*)search nodoParente:(MDTreeNode *)parentNode;
 
+- (NSNumber*) getFormId:(NSString *)title_node parent_id_root:(NSNumber*)parent_id_root;
+
 @end

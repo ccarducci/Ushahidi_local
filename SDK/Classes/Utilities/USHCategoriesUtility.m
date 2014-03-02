@@ -10,8 +10,11 @@
 #import "USHDatabase.h"
 #import "CategoryTree.h"
 #import "USHCategory.h"
+#import "CustomFieldType.h"
+
 @class USHCategory;
 @class CategoryTree;
+@class CustomFieldType;
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_PROTOTYPE(USHCategoriesUtility);
 
@@ -74,5 +77,33 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(USHCategoriesUtility);
     return categories;
 }
 
++ (NSNumber *) getCustomFormType:(NSString *)title
+{
+    NSNumber *ret = [NSNumber numberWithInt:1];
+    for (CustomFieldType *categoryForm in  [[USHDatabase sharedInstance] fetchArrayForName:@"CustomFieldType" query:nil params:nil, nil])
+    {
+        if ( [title.uppercaseString isEqualToString:categoryForm.title.uppercaseString] ){
+            NSLog(@"getCustomFormType: %@ ", categoryForm.title);
+            ret =[NSNumber numberWithInt:categoryForm.id.intValue];
+            return ret;
+        }
+    }
+    return ret;
+}
+
++ (NSString *) getCategoryTitleById:(NSNumber *)identifier
+{
+    NSLog(@"find for identifier: %@ ",identifier );
+     for (USHCategory *category in  [[USHDatabase sharedInstance] fetchArrayForName:@"Category" query:nil params:nil, nil])
+     {
+         NSLog(@"category title: %@ - id_category: %@ - ext_identifier: %@",category.title , category.identifier , identifier);
+         if ( [category.identifier intValue] == [identifier intValue])
+         {
+             NSLog(@"founded title: %@ - id: %@",category.title , category.identifier);
+             return category.title;
+         }
+     }
+    return 0;
+}
 
 @end
