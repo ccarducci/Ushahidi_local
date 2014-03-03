@@ -3628,6 +3628,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A13319F18C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */,
 				3E6D03AC159B774C00CDB5B7 /* down.png in Resources */,
 				3E6D03AD159B774C00CDB5B7 /* down@2x.png in Resources */,
 				3E6D03AE159B774C00CDB5B7 /* next.png in Resources */,
@@ -3650,7 +3651,6 @@
 				3E6D03CB159B774C00CDB5B7 /* radar.png in Resources */,
 				3E6D03CC159B774C00CDB5B7 /* radar@2x.png in Resources */,
 				3E6D03CD159B774C00CDB5B7 /* refresh.png in Resources */,
-				4A13319F18C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */,
 				3E6D03CE159B774C00CDB5B7 /* refresh@2x.png in Resources */,
 				3E6D03CF159B774C00CDB5B7 /* reports.png in Resources */,
 				3E6D03D0159B774C00CDB5B7 /* reports@2x.png in Resources */,

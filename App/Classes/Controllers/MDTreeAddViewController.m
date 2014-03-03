@@ -131,6 +131,8 @@
     return [[[MDTreeAddNodeStore sharedStore] allNodes] count];
 }
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"-------------------------------"  );
@@ -161,12 +163,19 @@
     if ( [self getSelected] == -1 )
     {
         [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
+        UIColor *coll =  cell.buttonCheck.tintColor;
+        
+        //cell.buttonCheck.tintColor = UIColor.blueColor;[UIColor colorWithRed:((float)((rgbValue & 0xFF0000)
+        // 0x0ce28c30
+        cell.buttonCheck.tintColor = UIColorFromRGB(0x0ce28c30);
     }else{
         if ( n.isSelected == true)
         {
             [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_checked.png"] forState:UIControlStateNormal];
+            cell.buttonCheck.tintColor = UIColorFromRGB(0x0ce28c30);
         }else{
-            [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_unchecked_dis.png"] forState:UIControlStateNormal];
+            [cell.buttonCheck setImage:[UIImage imageNamed:@"checkbox_unchecked.png"] forState:UIControlStateNormal];
+            cell.buttonCheck.tintColor = UIColor.grayColor;
         }
         
     }
