@@ -127,6 +127,8 @@ typedef enum {
 
 - (IBAction)cancel:(id)sender event:(UIEvent*)event {
     DLog(@"");
+    // resetIsDisabled
+    [MDTreeAddViewController resetMDStore];
     [UIAlertView showWithTitle:NSLocalizedString(@"Unsaved Changes", nil) 
                        message:NSLocalizedString(@"Are you sure you want to cancel?", nil) 
                       delegate:self 

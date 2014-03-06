@@ -25,5 +25,5 @@
 @property (strong, nonatomic) USHReport *report;
 - (IBAction)done:(id)sender;
 - (UIColor *)toUIColor :(NSString *)colorHex;
-
++ (void) resetMDStore;
 @end

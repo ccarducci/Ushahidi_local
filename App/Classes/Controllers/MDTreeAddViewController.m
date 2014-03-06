@@ -62,7 +62,7 @@
         [[self navigationItem] setRightBarButtonItem:bbi];
 
     }
-    NSNumber *selectedId = [self getSelected];
+    int selectedId = [self getSelected];
     [[MDTreeAddNodeStore sharedStore]   removeAll];
     NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory];
     NSLog(@"Count in MDTreeAddViewController: %i",flatCategory.count);
@@ -75,11 +75,11 @@
 
 
 
-- (void) setDefaultChioice:(NSNumber*) idCategoryStart
+- (void) setDefaultChioice:(int) idCategoryStart
 {
     NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodesAll];
     for (MDTreeNode *item in items) {
-        if ( item.id == idCategoryStart)
+        if ( [item.id intValue] == idCategoryStart  )
         {
             item.isSelected = true;
             item.isDisabled = false;
@@ -282,6 +282,7 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+
 - (void) setIsDisabled:(NSNumber*)selected
 {
     NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodesAll];
@@ -294,6 +295,15 @@
     }
 }
 
++ (void) resetMDStore
+{
+    NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodesAll];
+    for (MDTreeNode *item in items) {
+        item.isDisabled = false;
+        item.isSelected =false;
+    }
+}
+
 - (void) resetIsDisabled
 {
     NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodesAll];
@@ -302,11 +312,11 @@
     }
 }
 
-- (NSNumber*) getSelected
+- (int) getSelected
 {
     NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodesAll];
     for (MDTreeNode *item in items) {
-        if ( item.isSelected == true) return item.id;
+        if ( item.isSelected == true) return [item.id integerValue];
     }
     return -1;
 }
