@@ -12,6 +12,16 @@
 
 @interface USHCustomFieldsViewController ()
 
+typedef enum {
+    TextFieldType = 1,
+    TextAreaFieldType = 2,
+    DateFieldType = 3,
+    PasswordFieldType = 4,
+    RadioFieldType = 5,
+    CheckBoxFieldType = 6,
+    DropDownFieldType = 7
+} CustomFieldType;
+
 @end
 
 @implementation USHCustomFieldsViewController
@@ -51,14 +61,13 @@
  
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-self.booksArray = [NSArray arrayWithObjects:@"Brave new world",@"Call of the Wild",@"Catch-22",@"Atlas Shrugged",@"The Great Gatsby",@"The Art of War",@"The Catcher in the Rye",@"The Picture of Dorian Gray",@"The Grapes of Wrath", @"The Metamorphosis",nil];
+    self.booksArray = [NSArray arrayWithObjects:@"Brave new world",@"Call of the Wild",@"Catch-22",@"Atlas Shrugged",@"The Great Gatsby",@"The Art of War",@"The Catcher in the Rye",@"The Picture of Dorian Gray",@"The Grapes of Wrath", @"The Metamorphosis",nil];
  
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)dealloc {
@@ -67,7 +76,6 @@ self.booksArray = [NSArray arrayWithObjects:@"Brave new world",@"Call of the Wil
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.booksArray.count;
     return self.CustomFields.count;
 }
 
@@ -80,8 +88,7 @@ self.booksArray = [NSArray arrayWithObjects:@"Brave new world",@"Call of the Wil
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Configure the cell.
-    //cell.textLabel.text = [self.booksArray objectAtIndex:indexPath.row];
+
     NSString *label = [[self.CustomFields objectAtIndex:indexPath.row] name];
     NSString *labelvalue = [[self.CustomFields objectAtIndex:indexPath.row] value];
     NSMutableString *rowDesc = [[NSMutableString alloc]init];

@@ -50,7 +50,7 @@
     
     [[MDTreeNodeStore sharedStore]   removeAll] ;
     
-    
+
     NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory];
     NSMutableDictionary *flatCategorySelected = [[Ushahidi sharedInstance] flatCategorySelected] ;
     NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];

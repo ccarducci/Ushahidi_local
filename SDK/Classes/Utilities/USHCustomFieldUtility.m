@@ -17,6 +17,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_PROTOTYPE(USHCustomFieldUtility);
 
 @implementation USHCustomFieldUtility
 
+
 SYNTHESIZE_SINGLETON_FOR_CLASS(USHCustomFieldUtility);
 
 - (id) init {
