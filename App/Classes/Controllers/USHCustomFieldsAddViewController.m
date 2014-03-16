@@ -95,13 +95,14 @@ typedef enum {
         
         /*
         NSMutableArray *customFields = [USHCustomFieldUtility getCustomAllFields];
-        for (CustomFieldTypeDetail *item in customFields)
+         */
+        for (CustomFieldTypeDetail *item in [USHCategoriesUtility getCustomFormDetailType])
         {
                 NSLog(@"item form_id: %@",item.identifier);
                 NSLog(@"item identifier: %@",item.identifierField);
                 NSLog(@"item name: %@",item.name);
         }
-        */
+
     }
 }
 

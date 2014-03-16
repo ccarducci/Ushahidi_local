@@ -168,18 +168,29 @@
     for (NSDictionary *item in fields) {
         if (item != nil) {
             
-            NSString *identifierField = [item stringForKey:@"id"];
-            self.customFieldTypeDetail = (CustomFieldTypeDetail *)[[USHDatabase sharedInstance] fetchOrInsertItemForName:@"CustomFieldTypeDetail"
-                                                                                                           query:@"identifier = %@ && identifierField = %@"
-                                                                                                          params:self.identifier,identifierField, nil];
-            NSNumber *type =[item numberForKey:@"type"];
-            self.CustomFieldTypeDetail.type = type;
-            NSString *defaultvalue =[item stringForKey:@"default"];
-            self.CustomFieldTypeDetail.defaultvalue = defaultvalue;
-            NSString *name =[item stringForKey:@"name"];
-            self.CustomFieldTypeDetail.name = name;
             
+            NSString *identifierField = [item stringForKey:@"id"];
+            
+            /*
+            CustomFieldTypeDetail *customFieldTypeDetail  = [[USHDatabase sharedInstance] fetchOrInsertItemForName:@"CustomFieldTypeDetail"
+                                                                                                   query:@"identifier = %@ && identifierField = %@"
+                                                                                                          params:self.identifier,identifierField, nil];
+            */
+            NSNumber *type =[item numberForKey:@"type"];
+            //customFieldTypeDetail.type = type;
+            NSString *defaultvalue =[item stringForKey:@"default"];
+            //customFieldTypeDetail.defaultvalue = defaultvalue;
+            NSString *name =[item stringForKey:@"name"];
+            //customFieldTypeDetail.name = name;
+            
+            CustomFieldTypeDetail *customFieldTypeDetail = (CustomFieldTypeDetail *)[[USHDatabase sharedInstance]  insertItemWithName:@"CustomFieldTypeDetail"];
+            customFieldTypeDetail.name = name;
+            customFieldTypeDetail.type = type;
+            customFieldTypeDetail.defaultvalue = defaultvalue;
+            customFieldTypeDetail.identifierField = identifierField;
+            customFieldTypeDetail.identifier =self.identifier;
             [[USHDatabase sharedInstance] saveChanges];
+
             
             DLog(@"-----------------------------------");
             DLog(@"Custom detail identifier: %@", self.identifier);

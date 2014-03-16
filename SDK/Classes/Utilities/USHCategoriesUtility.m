@@ -93,14 +93,15 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(USHCategoriesUtility);
     return ret;
 }
 
-+ (NSNumber *) getCustomFormDetailType
++ (NSMutableArray *) getCustomFormDetailType
 {
-    NSNumber *ret = [NSNumber numberWithInt:1];
+    NSMutableArray *fields = [[NSMutableArray alloc] init];
     for (CustomFieldTypeDetail *categoryForm in  [[USHDatabase sharedInstance] fetchArrayForName:@"CustomFieldTypeDetail" query:nil params:nil, nil])
     {
         NSLog(@"getCustomFormDetailType: %@ ", categoryForm.name);
+        [fields addObject:categoryForm];
     }
-    return ret;
+    return fields;
 }
 
 

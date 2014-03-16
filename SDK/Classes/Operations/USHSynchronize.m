@@ -263,6 +263,12 @@
     
 
     /*
+    CustomFieldTypeDetail *customFieldTypeDetail = (CustomFieldTypeDetail *)[[USHDatabase sharedInstance]  insertItemWithName:@"CustomFieldTypeDetail"];
+    customFieldTypeDetail.name = @"test";
+    [[USHDatabase sharedInstance] saveChanges];
+    */
+    
+    /*
     NSManagedObjectContext *context = [[USHDatabase sharedInstance] managedObjectContext];
     NSFetchRequest *requestSaved = [[[NSFetchRequest alloc] init] autorelease];
     [requestSaved setEntity:[NSEntityDescription entityForName:@"ReportCustomField" inManagedObjectContext:context]];

@@ -6,125 +6,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SDK/Classes/Utilities/USHCustomFieldUtility.m"
-            timestampString = "416610500.225553"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "+getCustomAllFields"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK/Classes/Operations/USHSynchronize.m"
-            timestampString = "416610920.424273"
+            filePath = "App/Classes/Controllers/USHCustomFieldsAddViewController.m"
+            timestampString = "416669059.749889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
-            landmarkName = "-start"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[USHSynchronize start]"
+                  symbolName = "-[USHCustomFieldsAddViewController viewWillAppear:]"
                   moduleName = "Ushahidi"
-                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHSynchronize.m"
-                  timestampString = "416611017.592736"
+                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/App/Classes/Controllers/USHCustomFieldsAddViewController.m"
+                  timestampString = "416669066.482795"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "244"
-                  endingLineNumber = "244"
-                  offsetFromSymbolStart = "4506">
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "407">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[USHSynchronize start]"
+                  symbolName = "-[USHCustomFieldsAddViewController viewWillAppear:]"
                   moduleName = "Ushahidi"
-                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHSynchronize.m"
-                  timestampString = "416611017.592932"
+                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/App/Classes/Controllers/USHCustomFieldsAddViewController.m"
+                  timestampString = "416669066.483119"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "244"
-                  endingLineNumber = "244"
-                  offsetFromSymbolStart = "4604">
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "996">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SDK/Classes/Operations/USHSynchronize.m"
-            timestampString = "416626093.043809"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
-            landmarkName = "-start"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[USHSynchronize start]"
-                  moduleName = "Ushahidi"
-                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHSynchronize.m"
-                  timestampString = "416626171.110179"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "222"
-                  endingLineNumber = "222"
-                  offsetFromSymbolStart = "3474">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[USHSynchronize start]"
-                  moduleName = "Ushahidi"
-                  urlString = "file:///Users/ccarducci/Desktop/Ushahidi/SDK/Classes/Operations/USHSynchronize.m"
-                  timestampString = "416626171.11046"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "222"
-                  endingLineNumber = "222"
-                  offsetFromSymbolStart = "3602">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SDK/Classes/Utilities/USHCategoriesUtility.m"
-            timestampString = "416626848.97468"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "+getCustomFormDetailType"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

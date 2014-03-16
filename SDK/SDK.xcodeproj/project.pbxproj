@@ -387,6 +387,9 @@
 		4A2CEC0D186F2C5500AC8BC2 /* CustomFieldType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A2CEC0E186F2C5500AC8BC2 /* CustomFieldType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */; };
 		4A2CEC0F186F2C5500AC8BC2 /* CustomFieldType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */; };
+		4AA8F93D18D5D267001AFF0D /* CustomFieldTypeDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AA8F93B18D5D267001AFF0D /* CustomFieldTypeDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AA8F93E18D5D267001AFF0D /* CustomFieldTypeDetail.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AA8F93B18D5D267001AFF0D /* CustomFieldTypeDetail.h */; };
+		4AA8F93F18D5D267001AFF0D /* CustomFieldTypeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA8F93C18D5D267001AFF0D /* CustomFieldTypeDetail.m */; };
 		4AC064B3189DB01600186B58 /* USHDatabase.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 3E971B3515A37D08005EB625 /* USHDatabase.h */; };
 		4AEA9A62189DA57200B356B7 /* MDTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A60189DA57200B356B7 /* MDTreeNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AEA9A63189DA57200B356B7 /* MDTreeNode.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A60189DA57200B356B7 /* MDTreeNode.h */; };
@@ -534,6 +537,7 @@
 				3EDE88EB15A12C9E00FB30BD /* USHNews.h in Copy Headers */,
 				3EDE88EC15A12C9E00FB30BD /* USHVideo.h in Copy Headers */,
 				3EDE88ED15A12C9E00FB30BD /* USHMap.h in Copy Headers */,
+				4AA8F93E18D5D267001AFF0D /* CustomFieldTypeDetail.h in Copy Headers */,
 				3EDE88EE15A12C9E00FB30BD /* USHLocation.h in Copy Headers */,
 				3EA23627159B91460072A60D /* Ushahidi.h in Copy Headers */,
 			);
@@ -812,6 +816,8 @@
 		4A2A4127186E440300B302D1 /* USHDownloadCustomCategoryType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHDownloadCustomCategoryType.m; sourceTree = "<group>"; };
 		4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFieldType.h; sourceTree = "<group>"; };
 		4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFieldType.m; sourceTree = "<group>"; };
+		4AA8F93B18D5D267001AFF0D /* CustomFieldTypeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFieldTypeDetail.h; sourceTree = "<group>"; };
+		4AA8F93C18D5D267001AFF0D /* CustomFieldTypeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFieldTypeDetail.m; sourceTree = "<group>"; };
 		4AEA9A60189DA57200B356B7 /* MDTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeNode.h; sourceTree = "<group>"; };
 		4AEA9A61189DA57200B356B7 /* MDTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTreeNode.m; sourceTree = "<group>"; };
 		4AEA9A66189DA67F00B356B7 /* CategoryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTree.h; sourceTree = "<group>"; };
@@ -1192,6 +1198,8 @@
 		3EA235DA159B90730072A60D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4AA8F93B18D5D267001AFF0D /* CustomFieldTypeDetail.h */,
+				4AA8F93C18D5D267001AFF0D /* CustomFieldTypeDetail.m */,
 				4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */,
 				4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */,
 				4A0BC63C187565BF00F121AB /* ReportCustomField.h */,
@@ -1502,6 +1510,7 @@
 				3EDE88C215A12C3C00FB30BD /* USHVideo.h in Headers */,
 				3EDE88C615A12C3C00FB30BD /* USHNews.h in Headers */,
 				3EDE88CA15A12C3C00FB30BD /* USHSound.h in Headers */,
+				4AA8F93D18D5D267001AFF0D /* CustomFieldTypeDetail.h in Headers */,
 				3EDE88CE15A12C3C00FB30BD /* USHCheckin.h in Headers */,
 				3EDE88D215A12C3C00FB30BD /* USHComment.h in Headers */,
 				4AEA9A62189DA57200B356B7 /* MDTreeNode.h in Headers */,
@@ -1859,6 +1868,7 @@
 				3EC32CF4164C30CD000FFE7B /* USHRefreshButton.m in Sources */,
 				3EE57FAB164D0740002677E6 /* USHDownloadPhoto.m in Sources */,
 				3EA3442C1653FEA700DC017D /* USHDownloadJSON.m in Sources */,
+				4AA8F93F18D5D267001AFF0D /* CustomFieldTypeDetail.m in Sources */,
 				3EA34447165478D000DC017D /* UIBezierPath+USH.m in Sources */,
 				3EA3444B16547D8500DC017D /* USHTableCell.m in Sources */,
 				3EA3444F16547DB800DC017D /* USHWindow.m in Sources */,
