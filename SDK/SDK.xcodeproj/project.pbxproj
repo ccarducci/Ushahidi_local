@@ -367,7 +367,7 @@
 		4A0BC63E187565BF00F121AB /* ReportCustomField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A0BC63C187565BF00F121AB /* ReportCustomField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A0BC63F187565BF00F121AB /* ReportCustomField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BC63D187565BF00F121AB /* ReportCustomField.m */; };
 		4A0BC6441875665800F121AB /* ReportCustomField.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A0BC63C187565BF00F121AB /* ReportCustomField.h */; };
-		4A0D4DA7189E72F7001F9C28 /* USHCategoriesUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A0D4DA5189E72F7001F9C28 /* USHCategoriesUtility.h */; };
+		4A0D4DA7189E72F7001F9C28 /* USHCategoriesUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A0D4DA5189E72F7001F9C28 /* USHCategoriesUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A0D4DA8189E72F7001F9C28 /* USHCategoriesUtility.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A0D4DA5189E72F7001F9C28 /* USHCategoriesUtility.h */; };
 		4A0D4DA9189E72F7001F9C28 /* USHCategoriesUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D4DA6189E72F7001F9C28 /* USHCategoriesUtility.m */; };
 		4A0D4DAA189E72F7001F9C28 /* USHCategoriesUtility.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A0D4DA6189E72F7001F9C28 /* USHCategoriesUtility.m */; };

@@ -3094,6 +3094,10 @@
 		3E6D034F159B55FE00CDB5B7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AB5E38E1881EEF40037BD56 /* USHCustomFieldsAddViewController.h */,
+				4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */,
+				4AF856451876305100B6B357 /* USHCustomFieldsViewController.h */,
+				4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */,
 				4ADE3676189EDAB300ECB569 /* MDTreeAddViewCell.h */,
 				4ADE3677189EDAB300ECB569 /* MDTreeAddViewCell.m */,
 				4ADE3678189EDAB300ECB569 /* MDTreeAddViewController.h */,
@@ -3102,10 +3106,6 @@
 				4AC064B5189DB5AE00186B58 /* MDTreeViewCell.m */,
 				4AC064AA189DAD0300186B58 /* MDTreeViewController.h */,
 				4AC064AB189DAD0300186B58 /* MDTreeViewController.m */,
-				4AB5E38E1881EEF40037BD56 /* USHCustomFieldsAddViewController.h */,
-				4AB5E38F1881EEF40037BD56 /* USHCustomFieldsAddViewController.m */,
-				4AF856451876305100B6B357 /* USHCustomFieldsViewController.h */,
-				4AF856461876305100B6B357 /* USHCustomFieldsViewController.m */,
 				3E6D036A159B663100CDB5B7 /* USHMapTableViewController.h */,
 				3E6D036B159B663100CDB5B7 /* USHMapTableViewController.m */,
 				3E9BABBF164826B7006ED993 /* USHMapAddViewController.h */,
@@ -3230,6 +3230,8 @@
 		3E97572C161F7D980072C3BD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */,
+				4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */,
 				4ADE3688189EDCEC00ECB569 /* MDTreeAddViewCell.xib */,
 				4AC064BD189DB60500186B58 /* MDTreeViewCell.xib */,
 				3E97572D161F7E0D0072C3BD /* USHApplication_iPad.xib */,
@@ -3266,8 +3268,6 @@
 				3E01346E16723DC000C40CB4 /* USHImageViewController_iPhone.xib */,
 				3E01346F16723DC000C40CB4 /* USHWebViewController_iPad.xib */,
 				3E01347016723DC000C40CB4 /* USHWebViewController_iPhone.xib */,
-				4AF856561876314700B6B357 /* USHCustomFieldsViewController_iPhone.xib */,
-				4AF8565E1876318600B6B357 /* USHCustomFieldsViewController_iPad.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";

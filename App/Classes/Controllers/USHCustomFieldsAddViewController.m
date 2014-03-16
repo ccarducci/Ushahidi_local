@@ -41,26 +41,35 @@
 #import <Ushahidi/UIBarButtonItem+USH.h>
 #import <Ushahidi/MDTreeAddNodestore.h>
 #import <Ushahidi/MDTreeNode.h>
+#import <Ushahidi/USHCustomFieldUtility.h>
+#import <Ushahidi/CustomFieldTypeDetail.h>
+#import <Ushahidi/USHCategoriesUtility.h>
+
+@class USHCategoriesUtility;
 
 @interface USHCustomFieldsAddViewController ()
 
 
-
 @end
 
-@implementation USHCustomFieldsAddViewController
+typedef enum {
+    TextFieldType = 1,
+    TextAreaFieldType = 2,
+    DateFieldType = 3,
+    PasswordFieldType = 4,
+    RadioFieldType = 5,
+    CheckBoxFieldType = 6,
+    DropDownFieldType = 7
+} CustomFieldType;
 
+
+@implementation USHCustomFieldsAddViewController
 
 
 - (void)dealloc {
     [_cancel release];
     [_done release];
     [_reportAdd release];
-    [_Mess release];
-    [_Custom1 release];
-    [_Custom2 release];
-    [_Custom3 release];
-    [_Custom4 release];
     [super dealloc];
 }
 
@@ -75,11 +84,25 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     MDTreeNode *item =[self getSelected];
-    NSLog(@"Form_id: %@",item.form_id);
-    self.Custom1.hidden=YES;
-        self.Custom2.hidden=YES;
-        self.Custom3.hidden=YES;
-        self.Custom4.hidden=NO;
+        
+    if ( item == nil )
+    {
+        [self createLabel:@"Devi selezionare prima la categoria" tag:@"1" pointX:20 pointY:100 width:300 height:100];
+        //[self createText:@"test" tag:@"2" pointX:50 pointY:120 width:300 height:40];
+    }else{
+        NSLog(@"Form_id: %@",item.form_id);
+        [USHCategoriesUtility getCustomFormDetailType];
+        
+        /*
+        NSMutableArray *customFields = [USHCustomFieldUtility getCustomAllFields];
+        for (CustomFieldTypeDetail *item in customFields)
+        {
+                NSLog(@"item form_id: %@",item.identifier);
+                NSLog(@"item identifier: %@",item.identifierField);
+                NSLog(@"item name: %@",item.name);
+        }
+        */
+    }
 }
 
 - (MDTreeNode*) getSelected
@@ -88,7 +111,7 @@
     for (MDTreeNode *item in items) {
         if ( item.isSelected == true) return item;
     }
-    return -1;
+    return nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -97,6 +120,11 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    NSArray *viewsToRemove = [self.view subviews];
+    for (UIView *v in viewsToRemove) {
+        NSLog(@"Remove subview: %@",v.tag);
+        [v removeFromSuperview];
+    }
 }
 
 #pragma mark  action
@@ -106,4 +134,58 @@
 - (IBAction)DoneEv:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
 }
+
+#pragma mark  create control
+- (void)createText:(NSString*)text
+               tag:(NSString*)tag
+            pointX:(NSInteger) pointX
+            pointY:(NSInteger) pointY
+             width:(NSInteger) width
+            height:(NSInteger) height
+{
+    CGFloat fx = (CGFloat)pointX;
+    CGFloat fy = (CGFloat)pointY;
+    CGFloat fwidth = (CGFloat)width;
+    CGFloat fheight = (CGFloat)height;
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(fx, fy, fwidth, fheight)];
+    textField.tag = tag;
+    textField.text =text;
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    
+    textField.returnKeyType = UIReturnKeyDone;
+    //set the delegate for the text field to the view controller so that it can listen for events
+    textField.delegate = self;
+
+    
+    [self.view addSubview:textField];
+    NSLog(@"Create subview text: %@",tag);
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
+
+- (void)createLabel:(NSString*)text
+                tag:(NSString*)tag
+             pointX:(NSInteger) pointX
+             pointY:(NSInteger) pointY
+              width:(NSInteger) width
+             height:(NSInteger) height
+{
+    UILabel *label;
+    CGFloat fx = (CGFloat)pointX;
+    CGFloat fy = (CGFloat)pointY;
+    CGFloat fwidth = (CGFloat)width;
+    CGFloat fheight = (CGFloat)height;
+    label = [[UILabel alloc] initWithFrame:CGRectMake(fx, fy, fwidth, fheight)];
+    label.tag = tag;
+    label.text =text;
+    [self.view addSubview:label];
+    NSLog(@"Create subview label: %@",tag);
+}
+
+
+
 @end

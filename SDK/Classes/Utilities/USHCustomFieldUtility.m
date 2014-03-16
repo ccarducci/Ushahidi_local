@@ -9,6 +9,7 @@
 #import "USHCustomFieldUtility.h"
 #import "ReportCustomField.h"
 #import "USHDatabase.h"
+#import "CustomFieldTypeDetail.h"
 
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_PROTOTYPE(USHCustomFieldUtility);
@@ -49,6 +50,22 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(USHCustomFieldUtility);
          
      }
      
+    return cutomFields;
+}
+
+
++ (NSMutableArray *) getCustomAllFields{
+    NSMutableArray *cutomFields = [[NSMutableArray alloc] init];
+
+    NSManagedObjectContext *context = [[USHDatabase sharedInstance] managedObjectContext];
+    NSFetchRequest *requestCategoryDetailSaved = [[[NSFetchRequest alloc] init] autorelease];
+    [requestCategoryDetailSaved setEntity:[NSEntityDescription entityForName:@"CustomFieldTypeDetail" inManagedObjectContext:context]];
+    NSArray *CategoryDettailCustomFields =  [context executeFetchRequest:requestCategoryDetailSaved  error:nil];
+    for (CustomFieldTypeDetail *categoryDettailCustomField in CategoryDettailCustomFields)
+    {
+        NSLog(@"Search custom field for report %@", categoryDettailCustomField.identifier);
+    }
+    
     return cutomFields;
 }
 

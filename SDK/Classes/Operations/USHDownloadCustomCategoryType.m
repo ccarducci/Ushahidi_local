@@ -60,7 +60,7 @@
         
         NSMutableString *downCustomFieldDetailUrl = [[NSMutableString alloc]init];
         
-        [downCustomFieldDetailUrl appendString:@"api?task=customforms&resp=json&&by=meta&formid="];
+        [downCustomFieldDetailUrl appendString:@"api?task=customforms&resp=json&by=meta&formid="];
         [downCustomFieldDetailUrl appendString:identifier];
         USHDownloadCustomCategoryTypeDetail *downCustomFieldDetail = [[USHDownloadCustomCategoryTypeDetail alloc]
                                                                                initWithDelegate:self.map

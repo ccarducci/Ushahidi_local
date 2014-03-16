@@ -15,6 +15,8 @@
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(USHCustomFieldUtility);
 
-+ (ReportCustomField *) getCustomFields:(NSString*)identifier;
+//+ (ReportCustomField *) getCustomFields:(NSString*)identifier;
++ (NSMutableArray *) getCustomFields:(NSString*)identifier;
++ (NSMutableArray *) getCustomAllFields;
 
 @end

@@ -11,10 +11,12 @@
 #import "CategoryTree.h"
 #import "USHCategory.h"
 #import "CustomFieldType.h"
+#import "CustomFieldTypeDetail.h"
 
 @class USHCategory;
 @class CategoryTree;
 @class CustomFieldType;
+@class CustomFieldTypeDetail;
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_PROTOTYPE(USHCategoriesUtility);
 
@@ -90,6 +92,17 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(USHCategoriesUtility);
     }
     return ret;
 }
+
++ (NSNumber *) getCustomFormDetailType
+{
+    NSNumber *ret = [NSNumber numberWithInt:1];
+    for (CustomFieldTypeDetail *categoryForm in  [[USHDatabase sharedInstance] fetchArrayForName:@"CustomFieldTypeDetail" query:nil params:nil, nil])
+    {
+        NSLog(@"getCustomFormDetailType: %@ ", categoryForm.name);
+    }
+    return ret;
+}
+
 
 + (NSString *) getCategoryTitleById:(NSNumber *)identifier
 {

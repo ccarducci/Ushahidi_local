@@ -42,7 +42,10 @@
 #import "NSObject+USH.h"
 
 #import "ReportCustomField.h"
+#import "CustomFieldTypeDetail.h"
 #import "USHDatabase.h"
+
+
 
 @interface USHSynchronize ()
 
@@ -216,7 +219,7 @@
     NSFetchRequest *requestSaved = [[[NSFetchRequest alloc] init] autorelease];
     [requestSaved setEntity:[NSEntityDescription entityForName:@"ReportCustomField" inManagedObjectContext:context]];
     NSArray *CustomFields =  [context executeFetchRequest:requestSaved  error:nil];
-    for (id customField in CustomFields){
+    for (ReportCustomField *customField in CustomFields){
         [context deleteObject:customField];
         itemDeleted++;
     }
@@ -226,7 +229,7 @@
     NSFetchRequest *requestCategorySaved = [[[NSFetchRequest alloc] init] autorelease];
     [requestCategorySaved setEntity:[NSEntityDescription entityForName:@"CustomFieldType" inManagedObjectContext:context]];
     NSArray *CategoryCustomFields =  [context executeFetchRequest:requestCategorySaved  error:nil];
-    for (id categoryCustomField in CategoryCustomFields){
+    for (CustomFieldType* categoryCustomField in CategoryCustomFields){
         [context deleteObject:categoryCustomField];
         itemDeleted++;
     }
@@ -258,6 +261,7 @@
     [downloadIncidentCustomFields addDependency:downloadReport];
     [self.operations addOperation:downloadIncidentCustomFields];
     
+
     /*
     NSManagedObjectContext *context = [[USHDatabase sharedInstance] managedObjectContext];
     NSFetchRequest *requestSaved = [[[NSFetchRequest alloc] init] autorelease];
