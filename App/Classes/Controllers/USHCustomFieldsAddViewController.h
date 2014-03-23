@@ -27,7 +27,7 @@
 #import <Ushahidi/Ushahidi.h>
 #import <Ushahidi/USHShareController.h>
 #import "USHInputTableCell.h"
-
+#import <Ushahidi/MDTreeNode.h>
 
 @class USHCategoryTableViewController;
 @class USHLocationAddViewController;
@@ -38,12 +38,8 @@
 
 @interface USHCustomFieldsAddViewController : USHTableViewController
 
-@property (retain, nonatomic) IBOutlet UILabel *Mess;
-@property (retain, nonatomic) IBOutlet UIView *Custom1;
-@property (retain, nonatomic) IBOutlet UIView *Custom2;
-@property (retain, nonatomic) IBOutlet UIView *Custom3;
-@property (retain, nonatomic) IBOutlet UIView *Custom4;
-
+@property (strong, nonatomic) MDTreeNode *item;
+@property (strong, nonatomic) NSMutableArray *fields;
 @property (retain, nonatomic) IBOutlet USHReportAddViewController *reportAdd;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *cancel;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *done;

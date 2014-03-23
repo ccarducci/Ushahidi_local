@@ -190,7 +190,7 @@
                 <barButtonItem key="backBarButtonItem" title="Back" id="149"/>
                 <barButtonItem key="rightBarButtonItem" id="146">
                     <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" momentary="YES" id="145">
-                        <rect key="frame" x="244" y="7" width="71" height="30"/>
+                        <rect key="frame" x="233" y="7" width="71" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <segments>
                             <segment title="" image="up.png"/>
@@ -417,11 +417,6 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </viewController>
         <viewController title="Add Report" nibName="USHReportAddViewController_iPhone" id="g0v-Ul-aEK" userLabel="Custom Fields Add View Controller - Add Report" customClass="USHCustomFieldsAddViewController">
-            <view key="view" contentMode="scaleToFill" id="d10-wC-Uux">
-                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            </view>
             <extendedEdge key="edgesForExtendedLayout"/>
             <navigationItem key="navigationItem" title="Extended Info" id="Uhp-iM-CWO">
                 <barButtonItem key="leftBarButtonItem" title="Cancel" id="OAR-iK-7ut">

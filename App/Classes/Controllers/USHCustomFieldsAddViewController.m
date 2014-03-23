@@ -70,11 +70,16 @@ typedef enum {
     [_cancel release];
     [_done release];
     [_reportAdd release];
+    [_item release];
+    [_fields removeAllObjects];
+    [_fields release];
     [super dealloc];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _item =[self getSelected];
+    [self loadCustomFieldTypeDetail];
 }
 
 - (void)viewDidUnload {
@@ -83,28 +88,54 @@ typedef enum {
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    MDTreeNode *item =[self getSelected];
-        
-    if ( item == nil )
-    {
-        [self createLabel:@"Devi selezionare prima la categoria" tag:@"1" pointX:20 pointY:100 width:300 height:100];
-        //[self createText:@"test" tag:@"2" pointX:50 pointY:120 width:300 height:40];
-    }else{
-        NSLog(@"Form_id: %@",item.form_id);
-        [USHCategoriesUtility getCustomFormDetailType];
-        
-        /*
-        NSMutableArray *customFields = [USHCustomFieldUtility getCustomAllFields];
-         */
-        for (CustomFieldTypeDetail *item in [USHCategoriesUtility getCustomFormDetailType])
-        {
-                NSLog(@"item form_id: %@",item.identifier);
-                NSLog(@"item identifier: %@",item.identifierField);
-                NSLog(@"item name: %@",item.name);
-        }
-
-    }
+    _item =[self getSelected];
+    [self loadCustomFieldTypeDetail];
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+
+}
+
+#pragma mark  action
+
+- (IBAction)CancelEv:(id)sender {
+}
+
+- (IBAction)DoneEv:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+#pragma mark  Table event
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _fields.count;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CustomFieldTypeDetail *field= (CustomFieldTypeDetail *)[_fields objectAtIndex:indexPath.row];
+    NSLog(@"Press field: %@" , field.name);
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    CustomFieldTypeDetail *field= (CustomFieldTypeDetail *)[_fields objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:field.name];
+    [cell.textLabel setText:field.name];
+
+    [cell.detailTextLabel setText:field.value];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
+}
+
+#pragma mark Utility
 
 - (MDTreeNode*) getSelected
 {
@@ -115,28 +146,52 @@ typedef enum {
     return nil;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    NSArray *viewsToRemove = [self.view subviews];
-    for (UIView *v in viewsToRemove) {
-        NSLog(@"Remove subview: %@",v.tag);
-        [v removeFromSuperview];
+-(void) loadCustomFieldTypeDetail
+{
+    if( _fields == nil){
+        _fields = [[NSMutableArray alloc]init];
+    }else{
+        [_fields removeAllObjects];
     }
+    NSLog(@"Load field for form_id: %@",_item.form_id);
+    NSString *sForm_id = [_item.form_id stringValue];
+    for (CustomFieldTypeDetail *itemCustom in [USHCategoriesUtility getCustomFormDetailType])
+    {
+         if ( [itemCustom.identifier isEqualToString:sForm_id]){
+             [_fields addObject:itemCustom];
+         }
+    }
+    [self.tableView reloadData];
 }
 
-#pragma mark  action
-- (IBAction)CancelEv:(id)sender {
-}
+#pragma mark  old
+/*
+ if ( item == nil )
+ {
+ [self createLabel:@"Devi selezionare prima la categoria" tag:@"1" pointX:20 pointY:100 width:300 height:100];
+ //[self createText:@"test" tag:@"2" pointX:50 pointY:120 width:300 height:40];
+ }else{
+ NSLog(@"Form_id: %@",item.form_id);
+ [USHCategoriesUtility getCustomFormDetailType];
+ NSString *sForm_id = [item.form_id stringValue];
+ int x =20;
+ int y =10;
+ for (CustomFieldTypeDetail *item in [USHCategoriesUtility getCustomFormDetailType])
+ {
+ if ( [item.identifier isEqualToString:sForm_id]){
+ NSLog(@"item form_id: %@",item.identifier);
+ NSLog(@"item identifier: %@",item.identifierField);
+ NSLog(@"item name: %@",item.name);
+ 
+ //[self createLabel:item.name tag:item.name pointX:x pointY:y width:300 height:100];
+ y+=50;
+ 
+ }
+ }
+ }
+ */
 
-- (IBAction)DoneEv:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
-}
-
-#pragma mark  create control
+/*
 - (void)createText:(NSString*)text
                tag:(NSString*)tag
             pointX:(NSInteger) pointX
@@ -187,6 +242,14 @@ typedef enum {
     NSLog(@"Create subview label: %@",tag);
 }
 
+*/
 
+/*
+ NSArray *viewsToRemove = [self.view subviews];
+ for (UIView *v in viewsToRemove) {
+ NSLog(@"Remove subview: %@",v.tag);
+ [v removeFromSuperview];
+ }
+ */
 
 @end
