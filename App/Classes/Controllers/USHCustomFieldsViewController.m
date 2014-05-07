@@ -10,6 +10,7 @@
 #import <Ushahidi/ReportCustomField.h>
 #import <Ushahidi/USHCustomFieldUtility.h>
 
+
 @interface USHCustomFieldsViewController ()
 
 typedef enum {
@@ -61,8 +62,9 @@ typedef enum {
  
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    /*
     self.booksArray = [NSArray arrayWithObjects:@"Brave new world",@"Call of the Wild",@"Catch-22",@"Atlas Shrugged",@"The Great Gatsby",@"The Art of War",@"The Catcher in the Rye",@"The Picture of Dorian Gray",@"The Grapes of Wrath", @"The Metamorphosis",nil];
- 
+     */
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,5 +99,11 @@ typedef enum {
     [rowDesc appendString:labelvalue];
     cell.textLabel.text = rowDesc;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    int rowNo;
+    rowNo = indexPath.row;
 }
 @end

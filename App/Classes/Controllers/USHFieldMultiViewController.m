@@ -14,6 +14,10 @@
 
 @implementation USHFieldMultiViewController
 
+- (IBAction)done:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];

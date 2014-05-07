@@ -44,6 +44,7 @@
 #import <Ushahidi/USHCustomFieldUtility.h>
 #import <Ushahidi/CustomFieldTypeDetail.h>
 #import <Ushahidi/USHCategoriesUtility.h>
+#import "USHFieldMultiViewController.h"
 
 @class USHCategoriesUtility;
 
@@ -73,6 +74,7 @@ typedef enum {
     [_item release];
     [_fields removeAllObjects];
     [_fields release];
+    [_fieldMultiCustom release];
     [super dealloc];
 }
 
@@ -119,8 +121,40 @@ typedef enum {
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    CustomFieldType typeField;
     CustomFieldTypeDetail *field= (CustomFieldTypeDetail *)[_fields objectAtIndex:indexPath.row];
     NSLog(@"Press field: %@" , field.name);
+
+    if ( field.type.intValue == 1)
+    {
+        NSLog(@"CustomFieldType: TextFieldType");
+    }
+    else if (field.type.intValue == 2)
+    {
+        NSLog(@"CustomFieldType: TextAreaFieldType");
+    }
+    else if (field.type.intValue == 3)
+    {
+        NSLog(@"CustomFieldType: DateFieldType");
+    }else if (field.type.intValue == 4)
+    {
+        NSLog(@"CustomFieldType: PasswordFieldType");
+    }else if (field.type.intValue == 5)
+    {
+        NSLog(@"CustomFieldType: RadioFieldType");
+        [self presentModalViewController:self.fieldMultiCustom animated:YES];
+    }else if (field.type.intValue == 6)
+    {
+        NSLog(@"CustomFieldType: CheckBoxFieldType");
+        [self presentModalViewController:self.fieldMultiCustom animated:YES];
+    }else if (field.type.intValue == 7)
+    {
+        NSLog(@"CustomFieldType: DropDownFieldType");
+        [self presentModalViewController:self.fieldMultiCustom animated:YES];
+    }else
+    {
+    }
+  
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
