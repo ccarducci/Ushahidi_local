@@ -28,7 +28,7 @@
 #import <Ushahidi/USHShareController.h>
 #import "USHInputTableCell.h"
 #import <Ushahidi/MDTreeNode.h>
-#import "USHFieldMultiViewController.h"
+#import "USHCustomFieldViewController.h"
 
 @class USHCategoryTableViewController;
 @class USHLocationAddViewController;
@@ -39,7 +39,9 @@
 
 @interface USHCustomFieldsAddViewController : USHTableViewController
 
-@property (retain, nonatomic) IBOutlet USHFieldMultiViewController *fieldMultiCustom;
+
+@property (retain, nonatomic) IBOutlet USHCustomFieldViewController *fieldView;
+
 @property (strong, nonatomic) MDTreeNode *item;
 @property (strong, nonatomic) NSMutableArray *fields;
 @property (retain, nonatomic) IBOutlet USHReportAddViewController *reportAdd;

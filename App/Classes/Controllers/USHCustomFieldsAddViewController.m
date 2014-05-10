@@ -44,7 +44,7 @@
 #import <Ushahidi/USHCustomFieldUtility.h>
 #import <Ushahidi/CustomFieldTypeDetail.h>
 #import <Ushahidi/USHCategoriesUtility.h>
-#import "USHFieldMultiViewController.h"
+
 
 @class USHCategoriesUtility;
 
@@ -74,7 +74,7 @@ typedef enum {
     [_item release];
     [_fields removeAllObjects];
     [_fields release];
-    [_fieldMultiCustom release];
+    [_fieldView release];
     [super dealloc];
 }
 
@@ -124,7 +124,9 @@ typedef enum {
     CustomFieldType typeField;
     CustomFieldTypeDetail *field= (CustomFieldTypeDetail *)[_fields objectAtIndex:indexPath.row];
     NSLog(@"Press field: %@" , field.name);
-
+    
+    self.fieldView.field = field;
+    
     if ( field.type.intValue == 1)
     {
         NSLog(@"CustomFieldType: TextFieldType");
@@ -142,15 +144,16 @@ typedef enum {
     }else if (field.type.intValue == 5)
     {
         NSLog(@"CustomFieldType: RadioFieldType");
-        [self presentModalViewController:self.fieldMultiCustom animated:YES];
+        [self presentModalViewController:self.fieldView animated:YES];
     }else if (field.type.intValue == 6)
     {
         NSLog(@"CustomFieldType: CheckBoxFieldType");
-        [self presentModalViewController:self.fieldMultiCustom animated:YES];
+        [self presentModalViewController:self.fieldView animated:YES];
+        
     }else if (field.type.intValue == 7)
     {
         NSLog(@"CustomFieldType: DropDownFieldType");
-        [self presentModalViewController:self.fieldMultiCustom animated:YES];
+        [self presentModalViewController:self.fieldView animated:YES];
     }else
     {
     }
@@ -168,6 +171,7 @@ typedef enum {
     
     return cell;
 }
+
 
 #pragma mark Utility
 
@@ -198,92 +202,5 @@ typedef enum {
     [self.tableView reloadData];
 }
 
-#pragma mark  old
-/*
- if ( item == nil )
- {
- [self createLabel:@"Devi selezionare prima la categoria" tag:@"1" pointX:20 pointY:100 width:300 height:100];
- //[self createText:@"test" tag:@"2" pointX:50 pointY:120 width:300 height:40];
- }else{
- NSLog(@"Form_id: %@",item.form_id);
- [USHCategoriesUtility getCustomFormDetailType];
- NSString *sForm_id = [item.form_id stringValue];
- int x =20;
- int y =10;
- for (CustomFieldTypeDetail *item in [USHCategoriesUtility getCustomFormDetailType])
- {
- if ( [item.identifier isEqualToString:sForm_id]){
- NSLog(@"item form_id: %@",item.identifier);
- NSLog(@"item identifier: %@",item.identifierField);
- NSLog(@"item name: %@",item.name);
- 
- //[self createLabel:item.name tag:item.name pointX:x pointY:y width:300 height:100];
- y+=50;
- 
- }
- }
- }
- */
-
-/*
-- (void)createText:(NSString*)text
-               tag:(NSString*)tag
-            pointX:(NSInteger) pointX
-            pointY:(NSInteger) pointY
-             width:(NSInteger) width
-            height:(NSInteger) height
-{
-    CGFloat fx = (CGFloat)pointX;
-    CGFloat fy = (CGFloat)pointY;
-    CGFloat fwidth = (CGFloat)width;
-    CGFloat fheight = (CGFloat)height;
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(fx, fy, fwidth, fheight)];
-    textField.tag = tag;
-    textField.text =text;
-    textField.borderStyle = UITextBorderStyleRoundedRect;
-    
-    textField.returnKeyType = UIReturnKeyDone;
-    //set the delegate for the text field to the view controller so that it can listen for events
-    textField.delegate = self;
-
-    
-    [self.view addSubview:textField];
-    NSLog(@"Create subview text: %@",tag);
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    NSLog(@"touchesBegan:withEvent:");
-    [self.view endEditing:YES];
-    [super touchesBegan:touches withEvent:event];
-}
-
-- (void)createLabel:(NSString*)text
-                tag:(NSString*)tag
-             pointX:(NSInteger) pointX
-             pointY:(NSInteger) pointY
-              width:(NSInteger) width
-             height:(NSInteger) height
-{
-    UILabel *label;
-    CGFloat fx = (CGFloat)pointX;
-    CGFloat fy = (CGFloat)pointY;
-    CGFloat fwidth = (CGFloat)width;
-    CGFloat fheight = (CGFloat)height;
-    label = [[UILabel alloc] initWithFrame:CGRectMake(fx, fy, fwidth, fheight)];
-    label.tag = tag;
-    label.text =text;
-    [self.view addSubview:label];
-    NSLog(@"Create subview label: %@",tag);
-}
-
-*/
-
-/*
- NSArray *viewsToRemove = [self.view subviews];
- for (UIView *v in viewsToRemove) {
- NSLog(@"Remove subview: %@",v.tag);
- [v removeFromSuperview];
- }
- */
 
 @end

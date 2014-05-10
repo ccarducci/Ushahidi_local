@@ -438,15 +438,20 @@
             <connections>
                 <outlet property="cancel" destination="OAR-iK-7ut" id="y1D-MB-Zml"/>
                 <outlet property="done" destination="dWn-9m-OtH" id="J2l-6y-5jy"/>
-                <outlet property="fieldMultiCustom" destination="Lof-Vq-Acd" id="psq-Kg-4TA"/>
+                <outlet property="fieldView" destination="yEl-V0-qR4" id="g5O-1d-FL8"/>
                 <outlet property="reportAdd" destination="109" id="0mZ-xx-AdT"/>
             </connections>
         </viewController>
-        <viewController id="Lof-Vq-Acd" userLabel="FieldMultiViewController" customClass="USHFieldMultiViewController">
-            <navigationItem key="navigationItem" title="Select value" id="rDo-vh-L9H">
-                <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="02s-r9-pBY">
+        <viewController id="yEl-V0-qR4" customClass="USHCustomFieldViewController">
+            <navigationItem key="navigationItem" title="Title" id="uOV-WS-fG4">
+                <barButtonItem key="leftBarButtonItem" title="Done" id="Ndf-01-xOk">
                     <connections>
-                        <action selector="done:" destination="Lof-Vq-Acd" id="ouC-Ks-hzp"/>
+                        <action selector="DoneEv:" destination="yEl-V0-qR4" id="Sai-aw-4ty"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem key="rightBarButtonItem" title="Reset" id="Geg-AM-u79">
+                    <connections>
+                        <action selector="ResetEv:" destination="yEl-V0-qR4" id="kwz-NE-26c"/>
                     </connections>
                 </barButtonItem>
             </navigationItem>
@@ -454,7 +459,11 @@
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <nil key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="done" destination="Ndf-01-xOk" id="OAL-jU-CCE"/>
+                <outlet property="reset" destination="Geg-AM-u79" id="73z-2X-c8P"/>
+            </connections>
         </viewController>
     </objects>
     <resources>
