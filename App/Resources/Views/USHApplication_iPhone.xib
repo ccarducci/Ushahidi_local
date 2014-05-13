@@ -416,7 +416,7 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </viewController>
-        <viewController title="Custom Form Add" nibName="USHCustomFormAddViewController_iPhone" id="5LW-c1-WDa" userLabel="Custom Form Add View Controller - Custom Form Add" customClass="USHCustomFormAddViewController">
+        <viewController title="Custom Form Add" nibName="USHCustomFormAddViewController_iPhone" id="5LW-c1-WDa" userLabel="Custom Form Add View Controller" customClass="USHCustomFormAddViewController">
             <extendedEdge key="edgesForExtendedLayout"/>
             <navigationItem key="navigationItem" title="Title" id="ceR-FT-Ezr">
                 <barButtonItem key="leftBarButtonItem" title="Back" id="mdi-5Y-nob">
