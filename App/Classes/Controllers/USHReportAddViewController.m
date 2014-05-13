@@ -233,7 +233,9 @@ typedef enum {
     [_settingsViewController release];
     [_locateError release];
     [_lookupError release];
-    [_customFiedlsAddViewController release];
+
+  
+    [_customFormAddController release];
     [super dealloc];
 }
 
@@ -528,7 +530,9 @@ typedef enum {
         [self.videoPicker showVideoPickerForCell:cell];
     }
     else if (indexPath.section == TableSectionCustomFields) {
-        [self presentModalViewController:self.customFiedlsAddViewController animated:YES];
+        // SHOWFORM
+        [self presentModalViewController:self.customFormAddController animated:YES];
+        
     }
 }
 

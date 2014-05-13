@@ -7,7 +7,17 @@
 //
 
 #import <Ushahidi/Ushahidi.h>
+#import <Ushahidi/USHTableViewController.h>
+#import <Ushahidi/CustomFieldTypeDetail.h>
 
 @interface USHFieldViewController : USHTableViewController
+
+@property (retain, nonatomic) CustomFieldTypeDetail *field;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *Back;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *Reset;
+
+
+- (IBAction)BackEv:(id)sender;
+- (IBAction)ResetEv:(id)sender;
 
 @end

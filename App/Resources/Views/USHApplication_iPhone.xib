@@ -278,7 +278,7 @@
             <connections>
                 <outlet property="cancelButton" destination="185" id="189"/>
                 <outlet property="categoryTableController" destination="111" id="112"/>
-                <outlet property="customFiedlsAddViewController" destination="g0v-Ul-aEK" id="nT3-hk-Xuj"/>
+                <outlet property="customFormAddController" destination="5LW-c1-WDa" id="Yya-Pc-Deg"/>
                 <outlet property="doneButton" destination="184" id="188"/>
                 <outlet property="locationAddViewController" destination="152" id="153"/>
                 <outlet property="settingsViewController" destination="85" id="222"/>
@@ -416,42 +416,17 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </viewController>
-        <viewController title="Add Report" nibName="USHReportAddViewController_iPhone" id="g0v-Ul-aEK" userLabel="Custom Fields Add View Controller - Add Report" customClass="USHCustomFieldsAddViewController">
+        <viewController title="Custom Form Add" nibName="USHCustomFormAddViewController_iPhone" id="5LW-c1-WDa" userLabel="Custom Form Add View Controller - Custom Form Add" customClass="USHCustomFormAddViewController">
             <extendedEdge key="edgesForExtendedLayout"/>
-            <navigationItem key="navigationItem" title="Extended Info" id="Uhp-iM-CWO">
-                <barButtonItem key="leftBarButtonItem" title="Cancel" id="OAR-iK-7ut">
+            <navigationItem key="navigationItem" title="Title" id="ceR-FT-Ezr">
+                <barButtonItem key="leftBarButtonItem" title="Back" id="mdi-5Y-nob">
                     <connections>
-                        <action selector="CancelEv:" destination="g0v-Ul-aEK" id="fGQ-03-o0u"/>
+                        <action selector="BackEv:" destination="5LW-c1-WDa" id="97r-52-qef"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="dWn-9m-OtH">
+                <barButtonItem key="rightBarButtonItem" title="Reset" id="9cL-IX-S7B">
                     <connections>
-                        <action selector="DoneEv:" destination="g0v-Ul-aEK" id="PEi-Un-DGL"/>
-                    </connections>
-                </barButtonItem>
-            </navigationItem>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-            <nil key="simulatedBottomBarMetrics"/>
-            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-            <nil key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="cancel" destination="OAR-iK-7ut" id="y1D-MB-Zml"/>
-                <outlet property="done" destination="dWn-9m-OtH" id="J2l-6y-5jy"/>
-                <outlet property="fieldView" destination="yEl-V0-qR4" id="g5O-1d-FL8"/>
-                <outlet property="reportAdd" destination="109" id="0mZ-xx-AdT"/>
-            </connections>
-        </viewController>
-        <viewController id="yEl-V0-qR4" customClass="USHCustomFieldViewController">
-            <navigationItem key="navigationItem" title="Title" id="uOV-WS-fG4">
-                <barButtonItem key="leftBarButtonItem" title="Done" id="Ndf-01-xOk">
-                    <connections>
-                        <action selector="DoneEv:" destination="yEl-V0-qR4" id="Sai-aw-4ty"/>
-                    </connections>
-                </barButtonItem>
-                <barButtonItem key="rightBarButtonItem" title="Reset" id="Geg-AM-u79">
-                    <connections>
-                        <action selector="ResetEv:" destination="yEl-V0-qR4" id="kwz-NE-26c"/>
+                        <action selector="ResetEv:" destination="5LW-c1-WDa" id="7ab-7W-QXz"/>
                     </connections>
                 </barButtonItem>
             </navigationItem>
@@ -461,8 +436,33 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <nil key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="done" destination="Ndf-01-xOk" id="OAL-jU-CCE"/>
-                <outlet property="reset" destination="Geg-AM-u79" id="73z-2X-c8P"/>
+                <outlet property="Back" destination="mdi-5Y-nob" id="R6m-bf-tnS"/>
+                <outlet property="Reset" destination="9cL-IX-S7B" id="cRL-09-HYP"/>
+                <outlet property="fieldValueSelectorController" destination="9Aj-nC-lLv" id="1fR-VM-Mwy"/>
+            </connections>
+        </viewController>
+        <viewController title="Field" nibName="USHFieldViewController_iPhone" id="9Aj-nC-lLv" userLabel="Custom Field Value View Controller" customClass="USHFieldViewController">
+            <extendedEdge key="edgesForExtendedLayout"/>
+            <navigationItem key="navigationItem" title="Title" id="0dz-cd-shV">
+                <barButtonItem key="leftBarButtonItem" title="Back" id="bY8-0q-ecU">
+                    <connections>
+                        <action selector="BackEv:" destination="9Aj-nC-lLv" id="Y8z-iz-JsH"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem key="rightBarButtonItem" title="Reset" id="ff5-pa-rU0">
+                    <connections>
+                        <action selector="ResetEv:" destination="9Aj-nC-lLv" id="IrB-NK-Gcr"/>
+                    </connections>
+                </barButtonItem>
+            </navigationItem>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <nil key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="Back" destination="bY8-0q-ecU" id="DOF-oq-FCq"/>
+                <outlet property="Reset" destination="ff5-pa-rU0" id="DxU-Of-jDj"/>
             </connections>
         </viewController>
     </objects>

@@ -7,6 +7,18 @@
 //
 
 #import "USHFieldViewController.h"
+#import <Ushahidi/CustomFieldTypeDetail.h>
+
+
+typedef enum {
+    TextFieldType = 1,
+    TextAreaFieldType = 2,
+    DateFieldType = 3,
+    PasswordFieldType = 4,
+    RadioFieldType = 5,
+    CheckBoxFieldType = 6,
+    DropDownFieldType = 7
+} CustomFieldType;
 
 @interface USHFieldViewController ()
 
@@ -26,24 +38,65 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+- (void)dealloc {
+    [_Back release];
+    [_Reset release];
+    [super dealloc];
+}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+#pragma mark  utility
+
+- (NSInteger)getCount
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSInteger count =[[_field.defaultvalue componentsSeparatedByString:@","] count];
+    return count;
 }
-*/
 
+- (NSString*)getFieldValue:(NSUInteger)itemIndex
+{
+    NSArray *listItems = [_field.defaultvalue componentsSeparatedByString:@","];
+    return [listItems objectAtIndex:itemIndex];
+}
+
+#pragma mark  table event
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSInteger count = [self getCount];
+    return count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *value =[self getFieldValue:indexPath.row];
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:value];
+    [cell.textLabel setText:value];
+    
+    //[cell.detailTextLabel setText:value];
+    
+
+    return cell;
+}
+
+#pragma mark  action
+
+- (IBAction)BackEv:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (IBAction)ResetEv:(id)sender {
+}
 @end

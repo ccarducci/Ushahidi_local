@@ -27,7 +27,7 @@
 #import <Ushahidi/Ushahidi.h>
 #import <Ushahidi/USHShareController.h>
 #import "USHInputTableCell.h"
-#import "USHCustomFieldsAddViewController.h"
+#import "USHCustomFormAddViewController.h"
 
 
 @class USHCategoryTableViewController;
@@ -47,7 +47,8 @@
                                                              USHShareControllerDelegate>
 
 
-@property (retain, nonatomic) IBOutlet USHCustomFieldsAddViewController *customFiedlsAddViewController;
+@property (retain, nonatomic) IBOutlet USHCustomFormAddViewController *customFormAddController;
+
 @property (strong, nonatomic) IBOutlet USHCategoryTableViewController *categoryTableController;
 @property (strong, nonatomic) IBOutlet USHLocationAddViewController *locationAddViewController;
 @property (strong, nonatomic) IBOutlet USHSettingsViewController *settingsViewController;
