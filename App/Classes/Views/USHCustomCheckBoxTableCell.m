@@ -18,14 +18,14 @@
  **
  *****************************************************************************/
 
-#import "USHCheckBoxTableCell.h"
+#import "USHCustomCheckBoxTableCell.h"
 #import <Ushahidi/NSObject+USH.h>
 
-@interface USHCheckBoxTableCell ()
+@interface USHCustomCheckBoxTableCell ()
 
 @end
 
-@implementation USHCheckBoxTableCell
+@implementation USHCustomCheckBoxTableCell
 
 typedef enum {
 	CheckedFalse,

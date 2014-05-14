@@ -1993,6 +1993,27 @@
 		4A1331A318C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
 		4A1331A418C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
 		4A1331A518C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
+		4A40AB1619240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */; };
+		4A40AB1719240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */; };
+		4A40AB1819240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */; };
+		4A40AB1919240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */; };
+		4A40AB1A19240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */; };
+		4A40AB1B19240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */; };
+		4A40AB1C19240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */; };
+		4A40AB1E19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB1D19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib */; };
+		4A40AB1F19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB1D19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib */; };
+		4A40AB2019240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB1D19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib */; };
+		4A40AB2119240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB1D19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib */; };
+		4A40AB2219240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB1D19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib */; };
+		4A40AB2319240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB1D19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib */; };
+		4A40AB2419240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB1D19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib */; };
+		4A40AB26192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB25192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib */; };
+		4A40AB27192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB25192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib */; };
+		4A40AB28192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB25192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib */; };
+		4A40AB29192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB25192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib */; };
+		4A40AB2A192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB25192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib */; };
+		4A40AB2B192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB25192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib */; };
+		4A40AB2C192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40AB25192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib */; };
 		4AC064AC189DAD0300186B58 /* MDTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC064AB189DAD0300186B58 /* MDTreeViewController.m */; };
 		4AC064AD189DAD0300186B58 /* MDTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC064AB189DAD0300186B58 /* MDTreeViewController.m */; };
 		4AC064AE189DAD0300186B58 /* MDTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC064AB189DAD0300186B58 /* MDTreeViewController.m */; };
@@ -2522,6 +2543,10 @@
 		4A1162FE1922BF4500A05A03 /* USHFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHFieldViewController.m; sourceTree = "<group>"; };
 		4A1163061922C25100A05A03 /* USHFieldViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USHFieldViewController_iPhone.xib; sourceTree = "<group>"; };
 		4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_unchecked_dis.png; sourceTree = "<group>"; };
+		4A40AB1419240A4000DF32B8 /* USHCustomCheckBoxTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHCustomCheckBoxTableCell.h; sourceTree = "<group>"; };
+		4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHCustomCheckBoxTableCell.m; sourceTree = "<group>"; };
+		4A40AB1D19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USHCustomCheckBoxTableCell_iPhone.xib; sourceTree = "<group>"; };
+		4A40AB25192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USHCustomCheckBoxTableCell_iPad.xib; sourceTree = "<group>"; };
 		4AC064AA189DAD0300186B58 /* MDTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeViewController.h; sourceTree = "<group>"; };
 		4AC064AB189DAD0300186B58 /* MDTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTreeViewController.m; sourceTree = "<group>"; };
 		4AC064B4189DB5AE00186B58 /* MDTreeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeViewCell.h; sourceTree = "<group>"; };
@@ -3086,6 +3111,8 @@
 		3E6D034E159B55EE00CDB5B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4A40AB1419240A4000DF32B8 /* USHCustomCheckBoxTableCell.h */,
+				4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */,
 				3E9B26CC15DD4869004CB8EE /* USHMapTableCell.h */,
 				3E9B26CD15DD4869004CB8EE /* USHMapTableCell.m */,
 				3E9B26CE15DD4869004CB8EE /* USHReportTableCell.h */,
@@ -3247,9 +3274,11 @@
 				3E975765161F82E80072C3BD /* USHImageTableCell.xib */,
 				3E97576B161F83DF0072C3BD /* USHWebTableCell.xib */,
 				3E97576D161F84FB0072C3BD /* USHCommentTableCell.xib */,
-				3ED89D0C1623BA3E00F46881 /* USHCheckBoxTableCell.xib */,
 				3E9A5F0C16498FC000FF10C1 /* USHSwitchTableCell.xib */,
 				3E9A5F1816499D9200FF10C1 /* USHSliderTableCell.xib */,
+				3ED89D0C1623BA3E00F46881 /* USHCheckBoxTableCell.xib */,
+				4A40AB1D19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib */,
+				4A40AB25192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -3722,6 +3751,7 @@
 				3ED8F2311602B74F0095DB31 /* photo.png in Resources */,
 				3ED8F2321602B74F0095DB31 /* photo@2x.png in Resources */,
 				3EF435AD161113BF00C4D725 /* back.png in Resources */,
+				4A40AB1E19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */,
 				3EF435AE161113BF00C4D725 /* back@2x.png in Resources */,
 				3EF435AF161113BF00C4D725 /* checked.png in Resources */,
 				3EF435B0161113BF00C4D725 /* checked@2x.png in Resources */,
@@ -3887,6 +3917,7 @@
 				3E4CCDF2167BBAE2006BC175 /* Localizable.strings in Resources */,
 				3E4CCDF8167BBAE2006BC175 /* Localizable.strings in Resources */,
 				4AC064D7189DB67F00186B58 /* checkbox_checked.png in Resources */,
+				4A40AB26192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */,
 				3E4CCDFE167BBAE2006BC175 /* Localizable.strings in Resources */,
 				3E4CCE04167BBAE2006BC175 /* Localizable.strings in Resources */,
 				3E4CCE0A167BBAE2006BC175 /* Localizable.strings in Resources */,
@@ -4052,6 +4083,7 @@
 				3E9E50C9167129320095F4A4 /* USHCheckBoxTableCell.xib in Resources */,
 				3E9E50CA167129320095F4A4 /* USHCategoryTableViewController_iPhone.xib in Resources */,
 				3E9E50CB167129320095F4A4 /* USHCategoryTableViewController_iPad.xib in Resources */,
+				4A40AB28192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */,
 				4ACC0D7E192131520091383A /* USHCustomFormAddViewController_iPhone.xib in Resources */,
 				3E9E50CC167129320095F4A4 /* USHCommentAddViewController_iPhone.xib in Resources */,
 				3E9E50CD167129320095F4A4 /* USHCommentAddViewController_iPad.xib in Resources */,
@@ -4078,6 +4110,7 @@
 				3E9E50E3167129320095F4A4 /* USHLocationAddViewController_iPhone.xib in Resources */,
 				3E9E50E4167129320095F4A4 /* USHLocationAddViewController_iPad.xib in Resources */,
 				3E9E50E5167129320095F4A4 /* version.png in Resources */,
+				4A40AB2019240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */,
 				3E9E50E6167129320095F4A4 /* version@2x.png in Resources */,
 				4AC064C0189DB60500186B58 /* MDTreeViewCell.xib in Resources */,
 				3E9E50E7167129320095F4A4 /* firstname.png in Resources */,
@@ -4159,6 +4192,7 @@
 				3E9E5189167129350095F4A4 /* up.png in Resources */,
 				3E9E518A167129350095F4A4 /* up@2x.png in Resources */,
 				3E9E518B167129350095F4A4 /* checkin.png in Resources */,
+				4A40AB2219240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */,
 				3E9E518C167129350095F4A4 /* checkin@2x.png in Resources */,
 				3E9E518D167129350095F4A4 /* email.png in Resources */,
 				3E9E518E167129350095F4A4 /* email@2x.png in Resources */,
@@ -4205,6 +4239,7 @@
 				3E9E51C6167129350095F4A4 /* share.png in Resources */,
 				3E9E51C7167129350095F4A4 /* share@2x.png in Resources */,
 				3E9E51C8167129350095F4A4 /* starred.png in Resources */,
+				4A40AB2A192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */,
 				3E9E51C9167129350095F4A4 /* starred@2x.png in Resources */,
 				3E9E51CA167129350095F4A4 /* like@2x.png in Resources */,
 				3E9E51CB167129350095F4A4 /* unstarred.png in Resources */,
@@ -4451,6 +4486,7 @@
 				3E9E531C167129380095F4A4 /* starred.png in Resources */,
 				3E9E531D167129380095F4A4 /* starred@2x.png in Resources */,
 				3E9E531E167129380095F4A4 /* like@2x.png in Resources */,
+				4A40AB2319240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */,
 				3E9E531F167129380095F4A4 /* unstarred.png in Resources */,
 				3E9E5320167129380095F4A4 /* unstarred@2x.png in Resources */,
 				3E9E5321167129380095F4A4 /* camera.png in Resources */,
@@ -4516,6 +4552,7 @@
 				3E9E535C167129380095F4A4 /* place.png in Resources */,
 				3E9E535D167129380095F4A4 /* place@2x.png in Resources */,
 				3E9E535E167129380095F4A4 /* time.png in Resources */,
+				4A40AB2B192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */,
 				3E9E535F167129380095F4A4 /* time@2x.png in Resources */,
 				3E9E5360167129380095F4A4 /* title.png in Resources */,
 				3E9E5361167129380095F4A4 /* title@2x.png in Resources */,
@@ -4788,6 +4825,7 @@
 				3E9E54C5167129530095F4A4 /* USHCheckBoxTableCell.xib in Resources */,
 				3E9E54C6167129530095F4A4 /* USHCategoryTableViewController_iPhone.xib in Resources */,
 				3E9E54C7167129530095F4A4 /* USHCategoryTableViewController_iPad.xib in Resources */,
+				4A40AB29192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */,
 				4ACC0D7F192131520091383A /* USHCustomFormAddViewController_iPhone.xib in Resources */,
 				3E9E54C8167129530095F4A4 /* USHCommentAddViewController_iPhone.xib in Resources */,
 				3E9E54C9167129530095F4A4 /* USHCommentAddViewController_iPad.xib in Resources */,
@@ -4814,6 +4852,7 @@
 				3E9E54DF167129530095F4A4 /* USHLocationAddViewController_iPhone.xib in Resources */,
 				3E9E54E0167129530095F4A4 /* USHLocationAddViewController_iPad.xib in Resources */,
 				3E9E54E1167129530095F4A4 /* version.png in Resources */,
+				4A40AB2119240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */,
 				3E9E54E2167129530095F4A4 /* version@2x.png in Resources */,
 				4AC064C1189DB60500186B58 /* MDTreeViewCell.xib in Resources */,
 				3E9E54E3167129530095F4A4 /* firstname.png in Resources */,
@@ -5033,6 +5072,7 @@
 				3E9E581416712E5A0095F4A4 /* USHCheckBoxTableCell.xib in Resources */,
 				3E9E581516712E5A0095F4A4 /* USHCategoryTableViewController_iPhone.xib in Resources */,
 				3E9E581616712E5A0095F4A4 /* USHCategoryTableViewController_iPad.xib in Resources */,
+				4A40AB27192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */,
 				4ACC0D7D192131520091383A /* USHCustomFormAddViewController_iPhone.xib in Resources */,
 				3E9E581716712E5A0095F4A4 /* USHCommentAddViewController_iPhone.xib in Resources */,
 				3E9E581816712E5A0095F4A4 /* USHCommentAddViewController_iPad.xib in Resources */,
@@ -5059,6 +5099,7 @@
 				3E9E582E16712E5A0095F4A4 /* USHLocationAddViewController_iPhone.xib in Resources */,
 				3E9E582F16712E5A0095F4A4 /* USHLocationAddViewController_iPad.xib in Resources */,
 				3E9E583016712E5A0095F4A4 /* version.png in Resources */,
+				4A40AB1F19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */,
 				3E9E583116712E5A0095F4A4 /* version@2x.png in Resources */,
 				4AC064BF189DB60500186B58 /* MDTreeViewCell.xib in Resources */,
 				3E9E583216712E5A0095F4A4 /* firstname.png in Resources */,
@@ -5253,6 +5294,7 @@
 				3EC1B5231757AB1000CFF726 /* place.png in Resources */,
 				3EC1B5241757AB1000CFF726 /* place@2x.png in Resources */,
 				3EC1B5251757AB1000CFF726 /* time.png in Resources */,
+				4A40AB2C192412CF00DF32B8 /* USHCustomCheckBoxTableCell_iPad.xib in Resources */,
 				3EC1B5261757AB1000CFF726 /* time@2x.png in Resources */,
 				3EC1B5271757AB1000CFF726 /* title.png in Resources */,
 				3EC1B5281757AB1000CFF726 /* title@2x.png in Resources */,
@@ -5300,6 +5342,7 @@
 				4AC064DD189DB67F00186B58 /* checkbox_checked.png in Resources */,
 				3EC1B54D1757AB1000CFF726 /* user.png in Resources */,
 				3EC1B54E1757AB1000CFF726 /* user@2x.png in Resources */,
+				4A40AB2419240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib in Resources */,
 				3EC1B54F1757AB1000CFF726 /* USHMapAddViewController_iPad.xib in Resources */,
 				3EC1B5501757AB1000CFF726 /* USHMapAddViewController_iPhone.xib in Resources */,
 				3EC1B5511757AB1000CFF726 /* USHLocationAddViewController_iPhone.xib in Resources */,
@@ -5417,6 +5460,7 @@
 				3E9BABC1164826B7006ED993 /* USHMapAddViewController.m in Sources */,
 				3E9BABDA1648A91C006ED993 /* USHLocationAddViewController.m in Sources */,
 				3E9A5F101649903F00FF10C1 /* USHSwitchTableCell.m in Sources */,
+				4A40AB1619240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */,
 				3E0F3A9E16499EF3004BA80F /* USHSliderTableCell.m in Sources */,
 				3E9E4D5A166EACDF0095F4A4 /* USHFilterViewController.m in Sources */,
 				3E01346016723DB000C40CB4 /* USHImageViewController.m in Sources */,
@@ -5465,6 +5509,7 @@
 				3E9E5016167129320095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E5017167129320095F4A4 /* USHSwitchTableCell.m in Sources */,
 				4ADE3683189EDACC00ECB569 /* MDTreeAddViewCell.m in Sources */,
+				4A40AB1819240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */,
 				3E9E5018167129320095F4A4 /* USHSliderTableCell.m in Sources */,
 				3E9E5019167129320095F4A4 /* USHFilterViewController.m in Sources */,
 				3E01346216723DB000C40CB4 /* USHImageViewController.m in Sources */,
@@ -5513,6 +5558,7 @@
 				3E9E516A167129350095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E516B167129350095F4A4 /* USHSwitchTableCell.m in Sources */,
 				4ADE3685189EDACD00ECB569 /* MDTreeAddViewCell.m in Sources */,
+				4A40AB1A19240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */,
 				3E9E516C167129350095F4A4 /* USHSliderTableCell.m in Sources */,
 				3E9E516D167129350095F4A4 /* USHFilterViewController.m in Sources */,
 				3E01346416723DB000C40CB4 /* USHImageViewController.m in Sources */,
@@ -5561,6 +5607,7 @@
 				3E9E52BE167129380095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E52BF167129380095F4A4 /* USHSwitchTableCell.m in Sources */,
 				4ADE3686189EDACE00ECB569 /* MDTreeAddViewCell.m in Sources */,
+				4A40AB1B19240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */,
 				3E9E52C0167129380095F4A4 /* USHSliderTableCell.m in Sources */,
 				3E9E52C1167129380095F4A4 /* USHFilterViewController.m in Sources */,
 				3E01346516723DB000C40CB4 /* USHImageViewController.m in Sources */,
@@ -5609,6 +5656,7 @@
 				3E9E5412167129530095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E5413167129530095F4A4 /* USHSwitchTableCell.m in Sources */,
 				4ADE3684189EDACD00ECB569 /* MDTreeAddViewCell.m in Sources */,
+				4A40AB1919240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */,
 				3E9E5414167129530095F4A4 /* USHSliderTableCell.m in Sources */,
 				3E9E5415167129530095F4A4 /* USHFilterViewController.m in Sources */,
 				3E01346316723DB000C40CB4 /* USHImageViewController.m in Sources */,
@@ -5657,6 +5705,7 @@
 				3E9E576116712E5A0095F4A4 /* USHLocationAddViewController.m in Sources */,
 				3E9E576216712E5A0095F4A4 /* USHSwitchTableCell.m in Sources */,
 				4ADE3682189EDACC00ECB569 /* MDTreeAddViewCell.m in Sources */,
+				4A40AB1719240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */,
 				3E9E576316712E5A0095F4A4 /* USHSliderTableCell.m in Sources */,
 				3E9E576416712E5A0095F4A4 /* USHFilterViewController.m in Sources */,
 				3E01346116723DB000C40CB4 /* USHImageViewController.m in Sources */,
@@ -5705,6 +5754,7 @@
 				3EC1B4941757AB1000CFF726 /* USHLocationAddViewController.m in Sources */,
 				3EC1B4951757AB1000CFF726 /* USHSwitchTableCell.m in Sources */,
 				4ADE3687189EDACE00ECB569 /* MDTreeAddViewCell.m in Sources */,
+				4A40AB1C19240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */,
 				3EC1B4961757AB1000CFF726 /* USHSliderTableCell.m in Sources */,
 				3EC1B4971757AB1000CFF726 /* USHFilterViewController.m in Sources */,
 				3EC1B4981757AB1000CFF726 /* USHImageViewController.m in Sources */,

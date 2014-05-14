@@ -19,7 +19,7 @@
  *****************************************************************************/
 
 #import <Foundation/Foundation.h>
-
+#import "USHCustomCheckBoxTableCell.h"
 @class USHMapTableCell;
 @class USHReportTableCell;
 @class USHCheckinTableCell;
@@ -39,6 +39,9 @@
 @protocol USHCheckBoxTableCellDelegate;
 @protocol USHSwitchTableCellDelegate;
 @protocol USHSliderTableCellDelegate;
+
+
+@protocol USHCustomCheckBoxTableCellDelegate;
 
 @interface USHTableCellFactory : NSObject {
 
@@ -179,4 +182,21 @@
                                              max:(NSInteger)max
                                          enabled:(BOOL)enabled
                                           suffix:(NSString*)suffix;
+
+/* ------------------------------ */
+
++ (USHCustomCheckBoxTableCell *) customCheckBoxTableCellForTable:(UITableView *)tableView
+                                                       indexPath:(NSIndexPath *)indexPath
+                                                        delegate:(NSObject<USHCustomCheckBoxTableCellDelegate>*)delegate
+                                                            text:(NSString *)text
+                                                         details:(NSString *)details
+                                                         checked:(BOOL)checked;
+
++ (USHCustomCheckBoxTableCell *) customCheckBoxTableCellForTable:(UITableView *)tableView
+                                                       indexPath:(NSIndexPath *)indexPath
+                                                        delegate:(NSObject<USHCustomCheckBoxTableCellDelegate>*)delegate
+                                                            text:(NSString *)text
+                                                         details:(NSString *)details
+                                                         checked:(BOOL)checked
+                                                           color:(UIColor*)color;
 @end

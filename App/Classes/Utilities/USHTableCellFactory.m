@@ -461,4 +461,49 @@
     return cell;
 }
 
+
+/* ------------------------------ */
+
++ (USHCustomCheckBoxTableCell *) customCheckBoxTableCellForTable:(UITableView *)tableView
+                                           indexPath:(NSIndexPath *)indexPath
+                                            delegate:(NSObject<USHCustomCheckBoxTableCellDelegate>*)delegate
+                                                text:(NSString *)text
+                                             details:(NSString *)details
+                                             checked:(BOOL)checked {
+    return [USHTableCellFactory customCheckBoxTableCellForTable:tableView
+                                                indexPath:indexPath
+                                                 delegate:delegate
+                                                     text:text
+                                                  details:details
+                                                  checked:checked
+                                                    color:[UIColor blackColor]];
+}
+
++ (USHCustomCheckBoxTableCell *) customCheckBoxTableCellForTable:(UITableView *)tableView
+                                           indexPath:(NSIndexPath *)indexPath
+                                            delegate:(NSObject<USHCustomCheckBoxTableCellDelegate>*)delegate
+                                                text:(NSString *)text
+                                             details:(NSString *)details
+                                             checked:(BOOL)checked
+                                               color:(UIColor*)color {
+    //USHCustomCheckBoxTableCell_iPhone
+    
+    NSString *nibName = @"USHCustomCheckBoxTableCell_iPad";
+    USHCustomCheckBoxTableCell *cell = (USHCustomCheckBoxTableCell*)[self cellForTable:tableView withNibName:nibName];
+    cell.indexPath = indexPath;
+    cell.delegate = delegate;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.textLabel.text = text;
+    cell.textLabel.textColor = color;
+    cell.detailsTextLabel.text = details;
+    cell.detailsTextLabel.textColor = color;
+    cell.checked = checked;
+    return cell;
+}
+
+
+
+
+
 @end

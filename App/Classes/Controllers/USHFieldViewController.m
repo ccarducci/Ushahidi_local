@@ -8,7 +8,7 @@
 
 #import "USHFieldViewController.h"
 #import <Ushahidi/CustomFieldTypeDetail.h>
-
+#import "USHTableCellFactory.h"
 
 typedef enum {
     TextFieldType = 1,
@@ -81,14 +81,25 @@ typedef enum {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *value =[self getFieldValue:indexPath.row];
-    
+    /*
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:value];
     [cell.textLabel setText:value];
+    */
     
-    //[cell.detailTextLabel setText:value];
+    //UIColor *color = [NSString isNilOrEmpty:category.color] ? [UIColor blackColor] : [UIColor colorFromHexString:category.color];
+    if (_field.type.intValue == 6 ){
+    BOOL checked = false;
+    return [USHTableCellFactory customCheckBoxTableCellForTable:tableView
+                                                indexPath:indexPath
+                                                 delegate:self
+                                                     text:value
+                                                  details:nil
+                                                  checked:checked
+                                                    color:Nil];
+    }else{
+        return nil;
+    }
     
-
-    return cell;
 }
 
 #pragma mark  action
@@ -98,5 +109,21 @@ typedef enum {
 }
 
 - (IBAction)ResetEv:(id)sender {
+    
+    
+}
+
+#pragma mark - USHCheckBoxTableCell
+
+- (void) checkBoxChanged:(USHCheckBoxTableCell *)cell index:(NSIndexPath *)indexPath checked:(BOOL)checked {
+
+    if (checked) {
+      
+       
+    }
+    else {
+      
+        
+    }
 }
 @end

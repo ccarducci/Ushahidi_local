@@ -20,9 +20,9 @@
 
 #import <Ushahidi/USHTableCell.h>
 
-@protocol USHCheckBoxTableCellDelegate;
+@protocol USHCustomCheckBoxTableCellDelegate;
 
-@interface USHCheckBoxTableCell : USHTableCell {
+@interface USHCustomCheckBoxTableCell : USHTableCell {
 @public
     UILabel *textLabel;
     UILabel *detailsTextLabel;
@@ -32,16 +32,16 @@
 @property (nonatomic, retain) IBOutlet UILabel *textLabel;
 @property (nonatomic, retain) IBOutlet UILabel *detailsTextLabel;
 @property (nonatomic, assign) BOOL checked;
-@property (nonatomic, strong) NSObject<USHCheckBoxTableCellDelegate> *delegate;
+@property (nonatomic, strong) NSObject<USHCustomCheckBoxTableCellDelegate> *delegate;
 
 - (IBAction)checked:(id)sender event:(UIEvent*)event;
 
 @end
 
-@protocol USHCheckBoxTableCellDelegate <NSObject>
+@protocol USHCustomCheckBoxTableCellDelegate <NSObject>
 
 @optional
 
-- (void) checkBoxChanged:(USHCheckBoxTableCell *)cell index:(NSIndexPath *)indexPath checked:(BOOL)checked;
+- (void) checkBoxChanged:(USHCustomCheckBoxTableCell *)cell index:(NSIndexPath *)indexPath checked:(BOOL)checked;
 
 @end
