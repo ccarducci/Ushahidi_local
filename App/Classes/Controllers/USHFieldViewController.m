@@ -82,7 +82,7 @@ typedef enum {
 {
     NSString *value =[self getFieldValue:indexPath.row];
 
-    if (_field.type.intValue == 5 ){
+    if (_field.type.intValue == 6 ){
         BOOL checked = true;
         return [USHTableCellFactory customOptionBoxTableCellForTable:tableView
                                                           indexPath:indexPath
@@ -130,8 +130,7 @@ typedef enum {
 
 - (void) checkBoxChanged:(USHCheckBoxTableCell *)cell index:(NSIndexPath *)indexPath checked:(BOOL)checked {
 
-
-    
+    /*
     if (checked) {
       
        
@@ -139,6 +138,11 @@ typedef enum {
     else {
       
         
+    }
+    */
+    
+    if (_field.type.intValue == 5 || _field.type.intValue == 7 ){
+        [self.tableView reloadData];
     }
 }
 @end
