@@ -81,14 +81,9 @@ typedef enum {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *value =[self getFieldValue:indexPath.row];
-    /*
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:value];
-    [cell.textLabel setText:value];
-    */
-    
-    //UIColor *color = [NSString isNilOrEmpty:category.color] ? [UIColor blackColor] : [UIColor colorFromHexString:category.color];
+
     if (_field.type.intValue == 5 ){
-        BOOL checked = false;
+        BOOL checked = true;
         return [USHTableCellFactory customOptionBoxTableCellForTable:tableView
                                                           indexPath:indexPath
                                                            delegate:self
@@ -96,8 +91,8 @@ typedef enum {
                                                             details:nil
                                                             checked:checked
                                                               color:Nil];
-    }else if (_field.type.intValue == 6 ){
-        BOOL checked = false;
+    }else if (_field.type.intValue == 5 ){
+        BOOL checked = true;
         return [USHTableCellFactory customCheckBoxTableCellForTable:tableView
                                                           indexPath:indexPath
                                                            delegate:self
@@ -106,7 +101,7 @@ typedef enum {
                                                             checked:checked
                                                               color:Nil];
     }else if (_field.type.intValue == 7 ){
-        BOOL checked = false;
+        BOOL checked = true;
         return [USHTableCellFactory customComboBoxTableCellForTable:tableView
                                                           indexPath:indexPath
                                                            delegate:self
@@ -135,6 +130,8 @@ typedef enum {
 
 - (void) checkBoxChanged:(USHCheckBoxTableCell *)cell index:(NSIndexPath *)indexPath checked:(BOOL)checked {
 
+
+    
     if (checked) {
       
        

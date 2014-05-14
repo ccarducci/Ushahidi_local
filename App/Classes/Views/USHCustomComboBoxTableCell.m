@@ -57,11 +57,11 @@ typedef enum {
 - (void) setChecked:(BOOL)isChecked {
 	if (isChecked) {
 		self.tag = CheckedTrue;
-		[self.checkBox setImage:[UIImage imageNamed:@"checked.png"] forState:UIControlStateNormal];
+		[self.checkBox setImage:[UIImage imageNamed:@"description.png"] forState:UIControlStateNormal];
 	}
 	else {
 		self.tag = CheckedFalse;
-		[self.checkBox setImage:[UIImage imageNamed:@"unchecked.png"] forState:UIControlStateNormal];
+		[self.checkBox setImage:[UIImage imageNamed:@"done.png"] forState:UIControlStateNormal];
 	}
 }
 
