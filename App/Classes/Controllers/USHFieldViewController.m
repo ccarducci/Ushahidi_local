@@ -87,19 +87,37 @@ typedef enum {
     */
     
     //UIColor *color = [NSString isNilOrEmpty:category.color] ? [UIColor blackColor] : [UIColor colorFromHexString:category.color];
-    if (_field.type.intValue == 6 ){
-    BOOL checked = false;
-    return [USHTableCellFactory customCheckBoxTableCellForTable:tableView
-                                                indexPath:indexPath
-                                                 delegate:self
-                                                     text:value
-                                                  details:nil
-                                                  checked:checked
-                                                    color:Nil];
+    if (_field.type.intValue == 5 ){
+        BOOL checked = false;
+        return [USHTableCellFactory customOptionBoxTableCellForTable:tableView
+                                                          indexPath:indexPath
+                                                           delegate:self
+                                                               text:value
+                                                            details:nil
+                                                            checked:checked
+                                                              color:Nil];
+    }else if (_field.type.intValue == 6 ){
+        BOOL checked = false;
+        return [USHTableCellFactory customCheckBoxTableCellForTable:tableView
+                                                          indexPath:indexPath
+                                                           delegate:self
+                                                               text:value
+                                                            details:nil
+                                                            checked:checked
+                                                              color:Nil];
+    }else if (_field.type.intValue == 7 ){
+        BOOL checked = false;
+        return [USHTableCellFactory customComboBoxTableCellForTable:tableView
+                                                          indexPath:indexPath
+                                                           delegate:self
+                                                               text:value
+                                                            details:nil
+                                                            checked:checked
+                                                              color:Nil];
     }else{
-        return nil;
+        nil;
     }
-    
+    return nil;
 }
 
 #pragma mark  action

@@ -20,6 +20,9 @@
 
 #import <Foundation/Foundation.h>
 #import "USHCustomCheckBoxTableCell.h"
+#import "USHCustomComboBoxTableCell.h"
+#import "USHCustomOptionBoxTableCell.h"
+
 @class USHMapTableCell;
 @class USHReportTableCell;
 @class USHCheckinTableCell;
@@ -42,6 +45,9 @@
 
 
 @protocol USHCustomCheckBoxTableCellDelegate;
+@protocol USHCustomComboBoxTableCellDelegate;
+@protocol USHCustomOptionBoxTableCellDelegate;
+
 
 @interface USHTableCellFactory : NSObject {
 
@@ -183,7 +189,7 @@
                                          enabled:(BOOL)enabled
                                           suffix:(NSString*)suffix;
 
-/* ------------------------------ */
+/* ----------ckeckbox------------- */
 
 + (USHCustomCheckBoxTableCell *) customCheckBoxTableCellForTable:(UITableView *)tableView
                                                        indexPath:(NSIndexPath *)indexPath
@@ -199,4 +205,37 @@
                                                          details:(NSString *)details
                                                          checked:(BOOL)checked
                                                            color:(UIColor*)color;
+/* ----------combokbox------------- */
+
++ (USHCustomComboBoxTableCell *) customComboBoxTableCellForTable:(UITableView *)tableView
+                                                  indexPath:(NSIndexPath *)indexPath
+                                                   delegate:(NSObject<USHCustomComboBoxTableCellDelegate>*)delegate
+                                                       text:(NSString *)text
+                                                    details:(NSString *)details
+                                                    checked:(BOOL)checked ;
+
++ (USHCustomComboBoxTableCell *) customComboBoxTableCellForTable:(UITableView *)tableView
+                                                  indexPath:(NSIndexPath *)indexPath
+                                                   delegate:(NSObject<USHCustomComboBoxTableCellDelegate>*)delegate
+                                                       text:(NSString *)text
+                                                    details:(NSString *)details
+                                                    checked:(BOOL)checked
+                                                      color:(UIColor*)color;
+/* ----------optionbox------------- */
+
++ (USHCustomOptionBoxTableCell *) customOptionBoxTableCellForTable:(UITableView *)tableView
+                                                       indexPath:(NSIndexPath *)indexPath
+                                                        delegate:(NSObject<USHCustomOptionBoxTableCellDelegate>*)delegate
+                                                            text:(NSString *)text
+                                                         details:(NSString *)details
+                                                           checked:(BOOL)checked;
+
++ (USHCustomOptionBoxTableCell *) customOptionBoxTableCellForTable:(UITableView *)tableView
+                                                       indexPath:(NSIndexPath *)indexPath
+                                                        delegate:(NSObject<USHCustomOptionBoxTableCellDelegate>*)delegate
+                                                            text:(NSString *)text
+                                                         details:(NSString *)details
+                                                         checked:(BOOL)checked
+                                                           color:(UIColor*)color;
+
 @end

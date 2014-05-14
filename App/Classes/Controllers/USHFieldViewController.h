@@ -11,7 +11,7 @@
 #import <Ushahidi/CustomFieldTypeDetail.h>
 #import "USHTableCellFactory.h"
 
-@interface USHFieldViewController : USHTableViewController<USHCustomCheckBoxTableCellDelegate>
+@interface USHFieldViewController : USHTableViewController<USHCustomCheckBoxTableCellDelegate,USHCustomComboBoxTableCellDelegate,USHCustomOptionBoxTableCellDelegate>
 
 @property (retain, nonatomic) CustomFieldTypeDetail *field;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *Back;
