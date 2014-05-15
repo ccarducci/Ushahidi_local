@@ -46,6 +46,8 @@ typedef enum {
     [_Back release];
     [_Reset release];
     [_fieldValueSelectorController release];
+    [_fieldSingleValueSelectorController release];
+    [_fieldSingleValueSelectorController release];
     [super dealloc];
 }
 
@@ -82,48 +84,44 @@ typedef enum {
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CustomFieldType typeField;
+    //CustomFieldType typeField;
     CustomFieldTypeDetail *field= (CustomFieldTypeDetail *)[_fields objectAtIndex:indexPath.row];
     NSLog(@"Press field: %@" , field.name);
     
     self.fieldValueSelectorController.field = field;
     
-    [self presentModalViewController:self.fieldValueSelectorController animated:YES];
+    
     
     if ( field.type.intValue == 1)
     {
         NSLog(@"CustomFieldType: TextFieldType");
-        //[self presentModalViewController:self.fieldMultiCustom animated:YES];
-        
+        [self presentModalViewController:self.fieldSingleValueSelectorController animated:YES];
     }
     else if (field.type.intValue == 2)
     {
         NSLog(@"CustomFieldType: TextAreaFieldType");
-        //[self presentModalViewController:self.fieldMultiCustom animated:YES];
+        [self presentModalViewController:self.fieldSingleValueSelectorController animated:YES];
     }
     else if (field.type.intValue == 3)
     {
         NSLog(@"CustomFieldType: DateFieldType");
-        //[self presentModalViewController:self.fieldMultiCustom animated:YES];
+        [self presentModalViewController:self.fieldSingleValueSelectorController animated:YES];
     }else if (field.type.intValue == 4)
     {
         NSLog(@"CustomFieldType: PasswordFieldType");
-        //[self presentModalViewController:self.fieldMultiCustom animated:YES];
+        [self presentModalViewController:self.fieldSingleValueSelectorController animated:YES];
     }else if (field.type.intValue == 5)
     {
         NSLog(@"CustomFieldType: RadioFieldType");
-        //self.fieldMultiCustom.values =  [field.defaultvalue componentsSeparatedByString:@","];
-        //[self presentModalViewController:self.fieldMultiCustom animated:YES];
+        [self presentModalViewController:self.fieldValueSelectorController animated:YES];
     }else if (field.type.intValue == 6)
     {
         NSLog(@"CustomFieldType: CheckBoxFieldType");
-        //self.fieldMultiCustom.values =  [field.defaultvalue componentsSeparatedByString:@","];
-        //[self presentModalViewController:self.fieldMultiCustom animated:YES];
+        [self presentModalViewController:self.fieldValueSelectorController animated:YES];
     }else if (field.type.intValue == 7)
     {
         NSLog(@"CustomFieldType: DropDownFieldType");
-        //self.fieldMultiCustom.values =  [field.defaultvalue componentsSeparatedByString:@","];
-        //[self presentModalViewController:self.fieldMultiCustom animated:YES];
+        [self presentModalViewController:self.fieldValueSelectorController animated:YES];
     }else
     {
     }

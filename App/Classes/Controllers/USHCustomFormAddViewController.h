@@ -10,6 +10,7 @@
 #import <Ushahidi/USHTableViewController.h>
 #import <Ushahidi/MDTreeNode.h>
 #import "USHFieldViewController.h"
+#import "USHCustomFieldSingleViewController.h"
 
 @interface USHCustomFormAddViewController : USHTableViewController
 
@@ -19,6 +20,8 @@
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *Reset;
 
 @property (retain, nonatomic) IBOutlet USHFieldViewController *fieldValueSelectorController;
+@property (retain, nonatomic) IBOutlet USHCustomFieldSingleViewController *fieldSingleValueSelectorController;
+
 
 
 - (IBAction)ResetEv:(id)sender;

@@ -438,6 +438,7 @@
             <connections>
                 <outlet property="Back" destination="mdi-5Y-nob" id="R6m-bf-tnS"/>
                 <outlet property="Reset" destination="9cL-IX-S7B" id="cRL-09-HYP"/>
+                <outlet property="fieldSingleValueSelectorController" destination="Mgk-8q-a2c" id="yzh-q6-Snh"/>
                 <outlet property="fieldValueSelectorController" destination="9Aj-nC-lLv" id="1fR-VM-Mwy"/>
             </connections>
         </viewController>
@@ -463,6 +464,30 @@
             <connections>
                 <outlet property="Back" destination="bY8-0q-ecU" id="DOF-oq-FCq"/>
                 <outlet property="Reset" destination="ff5-pa-rU0" id="DxU-Of-jDj"/>
+            </connections>
+        </viewController>
+        <viewController title="Custom Field Single" nibName="USHCustomFieldSingleViewController_iPhone" id="Mgk-8q-a2c" userLabel="Custom Field Single View Controller" customClass="USHCustomFieldSingleViewController">
+            <extendedEdge key="edgesForExtendedLayout"/>
+            <navigationItem key="navigationItem" title="Title" id="At0-IQ-ZXz">
+                <barButtonItem key="leftBarButtonItem" title="Back" id="PTX-4j-7OP">
+                    <connections>
+                        <action selector="backev:" destination="Mgk-8q-a2c" id="Ocq-c8-9HN"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem key="rightBarButtonItem" title="Reset" id="2bM-gQ-mTh">
+                    <connections>
+                        <action selector="resetev:" destination="Mgk-8q-a2c" id="Tuh-bk-35A"/>
+                    </connections>
+                </barButtonItem>
+            </navigationItem>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <nil key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="back" destination="PTX-4j-7OP" id="u7B-5E-aeS"/>
+                <outlet property="reset" destination="2bM-gQ-mTh" id="iuD-3K-mlE"/>
             </connections>
         </viewController>
     </objects>
