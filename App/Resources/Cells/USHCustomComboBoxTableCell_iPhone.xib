@@ -21,12 +21,6 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD6-r4-FSc">
-                        <rect key="frame" x="218" y="11" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfL-8F-XHd">
                         <rect key="frame" x="280" y="-2" width="29" height="48"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -41,7 +35,6 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="checkBox" destination="CfL-8F-XHd" id="sBL-Dc-9WA"/>
-                <outlet property="detailsTextLabel" destination="tD6-r4-FSc" id="2f0-fR-sqc"/>
                 <outlet property="textLabel" destination="yjg-xR-9Ew" id="xI7-OJ-YRm"/>
             </connections>
         </tableViewCell>
