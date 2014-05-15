@@ -27,10 +27,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htx-Bn-BY6">
-                        <rect key="frame" x="278" y="5" width="22" height="34"/>
+                        <rect key="frame" x="272" y="4" width="38" height="34"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                        <state key="normal" title="Button" image="clear.png"/>
+                        <state key="normal" title="Button" image="radio-button-off-icon.png"/>
                         <connections>
                             <action selector="checked:event:" destination="N0J-CO-MlH" eventType="touchUpInside" id="NSx-ny-Okj"/>
                         </connections>
@@ -45,6 +45,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clear.png" width="20" height="20"/>
+        <image name="radio-button-off-icon.png" width="32" height="32"/>
     </resources>
 </document>
