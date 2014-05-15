@@ -38,6 +38,7 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _selected = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +49,7 @@ typedef enum {
 - (void)dealloc {
     [_Back release];
     [_Reset release];
+    [_selected release];
     [super dealloc];
 }
 
@@ -78,12 +80,28 @@ typedef enum {
     return count;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *value =[self getFieldValue:indexPath.row];
+    
+    
+    if (_field.type.intValue == 5 ){
 
-    if (_field.type.intValue == 6 ){
+
         BOOL checked = true;
+        if ( [_selected count] > 0 )
+        {
+            NSString *itemSselected =_selected[0];
+            NSInteger indexInt = indexPath.row;
+            NSString *itemS = [@(indexInt ) stringValue];
+            if ( [itemS isEqualToString:itemSselected] )checked = false;
+        }
+        
         return [USHTableCellFactory customOptionBoxTableCellForTable:tableView
                                                           indexPath:indexPath
                                                            delegate:self
@@ -91,8 +109,8 @@ typedef enum {
                                                             details:nil
                                                             checked:checked
                                                               color:Nil];
-    }else if (_field.type.intValue == 5 ){
-        BOOL checked = true;
+    }else if (_field.type.intValue == 6 ){
+        BOOL checked = false;
         return [USHTableCellFactory customCheckBoxTableCellForTable:tableView
                                                           indexPath:indexPath
                                                            delegate:self
@@ -102,6 +120,13 @@ typedef enum {
                                                               color:Nil];
     }else if (_field.type.intValue == 7 ){
         BOOL checked = true;
+        if ( [_selected count] > 0 )
+        {
+            NSString *itemSselected =_selected[0];
+            NSInteger indexInt = indexPath.row;
+            NSString *itemS = [@(indexInt ) stringValue];
+            if ( [itemS isEqualToString:itemSselected] )checked = false;
+        }
         return [USHTableCellFactory customComboBoxTableCellForTable:tableView
                                                           indexPath:indexPath
                                                            delegate:self
@@ -122,7 +147,10 @@ typedef enum {
 }
 
 - (IBAction)ResetEv:(id)sender {
-    
+    if (_field.type.intValue == 5 || _field.type.intValue == 7 ){
+            [_selected removeAllObjects];
+            [self.tableView reloadData];
+    }
     
 }
 
@@ -130,19 +158,22 @@ typedef enum {
 
 - (void) checkBoxChanged:(USHCheckBoxTableCell *)cell index:(NSIndexPath *)indexPath checked:(BOOL)checked {
 
-    /*
-    if (checked) {
-      
-       
-    }
-    else {
-      
-        
-    }
-    */
-    
     if (_field.type.intValue == 5 || _field.type.intValue == 7 ){
-        [self.tableView reloadData];
+        
+        if (_selected.count >0){
+            [_selected removeAllObjects];
+            NSInteger indexInt = indexPath.row;
+            NSString *itemS = [@(indexInt ) stringValue];
+            [_selected addObject:itemS];
+            [self.tableView reloadData];
+        }else{
+            NSInteger indexInt = indexPath.row;
+            NSString *itemS = [@(indexInt ) stringValue];
+            [_selected addObject:itemS];
+        }
+    }
+    if (_field.type.intValue == 6){
+
     }
 }
 @end

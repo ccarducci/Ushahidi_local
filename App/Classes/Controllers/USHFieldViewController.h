@@ -17,6 +17,7 @@
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *Back;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *Reset;
 
+@property (retain, nonatomic) NSMutableArray *selected;
 
 - (IBAction)BackEv:(id)sender;
 - (IBAction)ResetEv:(id)sender;
