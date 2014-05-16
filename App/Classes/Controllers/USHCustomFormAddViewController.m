@@ -95,6 +95,8 @@ typedef enum {
     if ( field.type.intValue == 1)
     {
         NSLog(@"CustomFieldType: TextFieldType");
+        self.fieldSingleValueSelectorController.field = field;
+        self.fieldSingleValueSelectorController.testo.text = field.value;
         [self presentModalViewController:self.fieldSingleValueSelectorController animated:YES];
     }
     else if (field.type.intValue == 2)
@@ -134,13 +136,14 @@ typedef enum {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:field.name];
     [cell.textLabel setText:field.name];
     
+    //[cell.detailTextLabel setText:field.value];
     [cell.detailTextLabel setText:field.value];
     
-    if ( field.value == nil ){
+    //if ( field.value == nil ){
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }else{
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }
+    //}else{
+    //    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    //}
     return cell;
 }
 

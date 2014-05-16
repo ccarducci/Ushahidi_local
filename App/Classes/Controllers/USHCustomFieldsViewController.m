@@ -98,6 +98,7 @@ typedef enum {
     [rowDesc appendString:@": "];
     [rowDesc appendString:labelvalue];
     cell.textLabel.text = rowDesc;
+
     return cell;
 }
 

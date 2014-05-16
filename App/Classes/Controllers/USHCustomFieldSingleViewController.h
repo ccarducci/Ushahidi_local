@@ -11,7 +11,7 @@
 #import <Ushahidi/CustomFieldTypeDetail.h>
 #import "USHTableCellFactory.h"
 
-@interface USHCustomFieldSingleViewController : USHTableViewController
+@interface USHCustomFieldSingleViewController : USHViewController
 
 @property (retain, nonatomic) CustomFieldTypeDetail *field;
 @property (retain, nonatomic) NSMutableArray *selected;
@@ -19,5 +19,6 @@
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *back;
 - (IBAction)resetev:(id)sender;
 - (IBAction)backev:(id)sender;
+@property (retain, nonatomic) IBOutlet UITextField *testo;
 
 @end
