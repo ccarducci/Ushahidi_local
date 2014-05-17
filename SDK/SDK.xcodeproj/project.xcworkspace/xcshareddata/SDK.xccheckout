@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F1EC60C3-C07B-4215-BE1A-9D695CA2A111</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SDK</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>043ECE14-6D95-4047-8B86-437EF951C4FD</key>
+		<string>https://github.com/ccarducci/Ushahidi_local.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SDK/SDK.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>043ECE14-6D95-4047-8B86-437EF951C4FD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ccarducci/Ushahidi_local.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>043ECE14-6D95-4047-8B86-437EF951C4FD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>043ECE14-6D95-4047-8B86-437EF951C4FD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Ushahidi_local 2</string>
+		</dict>
+	</array>
+</dict>
+</plist>
