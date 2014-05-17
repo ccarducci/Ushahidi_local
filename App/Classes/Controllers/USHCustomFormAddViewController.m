@@ -84,19 +84,15 @@ typedef enum {
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //CustomFieldType typeField;
     CustomFieldTypeDetail *field= (CustomFieldTypeDetail *)[_fields objectAtIndex:indexPath.row];
     NSLog(@"Press field: %@" , field.name);
-    
-    self.fieldValueSelectorController.field = field;
-    
-    
     
     if ( field.type.intValue == 1)
     {
         NSLog(@"CustomFieldType: TextFieldType");
         self.fieldSingleValueSelectorController.field = field;
         self.fieldSingleValueSelectorController.testo.text = field.value;
+        self.fieldSingleValueSelectorController.title = field.name;
         [self presentModalViewController:self.fieldSingleValueSelectorController animated:YES];
     }
     else if (field.type.intValue == 2)
@@ -115,14 +111,20 @@ typedef enum {
     }else if (field.type.intValue == 5)
     {
         NSLog(@"CustomFieldType: RadioFieldType");
+        self.fieldValueSelectorController.field = field;
+        self.fieldValueSelectorController.title = field.name;
         [self presentModalViewController:self.fieldValueSelectorController animated:YES];
     }else if (field.type.intValue == 6)
     {
         NSLog(@"CustomFieldType: CheckBoxFieldType");
+        self.fieldValueSelectorController.field = field;
+        self.fieldValueSelectorController.title = field.name;
         [self presentModalViewController:self.fieldValueSelectorController animated:YES];
     }else if (field.type.intValue == 7)
     {
         NSLog(@"CustomFieldType: DropDownFieldType");
+        self.fieldValueSelectorController.field = field;
+        self.fieldValueSelectorController.title = field.name;
         [self presentModalViewController:self.fieldValueSelectorController animated:YES];
     }else
     {
@@ -135,15 +137,9 @@ typedef enum {
     CustomFieldTypeDetail *field= (CustomFieldTypeDetail *)[_fields objectAtIndex:indexPath.row];
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:field.name];
     [cell.textLabel setText:field.name];
-    
-    //[cell.detailTextLabel setText:field.value];
     [cell.detailTextLabel setText:field.value];
-    
-    //if ( field.value == nil ){
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    //}else{
-    //    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    //}
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
     return cell;
 }
 
@@ -177,7 +173,7 @@ typedef enum {
     }
     NSLog(@"Load field for form_id: %@",_item.form_id);
     NSString *sForm_id = [_item.form_id stringValue];
-    for (CustomFieldTypeDetail *itemCustom in [USHCategoriesUtility getCustomFormDetailType])
+    for (CustomFieldTypeDetail *itemCustom in ((NSMutableArray *)[USHCategoriesUtility getCustomFormDetailType]))
     {
         if ( [itemCustom.identifier isEqualToString:sForm_id]){
             [_fields addObject:itemCustom];

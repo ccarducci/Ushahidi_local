@@ -491,7 +491,12 @@
                                                          details:(NSString *)details
                                                          checked:(BOOL)checked
                                                            color:(UIColor*)color{
-    NSString *nibName = @"USHCustomCheckBoxTableCell_iPhone";
+    NSString *nibName = nil;
+    if ([USHDevice isIPad]) {
+        nibName = @"USHCustomCheckBoxTableCell_iPad";
+    }else{
+        nibName = @"USHCustomCheckBoxTableCell_iPhone";
+    }
     USHCustomCheckBoxTableCell *cell = (USHCustomCheckBoxTableCell*)[self cellForTable:tableView withNibName:nibName];
     cell.indexPath = indexPath;
     cell.delegate = delegate;
@@ -528,7 +533,13 @@
                                                          details:(NSString *)details
                                                          checked:(BOOL)checked
                                                            color:(UIColor*)color{
-    NSString *nibName = @"USHCustomComboBoxTableCell_iPhone";
+    NSString *nibName = nil;
+    if ([USHDevice isIPad]) {
+        nibName = @"USHCustomComboBoxTableCell_iPad";
+    }else{
+        nibName = @"USHCustomComboBoxTableCell_iPhone";
+    }
+
     USHCustomComboBoxTableCell *cell = (USHCustomComboBoxTableCell*)[self cellForTable:tableView withNibName:nibName];
     cell.indexPath = indexPath;
     cell.delegate = delegate;
@@ -565,7 +576,14 @@
                                                            details:(NSString *)details
                                                            checked:(BOOL)checked
                                                              color:(UIColor*)color{
-    NSString *nibName = @"USHCustomOptionBoxTableCell_iPhone";
+    
+    NSString *nibName = nil;
+    if ([USHDevice isIPad]) {
+        nibName = @"USHCustomOptionBoxTableCell_iPhad";
+    }else{
+        nibName = @"USHCustomOptionBoxTableCell_iPhone";
+    }
+    
     USHCustomOptionBoxTableCell *cell = (USHCustomOptionBoxTableCell*)[self cellForTable:tableView withNibName:nibName];
     cell.indexPath = indexPath;
     cell.delegate = delegate;

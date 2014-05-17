@@ -26,13 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -43,6 +41,7 @@
     [super dealloc];
 }
 - (IBAction)resetev:(id)sender {
+    self.testo.text = nil;
 }
 
 - (IBAction)backev:(id)sender {
