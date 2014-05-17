@@ -46,6 +46,16 @@ typedef enum {
     [super didReceiveMemoryWarning];
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [_selected removeAllObjects];
+    if ( _field.type.intValue == 5 || _field.type.intValue == 7  ){
+        if (_field.value != nil && _field.value.length>0){
+            NSString *itemSelected = [self getIndexSingleValue:_field.value];
+            [_selected addObject:itemSelected];
+        }    }
+}
+
 - (void)dealloc {
     [_Back release];
     [_Reset release];
@@ -65,6 +75,21 @@ typedef enum {
 {
     NSArray *listItems = [_field.defaultvalue componentsSeparatedByString:@","];
     return [listItems objectAtIndex:itemIndex];
+}
+
+-(NSString*)getIndexSingleValue:(NSString*)value
+{
+    NSArray *listItems = [_field.defaultvalue componentsSeparatedByString:@","];
+    NSInteger item = 0;
+    NSInteger itemNotFound = -1;
+    for (NSString *object in listItems) {
+        if ( [object isEqualToString:value])
+        {
+            return [@(item ) stringValue];
+        }
+        item++;
+    }
+    return [@(itemNotFound ) stringValue];
 }
 
 #pragma mark  table event
@@ -143,15 +168,23 @@ typedef enum {
 #pragma mark  action
 
 - (IBAction)BackEv:(id)sender {
+    if (_field.type.intValue == 5 || _field.type.intValue == 7  ){
+        if ( _selected.count > 0 ){
+            NSString *itemSselected =_selected[0];
+            _field.value = [self getFieldValue:[itemSselected integerValue]];
+        }else if (_selected.count == 0)
+        {
+            _field.value = nil;
+        }
+    }
     [self dismissModalViewControllerAnimated:YES];
 }
 
 - (IBAction)ResetEv:(id)sender {
-    if (_field.type.intValue == 5 || _field.type.intValue == 7 ){
+    if (_field.type.intValue == 5 || _field.type.intValue == 7 || _field.type.intValue == 6 ){
             [_selected removeAllObjects];
             [self.tableView reloadData];
     }
-    
 }
 
 #pragma mark - USHCheckBoxTableCell
@@ -171,9 +204,6 @@ typedef enum {
             NSString *itemS = [@(indexInt ) stringValue];
             [_selected addObject:itemS];
         }
-    }
-    if (_field.type.intValue == 6){
-
     }
 }
 @end
