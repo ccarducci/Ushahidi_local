@@ -20,6 +20,11 @@ typedef enum {
     DropDownFieldType = 7
 } CustomFieldType;
 
+typedef enum {
+	CheckedFalse,
+	CheckedTrue
+} Checked;
+
 @interface USHFieldViewController ()
 
 @end
@@ -53,7 +58,9 @@ typedef enum {
         if (_field.value != nil && _field.value.length>0){
             NSString *itemSelected = [self getIndexSingleValue:_field.value];
             [_selected addObject:itemSelected];
-        }    }
+        }
+    }
+)
 }
 
 - (void)dealloc {
@@ -176,6 +183,34 @@ typedef enum {
         {
             _field.value = nil;
         }
+    }
+    if(_field.type.intValue == 6)
+    {
+        NSString *value = @"";
+        int item = 1;
+        [_selected removeAllObjects];
+        for (int section = 0; section < 1; section++) {
+            for (int row = 0; row < [self getCount]; row++) {
+                NSIndexPath* cellPath = [NSIndexPath indexPathForRow:row inSection:section];
+                USHCustomCheckBoxTableCell* cell = (USHCustomCheckBoxTableCell*)[self.tableView cellForRowAtIndexPath:cellPath];
+                
+                if (cell.tag == CheckedTrue)
+                {
+                    if(item == 1)
+                    {
+                        value = [value stringByAppendingString:cell.textLabel.text];
+
+                    }else{
+                        value = [value stringByAppendingString:@","];
+                        value = [value stringByAppendingString:cell.textLabel.text];
+                    }
+                    item++;
+                }
+            }
+            NSLog(@"_selected %@", value);
+            [_selected addObject:value];
+        }
+        
     }
     [self dismissModalViewControllerAnimated:YES];
 }
