@@ -54,13 +54,19 @@ typedef enum {
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [_selected removeAllObjects];
+    // _selected = [[NSMutableArray alloc] init];
     if ( _field.type.intValue == 5 || _field.type.intValue == 7  ){
         if (_field.value != nil && _field.value.length>0){
             NSString *itemSelected = [self getIndexSingleValue:_field.value];
             [_selected addObject:itemSelected];
         }
     }
-)
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [_selected removeAllObjects];
+    //[_selected release];
 }
 
 - (void)dealloc {
@@ -143,6 +149,11 @@ typedef enum {
                                                               color:Nil];
     }else if (_field.type.intValue == 6 ){
         BOOL checked = false;
+        if ( _field.value != nil && _field.value.length > 0){
+            if ( [_field.value rangeOfString:value].location != NSNotFound){
+                checked = true;
+            }
+        }
         return [USHTableCellFactory customCheckBoxTableCellForTable:tableView
                                                           indexPath:indexPath
                                                            delegate:self
@@ -208,7 +219,8 @@ typedef enum {
                 }
             }
             NSLog(@"_selected %@", value);
-            [_selected addObject:value];
+            //[_selected addObject:value];
+            _field.value = value;
         }
         
     }

@@ -59,4 +59,9 @@
 
 - (IBAction)info:(id)sender event:(UIEvent*)event;
 
+
+// GEOAVALANCHE INIZIO
+@property (strong, nonatomic) NSString *reportCustomForm_id;
+@property (strong, nonatomic) NSMutableArray *reportCustomFields;
+// GEOAVALANCHE INIZIO
 @end

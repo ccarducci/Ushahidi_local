@@ -62,6 +62,11 @@
 
 @implementation USHReportAddViewController
 
+// GEOAVALANCHE INIZIO
+@synthesize reportCustomForm_id = _reportCustomForm_id;
+@synthesize reportCustomFields = _reportCustomFields;
+// GEOAVALANCHE INIZIO
+
 @synthesize datePicker = _datePicker;
 @synthesize imagePicker = _imagePicker;
 @synthesize videoPicker = _videoPicker;
@@ -129,6 +134,7 @@ typedef enum {
     DLog(@"");
     // resetIsDisabled
     [MDTreeAddViewController resetMDStore];
+    [_reportCustomFields removeAllObjects];
     [UIAlertView showWithTitle:NSLocalizedString(@"Unsaved Changes", nil) 
                        message:NSLocalizedString(@"Are you sure you want to cancel?", nil) 
                       delegate:self 
@@ -233,8 +239,7 @@ typedef enum {
     [_settingsViewController release];
     [_locateError release];
     [_lookupError release];
-
-  
+    [_reportCustomFields release];
     [_customFormAddController release];
     [super dealloc];
 }
@@ -530,9 +535,13 @@ typedef enum {
         [self.videoPicker showVideoPickerForCell:cell];
     }
     else if (indexPath.section == TableSectionCustomFields) {
-        // SHOWFORM
+        // SHOWFORM GEOAVALANCHE INIZIO
+        if ( self.reportCustomFields == nil)
+            self.reportCustomFields = [[NSMutableArray alloc] init];
+  
+        self.customFormAddController.reportCustomFields = self.reportCustomFields;
         [self presentModalViewController:self.customFormAddController animated:YES];
-        
+        // SHOWFORM GEOAVALANCHE FINE
     }
 }
 

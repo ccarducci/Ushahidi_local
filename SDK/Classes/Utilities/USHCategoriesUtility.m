@@ -97,6 +97,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(USHCategoriesUtility);
 {
     NSMutableArray *fields = [[NSMutableArray alloc] init];
     //for (CustomFieldTypeDetail *categoryForm in  [[USHDatabase sharedInstance] fetchArrayForName:@"CustomFieldTypeDetail" query:nil params:nil, nil])
+    //for (CustomFieldTypeDetail *categoryForm in  [[USHDatabase sharedInstance] fetchArrayForName:@"CustomFieldTypeDetail" query:nil param:nil sort:@"name", nil])
     for (CustomFieldTypeDetail *categoryForm in  [[USHDatabase sharedInstance] fetchArrayForName:@"CustomFieldTypeDetail" query:nil param:nil sort:@"name", nil])
     {
         NSLog(@"getCustomFormDetailType: %@ ", categoryForm.name);

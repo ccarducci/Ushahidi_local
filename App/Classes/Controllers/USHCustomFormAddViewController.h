@@ -11,11 +11,11 @@
 #import <Ushahidi/MDTreeNode.h>
 #import "USHFieldViewController.h"
 #import "USHCustomFieldSingleViewController.h"
+#import "USHFieldItem.h"
 
 @interface USHCustomFormAddViewController : USHTableViewController
 
-@property (strong, nonatomic) MDTreeNode *item;
-@property (strong, nonatomic) NSMutableArray *fields;
+
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *Back;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *Reset;
 
@@ -26,5 +26,9 @@
 
 - (IBAction)ResetEv:(id)sender;
 - (IBAction)BackEv:(id)sender;
+
+@property (retain, nonatomic) MDTreeNode *item;
+@property (retain, nonatomic) NSMutableArray *reportCustomFields;
+@property (retain, nonatomic) NSMutableArray *fields;
 
 @end

@@ -1,4 +1,4 @@
-//
+    //
 //  USHCustomFormAddViewController.m
 //  App
 //
@@ -28,6 +28,9 @@ typedef enum {
 
 @implementation USHCustomFormAddViewController
 
+@synthesize reportCustomFields = _reportCustomFields;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -53,12 +56,17 @@ typedef enum {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _item =[self getSelected];
-    [self loadCustomFieldTypeDetail];
+    if( _fields == nil){
+        _fields = [[NSMutableArray alloc]init];
+    }else{
+        [_fields removeAllObjects];
+    }
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
+    [_fields removeAllObjects];
+    [_fields release];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -67,14 +75,11 @@ typedef enum {
     [self loadCustomFieldTypeDetail];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    
+    [_fields removeAllObjects];
 }
+
 
 #pragma mark  Table event
 
@@ -150,6 +155,13 @@ typedef enum {
 
 - (IBAction)BackEv:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
+    if ( _fields.count > 0 && _reportCustomFields != nil)
+    {
+        [_reportCustomFields removeAllObjects];
+        [_reportCustomFields addObjectsFromArray:_fields];
+        //_reportCustomForm_id = [_item.form_id stringValue];
+    }
+    [_fields removeAllObjects];
 }
 
 
@@ -166,21 +178,33 @@ typedef enum {
 
 -(void) loadCustomFieldTypeDetail
 {
-    if( _fields == nil){
-        _fields = [[NSMutableArray alloc]init];
-    }else{
-        [_fields removeAllObjects];
-    }
+
     NSLog(@"Load field for form_id: %@",_item.form_id);
     NSString *sForm_id = [_item.form_id stringValue];
     for (CustomFieldTypeDetail *itemCustom in ((NSMutableArray *)[USHCategoriesUtility getCustomFormDetailType]))
     {
         if ( [itemCustom.identifier isEqualToString:sForm_id]){
-            [_fields addObject:itemCustom];
+            USHFieldItem *item = [[USHFieldItem alloc] init];
+            if (itemCustom.value !=nil)
+                item.value =[[NSString alloc] initWithString:itemCustom.value];
+            else
+                item.value = nil;
+            item.defaultvalue =[[NSString alloc] initWithString:itemCustom.defaultvalue];
+            item.name =[[NSString alloc] initWithString:itemCustom.name];
+            item.type =itemCustom.type;
+            [_fields addObject:item];
         }
     }
     [self.tableView reloadData];
 }
 
+-(void)  resetAll
+{
+    
+    for (CustomFieldTypeDetail *itemCustom in ((NSMutableArray *)[USHCategoriesUtility getCustomFormDetailType]))
+    {
+
+    }
+}
 
 @end

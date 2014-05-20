@@ -2007,6 +2007,13 @@
 		4A1331A318C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
 		4A1331A418C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
 		4A1331A518C262230044C4D6 /* checkbox_unchecked_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */; };
+		4A13B96D192C1442007BE7BE /* USHFieldItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13B96C192C1442007BE7BE /* USHFieldItem.m */; };
+		4A13B96E192C1442007BE7BE /* USHFieldItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13B96C192C1442007BE7BE /* USHFieldItem.m */; };
+		4A13B96F192C1442007BE7BE /* USHFieldItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13B96C192C1442007BE7BE /* USHFieldItem.m */; };
+		4A13B970192C1442007BE7BE /* USHFieldItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13B96C192C1442007BE7BE /* USHFieldItem.m */; };
+		4A13B971192C1442007BE7BE /* USHFieldItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13B96C192C1442007BE7BE /* USHFieldItem.m */; };
+		4A13B972192C1442007BE7BE /* USHFieldItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13B96C192C1442007BE7BE /* USHFieldItem.m */; };
+		4A13B973192C1442007BE7BE /* USHFieldItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13B96C192C1442007BE7BE /* USHFieldItem.m */; };
 		4A40AB1619240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */; };
 		4A40AB1719240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */; };
 		4A40AB1819240A4000DF32B8 /* USHCustomCheckBoxTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */; };
@@ -2602,6 +2609,8 @@
 		4A1162FE1922BF4500A05A03 /* USHFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHFieldViewController.m; sourceTree = "<group>"; };
 		4A1163061922C25100A05A03 /* USHFieldViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USHFieldViewController_iPhone.xib; sourceTree = "<group>"; };
 		4A13319E18C262230044C4D6 /* checkbox_unchecked_dis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_unchecked_dis.png; sourceTree = "<group>"; };
+		4A13B96B192C1442007BE7BE /* USHFieldItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHFieldItem.h; sourceTree = "<group>"; };
+		4A13B96C192C1442007BE7BE /* USHFieldItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHFieldItem.m; sourceTree = "<group>"; };
 		4A40AB1419240A4000DF32B8 /* USHCustomCheckBoxTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHCustomCheckBoxTableCell.h; sourceTree = "<group>"; };
 		4A40AB1519240A4000DF32B8 /* USHCustomCheckBoxTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHCustomCheckBoxTableCell.m; sourceTree = "<group>"; };
 		4A40AB1D19240C8E00DF32B8 /* USHCustomCheckBoxTableCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USHCustomCheckBoxTableCell_iPhone.xib; sourceTree = "<group>"; };
@@ -2828,6 +2837,8 @@
 			children = (
 				3E2BFE51163DD3CC00445A29 /* USHSettings.h */,
 				3E2BFE52163DD3CC00445A29 /* USHSettings.m */,
+				4A13B96B192C1442007BE7BE /* USHFieldItem.h */,
+				4A13B96C192C1442007BE7BE /* USHFieldItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -5550,6 +5561,7 @@
 				3EB080F415DD8F4C0040DD65 /* USHReportMapViewController.m in Sources */,
 				3EB080F915DD91AA0040DD65 /* USHReportTabBarController.m in Sources */,
 				3EB9352015DEF16A002151B0 /* USHReportDetailsViewController.m in Sources */,
+				4A13B96D192C1442007BE7BE /* USHFieldItem.m in Sources */,
 				4AC064B6189DB5AE00186B58 /* MDTreeViewCell.m in Sources */,
 				3E7586F515ED4072005A3A62 /* USHSettingsViewController.m in Sources */,
 				3E6E528015EE6E1800CF67D6 /* USHCategoryTableViewController.m in Sources */,
@@ -5602,6 +5614,7 @@
 				3E9E5002167129320095F4A4 /* USHReportTabBarController.m in Sources */,
 				3E9E5003167129320095F4A4 /* USHReportDetailsViewController.m in Sources */,
 				4AC064B8189DB5AE00186B58 /* MDTreeViewCell.m in Sources */,
+				4A13B96F192C1442007BE7BE /* USHFieldItem.m in Sources */,
 				3E9E5004167129320095F4A4 /* USHSettingsViewController.m in Sources */,
 				3E9E5005167129320095F4A4 /* USHCategoryTableViewController.m in Sources */,
 				3E9E5006167129320095F4A4 /* USHTextTableCell.m in Sources */,
@@ -5654,6 +5667,7 @@
 				3E9E5156167129350095F4A4 /* USHReportTabBarController.m in Sources */,
 				3E9E5157167129350095F4A4 /* USHReportDetailsViewController.m in Sources */,
 				4AC064BA189DB5AE00186B58 /* MDTreeViewCell.m in Sources */,
+				4A13B971192C1442007BE7BE /* USHFieldItem.m in Sources */,
 				3E9E5158167129350095F4A4 /* USHSettingsViewController.m in Sources */,
 				3E9E5159167129350095F4A4 /* USHCategoryTableViewController.m in Sources */,
 				3E9E515A167129350095F4A4 /* USHTextTableCell.m in Sources */,
@@ -5706,6 +5720,7 @@
 				3E9E52AA167129380095F4A4 /* USHReportTabBarController.m in Sources */,
 				3E9E52AB167129380095F4A4 /* USHReportDetailsViewController.m in Sources */,
 				4AC064BB189DB5AE00186B58 /* MDTreeViewCell.m in Sources */,
+				4A13B972192C1442007BE7BE /* USHFieldItem.m in Sources */,
 				3E9E52AC167129380095F4A4 /* USHSettingsViewController.m in Sources */,
 				3E9E52AD167129380095F4A4 /* USHCategoryTableViewController.m in Sources */,
 				3E9E52AE167129380095F4A4 /* USHTextTableCell.m in Sources */,
@@ -5758,6 +5773,7 @@
 				3E9E53FE167129530095F4A4 /* USHReportTabBarController.m in Sources */,
 				3E9E53FF167129530095F4A4 /* USHReportDetailsViewController.m in Sources */,
 				4AC064B9189DB5AE00186B58 /* MDTreeViewCell.m in Sources */,
+				4A13B970192C1442007BE7BE /* USHFieldItem.m in Sources */,
 				3E9E5400167129530095F4A4 /* USHSettingsViewController.m in Sources */,
 				3E9E5401167129530095F4A4 /* USHCategoryTableViewController.m in Sources */,
 				3E9E5402167129530095F4A4 /* USHTextTableCell.m in Sources */,
@@ -5810,6 +5826,7 @@
 				3E9E574D16712E5A0095F4A4 /* USHReportTabBarController.m in Sources */,
 				3E9E574E16712E5A0095F4A4 /* USHReportDetailsViewController.m in Sources */,
 				4AC064B7189DB5AE00186B58 /* MDTreeViewCell.m in Sources */,
+				4A13B96E192C1442007BE7BE /* USHFieldItem.m in Sources */,
 				3E9E574F16712E5A0095F4A4 /* USHSettingsViewController.m in Sources */,
 				3E9E575016712E5A0095F4A4 /* USHCategoryTableViewController.m in Sources */,
 				3E9E575116712E5A0095F4A4 /* USHTextTableCell.m in Sources */,
@@ -5862,6 +5879,7 @@
 				3EC1B4801757AB1000CFF726 /* USHReportTabBarController.m in Sources */,
 				3EC1B4811757AB1000CFF726 /* USHReportDetailsViewController.m in Sources */,
 				4AC064BC189DB5AE00186B58 /* MDTreeViewCell.m in Sources */,
+				4A13B973192C1442007BE7BE /* USHFieldItem.m in Sources */,
 				3EC1B4821757AB1000CFF726 /* USHSettingsViewController.m in Sources */,
 				3EC1B4831757AB1000CFF726 /* USHCategoryTableViewController.m in Sources */,
 				3EC1B4841757AB1000CFF726 /* USHTextTableCell.m in Sources */,
