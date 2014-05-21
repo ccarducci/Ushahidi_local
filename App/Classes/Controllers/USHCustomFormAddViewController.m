@@ -45,8 +45,6 @@ typedef enum {
     [_fields removeAllObjects];
     [_fields release];
     [_Back release];
-    [_Back release];
-    [_Back release];
     [_Reset release];
     [_fieldValueSelectorController release];
     [_fieldSingleValueSelectorController release];
@@ -55,29 +53,31 @@ typedef enum {
 }
 
 - (void)viewDidLoad {
+    /*
     [super viewDidLoad];
     if( _fields == nil){
         _fields = [[NSMutableArray alloc]init];
     }else{
         [_fields removeAllObjects];
     }
+    */
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    [_fields removeAllObjects];
-    [_fields release];
+    //[_fields removeAllObjects];
+    //[_fields release];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    _item =[self getSelected];
-    [self loadCustomFieldTypeDetail];
+    //_item =[self getSelected];
+    //[self loadCustomFieldTypeDetail];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    [_fields removeAllObjects];
+    //[_fields removeAllObjects];
 }
 
 
@@ -89,7 +89,7 @@ typedef enum {
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CustomFieldTypeDetail *field= (CustomFieldTypeDetail *)[_fields objectAtIndex:indexPath.row];
+    USHFieldItem *field= (USHFieldItem *)[_fields objectAtIndex:indexPath.row];
     NSLog(@"Press field: %@" , field.name);
     
     if ( field.type.intValue == 1)
@@ -133,35 +133,33 @@ typedef enum {
         [self presentModalViewController:self.fieldValueSelectorController animated:YES];
     }else
     {
+        NSLog(@"CustomFieldType: NO");
     }
     
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    CustomFieldTypeDetail *field= (CustomFieldTypeDetail *)[_fields objectAtIndex:indexPath.row];
+    USHFieldItem *field= (USHFieldItem *)[_fields objectAtIndex:indexPath.row];
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:field.name];
     [cell.textLabel setText:field.name];
     [cell.detailTextLabel setText:field.value];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
     return cell;
 }
 
 #pragma mark  action
 
 - (IBAction)ResetEv:(id)sender {
+    [self resetAll];
 }
 
 - (IBAction)BackEv:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
-    if ( _fields.count > 0 && _reportCustomFields != nil)
+    if (_fields !=nil && _fields.count > 0 && _reportCustomFields != nil)
     {
         [_reportCustomFields removeAllObjects];
         [_reportCustomFields addObjectsFromArray:_fields];
-        //_reportCustomForm_id = [_item.form_id stringValue];
     }
-    [_fields removeAllObjects];
 }
 
 
@@ -200,10 +198,9 @@ typedef enum {
 
 -(void)  resetAll
 {
-    
-    for (CustomFieldTypeDetail *itemCustom in ((NSMutableArray *)[USHCategoriesUtility getCustomFormDetailType]))
+    for (USHFieldItem *itemCustom in _fields)
     {
-
+        itemCustom.value = nil;
     }
 }
 

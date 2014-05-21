@@ -10,10 +10,11 @@
 #import <Ushahidi/USHTableViewController.h>
 #import <Ushahidi/CustomFieldTypeDetail.h>
 #import "USHTableCellFactory.h"
+#import "USHFieldItem.h"
 
 @interface USHCustomFieldSingleViewController : USHViewController
 
-@property (retain, nonatomic) CustomFieldTypeDetail *field;
+@property (retain, nonatomic) USHFieldItem *field;
 @property (retain, nonatomic) NSMutableArray *selected;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *reset;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *back;

@@ -28,7 +28,10 @@
 #import <Ushahidi/USHShareController.h>
 #import "USHInputTableCell.h"
 #import "USHCustomFormAddViewController.h"
-
+#import <Ushahidi/MDTreeNode.h>
+#import <Ushahidi/MDTreeAddNodestore.h>
+#import <Ushahidi/CustomFieldTypeDetail.h>
+#import <Ushahidi/USHCategoriesUtility.h>
 
 @class USHCategoryTableViewController;
 @class USHLocationAddViewController;
@@ -63,5 +66,7 @@
 // GEOAVALANCHE INIZIO
 @property (strong, nonatomic) NSString *reportCustomForm_id;
 @property (strong, nonatomic) NSMutableArray *reportCustomFields;
+@property (strong, nonatomic) NSMutableArray *listCustomFields;
+@property (strong, nonatomic) NSString *prevCategoriSel;
 // GEOAVALANCHE INIZIO
 @end

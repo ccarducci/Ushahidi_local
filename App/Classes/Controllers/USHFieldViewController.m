@@ -54,7 +54,7 @@ typedef enum {
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [_selected removeAllObjects];
-    // _selected = [[NSMutableArray alloc] init];
+
     if ( _field.type.intValue == 5 || _field.type.intValue == 7  ){
         if (_field.value != nil && _field.value.length>0){
             NSString *itemSelected = [self getIndexSingleValue:_field.value];
@@ -66,7 +66,6 @@ typedef enum {
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [_selected removeAllObjects];
-    //[_selected release];
 }
 
 - (void)dealloc {
