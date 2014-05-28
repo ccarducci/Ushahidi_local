@@ -53,8 +53,8 @@ typedef enum {
 }
 
 - (void)viewDidLoad {
-    /*
     [super viewDidLoad];
+    /*
     if( _fields == nil){
         _fields = [[NSMutableArray alloc]init];
     }else{
