@@ -461,4 +461,139 @@
     return cell;
 }
 
+
+
+
+/* ----------ckeckbox------------- */
+
++ (USHCustomCheckBoxTableCell *) customCheckBoxTableCellForTable:(UITableView *)tableView
+                                                       indexPath:(NSIndexPath *)indexPath
+                                                        delegate:(NSObject<USHCustomCheckBoxTableCellDelegate>*)delegate
+                                                            text:(NSString *)text
+                                                         details:(NSString *)details
+                                                         checked:(BOOL)checked{
+    return [USHTableCellFactory customCheckBoxTableCellForTable:tableView
+                                                indexPath:indexPath
+                                                 delegate:delegate
+                                                     text:text
+                                                  details:details
+                                                  checked:checked
+                                                    color:[UIColor blackColor]];
+}
+
+
+
+
++ (USHCustomCheckBoxTableCell *) customCheckBoxTableCellForTable:(UITableView *)tableView
+                                                       indexPath:(NSIndexPath *)indexPath
+                                                        delegate:(NSObject<USHCustomCheckBoxTableCellDelegate>*)delegate
+                                                            text:(NSString *)text
+                                                         details:(NSString *)details
+                                                         checked:(BOOL)checked
+                                                           color:(UIColor*)color{
+    NSString *nibName = nil;
+    if ([USHDevice isIPad]) {
+        nibName = @"USHCustomCheckBoxTableCell_iPad";
+    }else{
+        nibName = @"USHCustomCheckBoxTableCell_iPhone";
+    }
+    USHCustomCheckBoxTableCell *cell = (USHCustomCheckBoxTableCell*)[self cellForTable:tableView withNibName:nibName];
+    cell.indexPath = indexPath;
+    cell.delegate = delegate;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.textLabel.text = text;
+    cell.textLabel.textColor = color;
+    cell.detailsTextLabel.text = details;
+    cell.detailsTextLabel.textColor = color;
+    cell.checked = checked;
+    return cell;
+}
+/* ----------combokbox------------- */
+
++ (USHCustomComboBoxTableCell *) customComboBoxTableCellForTable:(UITableView *)tableView
+                                                       indexPath:(NSIndexPath *)indexPath
+                                                        delegate:(NSObject<USHCustomComboBoxTableCellDelegate>*)delegate
+                                                            text:(NSString *)text
+                                                         details:(NSString *)details
+                                                         checked:(BOOL)checked {
+    return [USHTableCellFactory customComboBoxTableCellForTable:tableView
+                                                      indexPath:indexPath
+                                                       delegate:delegate
+                                                           text:text
+                                                        details:details
+                                                        checked:checked
+                                                          color:[UIColor blackColor]];
+}
+
++ (USHCustomComboBoxTableCell *) customComboBoxTableCellForTable:(UITableView *)tableView
+                                                       indexPath:(NSIndexPath *)indexPath
+                                                        delegate:(NSObject<USHCustomComboBoxTableCellDelegate>*)delegate
+                                                            text:(NSString *)text
+                                                         details:(NSString *)details
+                                                         checked:(BOOL)checked
+                                                           color:(UIColor*)color{
+    NSString *nibName = nil;
+    if ([USHDevice isIPad]) {
+        nibName = @"USHCustomComboBoxTableCell_iPad";
+    }else{
+        nibName = @"USHCustomComboBoxTableCell_iPhone";
+    }
+
+    USHCustomComboBoxTableCell *cell = (USHCustomComboBoxTableCell*)[self cellForTable:tableView withNibName:nibName];
+    cell.indexPath = indexPath;
+    cell.delegate = delegate;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.textLabel.text = text;
+    cell.textLabel.textColor = color;
+    cell.detailsTextLabel.text = details;
+    cell.detailsTextLabel.textColor = color;
+    cell.checked = checked;
+    return cell;
+}
+/* ----------optionbox------------- */
+
++ (USHCustomOptionBoxTableCell *) customOptionBoxTableCellForTable:(UITableView *)tableView
+                                                         indexPath:(NSIndexPath *)indexPath
+                                                          delegate:(NSObject<USHCustomOptionBoxTableCellDelegate>*)delegate
+                                                              text:(NSString *)text
+                                                           details:(NSString *)details
+                                                           checked:(BOOL)checked{
+    return [USHTableCellFactory customOptionBoxTableCellForTable:tableView
+                                                      indexPath:indexPath
+                                                       delegate:delegate
+                                                           text:text
+                                                        details:details
+                                                        checked:checked
+                                                          color:[UIColor blackColor]];
+}
+
++ (USHCustomOptionBoxTableCell *) customOptionBoxTableCellForTable:(UITableView *)tableView
+                                                         indexPath:(NSIndexPath *)indexPath
+                                                          delegate:(NSObject<USHCustomOptionBoxTableCellDelegate>*)delegate
+                                                              text:(NSString *)text
+                                                           details:(NSString *)details
+                                                           checked:(BOOL)checked
+                                                             color:(UIColor*)color{
+    
+    NSString *nibName = nil;
+    if ([USHDevice isIPad]) {
+        nibName = @"USHCustomOptionBoxTableCell_iPhad";
+    }else{
+        nibName = @"USHCustomOptionBoxTableCell_iPhone";
+    }
+    
+    USHCustomOptionBoxTableCell *cell = (USHCustomOptionBoxTableCell*)[self cellForTable:tableView withNibName:nibName];
+    cell.indexPath = indexPath;
+    cell.delegate = delegate;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.textLabel.text = text;
+    cell.textLabel.textColor = color;
+    cell.detailsTextLabel.text = details;
+    cell.detailsTextLabel.textColor = color;
+    cell.checked = checked;
+    return cell;
+}
 @end

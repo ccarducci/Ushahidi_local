@@ -27,9 +27,11 @@
 
 @property (nonatomic, retain) NSString * color;
 @property (nonatomic, retain) NSString * desc;
+@property (nonatomic, retain) NSNumber * id; // GEOAVALANCHE 
 @property (nonatomic, retain) NSString * identifier;
 @property (nonatomic, retain) NSNumber * position;
 @property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * parent_id; // GEOAVALANCHE 
 @property (nonatomic, retain) USHMap *map;
 @property (nonatomic, retain) NSSet *reports;
 

@@ -52,6 +52,10 @@
 @dynamic url;
 @dynamic starred;
 
+/* Geoavalanche INIZIO */
+@dynamic customFieldsForPending;
+/* Geoavalanche FINE */
+
 @dynamic authorFirst;
 @dynamic authorLast;
 @dynamic authorEmail;

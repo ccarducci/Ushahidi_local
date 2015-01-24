@@ -46,6 +46,11 @@
 @property (nonatomic, retain) NSSet *videos;
 @property (nonatomic, retain) NSNumber *starred;
 
+/* Geoavalanche INIZIO */
+@property (nonatomic, retain) NSString *customFieldsForPending;
+/* Geoavalanche FINE */
+
+
 @property (nonatomic, retain) NSString *authorFirst;
 @property (nonatomic, retain) NSString *authorLast;
 @property (nonatomic, retain) NSString *authorEmail;

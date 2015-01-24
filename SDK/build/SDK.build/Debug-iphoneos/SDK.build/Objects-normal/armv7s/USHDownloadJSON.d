@@ -1,0 +1,29 @@
+dependencies: \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Operations/USHDownloadJSON.m \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Operations/USHDownloadJSON.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Operations/USHDownload.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Ushahidi.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Libraries/Singleton/SynthesizeSingleton.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Models/USHMap.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Models/USHReport.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Models/USHCheckin.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Models/USHUser.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Models/USHCategory.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Models/USHLocation.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Models/USHComment.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Models/USHPhoto.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Models/USHVideo.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Models/USHSound.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Models/USHNews.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Categories/NSURL+USH.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Categories/NSError+USH.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Categories/NSString+USH.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Categories/NSObject+USH.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Classes/Categories/NSData+USH.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Libraries/JSON/SBJson.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Libraries/JSON/SBJsonParser.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Libraries/JSON/SBJsonWriter.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Libraries/JSON/SBJsonStreamParser.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Libraries/JSON/SBJsonStreamParserAdapter.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Libraries/JSON/SBJsonStreamWriter.h \
+  /Users/ccarducci/Desktop/Ushahidi_local/SDK/Libraries/JSON/NSObject+SBJson.h

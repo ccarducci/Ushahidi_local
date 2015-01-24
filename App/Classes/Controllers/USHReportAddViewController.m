@@ -40,6 +40,10 @@
 #import <Ushahidi/UITableView+USH.h>
 #import <Ushahidi/UIBarButtonItem+USH.h>
 
+// MODIFICA GEOAVALANCHE -- INIZIO
+#import "MDTreeAddViewController.h"
+// MODIFICA GEOAVALANCHE -- FINE
+
 @interface USHReportAddViewController ()
 
 @property (strong, nonatomic) USHDatePicker *datePicker;
@@ -57,6 +61,12 @@
 @end
 
 @implementation USHReportAddViewController
+
+// GEOAVALANCHE INIZIO
+@synthesize reportCustomForm_id = _reportCustomForm_id;
+@synthesize reportCustomFields = _reportCustomFields;
+@synthesize listCustomFields = _listCustomFields;
+// GEOAVALANCHE INIZIO
 
 @synthesize datePicker = _datePicker;
 @synthesize imagePicker = _imagePicker;
@@ -123,6 +133,10 @@ typedef enum {
 
 - (IBAction)cancel:(id)sender event:(UIEvent*)event {
     DLog(@"");
+    // resetIsDisabled
+    [MDTreeAddViewController resetMDStore];
+    [_reportCustomFields removeAllObjects];
+    [self.customFormAddController.fields removeAllObjects];
     [UIAlertView showWithTitle:NSLocalizedString(@"Unsaved Changes", nil) 
                        message:NSLocalizedString(@"Are you sure you want to cancel?", nil) 
                       delegate:self 
@@ -227,7 +241,10 @@ typedef enum {
     [_settingsViewController release];
     [_locateError release];
     [_lookupError release];
-    [_customFiedlsAddViewController release];
+    [_reportCustomFields release];
+    [_customFormAddController release];
+    [_listCustomFields release];
+    [_prevCategoriSel release];
     [super dealloc];
 }
 
@@ -482,11 +499,33 @@ typedef enum {
         [self.tableView reloadRowsAtSection:TableSectionPhotos];
     }
     else if (indexPath.section == TableSectionCategory) {
+        
+        /* GEOAVALANCHE */
+        
+        /*
         self.categoryTableController.map = self.map;
         self.categoryTableController.report = self.report;
         self.categoryTableController.modalPresentationStyle = UIModalPresentationFormSheet;
         self.categoryTableController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
         [self presentModalViewController:self.categoryTableController animated:YES];
+        */
+
+        NSMutableDictionary *flatCategoryToAdd = [[Ushahidi sharedInstance] flatCategoryToAdd];
+        [flatCategoryToAdd removeAllObjects];
+        NSArray *categories = [self.map categoriesSortedByPosition];
+        for ( USHCategory *cat in categories ) {
+            NSString *num = cat.identifier;
+            NSLog(@"flatCategoryToAdd: %@", num );
+            [flatCategoryToAdd setObject:cat forKey:num];
+        }
+        
+        MDTreeAddViewController *treeAddViewController = [MDTreeAddViewController new];
+        treeAddViewController.map = self.map;
+        treeAddViewController.report = self.report;
+        UINavigationController *navAddController = [[UINavigationController alloc] initWithRootViewController:treeAddViewController];
+        [self presentModalViewController:navAddController animated:YES];
+        
+        /* GEOAVALANCHE */
     }
     else if (indexPath.section == TableSectionLocation) {
         self.locationAddViewController.map = self.map;
@@ -500,7 +539,39 @@ typedef enum {
         [self.videoPicker showVideoPickerForCell:cell];
     }
     else if (indexPath.section == TableSectionCustomFields) {
-        [self presentModalViewController:self.customFiedlsAddViewController animated:YES];
+        // *********************************
+        // SHOWFORM GEOAVALANCHE INIZIO
+        if ( self.reportCustomFields == nil)
+            self.reportCustomFields = [[NSMutableArray alloc] init];
+        
+        if ( _listCustomFields == nil)
+        {
+            _listCustomFields =[[NSMutableArray alloc]init];
+            [self loadCustomFieldTypeDetail:_listCustomFields];
+        }else if(_listCustomFields != nil && _listCustomFields.count ==0)
+        {
+            [self loadCustomFieldTypeDetail:_listCustomFields];
+        }else if (_listCustomFields.count > 0 )
+        {
+            //NSString *catSel = [self.report.categories ]x
+            for (USHCategory *item in self.report.categories) {
+                NSLog(@"id %@", item.identifier);
+                NSLog(@"_prevCategoriSel %@", _prevCategoriSel);
+                if ( ![_prevCategoriSel isEqualToString:item.identifier])
+                {
+                    [_listCustomFields removeAllObjects];
+                    [self loadCustomFieldTypeDetail:_listCustomFields];
+                }
+            }
+        }
+
+        self.customFormAddController.itemCategory = [self getSelected];
+        self.customFormAddController.report = self.report;
+        self.customFormAddController.fields =_listCustomFields;
+        self.customFormAddController.reportCustomFields = self.reportCustomFields;
+        [self presentModalViewController:self.customFormAddController animated:YES];
+        // SHOWFORM GEOAVALANCHE FINE
+        // *********************************
     }
 }
 
@@ -751,4 +822,41 @@ typedef enum {
     [self performSelector:@selector(dismissModalViewController) withObject:nil afterDelay:0.5];
 }
 
+
+#pragma mark - CustomForm
+
+- (MDTreeNode*) getSelected
+{
+    NSArray *items = [[MDTreeAddNodeStore sharedStore] allNodesAll];
+    for (MDTreeNode *item in items) {
+        if ( item.isSelected == true) {
+            _prevCategoriSel = [[NSString alloc] initWithString:[item.id stringValue]];
+            return item;
+        }
+    }
+    return nil;
+}
+
+-(void) loadCustomFieldTypeDetail:(NSMutableArray*)list
+{
+    MDTreeNode *_item = [self getSelected];
+    NSLog(@"Load field for form_id: %@",_item.form_id);
+    NSString *sForm_id = [_item.form_id stringValue];
+    for (CustomFieldTypeDetail *itemCustom in ((NSMutableArray *)[USHCategoriesUtility getCustomFormDetailType]))
+    {
+        if ( [itemCustom.identifier isEqualToString:sForm_id]){
+            USHFieldItem *item = [[USHFieldItem alloc] init];
+            if (itemCustom.value !=nil)
+                item.value =[[NSString alloc] initWithString:itemCustom.value];
+            else
+                item.value = nil;
+            item.defaultvalue =[[NSString alloc] initWithString:itemCustom.defaultvalue];
+            item.name =[[NSString alloc] initWithString:itemCustom.name];
+            item.type =itemCustom.type;
+            item.identifierField = itemCustom.identifierField;
+            if (list != nil)[list addObject:item];
+        }
+    }
+    //[self.tableView reloadData];
+}
 @end

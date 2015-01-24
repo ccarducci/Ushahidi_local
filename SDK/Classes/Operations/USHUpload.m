@@ -241,7 +241,11 @@
         [request setValue:[NSString stringWithFormat:@"%d", httpBody.length] forHTTPHeaderField:@"Content-Length"];
         [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
         [request setHTTPBody:[httpBody dataUsingEncoding:NSUTF8StringEncoding]];
+        DLog(@"-----------------------------------------");
         DLog(@"POST:%@", httpBody);
+        NSString *inStr = [NSString stringWithFormat: @"%d", (int)httpBody.length];
+        DLog(@"POST:%@", inStr);
+        DLog(@"-----------------------------------------");
     }
     for (NSString *key in self.headers.allKeys) {
         NSString *value = [self.headers objectForKey:key];

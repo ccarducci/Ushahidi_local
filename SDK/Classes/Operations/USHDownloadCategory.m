@@ -26,6 +26,12 @@
 #import "USHMap.h"
 #import "USHCategory.h"
 
+/* MODIFICHE GEOAVALANCHE INIZIO */
+#import "CategoryTreeManager.h"
+#import "CategoryTree.h"
+/* MODIFICHE GEOAVALANCHE FINE */
+
+
 @interface USHDownloadCategory ()
 
 @property (nonatomic, strong, readwrite) USHCategory *category;
@@ -48,6 +54,18 @@
 - (void) downloadedJSON:(NSDictionary*)json {
     NSDictionary *payload = [json objectForKey:@"payload"];
     NSArray *categories = [payload objectForKey:@"categories"];
+    
+    
+    /* MODIFICHE GEOAVALANCHE INIZIO */
+    NSMutableArray *flatCategory = [[Ushahidi sharedInstance] flatCategory] ;
+    NSMutableDictionary *flatCategorySelected = [[Ushahidi sharedInstance] flatCategorySelected] ;
+    NSMutableDictionary *flatOnlyCategoryYES = [[Ushahidi sharedInstance] flatOnlyCategoryYES];
+    [flatCategory removeAllObjects];
+    [flatCategorySelected removeAllObjects];
+    [flatOnlyCategoryYES removeAllObjects];
+    /* MODIFICHE GEOAVALANCHE FINE */
+    
+    
     for (NSDictionary *item in categories) {
         NSDictionary *category = [item objectForKey:@"category"];
         if (category != nil) {
@@ -59,6 +77,35 @@
             self.category.desc = [category stringForKey:@"description"];
             self.category.color = [category stringForKey:@"color"];
             self.category.position = [NSNumber numberWithInt:[category intForKey:@"position"]];
+            
+            /* MODIFICHE GEOAVALANCHE INIZIO */
+            NSInteger tipoCategoria = [category intForKey:@"parent_id"];
+            self.category.parent_id = [NSString stringWithFormat:@"%i", tipoCategoria];
+            
+            CategoryTree *elementFlat = [[CategoryTree alloc] init];
+            elementFlat.open = @"NO";
+            elementFlat.selected = @"YES";
+            elementFlat.title =  self.category.title;
+            elementFlat.parent_id = self.category.parent_id;
+            elementFlat.id = self.category.identifier;
+            NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+            [f setNumberStyle:NSNumberFormatterDecimalStyle];
+            NSNumber * myNumber = [f numberFromString:self.category.identifier];
+            elementFlat.indetifier = myNumber ;
+            [flatCategory addObject:elementFlat];
+            NSLog(@"------------------ RICARICO INIT ----------------------");
+            NSLog(@"elementFlat.Title --> %@",elementFlat.title);
+            NSLog(@"elementFlat.parent_id --> %@",elementFlat.parent_id);
+            NSLog(@"elementFlat.id --> %@",elementFlat.indetifier);
+            NSLog(@"elementFlat.selected --> %@",elementFlat.selected);
+            [flatCategorySelected setValue:elementFlat.selected forKey:elementFlat.indetifier];
+            NSString *value = [flatCategorySelected objectForKey:elementFlat.indetifier];
+            NSLog(@"flatCategorySelected --> %@",value);
+            [flatOnlyCategoryYES setValue:@"YES" forKey:elementFlat.id];
+            NSLog(@"flatOnlyCategoryYES %@ --> %@",elementFlat.selected,elementFlat.id);
+            NSLog(@"------------------ RICARICO END ----------------------");
+            /* MODIFICHE GEOAVALANCHE FINE */
+            
             self.category.map = self.map;
             DLog(@"Map:%@ Category:%@", self.map.name, self.category.title);
             [[USHDatabase sharedInstance] saveChanges];

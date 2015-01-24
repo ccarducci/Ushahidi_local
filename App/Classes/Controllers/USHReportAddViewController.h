@@ -27,8 +27,11 @@
 #import <Ushahidi/Ushahidi.h>
 #import <Ushahidi/USHShareController.h>
 #import "USHInputTableCell.h"
-#import "USHCustomFieldsAddViewController.h"
-
+#import "USHCustomFormAddViewController.h"
+#import <Ushahidi/MDTreeNode.h>
+#import <Ushahidi/MDTreeAddNodestore.h>
+#import <Ushahidi/CustomFieldTypeDetail.h>
+#import <Ushahidi/USHCategoriesUtility.h>
 
 @class USHCategoryTableViewController;
 @class USHLocationAddViewController;
@@ -47,7 +50,8 @@
                                                              USHShareControllerDelegate>
 
 
-@property (retain, nonatomic) IBOutlet USHCustomFieldsAddViewController *customFiedlsAddViewController;
+@property (retain, nonatomic) IBOutlet USHCustomFormAddViewController *customFormAddController;
+
 @property (strong, nonatomic) IBOutlet USHCategoryTableViewController *categoryTableController;
 @property (strong, nonatomic) IBOutlet USHLocationAddViewController *locationAddViewController;
 @property (strong, nonatomic) IBOutlet USHSettingsViewController *settingsViewController;
@@ -58,4 +62,11 @@
 
 - (IBAction)info:(id)sender event:(UIEvent*)event;
 
+
+// GEOAVALANCHE INIZIO
+@property (strong, nonatomic) NSString *reportCustomForm_id;
+@property (strong, nonatomic) NSMutableArray *reportCustomFields;
+@property (strong, nonatomic) NSMutableArray *listCustomFields;
+@property (strong, nonatomic) NSString *prevCategoriSel;
+// GEOAVALANCHE INIZIO
 @end

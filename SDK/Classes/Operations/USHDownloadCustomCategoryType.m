@@ -58,9 +58,15 @@
         [[USHDatabase sharedInstance] saveChanges];
 
         
+        /*
+        CustomFieldTypeDetail *customFieldTypeDetail = (CustomFieldTypeDetail *)[[USHDatabase sharedInstance]  insertItemWithName:@"CustomFieldTypeDetail"];
+        customFieldTypeDetail.name = @"test";
+        [[USHDatabase sharedInstance] saveChanges];
+        */
+        
         NSMutableString *downCustomFieldDetailUrl = [[NSMutableString alloc]init];
         
-        [downCustomFieldDetailUrl appendString:@"api?task=customforms&resp=json&&by=meta&formid="];
+        [downCustomFieldDetailUrl appendString:@"api?task=customforms&resp=json&by=meta&formid="];
         [downCustomFieldDetailUrl appendString:identifier];
         USHDownloadCustomCategoryTypeDetail *downCustomFieldDetail = [[USHDownloadCustomCategoryTypeDetail alloc]
                                                                                initWithDelegate:self.map
@@ -70,7 +76,7 @@
                                                                                      identifier:identifier];
         [downCustomFieldDetail download];
         [downCustomFieldDetail release];
-        
+
     }
     DLog(@"----------------------------------------------------------------------------------------");
 }

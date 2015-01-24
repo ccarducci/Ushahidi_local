@@ -128,7 +128,7 @@
 		3E971B1915A365F1005EB625 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E817EBD159E0981001B16CF /* CoreFoundation.framework */; };
 		3E971B2D15A36E51005EB625 /* USHDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E971B2B15A36E51005EB625 /* USHDownload.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3E971B2E15A36E51005EB625 /* USHDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E971B2C15A36E51005EB625 /* USHDownload.m */; };
-		3E971B3715A37D08005EB625 /* USHDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E971B3515A37D08005EB625 /* USHDatabase.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3E971B3715A37D08005EB625 /* USHDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E971B3515A37D08005EB625 /* USHDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E971B3815A37D08005EB625 /* USHDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E971B3615A37D08005EB625 /* USHDatabase.m */; };
 		3E971B3B15A382F2005EB625 /* USHDownloadVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E971B3915A382F2005EB625 /* USHDownloadVersion.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3E971B3C15A382F2005EB625 /* USHDownloadVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E971B3A15A382F2005EB625 /* USHDownloadVersion.m */; };
@@ -367,13 +367,14 @@
 		4A0BC63E187565BF00F121AB /* ReportCustomField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A0BC63C187565BF00F121AB /* ReportCustomField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A0BC63F187565BF00F121AB /* ReportCustomField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BC63D187565BF00F121AB /* ReportCustomField.m */; };
 		4A0BC6441875665800F121AB /* ReportCustomField.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A0BC63C187565BF00F121AB /* ReportCustomField.h */; };
+		4A0D4DA7189E72F7001F9C28 /* USHCategoriesUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A0D4DA5189E72F7001F9C28 /* USHCategoriesUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A0D4DA8189E72F7001F9C28 /* USHCategoriesUtility.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A0D4DA5189E72F7001F9C28 /* USHCategoriesUtility.h */; };
+		4A0D4DA9189E72F7001F9C28 /* USHCategoriesUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D4DA6189E72F7001F9C28 /* USHCategoriesUtility.m */; };
+		4A0D4DAA189E72F7001F9C28 /* USHCategoriesUtility.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A0D4DA6189E72F7001F9C28 /* USHCategoriesUtility.m */; };
 		4A1C81D31871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1C81D11871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4A1C81D41871EB7600EE1A24 /* USHDownloadIncidentCustomFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1C81D21871EB7600EE1A24 /* USHDownloadIncidentCustomFields.m */; };
 		4A1C81D7187228DD00EE1A24 /* USHDowloadCustomField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1C81D5187228DD00EE1A24 /* USHDowloadCustomField.h */; };
 		4A1C81D8187228DD00EE1A24 /* USHDowloadCustomField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1C81D6187228DD00EE1A24 /* USHDowloadCustomField.m */; };
-		4A249B32187A15EA001F1A96 /* CustomFieldTypeDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A249B30187A15EA001F1A96 /* CustomFieldTypeDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A249B33187A15EA001F1A96 /* CustomFieldTypeDetail.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A249B30187A15EA001F1A96 /* CustomFieldTypeDetail.h */; };
-		4A249B34187A15EA001F1A96 /* CustomFieldTypeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A249B31187A15EA001F1A96 /* CustomFieldTypeDetail.m */; };
 		4A249B3E187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A249B3C187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.h */; };
 		4A249B3F187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A249B3C187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.h */; };
 		4A249B40187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A249B3D187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.m */; };
@@ -386,6 +387,29 @@
 		4A2CEC0D186F2C5500AC8BC2 /* CustomFieldType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A2CEC0E186F2C5500AC8BC2 /* CustomFieldType.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */; };
 		4A2CEC0F186F2C5500AC8BC2 /* CustomFieldType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */; };
+		4AA8F93D18D5D267001AFF0D /* CustomFieldTypeDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AA8F93B18D5D267001AFF0D /* CustomFieldTypeDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AA8F93E18D5D267001AFF0D /* CustomFieldTypeDetail.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AA8F93B18D5D267001AFF0D /* CustomFieldTypeDetail.h */; };
+		4AA8F93F18D5D267001AFF0D /* CustomFieldTypeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA8F93C18D5D267001AFF0D /* CustomFieldTypeDetail.m */; };
+		4AC064B3189DB01600186B58 /* USHDatabase.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 3E971B3515A37D08005EB625 /* USHDatabase.h */; };
+		4AEA9A62189DA57200B356B7 /* MDTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A60189DA57200B356B7 /* MDTreeNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AEA9A63189DA57200B356B7 /* MDTreeNode.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A60189DA57200B356B7 /* MDTreeNode.h */; };
+		4AEA9A64189DA57200B356B7 /* MDTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A61189DA57200B356B7 /* MDTreeNode.m */; };
+		4AEA9A6A189DA67F00B356B7 /* CategoryTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A66189DA67F00B356B7 /* CategoryTree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AEA9A6B189DA67F00B356B7 /* CategoryTree.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A66189DA67F00B356B7 /* CategoryTree.h */; };
+		4AEA9A6C189DA67F00B356B7 /* CategoryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A67189DA67F00B356B7 /* CategoryTree.m */; };
+		4AEA9A6D189DA67F00B356B7 /* CategoryTree.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A67189DA67F00B356B7 /* CategoryTree.m */; };
+		4AEA9A6E189DA67F00B356B7 /* CategoryTreeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AEA9A6F189DA67F00B356B7 /* CategoryTreeManager.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */; };
+		4AEA9A70189DA67F00B356B7 /* CategoryTreeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A69189DA67F00B356B7 /* CategoryTreeManager.m */; };
+		4AEA9A71189DA67F00B356B7 /* CategoryTreeManager.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A69189DA67F00B356B7 /* CategoryTreeManager.m */; };
+		4AEA9A76189DA79800B356B7 /* MDTreeAddNodestore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A72189DA79800B356B7 /* MDTreeAddNodestore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AEA9A77189DA79800B356B7 /* MDTreeAddNodestore.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A72189DA79800B356B7 /* MDTreeAddNodestore.h */; };
+		4AEA9A78189DA79800B356B7 /* MDTreeAddNodeStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A73189DA79800B356B7 /* MDTreeAddNodeStore.m */; };
+		4AEA9A79189DA79800B356B7 /* MDTreeAddNodeStore.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A73189DA79800B356B7 /* MDTreeAddNodeStore.m */; };
+		4AEA9A7A189DA79800B356B7 /* MDTreeNodestore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A74189DA79800B356B7 /* MDTreeNodestore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AEA9A7B189DA79800B356B7 /* MDTreeNodestore.h in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A74189DA79800B356B7 /* MDTreeNodestore.h */; };
+		4AEA9A7C189DA79800B356B7 /* MDTreeNodeStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA9A75189DA79800B356B7 /* MDTreeNodeStore.m */; };
+		4AEA9A7D189DA79800B356B7 /* MDTreeNodeStore.m in Copy Headers */ = {isa = PBXBuildFile; fileRef = 4AEA9A75189DA79800B356B7 /* MDTreeNodeStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -436,8 +460,10 @@
 				3E9E4DA11670037F0095F4A4 /* USHQrCodeViewController.h in Copy Headers */,
 				3E9E4DA21670037F0095F4A4 /* USHTwitterViewController.h in Copy Headers */,
 				3EB0D713165C02B70092DFC8 /* USHVideoPicker.h in Copy Headers */,
+				4AEA9A63189DA57200B356B7 /* MDTreeNode.h in Copy Headers */,
 				3ECD8FCE165B069100709ACA /* USHDefaults.h in Copy Headers */,
 				3EA3445016547DFE00DC017D /* USHWindow.h in Copy Headers */,
+				4AEA9A71189DA67F00B356B7 /* CategoryTreeManager.m in Copy Headers */,
 				3EA3445116547DFE00DC017D /* USHTableCell.h in Copy Headers */,
 				3EA3445216547DFE00DC017D /* UIBezierPath+USH.h in Copy Headers */,
 				3EC32CF5164C31D9000FFE7B /* USHRefreshButton.h in Copy Headers */,
@@ -457,28 +483,36 @@
 				3EFF5AC31620BB4C0072FAE1 /* NSBundle+USH.h in Copy Headers */,
 				3EFF5AC41620BB4C0072FAE1 /* UITableView+USH.h in Copy Headers */,
 				3E6E529615EE79DC00CF67D6 /* USHItemPicker.h in Copy Headers */,
-				4A249B33187A15EA001F1A96 /* CustomFieldTypeDetail.h in Copy Headers */,
+				4AEA9A6D189DA67F00B356B7 /* CategoryTree.m in Copy Headers */,
+				4AEA9A6B189DA67F00B356B7 /* CategoryTree.h in Copy Headers */,
+				4AEA9A6F189DA67F00B356B7 /* CategoryTreeManager.h in Copy Headers */,
 				3E6E522A15EE12D400CF67D6 /* USHRefreshButtonItem.h in Copy Headers */,
 				3E022E1515ECE22D00FDDC9E /* UIBarButtonItem+USH.h in Copy Headers */,
 				3E94937215ECB919004B32A8 /* USHTabBarController.h in Copy Headers */,
 				4A0BC6441875665800F121AB /* ReportCustomField.h in Copy Headers */,
 				3EAA80F715EA174200F2FC16 /* USHAlertView.h in Copy Headers */,
 				3EAA80F815EA174200F2FC16 /* USHLoadingView.h in Copy Headers */,
+				4A0D4DA8189E72F7001F9C28 /* USHCategoriesUtility.h in Copy Headers */,
 				3EAA80F915EA174200F2FC16 /* USHMapAnnotation.h in Copy Headers */,
 				3EAA80FA15EA174200F2FC16 /* USHAddViewController.h in Copy Headers */,
 				3EAA80FB15EA174200F2FC16 /* USHDetailsViewController.h in Copy Headers */,
 				4A2CEC0E186F2C5500AC8BC2 /* CustomFieldType.h in Copy Headers */,
 				3EAA80FC15EA174200F2FC16 /* USHMapViewController.h in Copy Headers */,
 				3EAA80FE15EA174200F2FC16 /* USHTableViewController.h in Copy Headers */,
+				4AEA9A7B189DA79800B356B7 /* MDTreeNodestore.h in Copy Headers */,
+				4AC064B3189DB01600186B58 /* USHDatabase.h in Copy Headers */,
 				3EAA80FF15EA174200F2FC16 /* USHViewController.h in Copy Headers */,
 				3EAA810115EA174200F2FC16 /* USHDevice.h in Copy Headers */,
 				3EAA810215EA174200F2FC16 /* USHInternet.h in Copy Headers */,
 				3EAA810315EA174200F2FC16 /* NSObject+USH.h in Copy Headers */,
 				3EAA810415EA174200F2FC16 /* NSString+USH.h in Copy Headers */,
 				3EAA810515EA174200F2FC16 /* NSDictionary+USH.h in Copy Headers */,
+				4AEA9A77189DA79800B356B7 /* MDTreeAddNodestore.h in Copy Headers */,
 				3EAA810615EA174200F2FC16 /* UIColor+USH.h in Copy Headers */,
+				4A0D4DAA189E72F7001F9C28 /* USHCategoriesUtility.m in Copy Headers */,
 				3EAA810715EA174200F2FC16 /* NSError+USH.h in Copy Headers */,
 				3EAA810815EA174200F2FC16 /* MKMapView+USH.h in Copy Headers */,
+				4AEA9A79189DA79800B356B7 /* MDTreeAddNodeStore.m in Copy Headers */,
 				3EAA810915EA174200F2FC16 /* MKPinAnnotationView+USH.h in Copy Headers */,
 				4A249B3F187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.h in Copy Headers */,
 				4A25DD57187743700053A11A /* USHCustomFieldUtility.h in Copy Headers */,
@@ -493,6 +527,7 @@
 				3EAA811715EA174200F2FC16 /* UIViewController+USH.h in Copy Headers */,
 				3EDE88E415A12C9E00FB30BD /* USHReport.h in Copy Headers */,
 				3EDE88E515A12C9E00FB30BD /* USHPhoto.h in Copy Headers */,
+				4AEA9A7D189DA79800B356B7 /* MDTreeNodeStore.m in Copy Headers */,
 				3EDE88E615A12C9E00FB30BD /* USHUser.h in Copy Headers */,
 				4A249B41187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.m in Copy Headers */,
 				3EDE88E715A12C9E00FB30BD /* USHCategory.h in Copy Headers */,
@@ -502,6 +537,7 @@
 				3EDE88EB15A12C9E00FB30BD /* USHNews.h in Copy Headers */,
 				3EDE88EC15A12C9E00FB30BD /* USHVideo.h in Copy Headers */,
 				3EDE88ED15A12C9E00FB30BD /* USHMap.h in Copy Headers */,
+				4AA8F93E18D5D267001AFF0D /* CustomFieldTypeDetail.h in Copy Headers */,
 				3EDE88EE15A12C9E00FB30BD /* USHLocation.h in Copy Headers */,
 				3EA23627159B91460072A60D /* Ushahidi.h in Copy Headers */,
 			);
@@ -766,12 +802,12 @@
 		3EFF5ABE162097D20072FAE1 /* UITableView+USH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+USH.m"; sourceTree = "<group>"; };
 		4A0BC63C187565BF00F121AB /* ReportCustomField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCustomField.h; sourceTree = "<group>"; };
 		4A0BC63D187565BF00F121AB /* ReportCustomField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCustomField.m; sourceTree = "<group>"; };
+		4A0D4DA5189E72F7001F9C28 /* USHCategoriesUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHCategoriesUtility.h; sourceTree = "<group>"; };
+		4A0D4DA6189E72F7001F9C28 /* USHCategoriesUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHCategoriesUtility.m; sourceTree = "<group>"; };
 		4A1C81D11871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHDownloadIncidentCustomFields.h; sourceTree = "<group>"; };
 		4A1C81D21871EB7600EE1A24 /* USHDownloadIncidentCustomFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHDownloadIncidentCustomFields.m; sourceTree = "<group>"; };
 		4A1C81D5187228DD00EE1A24 /* USHDowloadCustomField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHDowloadCustomField.h; sourceTree = "<group>"; };
 		4A1C81D6187228DD00EE1A24 /* USHDowloadCustomField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHDowloadCustomField.m; sourceTree = "<group>"; };
-		4A249B30187A15EA001F1A96 /* CustomFieldTypeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFieldTypeDetail.h; sourceTree = "<group>"; };
-		4A249B31187A15EA001F1A96 /* CustomFieldTypeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFieldTypeDetail.m; sourceTree = "<group>"; };
 		4A249B3C187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHDownloadCustomCategoryTypeDetail.h; sourceTree = "<group>"; };
 		4A249B3D187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHDownloadCustomCategoryTypeDetail.m; sourceTree = "<group>"; };
 		4A25DD54187743700053A11A /* USHCustomFieldUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHCustomFieldUtility.h; sourceTree = "<group>"; };
@@ -780,6 +816,18 @@
 		4A2A4127186E440300B302D1 /* USHDownloadCustomCategoryType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHDownloadCustomCategoryType.m; sourceTree = "<group>"; };
 		4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFieldType.h; sourceTree = "<group>"; };
 		4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFieldType.m; sourceTree = "<group>"; };
+		4AA8F93B18D5D267001AFF0D /* CustomFieldTypeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFieldTypeDetail.h; sourceTree = "<group>"; };
+		4AA8F93C18D5D267001AFF0D /* CustomFieldTypeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFieldTypeDetail.m; sourceTree = "<group>"; };
+		4AEA9A60189DA57200B356B7 /* MDTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeNode.h; sourceTree = "<group>"; };
+		4AEA9A61189DA57200B356B7 /* MDTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTreeNode.m; sourceTree = "<group>"; };
+		4AEA9A66189DA67F00B356B7 /* CategoryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTree.h; sourceTree = "<group>"; };
+		4AEA9A67189DA67F00B356B7 /* CategoryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTree.m; sourceTree = "<group>"; };
+		4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTreeManager.h; sourceTree = "<group>"; };
+		4AEA9A69189DA67F00B356B7 /* CategoryTreeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTreeManager.m; sourceTree = "<group>"; };
+		4AEA9A72189DA79800B356B7 /* MDTreeAddNodestore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeAddNodestore.h; sourceTree = "<group>"; };
+		4AEA9A73189DA79800B356B7 /* MDTreeAddNodeStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTreeAddNodeStore.m; sourceTree = "<group>"; };
+		4AEA9A74189DA79800B356B7 /* MDTreeNodestore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTreeNodestore.h; sourceTree = "<group>"; };
+		4AEA9A75189DA79800B356B7 /* MDTreeNodeStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTreeNodeStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -998,6 +1046,10 @@
 		3E971B2A15A36E0E005EB625 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				4AEA9A66189DA67F00B356B7 /* CategoryTree.h */,
+				4AEA9A67189DA67F00B356B7 /* CategoryTree.m */,
+				4AEA9A68189DA67F00B356B7 /* CategoryTreeManager.h */,
+				4AEA9A69189DA67F00B356B7 /* CategoryTreeManager.m */,
 				4A249B3C187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.h */,
 				4A249B3D187A1A8D001F1A96 /* USHDownloadCustomCategoryTypeDetail.m */,
 				4A2A4126186E440300B302D1 /* USHDownloadCustomCategoryType.h */,
@@ -1146,6 +1198,14 @@
 		3EA235DA159B90730072A60D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4AA8F93B18D5D267001AFF0D /* CustomFieldTypeDetail.h */,
+				4AA8F93C18D5D267001AFF0D /* CustomFieldTypeDetail.m */,
+				4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */,
+				4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */,
+				4A0BC63C187565BF00F121AB /* ReportCustomField.h */,
+				4A0BC63D187565BF00F121AB /* ReportCustomField.m */,
+				4AEA9A60189DA57200B356B7 /* MDTreeNode.h */,
+				4AEA9A61189DA57200B356B7 /* MDTreeNode.m */,
 				3EDE88BC15A12C3C00FB30BD /* USHMap.h */,
 				3EDE88BD15A12C3C00FB30BD /* USHMap.m */,
 				3EDE88E015A12C3D00FB30BD /* USHReport.h */,
@@ -1168,12 +1228,6 @@
 				3EDE88C115A12C3C00FB30BD /* USHVideo.m */,
 				3EDE88B815A12C3C00FB30BD /* USHLocation.h */,
 				3EDE88B915A12C3C00FB30BD /* USHLocation.m */,
-				4A2CEC0B186F2C5500AC8BC2 /* CustomFieldType.h */,
-				4A2CEC0C186F2C5500AC8BC2 /* CustomFieldType.m */,
-				4A249B30187A15EA001F1A96 /* CustomFieldTypeDetail.h */,
-				4A249B31187A15EA001F1A96 /* CustomFieldTypeDetail.m */,
-				4A0BC63C187565BF00F121AB /* ReportCustomField.h */,
-				4A0BC63D187565BF00F121AB /* ReportCustomField.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1193,6 +1247,8 @@
 				3ECD8FCA165B013200709ACA /* USHDefaults.m */,
 				4A25DD54187743700053A11A /* USHCustomFieldUtility.h */,
 				4A25DD55187743700053A11A /* USHCustomFieldUtility.m */,
+				4A0D4DA5189E72F7001F9C28 /* USHCategoriesUtility.h */,
+				4A0D4DA6189E72F7001F9C28 /* USHCategoriesUtility.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1296,6 +1352,10 @@
 		3EAA806715EA110700F2FC16 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AEA9A72189DA79800B356B7 /* MDTreeAddNodestore.h */,
+				4AEA9A73189DA79800B356B7 /* MDTreeAddNodeStore.m */,
+				4AEA9A74189DA79800B356B7 /* MDTreeNodestore.h */,
+				4AEA9A75189DA79800B356B7 /* MDTreeNodeStore.m */,
 				3E9E4D7B166FFFBB0095F4A4 /* USHShareController.h */,
 				3E9E4D7C166FFFBB0095F4A4 /* USHShareController.m */,
 				3EAA80D815EA13FC00F2FC16 /* USHViewController.h */,
@@ -1387,6 +1447,7 @@
 				3E9E4D83167000410095F4A4 /* USHQrCodeViewController.h in Headers */,
 				3E9E4D85167000410095F4A4 /* USHTwitterViewController.h in Headers */,
 				3EB0D711165BF6600092DFC8 /* USHVideoPicker.h in Headers */,
+				4AEA9A6E189DA67F00B356B7 /* CategoryTreeManager.h in Headers */,
 				4A2A4128186E440300B302D1 /* USHDownloadCustomCategoryType.h in Headers */,
 				3ECD8FCB165B013200709ACA /* USHDefaults.h in Headers */,
 				3EA34446165478D000DC017D /* UIBezierPath+USH.h in Headers */,
@@ -1427,6 +1488,7 @@
 				3EAA80C015EA12B300F2FC16 /* UIEvent+USH.h in Headers */,
 				3EAA80C815EA12B300F2FC16 /* UIImage+USH.h in Headers */,
 				3EAA80CA15EA12B300F2FC16 /* UIView+USH.h in Headers */,
+				4A0D4DA7189E72F7001F9C28 /* USHCategoriesUtility.h in Headers */,
 				3EAA80CC15EA12B300F2FC16 /* UIViewController+USH.h in Headers */,
 				3EAA80DC15EA13FC00F2FC16 /* USHAddViewController.h in Headers */,
 				3EAA80DE15EA13FC00F2FC16 /* USHDetailsViewController.h in Headers */,
@@ -1434,7 +1496,6 @@
 				3EAA80E415EA13FC00F2FC16 /* USHTableViewController.h in Headers */,
 				3EAA80E615EA13FC00F2FC16 /* USHViewController.h in Headers */,
 				3EAA80F315EA152900F2FC16 /* USHAlertView.h in Headers */,
-				4A249B32187A15EA001F1A96 /* CustomFieldTypeDetail.h in Headers */,
 				3EAA80F515EA152900F2FC16 /* USHMapAnnotation.h in Headers */,
 				4A2CEC0D186F2C5500AC8BC2 /* CustomFieldType.h in Headers */,
 				3EE3990015DB0483006A3CE8 /* NSObject+USH.h in Headers */,
@@ -1449,8 +1510,11 @@
 				3EDE88C215A12C3C00FB30BD /* USHVideo.h in Headers */,
 				3EDE88C615A12C3C00FB30BD /* USHNews.h in Headers */,
 				3EDE88CA15A12C3C00FB30BD /* USHSound.h in Headers */,
+				4AA8F93D18D5D267001AFF0D /* CustomFieldTypeDetail.h in Headers */,
 				3EDE88CE15A12C3C00FB30BD /* USHCheckin.h in Headers */,
 				3EDE88D215A12C3C00FB30BD /* USHComment.h in Headers */,
+				4AEA9A62189DA57200B356B7 /* MDTreeNode.h in Headers */,
+				4AEA9A7A189DA79800B356B7 /* MDTreeNodestore.h in Headers */,
 				4A1C81D31871EB7600EE1A24 /* USHDownloadIncidentCustomFields.h in Headers */,
 				3EDE88D615A12C3C00FB30BD /* USHCategory.h in Headers */,
 				3EDE88DA15A12C3C00FB30BD /* USHUser.h in Headers */,
@@ -1460,6 +1524,7 @@
 				3EA79902167B7B52009C83B1 /* SBJson.h in Headers */,
 				3EA79903167B7B52009C83B1 /* SBJsonParser.h in Headers */,
 				3EA79905167B7B52009C83B1 /* SBJsonStreamParser.h in Headers */,
+				4AEA9A76189DA79800B356B7 /* MDTreeAddNodestore.h in Headers */,
 				4A0BC63E187565BF00F121AB /* ReportCustomField.h in Headers */,
 				3EA79907167B7B52009C83B1 /* SBJsonStreamParserAccumulator.h in Headers */,
 				3EA79909167B7B52009C83B1 /* SBJsonStreamParserAdapter.h in Headers */,
@@ -1496,6 +1561,7 @@
 				3E971B3B15A382F2005EB625 /* USHDownloadVersion.h in Headers */,
 				3E83650B15A3A75F00998484 /* USHDownloadReport.h in Headers */,
 				3E83650F15A3B64600998484 /* USHDownloadCategory.h in Headers */,
+				4AEA9A6A189DA67F00B356B7 /* CategoryTree.h in Headers */,
 				3E83651815A3BF7A00998484 /* USHDownloadLocation.h in Headers */,
 				3E83651C15A3C61500998484 /* USHDownloadCheckin.h in Headers */,
 				3E943117159A24C700864D11 /* SDK-Prefix.pch in Headers */,
@@ -1732,8 +1798,8 @@
 				3E83651915A3BF7A00998484 /* USHDownloadLocation.m in Sources */,
 				3E83651D15A3C61500998484 /* USHDownloadCheckin.m in Sources */,
 				3E33D42515D56D5200010DC3 /* USHSynchronize.m in Sources */,
+				4AEA9A78189DA79800B356B7 /* MDTreeAddNodeStore.m in Sources */,
 				3E33D42E15D5AB2600010DC3 /* UIColor+USH.m in Sources */,
-				4A249B34187A15EA001F1A96 /* CustomFieldTypeDetail.m in Sources */,
 				3E33D43215D5B1E900010DC3 /* NSError+USH.m in Sources */,
 				3E33D43615D5B59000010DC3 /* NSString+USH.m in Sources */,
 				3EE3990115DB0483006A3CE8 /* NSObject+USH.m in Sources */,
@@ -1755,6 +1821,7 @@
 				3EAA80DD15EA13FC00F2FC16 /* USHAddViewController.m in Sources */,
 				3EAA80DF15EA13FC00F2FC16 /* USHDetailsViewController.m in Sources */,
 				3EAA80E115EA13FC00F2FC16 /* USHMapViewController.m in Sources */,
+				4AEA9A7C189DA79800B356B7 /* MDTreeNodeStore.m in Sources */,
 				3EAA80E515EA13FC00F2FC16 /* USHTableViewController.m in Sources */,
 				3EAA80E715EA13FC00F2FC16 /* USHViewController.m in Sources */,
 				3EAA80EE15EA14C300F2FC16 /* Reachability.m in Sources */,
@@ -1764,16 +1831,19 @@
 				3E94937115ECB6ED004B32A8 /* USHTabBarController.m in Sources */,
 				3E022E0A15ECC4ED00FDDC9E /* NSBundle+USH.m in Sources */,
 				3E022E1415ECE20600FDDC9E /* UIBarButtonItem+USH.m in Sources */,
+				4AEA9A64189DA57200B356B7 /* MDTreeNode.m in Sources */,
 				3E6E522815EE120F00CF67D6 /* USHRefreshButtonItem.m in Sources */,
 				3E6E527015EE5DF100CF67D6 /* USHHeaderView.m in Sources */,
 				3E6E529515EE77F300CF67D6 /* USHItemPicker.m in Sources */,
 				3EFF5AC0162097D20072FAE1 /* UITableView+USH.m in Sources */,
 				3ED89CFF1623788400F46881 /* USHDatePicker.m in Sources */,
 				3ED89D051623986C00F46881 /* USHLocator.m in Sources */,
+				4AEA9A6C189DA67F00B356B7 /* CategoryTree.m in Sources */,
 				3ED89D0A1623A44000F46881 /* USHImagePicker.m in Sources */,
 				3E9D90E416248040006B3BFA /* NSSet+USH.m in Sources */,
 				3E9D90E91624818E006B3BFA /* NSArray+USH.m in Sources */,
 				3E5F619D163CD0EE00F7C83D /* Ushahidi.xcdatamodeld in Sources */,
+				4A0D4DA9189E72F7001F9C28 /* USHCategoriesUtility.m in Sources */,
 				3E2BFE6A163E0B7C00445A29 /* USHUpload.m in Sources */,
 				3E2BFE6E163E0C2100445A29 /* USHUploadReport.m in Sources */,
 				3E2BFE72163E0C3200445A29 /* USHUploadCheckin.m in Sources */,
@@ -1789,6 +1859,7 @@
 				3E59CC6E1641EE2000D9705B /* QRBitBuffer.m in Sources */,
 				3E59CC711641EE2000D9705B /* QREncoder.m in Sources */,
 				3E59CC731641EE2000D9705B /* QRMath.m in Sources */,
+				4AEA9A70189DA67F00B356B7 /* CategoryTreeManager.m in Sources */,
 				3E59CC751641EE2000D9705B /* QRMatrix.m in Sources */,
 				3E59CC771641EE2000D9705B /* QRPolynomial.m in Sources */,
 				3E59CC791641EE2000D9705B /* QRRSBlock.m in Sources */,
@@ -1797,6 +1868,7 @@
 				3EC32CF4164C30CD000FFE7B /* USHRefreshButton.m in Sources */,
 				3EE57FAB164D0740002677E6 /* USHDownloadPhoto.m in Sources */,
 				3EA3442C1653FEA700DC017D /* USHDownloadJSON.m in Sources */,
+				4AA8F93F18D5D267001AFF0D /* CustomFieldTypeDetail.m in Sources */,
 				3EA34447165478D000DC017D /* UIBezierPath+USH.m in Sources */,
 				3EA3444B16547D8500DC017D /* USHTableCell.m in Sources */,
 				3EA3444F16547DB800DC017D /* USHWindow.m in Sources */,

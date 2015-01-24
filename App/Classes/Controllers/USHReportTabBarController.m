@@ -39,6 +39,15 @@
 #import <Ushahidi/USHDevice.h>
 #import <Ushahidi/NSBundle+USH.h>
 
+
+/* MODIFICHE GEOAVALANCHE INIZIO */
+#import <Ushahidi/USHDatabase.h>
+#import <Ushahidi/CategoryTreeManager.h>
+#import <Ushahidi/CategoryTree.h>
+#import "MDTreeViewController.h"
+#import <Ushahidi/USHCategoriesUtility.h>
+/* MODIFICHE GEOAVALANCHE INIZIO */
+
 @interface USHReportTabBarController ()
 
 @property (strong, nonatomic) NSString *textSubmitViaUshahidiAPI;
@@ -79,6 +88,12 @@
                              buttons:self.textSubmitViaOpenGeoSMS, self.textSubmitViaUshahidiAPI, nil];
     }
     else {
+        
+        /* MODIFICHE GEOAVALANCHE INIZIO */
+        NSMutableDictionary *flatCategoryToAddSelected = [[Ushahidi sharedInstance] flatCategoryToAddSelected];
+        [flatCategoryToAddSelected removeAllObjects];
+        /* MODIFICHE GEOAVALANCHE FINE */
+        
         self.reportAddController.openGeoSMS = NO;
         self.reportAddController.map = self.map;
         self.reportAddController.report = [[Ushahidi sharedInstance] addReportForMap:self.map];
@@ -90,7 +105,11 @@
 
 - (IBAction)filter:(id)sender event:(UIEvent*)event {
     DLog(@"");
+    /* MODIFICHE GEOAVALANCHE INIZIO */
+    /*
 	NSMutableArray *titles = [NSMutableArray arrayWithObject:NSLocalizedString(@"--- ALL CATEGORIES ---", nil)];
+
+
 	for (USHCategory *category in self.map.categoriesSortedByPosition) {
 		if (category.title != nil) {
 			[titles addObject:category.title];
@@ -100,6 +119,30 @@
                           selected:self.category.title
                              event:event
                                tag:0];
+    
+    */
+    
+    
+    if ([USHDevice isIPad]) {
+        MDTreeViewController *treeViewController = [MDTreeViewController new];
+        UINavigationController *navController =
+        [[UINavigationController alloc] initWithRootViewController:treeViewController];
+        //reportMapController     self.reportMapController
+        treeViewController.mapControllerTree = self.reportMapController;
+        
+        
+        [self presentModalViewController:navController animated:YES];
+    }else{
+        
+        MDTreeViewController *treeViewController = [MDTreeViewController new];
+        UINavigationController *navController =
+        [[UINavigationController alloc]
+         initWithRootViewController:treeViewController];
+        treeViewController.mapControllerTree = self.reportMapController;
+        
+        [self presentModalViewController:navController animated:YES];
+    }
+    /* MODIFICHE GEOAVALANCHE FINE */
 }
 
 - (IBAction)info:(id)sender event:(UIEvent*)event {

@@ -38,9 +38,30 @@
 @class USHMap;
 @protocol UshahidiDelegate;
 
-@interface Ushahidi : NSObject
+@interface Ushahidi : NSObject {
+    
+    /* MODIFICHE GEOALVALANCHE INIZIO */
+@public
+    NSMutableArray *flatCategory;
+    NSMutableDictionary *flatCategorySelected;
+    NSMutableDictionary *flatOnlyCategoryYES;
+    NSMutableDictionary *flatCategoryTest;
+    NSMutableDictionary *flatCategoryToAdd;
+    NSMutableDictionary *flatCategoryToAddSelected;
+    NSString *refreshReport;
+    /* MODIFICHE GEOALVALANCHE FINE */
+}
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(Ushahidi);
+/* MODIFICHE GEOALVALANCHE INIZIO */
+@property (retain) NSMutableArray *flatCategoryTest;
+@property (retain) NSMutableArray *flatCategory;
+@property (retain) NSMutableDictionary *flatCategorySelected;
+@property (retain) NSMutableDictionary *flatOnlyCategoryYES;
+@property (retain) NSMutableDictionary *flatCategoryToAdd;
+@property (retain) NSMutableDictionary *flatCategoryToAddSelected;
+@property (retain) NSString *refreshReport;
+/* MODIFICHE GEOALVALANCHE FINE */
 
 @property (nonatomic, assign) NSInteger syncOperations;
 @property (nonatomic, strong) NSString *youtubeUsername;

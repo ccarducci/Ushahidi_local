@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIApplication">
@@ -277,7 +277,7 @@
             <connections>
                 <outlet property="cancelButton" destination="209" id="210"/>
                 <outlet property="categoryTableController" destination="149" id="151"/>
-                <outlet property="customFiedlsAddViewController" destination="PXb-fW-3Yn" id="e1e-m2-xN1"/>
+                <outlet property="customFormAddController" destination="Uzm-zF-pHp" id="agm-52-B9U"/>
                 <outlet property="doneButton" destination="208" id="211"/>
                 <outlet property="locationAddViewController" destination="173" id="174"/>
                 <outlet property="settingsViewController" destination="92" id="246"/>
@@ -416,14 +416,14 @@
             <nil key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="commentAddViewController" destination="152" id="154"/>
-                <outlet property="customFieldsViewController" destination="lky-Fv-zKi" id="kdj-5O-Wb9"/>
                 <outlet property="imageViewController" destination="132" id="134"/>
                 <outlet property="locationViewController" destination="142" id="145"/>
                 <outlet property="pager" destination="48" id="127"/>
                 <outlet property="webViewController" destination="131" id="133"/>
             </connections>
         </viewController>
-        <viewController id="lky-Fv-zKi" userLabel="Custom Fields View Controller" customClass="USHCustomFieldsViewController">
+        <viewController title="dd" nibName="USHCustomFormAddViewController_iPad" id="lky-Fv-zKi" userLabel="Custom Fields View Controller" customClass="USHCustomFieldsViewController">
+            <extendedEdge key="edgesForExtendedLayout"/>
             <navigationItem key="navigationItem" title="Title" id="Bp2-ml-jQ3"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -431,29 +431,52 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <nil key="simulatedDestinationMetrics"/>
         </viewController>
-        <viewController title="Add Report" nibName="USHReportAddViewController_iPad" id="PXb-fW-3Yn" userLabel="Custom Fields Add View Controller - Add Report" customClass="USHCustomFieldsAddViewController">
+        <viewController title="Custom Field Add" nibName="USHCustomFormAddViewController_iPad" id="Uzm-zF-pHp" userLabel="Custom Fields Add View Controller" customClass="USHCustomFormAddViewController">
             <extendedEdge key="edgesForExtendedLayout"/>
-            <navigationItem key="navigationItem" title="Extended Info" id="opa-Gz-Zww">
-                <barButtonItem key="leftBarButtonItem" title="Cancel" id="H8N-gf-mRL">
+            <navigationItem key="navigationItem" title="Title" id="C5y-KP-Lhx">
+                <barButtonItem key="leftBarButtonItem" title="Back" id="s6y-ob-hmB">
                     <connections>
-                        <action selector="CancelEv:" destination="PXb-fW-3Yn" id="tTa-E3-DSB"/>
+                        <action selector="BackEv:" destination="Uzm-zF-pHp" id="ZBO-FP-wwk"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="Aib-7V-TLl">
+                <barButtonItem key="rightBarButtonItem" title="Reset" id="cav-qg-8ry">
                     <connections>
-                        <action selector="DoneEv:" destination="PXb-fW-3Yn" id="9Zx-gR-W8Y"/>
+                        <action selector="ResetEv:" destination="Uzm-zF-pHp" id="nVM-dt-ndB"/>
                     </connections>
                 </barButtonItem>
             </navigationItem>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <nil key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="cancel" destination="H8N-gf-mRL" id="sNN-Kq-ltH"/>
-                <outlet property="done" destination="Aib-7V-TLl" id="wgU-QV-R5W"/>
-                <outlet property="reportAdd" destination="147" id="VPG-v9-8Ko"/>
+                <outlet property="Back" destination="cav-qg-8ry" id="Eex-hj-nsU"/>
+                <outlet property="fieldValueSelectorController" destination="mHu-L5-o9o" id="4SN-uh-41l"/>
+            </connections>
+        </viewController>
+        <viewController title="Field" nibName="USHFieldViewController_iPad" id="mHu-L5-o9o" userLabel="Custom Field Value View Controller" customClass="USHFieldViewController">
+            <extendedEdge key="edgesForExtendedLayout"/>
+            <navigationItem key="navigationItem" title="Title" id="tjE-Ox-Gny">
+                <barButtonItem key="leftBarButtonItem" title="Back" id="iWL-rx-pcw">
+                    <connections>
+                        <action selector="BackEv:" destination="mHu-L5-o9o" id="v8t-e2-yPv"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem key="rightBarButtonItem" title="Reset" id="2uc-2R-DLj">
+                    <connections>
+                        <action selector="ResetEv:" destination="mHu-L5-o9o" id="Ckb-S2-7gc"/>
+                    </connections>
+                </barButtonItem>
+            </navigationItem>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <nil key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="Back" destination="iWL-rx-pcw" id="MWh-sf-mKX"/>
+                <outlet property="Reset" destination="2uc-2R-DLj" id="N4B-ca-SJI"/>
             </connections>
         </viewController>
     </objects>
