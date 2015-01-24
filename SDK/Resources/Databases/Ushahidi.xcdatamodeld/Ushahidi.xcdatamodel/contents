@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="Ushahidi" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="13C64" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="Ushahidi" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Category" representedClassName="USHCategory" syncable="YES">
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
@@ -96,6 +96,7 @@
         <attribute name="authorEmail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="authorFirst" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="authorLast" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customFieldsForPending" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
@@ -153,19 +154,19 @@
         <relationship name="report" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Report" inverseName="videos" inverseEntity="Report" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Category" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Checkin" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Comment" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="CustomFieldType" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="CustomFieldTypeDetail" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Location" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Map" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="News" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Photo" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Report" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="ReportCustomField" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Sound" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="User" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Video" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Category" positionX="0" positionY="0" width="128" height="180"/>
+        <element name="Checkin" positionX="0" positionY="0" width="128" height="195"/>
+        <element name="Comment" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="CustomFieldType" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="CustomFieldTypeDetail" positionX="0" positionY="0" width="128" height="180"/>
+        <element name="Location" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="Map" positionX="0" positionY="0" width="128" height="360"/>
+        <element name="News" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Photo" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="Report" positionX="0" positionY="0" width="128" height="405"/>
+        <element name="ReportCustomField" positionX="0" positionY="0" width="128" height="225"/>
+        <element name="Sound" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="User" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="Video" positionX="0" positionY="0" width="128" height="120"/>
     </elements>
 </model>

@@ -28,7 +28,9 @@ typedef enum {
 
 @implementation USHCustomFormAddViewController
 
+@synthesize report = _report;
 @synthesize reportCustomFields = _reportCustomFields;
+@synthesize itemCategory = _itemCategory;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -155,10 +157,26 @@ typedef enum {
 
 - (IBAction)BackEv:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
+    self.report.customFieldsForPending =@"";
+    
     if (_fields !=nil && _fields.count > 0 && _reportCustomFields != nil)
     {
         [_reportCustomFields removeAllObjects];
         [_reportCustomFields addObjectsFromArray:_fields];
+        
+        NSMutableString *customString = [NSMutableString stringWithString:@"form_id="];
+        //[NSMutableString stringWithString:(NSString *)[self.itemCategory.form_id stringValue]];
+        [customString appendFormat:[self.itemCategory.form_id stringValue]];
+        for (USHFieldItem *item in _reportCustomFields) {
+            if ( item.value != nil){
+                [customString appendFormat:@"&"];
+                [customString appendFormat:item.identifierField];
+                [customString appendFormat:@"="];
+                [customString appendFormat:item.value];
+            }
+        }
+        // OKKIO DA RICOMMENTARE
+        self.report.customFieldsForPending = customString;
     }
 }
 

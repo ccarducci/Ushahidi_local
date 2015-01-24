@@ -88,6 +88,41 @@
     [self setValue:self.report.authorFirst forKey:@"person_first"];
     [self setValue:self.report.authorLast forKey:@"person_last"];
     [self setValue:self.report.authorEmail forKey:@"person_email"];
+    
+    
+    /* ********************************* */
+    /* INIZIO CUSTOM FIELDS GEOAVALANCHE */
+    /* ********************************* */
+    // STRINGA CHE ARRIVA @"form_id=2&custom_field[2]=Other"
+    if ( self.report.customFieldsForPending != nil )
+    {
+        // from form_id=2&2=Other
+        // to form_id=2&custom_field[2]=Other
+        // NSString *customString = @"form_id=2&2=Other";
+        NSString *customString = self.report.customFieldsForPending;
+        NSArray *listCustomItems = [customString componentsSeparatedByString:@"&"];
+        
+        for (NSString *item in listCustomItems) {
+            NSArray *listCustomValueItems = [item componentsSeparatedByString:@"="];
+            NSString *parameter = listCustomValueItems[0];
+            NSString *value = listCustomValueItems[1];
+            NSMutableString *parameterNorm =  [NSMutableString string];
+            
+            if ([parameter isEqual:@"form_id"]){
+                [parameterNorm setString:parameter];
+            }else{
+                [parameterNorm appendString:@"custom_field["];
+                [parameterNorm appendString:parameter];
+                [parameterNorm appendString:@"]"];
+            }
+            NSLog(@"%@: %@",parameterNorm,value);
+            if (value)
+                [self setValue:value forKey:parameterNorm];
+        }
+    }
+    /* ********************************* */
+    /* FINE CUSTOM FIELDS GEOAVALANCHE   */
+    /* ********************************* */
 }
 
 - (void) success {

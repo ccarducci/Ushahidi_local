@@ -66,7 +66,6 @@
 @synthesize reportCustomForm_id = _reportCustomForm_id;
 @synthesize reportCustomFields = _reportCustomFields;
 @synthesize listCustomFields = _listCustomFields;
-
 // GEOAVALANCHE INIZIO
 
 @synthesize datePicker = _datePicker;
@@ -540,6 +539,7 @@ typedef enum {
         [self.videoPicker showVideoPickerForCell:cell];
     }
     else if (indexPath.section == TableSectionCustomFields) {
+        // *********************************
         // SHOWFORM GEOAVALANCHE INIZIO
         if ( self.reportCustomFields == nil)
             self.reportCustomFields = [[NSMutableArray alloc] init];
@@ -564,10 +564,14 @@ typedef enum {
                 }
             }
         }
+
+        self.customFormAddController.itemCategory = [self getSelected];
+        self.customFormAddController.report = self.report;
         self.customFormAddController.fields =_listCustomFields;
         self.customFormAddController.reportCustomFields = self.reportCustomFields;
         [self presentModalViewController:self.customFormAddController animated:YES];
         // SHOWFORM GEOAVALANCHE FINE
+        // *********************************
     }
 }
 
@@ -849,6 +853,7 @@ typedef enum {
             item.defaultvalue =[[NSString alloc] initWithString:itemCustom.defaultvalue];
             item.name =[[NSString alloc] initWithString:itemCustom.name];
             item.type =itemCustom.type;
+            item.identifierField = itemCustom.identifierField;
             if (list != nil)[list addObject:item];
         }
     }

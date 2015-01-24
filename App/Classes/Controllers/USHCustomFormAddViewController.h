@@ -12,6 +12,10 @@
 #import "USHFieldViewController.h"
 #import "USHCustomFieldSingleViewController.h"
 #import "USHFieldItem.h"
+#import "MDTreeAddViewController.h"
+
+
+@class USHReport;
 
 @interface USHCustomFormAddViewController : USHTableViewController
 
@@ -30,5 +34,7 @@
 @property (retain, nonatomic) MDTreeNode *item;
 @property (retain, nonatomic) NSMutableArray *reportCustomFields;
 @property (retain, nonatomic) NSMutableArray *fields;
+@property (strong, nonatomic) USHReport *report;
+@property (strong, nonatomic) MDTreeNode *itemCategory;
 
 @end
